@@ -1010,8 +1010,8 @@ if ($Config['DaysDate'] != $CurrentDate) {
 
 require(LibraryPath . "RedisClient.class.php");
 $redis = RedisClient::getInstance();
-$token = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
-$redisKey = 'userInfo' . $token;
+$accessToken = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
+$redisKey = 'userInfo' . $accessToken;
 $CurUserInfo = json_decode($redis->get($redisKey), TRUE);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])

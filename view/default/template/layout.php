@@ -67,7 +67,7 @@ if ( IsSSL() ) {
 			<div class="nav-panel">
 				<div class="inner-nav-panel">
 					<div class="logo">
-						<a href="<?php echo $Config['WebsitePath']; ?>/">
+						<a href="<?php echo $Config['WebsitePath']; ?>/?token=<?php echo $accessToken; ?>">
 							<img src="<?php echo $Config['WebsitePath']; ?>/static/img/logo.png" alt="<?php echo $Lang['Home']; ?>" />
 						</a>
 					</div>
@@ -79,31 +79,31 @@ if ( IsSSL() ) {
 	<?php
 	if($CurUserID){
 	?>
-					<a href="<?php echo $Config['WebsitePath']; ?>/settings" title="<?php echo $Lang['Settings']; ?>"<?php echo $UrlPath=='settings'?' class="buttons-active"':''; ?>><div class="icon icon-settings"></div></a>
-					<a href="<?php echo $Config['WebsitePath']; ?>/notifications#notifications1" title="<?php echo $Lang['Notifications']; ?>"<?php echo $UrlPath=='notifications'?' class="buttons-active"':''; ?> onclick="javascript:ShowNotification(0);"><div class="icon icon-notifications"></div><span class="icon-messages-num" id="MessageNumber">0</span></a>
+					<a href="<?php echo $Config['WebsitePath']; ?>/settings?token=<?php echo $accessToken; ?>" title="<?php echo $Lang['Settings']; ?>"<?php echo $UrlPath=='settings'?' class="buttons-active"':''; ?>><div class="icon icon-settings"></div></a>
+					<a href="<?php echo $Config['WebsitePath']; ?>/notifications?token=<?php echo $accessToken; ?>#notifications1" title="<?php echo $Lang['Notifications']; ?>"<?php echo $UrlPath=='notifications'?' class="buttons-active"':''; ?> onclick="javascript:ShowNotification(0);"><div class="icon icon-notifications"></div><span class="icon-messages-num" id="MessageNumber">0</span></a>
 	<?php
 	if($CurUserRole==5){
 	?>
-					<a href="<?php echo $Config['WebsitePath']; ?>/dashboard" title="<?php echo $Lang['System_Settings']; ?>"<?php echo $UrlPath=='dashboard'?' class="buttons-active"':''; ?>><div class="icon icon-dashboard"></div></a>
+					<a href="<?php echo $Config['WebsitePath']; ?>/dashboard?token=<?php echo $accessToken; ?>" title="<?php echo $Lang['System_Settings']; ?>"<?php echo $UrlPath=='dashboard'?' class="buttons-active"':''; ?>><div class="icon icon-dashboard"></div></a>
 	<?php }
 	?>
-					<a href="<?php echo $Config['WebsitePath']; ?>/users/following"<?php echo $UrlPath=='favorite_users'?' class="buttons-active"':''; ?>><?php echo $Lang['Users_Followed']; ?></a>
-					<a href="<?php echo $Config['WebsitePath']; ?>/tags/following"<?php echo $UrlPath=='favorite_tags'?' class="buttons-active"':''; ?>><?php echo $Lang['Tags_Followed']; ?></a>
-					<a href="<?php echo $Config['WebsitePath']; ?>/new"<?php echo $UrlPath=='new'?' class="buttons-active"':''; ?>><?php echo $Lang['Create_New_Topic']; ?></a>
+					<a href="<?php echo $Config['WebsitePath']; ?>/users/following?token=<?php echo $accessToken; ?>"<?php echo $UrlPath=='favorite_users'?' class="buttons-active"':''; ?>><?php echo $Lang['Users_Followed']; ?></a>
+					<a href="<?php echo $Config['WebsitePath']; ?>/tags/following?token=<?php echo $accessToken; ?>"<?php echo $UrlPath=='favorite_tags'?' class="buttons-active"':''; ?>><?php echo $Lang['Tags_Followed']; ?></a>
+					<a href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>"<?php echo $UrlPath=='new'?' class="buttons-active"':''; ?>><?php echo $Lang['Create_New_Topic']; ?></a>
 	<?php
 	}else{
 	?>
 					<!--a href="<?php echo $Config['WebsitePath']; ?>/register"<?php echo $UrlPath=='register'?' class="buttons-active"':''; ?>>
 						<?php echo $Lang['Sign_Up']; ?>
 					</a-->
-					<a href="<?php echo $Config['WebsitePath']; ?>/login"<?php echo $UrlPath=='login'?' class="buttons-active"':''; ?>>
+					<a href="<?php echo $Config['WebsitePath']; ?>/login?token=<?php echo $accessToken; ?>"<?php echo $UrlPath=='login'?' class="buttons-active"':''; ?>>
 						<?php echo $Lang['Log_In']; ?>
 					</a>
 	<?php
 	}
 	?>
 					<!--a href="<?php echo $Config['WebsitePath']; ?>/explore"<?php echo $UrlPath=='explore'?' class="buttons-active"':''; ?>>发现</a-->
-					<a href="<?php echo $Config['WebsitePath']; ?>/"<?php echo $UrlPath=='home'?' class="buttons-active"':''; ?>>
+					<a href="<?php echo $Config['WebsitePath']; ?>/?token=<?php echo $accessToken; ?>"<?php echo $UrlPath=='home'?' class="buttons-active"':''; ?>>
 						<?php echo $Lang['Home']; ?>
 					</a>
 					</div>
@@ -130,7 +130,7 @@ if ( IsSSL() ) {
 			if ($IsMobile && $Config['MobileDomainName']) {
 ?>
 			<div class="swtich-to-mobile">
-				<a href="<?php echo $CurProtocol . $Config['MainDomainName']; ?>/view-mobile?callback=<?php echo urlencode($RequestURI); ?>">
+				<a href="<?php echo $CurProtocol . $Config['MainDomainName']; ?>/view-mobile?callback=<?php echo urlencode($RequestURI); ?>&token=<?php echo $accessToken; ?>">
 					<?php echo $Lang['Mobile_Version']; ?>
 				</a>
 			</div>
@@ -154,7 +154,7 @@ if(!$IsAjax){
 		<div class="Copyright">
 			<p>
 			<?php echo $Config['SiteName']; ?> Powered By © 2006-2016 <a href="http://www.tv189.com" target="_blank">Carbon Forum</a> V<?php echo $Config['Version']; ?>
-			<a href="<?php echo $Config['WebsitePath']; ?>/statistics"><?php echo $Lang['Statistics']; ?></a>
+			<a href="<?php echo $Config['WebsitePath']; ?>/statistics?token=<?php echo $accessToken; ?>"><?php echo $Lang['Statistics']; ?></a>
 			<br />
 <?php
 $MicroTime = explode(' ', microtime());

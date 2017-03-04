@@ -9,13 +9,13 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		?>
 			<div class="post-list">
 				<div class="item-avatar">
-					<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>">
+					<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>
 					</a>
 				</div>
 				<div class="item-content">
 					<h2>
-						<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>">
+						<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>">
 							<?php echo $Topic['Topic']; ?>
 						</a>
 					</h2>
@@ -23,18 +23,18 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 						<?php
 						if($Topic['Tags']){
 							foreach (explode("|", $Topic['Tags']) as $Tag) {
-						?><a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>"><?php echo $Tag; ?></a>
+						?><a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>"><?php echo $Tag; ?>?<?php echo $accessToken; ?></a>
 							<?php
 							}
 						}
-						?></span><span class="item-date float-right"><a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['UserName']); ?>"><?php echo $Topic['UserName']; ?></a>&nbsp;•&nbsp;<?php echo FormatTime($Topic['LastTime']); 
+						?></span><span class="item-date float-right"><a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['UserName']); ?>?<?php echo $accessToken; ?>"><?php echo $Topic['UserName']; ?></a>&nbsp;•&nbsp;<?php echo FormatTime($Topic['LastTime']);
 							if($Topic['Replies']){
-						?>&nbsp;•&nbsp;<?php echo $Lang['Last_Reply_From']; ?>&nbsp;<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['LastName']); ?>"><?php echo $Topic['LastName']; ?></a><?php } ?>
+						?>&nbsp;•&nbsp;<?php echo $Lang['Last_Reply_From']; ?>&nbsp;<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['LastName']); ?>?token=<?php echo $accessToken; ?>"><?php echo $Topic['LastName']; ?></a><?php } ?>
 					</span>
 				</div>
 							<?php if($Topic['Replies']){ ?>
 							<div class="item-count">
-							<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>"><?php echo $Topic['Replies']; ?></a>
+							<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>"><?php echo $Topic['Replies']; ?></a>
 							</div>
 							<?php } ?>
 							<div class="c"></div>
