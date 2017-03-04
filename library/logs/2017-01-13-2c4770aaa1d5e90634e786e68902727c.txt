@@ -1,0 +1,5 @@
+Time : 15:56:40
+SQLSTATE[HY000] [1049] Unknown database 'cb'
+
+Time : 15:49:15
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
