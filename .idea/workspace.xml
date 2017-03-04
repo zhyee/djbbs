@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common.php" afterPath="$PROJECT_DIR$/common.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/template/home.php" afterPath="$PROJECT_DIR$/view/default/template/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/default/template/layout.php" afterPath="$PROJECT_DIR$/view/default/template/layout.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,23 +79,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/default/template/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="156" column="103" selection-start-line="156" selection-start-column="103" selection-end-line="156" selection-end-column="103" />
+            <state relative-caret-position="3990">
+              <caret line="179" column="14" selection-start-line="179" selection-start-column="14" selection-end-line="179" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/default/template/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="36" column="138" selection-start-line="36" selection-start-column="138" selection-end-line="36" selection-end-column="138" />
+            <state relative-caret-position="303">
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
-                <marker date="1488618443411" expanded="true" signature="536:551" ph="..." />
+                <element signature="e#1225#1231#0#HTML" expanded="true" />
+                <marker date="1488620702189" expanded="true" signature="536:551" ph="..." />
               </folding>
             </state>
           </provider>
@@ -190,8 +189,8 @@
         <option value="$PROJECT_DIR$/library/RedisClient.class.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/common.php" />
-        <option value="$PROJECT_DIR$/view/default/template/home.php" />
         <option value="$PROJECT_DIR$/view/default/template/layout.php" />
+        <option value="$PROJECT_DIR$/view/default/template/home.php" />
       </list>
     </option>
   </component>
@@ -418,12 +417,12 @@
       <workItem from="1487901933273" duration="645000" />
       <workItem from="1488244729688" duration="2466000" />
       <workItem from="1488598349314" duration="11429000" />
-      <workItem from="1488617120384" duration="1553000" />
+      <workItem from="1488617120384" duration="3352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153649000" />
+    <option name="totallyTimeSpent" value="155448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -920,16 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/default/template/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="36" column="138" selection-start-line="36" selection-start-column="138" selection-end-line="36" selection-end-column="138" />
-          <folding>
-            <marker date="1488618443411" expanded="true" signature="536:551" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="751">
@@ -940,9 +929,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/default/template/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="156" column="103" selection-start-line="156" selection-start-column="103" selection-end-line="156" selection-end-column="103" />
+        <state relative-caret-position="3990">
+          <caret line="179" column="14" selection-start-line="179" selection-start-column="14" selection-end-line="179" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/default/template/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#1225#1231#0#HTML" expanded="true" />
+            <marker date="1488620702189" expanded="true" signature="536:551" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

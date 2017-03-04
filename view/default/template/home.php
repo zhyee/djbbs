@@ -23,7 +23,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 						<?php
 						if($Topic['Tags']){
 							foreach (explode("|", $Topic['Tags']) as $Tag) {
-						?><a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>"><?php echo $Tag; ?>?<?php echo $accessToken; ?></a>
+						?><a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>?<?php echo $accessToken; ?>"><?php echo $Tag; ?></a>
 							<?php
 							}
 						}
