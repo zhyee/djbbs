@@ -3,7 +3,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 if($Page>1){
 ?>
 <ul class="list topic-list">
-	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $ID.'-'.($Page-1); ?>" data-transition="slide"><?php echo $Lang['Page_Previous']; ?></a></li>
+	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $ID.'-'.($Page-1); ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Lang['Page_Previous']; ?></a></li>
 </ul>
 <?php
 }
@@ -13,7 +13,7 @@ if($Page==1){
 	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
-			<p class="color-gray">By <a href="<?php echo $Config['WebsitePath'].'/u/'.urlencode($Topic['UserName']); ?>"><?php echo $Topic['UserName']; ?></a>
+			<p class="color-gray">By <a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>"><?php echo $Topic['UserName']; ?></a>
  at <?php echo FormatTime($Topic['PostTime']); ?><br /><?php echo $Topic['Favorites']; ?><?php echo $Lang['People_Collection']; ?> • <?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?>
 			</p>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
@@ -21,7 +21,7 @@ if($Page==1){
 <?php
 if($Topic['Tags']){
 	foreach (explode("|", $Topic['Tags']) as $Tag) {
-?>					<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>" class="button"><?php echo $Tag; ?></a>
+?>					<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>?token=<?php echo $accessToken; ?>" class="button"><?php echo $Tag; ?></a>
 <?php
 	}
 }
@@ -89,7 +89,7 @@ foreach($PostsArray as $key => $Post)
 <div class="card carbonforum-card">
 	<div class="card-header no-border">
 		<div class="carbonforum-avatar">
-			<a href="<?php echo $Config['WebsitePath'].'/u/'.urlencode($Post['UserName']); ?>">
+			<a href="<?php echo $Config['WebsitePath'].'/u/'.$Post['UserID']; ?>?token=<?php echo $accessToken; ?>">
 				<?php echo GetAvatar($Post['UserID'], $Post['UserName'], 'small'); ?>
 			</a>
 		</div>
@@ -124,7 +124,7 @@ foreach($PostsArray as $key => $Post)
 <?php
 if($Page<$TotalPage){
 ?>
-	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $ID.'-'.($Page+1); ?>" data-transition="slide"<?php echo (($Page+1)==$TotalPage)?' data-refresh="true"':''; ?>><?php echo $Lang['Page_Next']; ?></a></li>
+	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $ID.'-'.($Page+1); ?>?token=<?php echo $accessToken; ?>" data-transition="slide"<?php echo (($Page+1)==$TotalPage)?' data-refresh="true"':''; ?>><?php echo $Lang['Page_Next']; ?></a></li>
 <?php } ?>
 </ul>
 <script type="text/javascript">
