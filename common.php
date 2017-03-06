@@ -108,8 +108,8 @@ if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 }
 
 $CurUserID             = $CurUserInfo['uid'];  //当前用户ID
-//$CurGroupID            = $CurUserInfo['gid'];  //当前组织ID
-$CurGroupID            = '0';  //当前组织ID
+$CurGroupID            = $CurUserInfo['merCode'];  //当前组织ID
+//$CurGroupID            = '0';  //当前组织ID
 $CurUserRole           = 0;                     //当前角色ID
 
 //Load configuration
@@ -121,6 +121,7 @@ if (!$Config) {
 
     $ConfigArrays = $DB->query('SELECT ConfigName,ConfigValue FROM ' . PREFIX . 'config WHERE GroupID = :GroupID', array('GroupID' =>$CurGroupID));
 
+    /* 新组织人首次登陆，初始化网站配置参数 */
     if (!$ConfigArrays)
     {
         $Config = array(
@@ -166,6 +167,11 @@ if (!$Config) {
             'LoadJqueryUrl'                 => '/static/js/jquery.js'
         );
 
+        $sql = "INSERT INTO " . PREFIX . "config (ID, ConfigName, ConfigValue, GroupID) VALUES (NULL, ?, ?, ?)";
+        foreach ($Config as $ConfigName => $ConfigValue)
+        {
+            $DB->query($sql, array($ConfigName, $ConfigValue, $CurGroupID));
+        }
     }
     else
     {
