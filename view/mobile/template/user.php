@@ -36,7 +36,7 @@ foreach($PostsArray as $Post) {
 <div class="card">
 	<div class="card-header">
 		<!--<?php echo FormatTime($Post['PostTime']); ?>-->
-		<a href="<?php echo $Config['WebsitePath']; ?>/goto/<?php echo $Post['TopicID']; ?>-<?php echo $Post['ID']; ?>" data-transition="slide"><?php echo $Post['Subject'];?></a>
+		<a href="<?php echo $Config['WebsitePath']; ?>/goto/<?php echo $Post['TopicID']; ?>-<?php echo $Post['ID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Post['Subject'];?></a>
 	</div>
 	<div class="card-content">
 		<div class="card-content-inner">

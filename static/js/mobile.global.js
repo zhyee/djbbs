@@ -195,7 +195,7 @@ function GetNotification() {
 		type: "post",
 		cache: false,
 		url: WebsitePath + '/json/get_notifications',
-		data: {accessToken: accessToken},
+		data: {token: accessToken},
 		dataType: 'json',
 		async: true,
 		success: function(Data) {
@@ -333,7 +333,7 @@ function Manage(ID, Type, Action, NeedToConfirm, TargetTag) {
 						ID: ID,
 						Type: Type,
 						Action: Action,
-						accessToken: accessToken
+						token: accessToken
 					},
 					dataType: "json",
 					type: "POST",
@@ -351,7 +351,7 @@ function Manage(ID, Type, Action, NeedToConfirm, TargetTag) {
 				ID: ID,
 				Type: Type,
 				Action: Action,
-				accessToken: accessToken
+				token: accessToken
 			},
 			dataType: "json",
 			type: "POST",
@@ -393,7 +393,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 					FormHash: FormHash,
 					TopicID: TopicID,
 					Content: Content,
-					accessToken: accessToken
+					token: accessToken
 				},
 				type: "post",
 				dataType: "json",
@@ -503,7 +503,7 @@ function UploadPicture(TextareaID) {
 		$.afui.toast("Uploading……");
 		var UploadData = new FormData();
 		UploadData.append('upfile', $('#upfile')[0].files[0]);
-		UploadData.append('accessToken', accessToken);
+		UploadData.append('token', accessToken);
 		$.ajax({  
 			url: WebsitePath + "/upload_controller?action=uploadimage",  
 			type: 'POST',  
