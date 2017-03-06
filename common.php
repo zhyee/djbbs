@@ -67,15 +67,6 @@ if ($UserAgent) {
 }
 $IsApp = $_SERVER['HTTP_HOST'] == $Config['AppDomainName'] ? true : false;
 
-if ($IsMobile)
-{
-    $TemplatePath = __DIR__ . '/view/mobile/template/';
-}
-else
-{
-    $TemplatePath = __DIR__ . '/view/default/template';
-}
-
 require(LibraryPath . "RedisClient.class.php");
 $redis = RedisClient::getInstance();
 $accessToken = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
@@ -84,7 +75,7 @@ $CurUserInfo = json_decode($redis->get($redisKey), TRUE);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 {
-    AlertMsg('请登录', '您还未登陆，无法访问');
+    die('请登录，您还未登陆，无法访问');
 }
 
 $CurUserID             = $CurUserInfo['uid'];  //当前用户ID
@@ -201,16 +192,12 @@ if ($IsApp) {
     //X-XSS-Protection may cause some issues in dashboard
 }
 
-
-
-
-$TempUserInfo = $DB->row("SELECT ID FROM " . PREFIX . "users WHERE ID = :UserID LIMIT 1", array(
-    "UserID" => $CurUserID
+$TempUserInfo = $DB->row("SELECT ID FROM " . PREFIX . "users WHERE ID = :ID LIMIT 1", array(
+    "ID" => $CurUserID
 ));
 
 if (!$TempUserInfo || !$TempUserInfo['ID'])
 {
-
     /*用户首次登录计入本地数据库*/
     $NewUserData     = array(
         'ID' => $CurUserID,
