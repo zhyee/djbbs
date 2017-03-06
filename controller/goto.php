@@ -14,7 +14,7 @@ if ($TopicID && $PostID) {
 	$AppendURL = ($OlderPosts >= $Config['PostsPerPage']) ? ('-' . ceil(($OlderPosts + 1) / $Config['PostsPerPage'])) : '';
 	header("HTTP/1.1 301 Moved Permanently");
 	header("Status: 301 Moved Permanently");
-	header("Location: " . $Config['WebsitePath'] . "/t/" . $TopicID . $AppendURL); //.'#Post'.$PostID
+	header("Location: " . $Config['WebsitePath'] . "/t/" . $TopicID . $AppendURL . '?token=' . $accessToken); //.'#Post'.$PostID
 } else {
 	AlertMsg('Bad Request', 'Bad Request', 400);
 }
