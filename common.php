@@ -75,10 +75,10 @@ if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
     die('请登录，您还未登陆，无法访问');
 }
 
-$CurUserID             = $CurUserInfo['uid'];  //当前用户ID
+$CurUserID              = $CurUserInfo['uid'];  //当前用户ID
 $CurUserName            = $CurUserInfo['nickName'];  //当前用户昵称
-$CurGroupID            = $CurUserInfo['merCode'];  //当前组织ID
-$CurUserRole           = 0;                     //当前角色ID
+$CurGroupID             = $CurUserInfo['merCode'];  //当前组织ID
+$CurUserRole            = 1;                        //当前用户角色，默认为1
 
 //Load configuration
 $Config = array();
@@ -189,7 +189,7 @@ if ($IsApp) {
     //X-XSS-Protection may cause some issues in dashboard
 }
 
-$TempUserInfo = $DB->row("SELECT ID FROM " . PREFIX . "users WHERE ID = :ID LIMIT 1", array(
+$TempUserInfo = $DB->row("SELECT ID,UserRoleID FROM " . PREFIX . "users WHERE ID = :ID LIMIT 1", array(
     "ID" => $CurUserID
 ));
 
@@ -259,6 +259,10 @@ if (!$TempUserInfo || !$TempUserInfo['ID'])
         "DaysUsers" => $Config["DaysUsers"] + 1
     );
     UpdateConfig($NewConfig, $CurGroupID);
+}
+else
+{
+    $CurUserRole           = $TempUserInfo['UserRoleID'];                //当前角色ID
 }
 
 
@@ -572,26 +576,7 @@ function GetAvatar($UserID, $UserName, $Size = 'middle')
     $FaceUrl = 'upload/avatar/' . $Size . '/' . $UserID . '.png';
     if (!file_exists(RootPath . $FaceUrl))
     {
-        $Char = mb_substr($UserName, 0, 1, "UTF-8");
-        /*昵称中第一个字为中文时默认生成头像*/
-        if (preg_match('/^[\x{4e00}-\x{9fa5}]$/u', $Char))
-        {
-            if (!class_exists('MDAvtars'))
-            {
-                require(LibraryPath . "MaterialDesign.Avatars.class.php");
-            }
-
-            $Avatar = new MDAvtars($Char, 256);
-            $Avatar->Save(RootPath . 'upload/avatar/large/' . $UserID . '.png', 256);
-            $Avatar->Save(RootPath . 'upload/avatar/middle/' . $UserID . '.png', 48);
-            $Avatar->Save(RootPath . 'upload/avatar/small/' . $UserID . '.png', 24);
-            $Avatar->Free();
-        }
-        else
-        {
-            $FaceUrl = 'upload/avatar/' . $Size . '/default.gif';
-        }
-
+        $FaceUrl = 'upload/avatar/' . $Size . '/default.gif';
     }
 	return '<img src="' . $Config['WebsitePath'] . '/' . $FaceUrl . '" alt="' . $UserName . '"/>';
 }

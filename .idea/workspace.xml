@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common.php" afterPath="$PROJECT_DIR$/common.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,121 +25,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/login.php">
+      <file leaf-file-name="common.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2660">
-              <caret line="140" column="151" selection-start-line="140" selection-start-column="151" selection-end-line="140" selection-end-column="151" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state relative-caret-position="532">
+              <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
               <folding>
-                <marker date="1484719456392" expanded="true" signature="485:725" ph="SELECT `ID`,... ${PREFIX}" />
-                <marker date="1484719456392" expanded="true" signature="895:1290" ph="SELECT `ID`,... ${PREFIX}" />
+                <element signature="e#6#328#0#PHP" expanded="true" />
+                <element signature="e#11871#13250#0#PHP" expanded="false" />
+                <element signature="e#14380#14662#0#PHP" expanded="false" />
+                <element signature="e#14670#15292#0#PHP" expanded="false" />
+                <element signature="e#15302#15391#0#PHP" expanded="false" />
+                <element signature="e#15407#15547#0#PHP" expanded="false" />
+                <element signature="e#15560#16417#0#PHP" expanded="false" />
+                <element signature="e#16428#17283#0#PHP" expanded="false" />
+                <element signature="e#17297#17507#0#PHP" expanded="false" />
+                <element signature="e#17520#17856#0#PHP" expanded="false" />
+                <element signature="e#17868#18574#0#PHP" expanded="false" />
+                <element signature="e#19187#19589#0#PHP" expanded="false" />
+                <element signature="e#19610#19813#0#PHP" expanded="false" />
+                <element signature="e#19839#19933#0#PHP" expanded="false" />
+                <element signature="e#19948#20061#0#PHP" expanded="false" />
+                <element signature="e#20077#20215#0#PHP" expanded="false" />
+                <element signature="e#20504#20656#0#PHP" expanded="false" />
+                <element signature="e#20673#21225#0#PHP" expanded="false" />
+                <element signature="e#21233#23016#0#PHP" expanded="false" />
+                <element signature="e#23024#23167#0#PHP" expanded="false" />
+                <element signature="e#23176#23483#0#PHP" expanded="false" />
+                <element signature="e#23492#24171#0#PHP" expanded="false" />
+                <element signature="e#24226#24552#0#PHP" expanded="false" />
+                <element signature="e#24568#24961#0#PHP" expanded="false" />
+                <element signature="e#24984#25563#0#PHP" expanded="false" />
+                <element signature="e#25575#26031#0#PHP" expanded="false" />
+                <element signature="e#26043#29940#0#PHP" expanded="false" />
+                <element signature="e#29954#32630#0#PHP" expanded="false" />
+                <element signature="e#32633#33454#0#PHP" expanded="false" />
+                <marker date="1488802637185" expanded="true" signature="2781:2861" ph="SELECT Confi... ${PREFIX}" />
+                <marker date="1488802637185" expanded="true" signature="5884:5978" ph="INSERT INTO ${PREFIX}config... " />
+                <marker date="1488802637185" expanded="true" signature="7798:7866" ph="SELECT ID,Us... ${PREFIX}" />
+                <marker date="1488802637185" expanded="true" signature="9038:10040" ph="INSERT INTO `${PREFIX}users`... " />
+                <marker date="1488802637185" expanded="true" signature="12535:12595" ph="SELECT ID FR... ${PREFIX}users" />
+                <marker date="1488802637185" expanded="true" signature="12734:12877" ph="INSERT INTO `${PREFIX}notifications`... " />
+                <marker date="1488802637185" expanded="true" signature="20947:20955" ph="‹" />
+                <marker date="1488802637185" expanded="true" signature="20955:20963" ph="‹" />
+                <marker date="1488802637185" expanded="true" signature="21195:21203" ph="›" />
+                <marker date="1488802637185" expanded="true" signature="21203:21211" ph="›" />
+                <marker date="1488802637185" expanded="true" signature="21661:21669" ph="‹" />
+                <marker date="1488802637185" expanded="true" signature="21669:21677" ph="‹" />
+                <marker date="1488802637185" expanded="true" signature="22707:22715" ph="›" />
+                <marker date="1488802637185" expanded="true" signature="22715:22723" ph="›" />
+                <marker date="1488802637185" expanded="true" signature="26235:26341" ph="SELECT ID,Us... ${PREFIX}" />
+                <marker date="1488802637185" expanded="true" signature="27903:28913" ph="INSERT INTO `${PREFIX}users`... " />
+                <marker date="1488802637185" expanded="true" signature="29736:29788" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1488802637185" expanded="true" signature="33826:34211" ph="INSERT INTO `${PREFIX}statistics`... " />
+                <marker date="1488802637185" expanded="true" signature="33982:34211" ph="SELECT :Days... dual" />
+                <marker date="1488802637185" expanded="true" signature="34133:34207" ph="SELECT * FRO... ${PREFIX}statistics" />
+                <marker date="1488802637185" expanded="true" signature="34728:34870" ph="SELECT ID,Na... ${PREFIX}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/mobile/template/home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
-              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/user.php">
+        <entry file="file://$PROJECT_DIR$/view/mobile/template/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding>
-                <marker date="1488781284434" expanded="true" signature="195:241" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1488781284434" expanded="true" signature="399:496" ph="SELECT ID FR... ${PREFIX}" />
-                <marker date="1488781284434" expanded="true" signature="615:717" ph="SELECT * FRO... ${PREFIX}" />
-              </folding>
+            <state relative-caret-position="475">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5788">
-              <caret line="591" column="65" selection-start-line="591" selection-start-column="65" selection-end-line="591" selection-end-column="65" />
-              <folding>
-                <element signature="e#6#328#0#PHP" expanded="true" />
-                <element signature="e#11758#13137#0#PHP" expanded="false" />
-                <element signature="e#14267#14549#0#PHP" expanded="false" />
-                <element signature="e#14557#15179#0#PHP" expanded="false" />
-                <element signature="e#15189#15278#0#PHP" expanded="false" />
-                <element signature="e#15294#15434#0#PHP" expanded="false" />
-                <element signature="e#15447#16304#0#PHP" expanded="false" />
-                <element signature="e#16315#17170#0#PHP" expanded="false" />
-                <element signature="e#17184#17394#0#PHP" expanded="false" />
-                <element signature="e#17407#17743#0#PHP" expanded="false" />
-                <element signature="e#17755#18461#0#PHP" expanded="false" />
-                <element signature="e#19755#20157#0#PHP" expanded="false" />
-                <element signature="e#20178#20381#0#PHP" expanded="false" />
-                <element signature="e#20407#20501#0#PHP" expanded="false" />
-                <element signature="e#20516#20629#0#PHP" expanded="false" />
-                <element signature="e#20645#20783#0#PHP" expanded="false" />
-                <element signature="e#21072#21224#0#PHP" expanded="false" />
-                <element signature="e#21241#21793#0#PHP" expanded="false" />
-                <element signature="e#21801#23584#0#PHP" expanded="false" />
-                <element signature="e#23592#23735#0#PHP" expanded="false" />
-                <element signature="e#23744#24051#0#PHP" expanded="false" />
-                <element signature="e#24060#24739#0#PHP" expanded="false" />
-                <element signature="e#24794#25120#0#PHP" expanded="false" />
-                <element signature="e#25136#25529#0#PHP" expanded="false" />
-                <element signature="e#25552#26131#0#PHP" expanded="false" />
-                <element signature="e#26143#26599#0#PHP" expanded="false" />
-                <element signature="e#26611#30508#0#PHP" expanded="false" />
-                <element signature="e#30522#33198#0#PHP" expanded="false" />
-                <element signature="e#33201#34022#0#PHP" expanded="false" />
-                <marker date="1488800645054" expanded="true" signature="2770:2850" ph="SELECT Confi... ${PREFIX}" />
-                <marker date="1488800645054" expanded="true" signature="5873:5967" ph="INSERT INTO ${PREFIX}config... " />
-                <marker date="1488800645054" expanded="true" signature="7787:7844" ph="SELECT ID FR... ${PREFIX}" />
-                <marker date="1488800645054" expanded="true" signature="9016:10018" ph="INSERT INTO `${PREFIX}users`... " />
-                <marker date="1488800645054" expanded="true" signature="12422:12482" ph="SELECT ID FR... ${PREFIX}users" />
-                <marker date="1488800645054" expanded="true" signature="12621:12764" ph="INSERT INTO `${PREFIX}notifications`... " />
-                <marker date="1488800645054" expanded="true" signature="21515:21523" ph="‹" />
-                <marker date="1488800645054" expanded="true" signature="21523:21531" ph="‹" />
-                <marker date="1488800645054" expanded="true" signature="21763:21771" ph="›" />
-                <marker date="1488800645054" expanded="true" signature="21771:21779" ph="›" />
-                <marker date="1488800645054" expanded="true" signature="22229:22237" ph="‹" />
-                <marker date="1488800645054" expanded="true" signature="22237:22245" ph="‹" />
-                <marker date="1488800645054" expanded="true" signature="23275:23283" ph="›" />
-                <marker date="1488800645054" expanded="true" signature="23283:23291" ph="›" />
-                <marker date="1488800645054" expanded="true" signature="26803:26909" ph="SELECT ID,Us... ${PREFIX}" />
-                <marker date="1488800645054" expanded="true" signature="28471:29481" ph="INSERT INTO `${PREFIX}users`... " />
-                <marker date="1488800645054" expanded="true" signature="30304:30356" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1488800645054" expanded="true" signature="34394:34779" ph="INSERT INTO `${PREFIX}statistics`... " />
-                <marker date="1488800645054" expanded="true" signature="34550:34779" ph="SELECT :Days... dual" />
-                <marker date="1488800645054" expanded="true" signature="34701:34775" ph="SELECT * FRO... ${PREFIX}statistics" />
-                <marker date="1488800645054" expanded="true" signature="35296:35438" ph="SELECT ID,Na... ${PREFIX}" />
-              </folding>
-            </state>
+      <file leaf-file-name="default.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/avatar/large/default.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.gif" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/avatar/large/default.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/avatar/small/default.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/avatar/middle/default.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -227,8 +208,8 @@
         <option value="$PROJECT_DIR$/view/mobile/template/sider.php" />
         <option value="$PROJECT_DIR$/library/MaterialDesign.Avatars.class.php" />
         <option value="$PROJECT_DIR$/view/mobile/template/topic.php" />
-        <option value="$PROJECT_DIR$/common.php" />
         <option value="$PROJECT_DIR$/404.php" />
+        <option value="$PROJECT_DIR$/common.php" />
       </list>
     </option>
   </component>
@@ -482,9 +463,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\djbbs\upload\avatar\large" />
-      <recent name="E:\project\djbbs\upload\avatar\middle" />
       <recent name="E:\project\djbbs\upload\avatar\small" />
+      <recent name="E:\project\djbbs\upload\avatar\middle" />
+      <recent name="E:\project\djbbs\upload\avatar\large" />
       <recent name="E:\project\djbbs" />
       <recent name="E:\project\Carbon-Forum\static\img" />
     </key>
@@ -574,18 +555,18 @@
       <workItem from="1488617120384" duration="10343000" />
       <workItem from="1488761389416" duration="209000" />
       <workItem from="1488761936366" duration="26819000" />
-      <workItem from="1488800667833" duration="244000" />
+      <workItem from="1488800667833" duration="1970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189711000" />
+    <option name="totallyTimeSpent" value="191437000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18615879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18615879" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -809,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/RedisClient.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -890,25 +864,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/upload/avatar/large/1.png" />
-    <entry file="file://$PROJECT_DIR$/upload/avatar/large/default.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/avatar/middle/default.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/avatar/small/default.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1025,9 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/avatar/small/default.gif" />
-    <entry file="file://$PROJECT_DIR$/upload/avatar/middle/default.gif" />
-    <entry file="file://$PROJECT_DIR$/upload/avatar/large/default.gif" />
     <entry file="file://$PROJECT_DIR$/view/mobile/template/topic.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
@@ -1044,61 +1001,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/upload/avatar/middle/default.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/avatar/middle/default.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/avatar/small/default.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/avatar/small/default.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/avatar/large/default.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/avatar/large/default.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5788">
-          <caret line="591" column="65" selection-start-line="591" selection-start-column="65" selection-end-line="591" selection-end-column="65" />
+        <state relative-caret-position="532">
+          <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
           <folding>
             <element signature="e#6#328#0#PHP" expanded="true" />
-            <element signature="e#11758#13137#0#PHP" expanded="false" />
-            <element signature="e#14267#14549#0#PHP" expanded="false" />
-            <element signature="e#14557#15179#0#PHP" expanded="false" />
-            <element signature="e#15189#15278#0#PHP" expanded="false" />
-            <element signature="e#15294#15434#0#PHP" expanded="false" />
-            <element signature="e#15447#16304#0#PHP" expanded="false" />
-            <element signature="e#16315#17170#0#PHP" expanded="false" />
-            <element signature="e#17184#17394#0#PHP" expanded="false" />
-            <element signature="e#17407#17743#0#PHP" expanded="false" />
-            <element signature="e#17755#18461#0#PHP" expanded="false" />
-            <element signature="e#19755#20157#0#PHP" expanded="false" />
-            <element signature="e#20178#20381#0#PHP" expanded="false" />
-            <element signature="e#20407#20501#0#PHP" expanded="false" />
-            <element signature="e#20516#20629#0#PHP" expanded="false" />
-            <element signature="e#20645#20783#0#PHP" expanded="false" />
-            <element signature="e#21072#21224#0#PHP" expanded="false" />
-            <element signature="e#21241#21793#0#PHP" expanded="false" />
-            <element signature="e#21801#23584#0#PHP" expanded="false" />
-            <element signature="e#23592#23735#0#PHP" expanded="false" />
-            <element signature="e#23744#24051#0#PHP" expanded="false" />
-            <element signature="e#24060#24739#0#PHP" expanded="false" />
-            <element signature="e#24794#25120#0#PHP" expanded="false" />
-            <element signature="e#25136#25529#0#PHP" expanded="false" />
-            <element signature="e#25552#26131#0#PHP" expanded="false" />
-            <element signature="e#26143#26599#0#PHP" expanded="false" />
-            <element signature="e#26611#30508#0#PHP" expanded="false" />
-            <element signature="e#30522#33198#0#PHP" expanded="false" />
-            <element signature="e#33201#34022#0#PHP" expanded="false" />
-            <marker date="1488800645054" expanded="true" signature="2770:2850" ph="SELECT Confi... ${PREFIX}" />
-            <marker date="1488800645054" expanded="true" signature="5873:5967" ph="INSERT INTO ${PREFIX}config... " />
-            <marker date="1488800645054" expanded="true" signature="7787:7844" ph="SELECT ID FR... ${PREFIX}" />
-            <marker date="1488800645054" expanded="true" signature="9016:10018" ph="INSERT INTO `${PREFIX}users`... " />
-            <marker date="1488800645054" expanded="true" signature="12422:12482" ph="SELECT ID FR... ${PREFIX}users" />
-            <marker date="1488800645054" expanded="true" signature="12621:12764" ph="INSERT INTO `${PREFIX}notifications`... " />
-            <marker date="1488800645054" expanded="true" signature="21515:21523" ph="‹" />
-            <marker date="1488800645054" expanded="true" signature="21523:21531" ph="‹" />
-            <marker date="1488800645054" expanded="true" signature="21763:21771" ph="›" />
-            <marker date="1488800645054" expanded="true" signature="21771:21779" ph="›" />
-            <marker date="1488800645054" expanded="true" signature="22229:22237" ph="‹" />
-            <marker date="1488800645054" expanded="true" signature="22237:22245" ph="‹" />
-            <marker date="1488800645054" expanded="true" signature="23275:23283" ph="›" />
-            <marker date="1488800645054" expanded="true" signature="23283:23291" ph="›" />
-            <marker date="1488800645054" expanded="true" signature="26803:26909" ph="SELECT ID,Us... ${PREFIX}" />
-            <marker date="1488800645054" expanded="true" signature="28471:29481" ph="INSERT INTO `${PREFIX}users`... " />
-            <marker date="1488800645054" expanded="true" signature="30304:30356" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1488800645054" expanded="true" signature="34394:34779" ph="INSERT INTO `${PREFIX}statistics`... " />
-            <marker date="1488800645054" expanded="true" signature="34550:34779" ph="SELECT :Days... dual" />
-            <marker date="1488800645054" expanded="true" signature="34701:34775" ph="SELECT * FRO... ${PREFIX}statistics" />
-            <marker date="1488800645054" expanded="true" signature="35296:35438" ph="SELECT ID,Na... ${PREFIX}" />
+            <element signature="e#11871#13250#0#PHP" expanded="false" />
+            <element signature="e#14380#14662#0#PHP" expanded="false" />
+            <element signature="e#14670#15292#0#PHP" expanded="false" />
+            <element signature="e#15302#15391#0#PHP" expanded="false" />
+            <element signature="e#15407#15547#0#PHP" expanded="false" />
+            <element signature="e#15560#16417#0#PHP" expanded="false" />
+            <element signature="e#16428#17283#0#PHP" expanded="false" />
+            <element signature="e#17297#17507#0#PHP" expanded="false" />
+            <element signature="e#17520#17856#0#PHP" expanded="false" />
+            <element signature="e#17868#18574#0#PHP" expanded="false" />
+            <element signature="e#19187#19589#0#PHP" expanded="false" />
+            <element signature="e#19610#19813#0#PHP" expanded="false" />
+            <element signature="e#19839#19933#0#PHP" expanded="false" />
+            <element signature="e#19948#20061#0#PHP" expanded="false" />
+            <element signature="e#20077#20215#0#PHP" expanded="false" />
+            <element signature="e#20504#20656#0#PHP" expanded="false" />
+            <element signature="e#20673#21225#0#PHP" expanded="false" />
+            <element signature="e#21233#23016#0#PHP" expanded="false" />
+            <element signature="e#23024#23167#0#PHP" expanded="false" />
+            <element signature="e#23176#23483#0#PHP" expanded="false" />
+            <element signature="e#23492#24171#0#PHP" expanded="false" />
+            <element signature="e#24226#24552#0#PHP" expanded="false" />
+            <element signature="e#24568#24961#0#PHP" expanded="false" />
+            <element signature="e#24984#25563#0#PHP" expanded="false" />
+            <element signature="e#25575#26031#0#PHP" expanded="false" />
+            <element signature="e#26043#29940#0#PHP" expanded="false" />
+            <element signature="e#29954#32630#0#PHP" expanded="false" />
+            <element signature="e#32633#33454#0#PHP" expanded="false" />
+            <marker date="1488802637185" expanded="true" signature="2781:2861" ph="SELECT Confi... ${PREFIX}" />
+            <marker date="1488802637185" expanded="true" signature="5884:5978" ph="INSERT INTO ${PREFIX}config... " />
+            <marker date="1488802637185" expanded="true" signature="7798:7866" ph="SELECT ID,Us... ${PREFIX}" />
+            <marker date="1488802637185" expanded="true" signature="9038:10040" ph="INSERT INTO `${PREFIX}users`... " />
+            <marker date="1488802637185" expanded="true" signature="12535:12595" ph="SELECT ID FR... ${PREFIX}users" />
+            <marker date="1488802637185" expanded="true" signature="12734:12877" ph="INSERT INTO `${PREFIX}notifications`... " />
+            <marker date="1488802637185" expanded="true" signature="20947:20955" ph="‹" />
+            <marker date="1488802637185" expanded="true" signature="20955:20963" ph="‹" />
+            <marker date="1488802637185" expanded="true" signature="21195:21203" ph="›" />
+            <marker date="1488802637185" expanded="true" signature="21203:21211" ph="›" />
+            <marker date="1488802637185" expanded="true" signature="21661:21669" ph="‹" />
+            <marker date="1488802637185" expanded="true" signature="21669:21677" ph="‹" />
+            <marker date="1488802637185" expanded="true" signature="22707:22715" ph="›" />
+            <marker date="1488802637185" expanded="true" signature="22715:22723" ph="›" />
+            <marker date="1488802637185" expanded="true" signature="26235:26341" ph="SELECT ID,Us... ${PREFIX}" />
+            <marker date="1488802637185" expanded="true" signature="27903:28913" ph="INSERT INTO `${PREFIX}users`... " />
+            <marker date="1488802637185" expanded="true" signature="29736:29788" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1488802637185" expanded="true" signature="33826:34211" ph="INSERT INTO `${PREFIX}statistics`... " />
+            <marker date="1488802637185" expanded="true" signature="33982:34211" ph="SELECT :Days... dual" />
+            <marker date="1488802637185" expanded="true" signature="34133:34207" ph="SELECT * FRO... ${PREFIX}statistics" />
+            <marker date="1488802637185" expanded="true" signature="34728:34870" ph="SELECT ID,Na... ${PREFIX}" />
           </folding>
         </state>
       </provider>
