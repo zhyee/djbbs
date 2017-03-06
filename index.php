@@ -66,7 +66,7 @@ $Routes['POST']['/t/(?<id>[0-9]+)(-(?<page>[0-9]*))?']                          
 $Routes['GET']['/tag/(?<name>.*?)(/page/(?<page>[0-9]*))?']                                = 'tag';
 $Routes['GET']['/tags/following(/page/(?<page>[0-9]*))?']                                  = 'favorite_tags';
 $Routes['GET']['/tags(/page/(?<page>[0-9]*))?']                                            = 'tags';
-$Routes['GET']['/u/(?<username>.*?)']                                                      = 'user';
+$Routes['GET']['/u/(?<userid>.*?)']                                                      = 'user';
 $Routes['GET']['/users/following(/page/(?<page>[0-9]*))?']                                 = 'favorite_users';
 $Routes['GET']['/upload_controller']                                                       = 'upload_controller';
 $Routes['POST']['/upload_controller']                                                      = 'upload_controller';

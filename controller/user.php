@@ -1,19 +1,15 @@
 <?php
 require(LanguagePath . 'user.php');
-$UserName = Request('Get', 'username');
-$UserInfo = array();
-if(preg_match('/^\d+$/', $UserName)) {
-	$UserInfo = $DB->row('SELECT * FROM ' . PREFIX . 'users WHERE ID=:ID', array(
-		'ID' => $UserName
-	));
-	if (!empty($UserInfo)) {
-		Redirect('u/' . urlencode($UserInfo['UserName']));
-	}
+$UserID = Request('Get', 'userid');
+
+if(!preg_match('/^\d+$/', $UserName)) {
+    AlertMsg('404 Not Found', '404 Not Found', 404);
 }
 
-$UserInfo = $DB->row('SELECT * FROM ' . PREFIX . 'users WHERE UserName=:UserName', array(
-	'UserName' => $UserName
+$UserInfo = $DB->row('SELECT * FROM ' . PREFIX . 'users WHERE ID=:ID', array(
+    'ID' => $UserID
 ));
+
 if (!$UserInfo)
 	AlertMsg('404 Not Found', '404 Not Found', 404);
 
