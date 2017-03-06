@@ -66,33 +66,14 @@ if ($UserAgent) {
     $IsMobile = false;
 }
 $IsApp = $_SERVER['HTTP_HOST'] == $Config['AppDomainName'] ? true : false;
-/* Set current template
- * default: PC Version
- * mobile: Mobile Version
- * api: API
- */
-if ($IsApp) {
-    $TemplatePath = __DIR__ . '/view/api/template/';
-    $Style        = 'API';
-    header('Access-Control-Allow-Origin: *');
-    header('Content-Type: application/json');
-    //API鉴权
-    $SignatureKey   = Request("Request", "SKey");
-    $SignatureValue = Request("Request", "SValue");
-    $SignatureTime  = intval(Request("Request", "STime"));
-    if (!$SignatureTime || !$SignatureKey || !$SignatureValue || empty($APISignature[$SignatureKey]) || abs($SignatureTime - $TimeStamp) > 600 || !HashEquals($SignatureValue, md5($SignatureKey . $APISignature[$SignatureKey] . $SignatureTime))) {
-        AlertMsg('403', 'Forbidden', 403);
-    }
-} elseif ($_SERVER['HTTP_HOST'] == $Config['MobileDomainName'] || (!$Config['MobileDomainName'] && $IsMobile)) {
+
+if ($IsMobile)
+{
     $TemplatePath = __DIR__ . '/view/mobile/template/';
-    $Style        = 'Mobile';
-    header('X-Frame-Options: SAMEORIGIN');
-} else {
-    $TemplatePath = __DIR__ . '/view/default/template/';
-    $Style        = 'Default';
-    header('X-Frame-Options: SAMEORIGIN');
-    //header('X-XSS-Protection: 1; mode=block');
-    //X-XSS-Protection may cause some issues in dashboard
+}
+else
+{
+    $TemplatePath = __DIR__ . '/view/default/template';
 }
 
 require(LibraryPath . "RedisClient.class.php");
@@ -103,8 +84,7 @@ $CurUserInfo = json_decode($redis->get($redisKey), TRUE);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 {
-//    AlertMsg('请登录', '您还未登陆，无法访问');
-    die('您还未登陆，无法访问');
+    AlertMsg('请登录', '您还未登陆，无法访问');
 }
 
 $CurUserID             = $CurUserInfo['uid'];  //当前用户ID
@@ -144,11 +124,11 @@ if (!$Config) {
             'MaxTagsNum'                    => 5,
             'MaxTitleChars'                 => 255,
             'MobileDomainName'              => '',
-            'NumFiles'                      => 2,
-            'NumPosts'                      => 38,
-            'NumTags'                       => 9,
-            'NumTopics'                     => 9,
-            'NumUsers'                      => 4,
+            'NumFiles'                      => 0,
+            'NumPosts'                      => 0,
+            'NumTags'                       => 0,
+            'NumTopics'                     => 0,
+            'NumUsers'                      => 0,
             'PageBottomContent'             => '',
             'PageHeadContent'               => '',
             'PageSiderContent'              => '为了光荣的党建事业！',
@@ -182,20 +162,53 @@ if (!$Config) {
 
 
 	// Update
-	if ($Config['Version'] != CARBON_FORUM_VERSION) {
+/*	if ($Config['Version'] != CARBON_FORUM_VERSION) {
 		header("Location: update/"); // Bring user to installation
 		exit(); //No errors
-	}
+	}*/
 	if ($MCache) {
 		$MCache->set(MemCachePrefix . 'Config', $Config, 86400);
 	}
 }
 
-$TempUserInfo = $DB->row("SELECT UserID FROM " . PREFIX . "users WHERE ID = :UserID LIMIT 1", array(
+
+/* Set current template
+ * default: PC Version
+ * mobile: Mobile Version
+ * api: API
+ */
+if ($IsApp) {
+    $TemplatePath = __DIR__ . '/view/api/template/';
+    $Style        = 'API';
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type: application/json');
+    //API鉴权
+    $SignatureKey   = Request("Request", "SKey");
+    $SignatureValue = Request("Request", "SValue");
+    $SignatureTime  = intval(Request("Request", "STime"));
+    if (!$SignatureTime || !$SignatureKey || !$SignatureValue || empty($APISignature[$SignatureKey]) || abs($SignatureTime - $TimeStamp) > 600 || !HashEquals($SignatureValue, md5($SignatureKey . $APISignature[$SignatureKey] . $SignatureTime))) {
+        AlertMsg('403', 'Forbidden', 403);
+    }
+} elseif ($_SERVER['HTTP_HOST'] == $Config['MobileDomainName'] || (!$Config['MobileDomainName'] && $IsMobile)) {
+    $TemplatePath = __DIR__ . '/view/mobile/template/';
+    $Style        = 'Mobile';
+    header('X-Frame-Options: SAMEORIGIN');
+} else {
+    $TemplatePath = __DIR__ . '/view/default/template/';
+    $Style        = 'Default';
+    header('X-Frame-Options: SAMEORIGIN');
+    //header('X-XSS-Protection: 1; mode=block');
+    //X-XSS-Protection may cause some issues in dashboard
+}
+
+
+
+
+$TempUserInfo = $DB->row("SELECT ID FROM " . PREFIX . "users WHERE ID = :UserID LIMIT 1", array(
     "UserID" => $CurUserID
 ));
 
-if (!$TempUserInfo || !$TempUserInfo['UserID'])
+if (!$TempUserInfo || !$TempUserInfo['ID'])
 {
 
     /*用户首次登录计入本地数据库*/
