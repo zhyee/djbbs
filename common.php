@@ -123,17 +123,58 @@ if (!$Config) {
 
     if (!$ConfigArrays)
     {
+        $Config = array(
+            'AppDomainName'                 => 'dj.tv189.com',
+            'CacheAnnouncements'            => '',
+            'CacheHotTags' => '[{"ID":"9","Name":"\u7406\u8bba","Icon":"0","TotalPosts":"4","Followers":"1"},{"ID":"6","Name":"\u8d3a\u8bcd","Icon":"0","TotalPosts":"3","Followers":"0"},{"ID":"12","Name":"\u4e2d\u56fd","Icon":"0","TotalPosts":"2","Followers":"1"},{"ID":"15","Name":"\u5566\u5566","Icon":"0","TotalPosts":"1","Followers":"0"},{"ID":"13","Name":"\u8fbe\u6c83\u65af","Icon":"0","TotalPosts":"1","Followers":"1"},{"ID":"11","Name":"\u6d77\u5916","Icon":"0","TotalPosts":"1","Followers":"1"},{"ID":"10","Name":"\u4e00\u5e26\u4e00\u8def","Icon":"0","TotalPosts":"1","Followers":"0"},{"ID":"8","Name":"\u5b66\u4e60","Icon":"0","TotalPosts":"1","Followers":"2"},{"ID":"7","Name":"\u6587\u5316\u4f20\u7edf","Icon":"0","TotalPosts":"1","Followers":"0"}]',
+            'CacheHotTopics'                => '',
+            'CacheLinks'                    => '',
+            'CacheOauth'                    => '',
+            'CacheRolesDict'                => '',
+            'CacheTime'                     => '',
+            'CookiePrefix'                  => 'DJBBS_',
+            'DaysDate'                      => date('Y-m-d'),
+            'DaysPosts'                     => 0,
+            'DaysTopics'                    => 0,
+            'DaysUsers'                     => 0,
+            'MainDomainName'                => '',
+            'MaxPostChars'                  => 60000,
+            'MaxTagChars'                   => 128,
+            'MaxTagsNum'                    => 5,
+            'MaxTitleChars'                 => 255,
+            'MobileDomainName'              => '',
+            'NumFiles'                      => 2,
+            'NumPosts'                      => 38,
+            'NumTags'                       => 9,
+            'NumTopics'                     => 9,
+            'NumUsers'                      => 4,
+            'PageBottomContent'             => '',
+            'PageHeadContent'               => '',
+            'PageSiderContent'              => '为了光荣的党建事业！',
+            'PostsPerPage'                  => 25,
+            'SiteDesc'                      => '一个精简、高速的基于话题的新式论坛',
+            'SiteName'                      => '互动',
+            'TopicsPerPage'                 => 20,
+            'Version'                       => '5.8.0',
+            'PushConnectionTimeoutPeriod'   => 22,
+            'SMTPHost'                      => 'smtp1.example.com',
+            'SMTPPort'                      => 587,
+            'SMTPAuth'                      => 'true',
+            'SMTPUsername'                  => 'user@example.com',
+            'SMTPPassword'                  => 'secret',
+            'WebsitePath'                   => '',
+            'LoadJqueryUrl'                 => '/static/js/jquery.js'
+        );
 
     }
     else
     {
-        print_r($ConfigArrays);
-        die;
+        foreach ($ConfigArrays as $ConfigArray) {
+            $Config[$ConfigArray['ConfigName']] = $ConfigArray['ConfigValue'];
+        }
     }
 
-	foreach ($ConfigArrays as $ConfigArray) {
-		$Config[$ConfigArray['ConfigName']] = $ConfigArray['ConfigValue'];
-	}
+
 	// Update
 	if ($Config['Version'] != CARBON_FORUM_VERSION) {
 		header("Location: update/"); // Bring user to installation

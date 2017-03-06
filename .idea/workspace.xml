@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common.php" afterPath="$PROJECT_DIR$/common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myadmin/libraries/common.inc.php" afterPath="$PROJECT_DIR$/myadmin/libraries/common.inc.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,31 +74,41 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+            <state relative-caret-position="523">
+              <caret line="155" column="52" selection-start-line="155" selection-start-column="52" selection-end-line="155" selection-end-column="52" />
               <folding>
                 <element signature="e#6#328#0#PHP" expanded="true" />
-                <marker date="1488768792850" expanded="true" signature="4147:4227" ph="SELECT Confi... ${PREFIX}" />
-                <marker date="1488768792850" expanded="true" signature="4738:4803" ph="SELECT UserI... ${PREFIX}" />
-                <marker date="1488768792850" expanded="true" signature="5984:6986" ph="INSERT INTO `${PREFIX}users`... " />
-                <marker date="1488768792850" expanded="true" signature="9021:9081" ph="SELECT ID FR... ${PREFIX}users" />
-                <marker date="1488768792850" expanded="true" signature="9220:9363" ph="INSERT INTO `${PREFIX}notifications`... " />
-                <marker date="1488768792850" expanded="true" signature="18029:18037" ph="‹" />
-                <marker date="1488768792850" expanded="true" signature="18037:18045" ph="‹" />
-                <marker date="1488768792850" expanded="true" signature="18277:18285" ph="›" />
-                <marker date="1488768792850" expanded="true" signature="18285:18293" ph="›" />
-                <marker date="1488768792850" expanded="true" signature="18743:18751" ph="‹" />
-                <marker date="1488768792850" expanded="true" signature="18751:18759" ph="‹" />
-                <marker date="1488768792850" expanded="true" signature="19789:19797" ph="›" />
-                <marker date="1488768792850" expanded="true" signature="19797:19805" ph="›" />
-                <marker date="1488768792850" expanded="true" signature="23317:23423" ph="SELECT ID,Us... ${PREFIX}" />
-                <marker date="1488768792850" expanded="true" signature="24985:25995" ph="INSERT INTO `${PREFIX}users`... " />
-                <marker date="1488768792850" expanded="true" signature="26818:26870" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1488768792850" expanded="true" signature="30908:31293" ph="INSERT INTO `${PREFIX}statistics`... " />
-                <marker date="1488768792850" expanded="true" signature="31064:31293" ph="SELECT :Days... dual" />
-                <marker date="1488768792850" expanded="true" signature="31215:31289" ph="SELECT * FRO... ${PREFIX}statistics" />
-                <marker date="1488768792850" expanded="true" signature="31810:31952" ph="SELECT ID,Na... ${PREFIX}" />
+                <marker date="1488770992704" expanded="true" signature="4147:4227" ph="SELECT Confi... ${PREFIX}" />
+                <marker date="1488770992704" expanded="true" signature="7629:7694" ph="SELECT UserI... ${PREFIX}" />
+                <marker date="1488770992704" expanded="true" signature="8875:9877" ph="INSERT INTO `${PREFIX}users`... " />
+                <marker date="1488770992704" expanded="true" signature="11912:11972" ph="SELECT ID FR... ${PREFIX}users" />
+                <marker date="1488770992704" expanded="true" signature="12111:12254" ph="INSERT INTO `${PREFIX}notifications`... " />
+                <marker date="1488770992704" expanded="true" signature="20920:20928" ph="‹" />
+                <marker date="1488770992704" expanded="true" signature="20928:20936" ph="‹" />
+                <marker date="1488770992704" expanded="true" signature="21168:21176" ph="›" />
+                <marker date="1488770992704" expanded="true" signature="21176:21184" ph="›" />
+                <marker date="1488770992704" expanded="true" signature="21634:21642" ph="‹" />
+                <marker date="1488770992704" expanded="true" signature="21642:21650" ph="‹" />
+                <marker date="1488770992704" expanded="true" signature="22680:22688" ph="›" />
+                <marker date="1488770992704" expanded="true" signature="22688:22696" ph="›" />
+                <marker date="1488770992704" expanded="true" signature="26208:26314" ph="SELECT ID,Us... ${PREFIX}" />
+                <marker date="1488770992704" expanded="true" signature="27876:28886" ph="INSERT INTO `${PREFIX}users`... " />
+                <marker date="1488770992704" expanded="true" signature="29709:29761" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1488770992704" expanded="true" signature="33799:34184" ph="INSERT INTO `${PREFIX}statistics`... " />
+                <marker date="1488770992704" expanded="true" signature="33955:34184" ph="SELECT :Days... dual" />
+                <marker date="1488770992704" expanded="true" signature="34106:34180" ph="SELECT * FRO... ${PREFIX}statistics" />
+                <marker date="1488770992704" expanded="true" signature="34701:34843" ph="SELECT ID,Na... ${PREFIX}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myadmin/libraries/common.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="603">
+              <caret line="486" column="24" selection-start-line="486" selection-start-column="24" selection-end-line="486" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,6 +180,7 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/view/default/template/layout.php" />
         <option value="$PROJECT_DIR$/view/default/template/home.php" />
+        <option value="$PROJECT_DIR$/myadmin/libraries/common.inc.php" />
         <option value="$PROJECT_DIR$/common.php" />
       </list>
     </option>
@@ -226,6 +239,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myadmin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myadmin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,12 +375,12 @@
       <workItem from="1488598349314" duration="11429000" />
       <workItem from="1488617120384" duration="10343000" />
       <workItem from="1488761389416" duration="209000" />
-      <workItem from="1488761936366" duration="4807000" />
+      <workItem from="1488761936366" duration="7076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167455000" />
+    <option name="totallyTimeSpent" value="169724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -378,13 +423,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/default/template/topic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2147">
-          <caret line="113" column="1" selection-start-line="113" selection-start-column="1" selection-end-line="113" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/jquery.async.uploader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -828,32 +866,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myadmin/libraries/common.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="486" column="24" selection-start-line="486" selection-start-column="24" selection-end-line="486" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+        <state relative-caret-position="523">
+          <caret line="155" column="52" selection-start-line="155" selection-start-column="52" selection-end-line="155" selection-end-column="52" />
           <folding>
             <element signature="e#6#328#0#PHP" expanded="true" />
-            <marker date="1488768792850" expanded="true" signature="4147:4227" ph="SELECT Confi... ${PREFIX}" />
-            <marker date="1488768792850" expanded="true" signature="4738:4803" ph="SELECT UserI... ${PREFIX}" />
-            <marker date="1488768792850" expanded="true" signature="5984:6986" ph="INSERT INTO `${PREFIX}users`... " />
-            <marker date="1488768792850" expanded="true" signature="9021:9081" ph="SELECT ID FR... ${PREFIX}users" />
-            <marker date="1488768792850" expanded="true" signature="9220:9363" ph="INSERT INTO `${PREFIX}notifications`... " />
-            <marker date="1488768792850" expanded="true" signature="18029:18037" ph="‹" />
-            <marker date="1488768792850" expanded="true" signature="18037:18045" ph="‹" />
-            <marker date="1488768792850" expanded="true" signature="18277:18285" ph="›" />
-            <marker date="1488768792850" expanded="true" signature="18285:18293" ph="›" />
-            <marker date="1488768792850" expanded="true" signature="18743:18751" ph="‹" />
-            <marker date="1488768792850" expanded="true" signature="18751:18759" ph="‹" />
-            <marker date="1488768792850" expanded="true" signature="19789:19797" ph="›" />
-            <marker date="1488768792850" expanded="true" signature="19797:19805" ph="›" />
-            <marker date="1488768792850" expanded="true" signature="23317:23423" ph="SELECT ID,Us... ${PREFIX}" />
-            <marker date="1488768792850" expanded="true" signature="24985:25995" ph="INSERT INTO `${PREFIX}users`... " />
-            <marker date="1488768792850" expanded="true" signature="26818:26870" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1488768792850" expanded="true" signature="30908:31293" ph="INSERT INTO `${PREFIX}statistics`... " />
-            <marker date="1488768792850" expanded="true" signature="31064:31293" ph="SELECT :Days... dual" />
-            <marker date="1488768792850" expanded="true" signature="31215:31289" ph="SELECT * FRO... ${PREFIX}statistics" />
-            <marker date="1488768792850" expanded="true" signature="31810:31952" ph="SELECT ID,Na... ${PREFIX}" />
+            <marker date="1488770992704" expanded="true" signature="4147:4227" ph="SELECT Confi... ${PREFIX}" />
+            <marker date="1488770992704" expanded="true" signature="7629:7694" ph="SELECT UserI... ${PREFIX}" />
+            <marker date="1488770992704" expanded="true" signature="8875:9877" ph="INSERT INTO `${PREFIX}users`... " />
+            <marker date="1488770992704" expanded="true" signature="11912:11972" ph="SELECT ID FR... ${PREFIX}users" />
+            <marker date="1488770992704" expanded="true" signature="12111:12254" ph="INSERT INTO `${PREFIX}notifications`... " />
+            <marker date="1488770992704" expanded="true" signature="20920:20928" ph="‹" />
+            <marker date="1488770992704" expanded="true" signature="20928:20936" ph="‹" />
+            <marker date="1488770992704" expanded="true" signature="21168:21176" ph="›" />
+            <marker date="1488770992704" expanded="true" signature="21176:21184" ph="›" />
+            <marker date="1488770992704" expanded="true" signature="21634:21642" ph="‹" />
+            <marker date="1488770992704" expanded="true" signature="21642:21650" ph="‹" />
+            <marker date="1488770992704" expanded="true" signature="22680:22688" ph="›" />
+            <marker date="1488770992704" expanded="true" signature="22688:22696" ph="›" />
+            <marker date="1488770992704" expanded="true" signature="26208:26314" ph="SELECT ID,Us... ${PREFIX}" />
+            <marker date="1488770992704" expanded="true" signature="27876:28886" ph="INSERT INTO `${PREFIX}users`... " />
+            <marker date="1488770992704" expanded="true" signature="29709:29761" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1488770992704" expanded="true" signature="33799:34184" ph="INSERT INTO `${PREFIX}statistics`... " />
+            <marker date="1488770992704" expanded="true" signature="33955:34184" ph="SELECT :Days... dual" />
+            <marker date="1488770992704" expanded="true" signature="34106:34180" ph="SELECT * FRO... ${PREFIX}statistics" />
+            <marker date="1488770992704" expanded="true" signature="34701:34843" ph="SELECT ID,Na... ${PREFIX}" />
           </folding>
         </state>
       </provider>
