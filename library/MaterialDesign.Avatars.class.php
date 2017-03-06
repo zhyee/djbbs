@@ -357,7 +357,7 @@ class MDAvtars
 											  $MaterialDesignColor[$BackgroundColorIndex][2]
 											 );
 		//画一个居中圆形
-		imagefilledellipse($this->Avatar, 
+		imagefilledellipse($this->Avatar,
 						   $Width/2, 
 						   $Height/2, 
 						   $Width, 

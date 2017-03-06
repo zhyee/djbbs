@@ -572,12 +572,16 @@ function GetAvatar($UserID, $UserName, $Size = 'middle')
     $FaceUrl = 'upload/avatar/' . $Size . '/' . $UserID . '.png';
     if (!file_exists(RootPath . $FaceUrl))
     {
-        if (extension_loaded('gd')) {
+        $Char = mb_substr($UserName, 0, 1, "UTF-8");
+        /*昵称中第一个字为中文时默认生成头像*/
+        if (preg_match('/^[\x{4e00}-\x{9fa5}]$/u', $Char))
+        {
             if (!class_exists('MDAvtars'))
             {
                 require(LibraryPath . "MaterialDesign.Avatars.class.php");
             }
-            $Avatar = new MDAvtars(mb_substr($UserName, 0, 1, "UTF-8"), 256);
+
+            $Avatar = new MDAvtars($Char, 256);
             $Avatar->Save(RootPath . 'upload/avatar/large/' . $UserID . '.png', 256);
             $Avatar->Save(RootPath . 'upload/avatar/middle/' . $UserID . '.png', 48);
             $Avatar->Save(RootPath . 'upload/avatar/small/' . $UserID . '.png', 24);
