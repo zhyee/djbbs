@@ -589,7 +589,7 @@ function GetAvatar($UserID, $UserName, $Size = 'middle')
         }
         else
         {
-            $FaceUrl = 'upload/avatar/' . $Size . '/default.png';
+            $FaceUrl = 'upload/avatar/' . $Size . '/default.gif';
         }
 
     }

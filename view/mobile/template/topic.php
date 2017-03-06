@@ -13,7 +13,7 @@ if($Page==1){
 	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
-			<p class="color-gray">By <a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>"><?php echo $Topic['UserName']; ?></a>
+			<p class="color-gray">By <a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>"><?php echo $Topic['UserName']; ?></a>
  at <?php echo FormatTime($Topic['PostTime']); ?><br /><?php echo $Topic['Favorites']; ?><?php echo $Lang['People_Collection']; ?> • <?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?>
 			</p>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>

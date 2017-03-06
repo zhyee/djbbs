@@ -7,7 +7,7 @@ if(preg_match('/upload\/avatar\/(large|middle|small)\/[0-9]+.png/i', $RequestURI
 	//header('Location: default.png');
 	header("HTTP/1.0 200 OK");
 	header("Status: 200 OK");
-	$DefaultAvatar = fopen('upload/avatar/'.$AvatarSize[1].'/default.png', "rb");
+	$DefaultAvatar = fopen('upload/avatar/'.$AvatarSize[1].'/default.gif', "rb");
 	header("Accept-Ranges: bytes");
 	header("Content-Type: image/png");
 	header('Expires: '.gmdate ("D, d M Y H:i:s",strtotime("+7 day"))." GMT");
