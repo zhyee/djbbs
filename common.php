@@ -68,9 +68,9 @@ if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 }
 
 $CurUserID             = $CurUserInfo['uid'];  //当前用户ID
-$CurGroupID            = $CurUserInfo['gid'];  //当前组织ID
+//$CurGroupID            = $CurUserInfo['gid'];  //当前组织ID
+$CurGroupID            = '0';  //当前组织ID
 $CurUserRole           = 0;                     //当前角色ID
-
 
 //Load configuration
 $Config = array();
@@ -78,7 +78,20 @@ if ($MCache) {
 	$Config = $MCache->get(MemCachePrefix . 'Config');
 }
 if (!$Config) {
-	foreach ($DB->query('SELECT ConfigName,ConfigValue FROM ' . PREFIX . 'config WHERE GroupID = :GroupID', array('GroupID' =>$CurGroupID)) as $ConfigArray) {
+
+    $ConfigArrays = $DB->query('SELECT ConfigName,ConfigValue FROM ' . PREFIX . 'config WHERE GroupID = :GroupID', array('GroupID' =>$CurGroupID));
+
+    if (!$ConfigArrays)
+    {
+
+    }
+    else
+    {
+        print_r($ConfigArrays);
+        die;
+    }
+
+	foreach ($ConfigArrays as $ConfigArray) {
 		$Config[$ConfigArray['ConfigName']] = $ConfigArray['ConfigValue'];
 	}
 	// Update
@@ -162,7 +175,6 @@ if (!$TempUserInfo || !$TempUserInfo['UserID'])
         "DaysUsers" => $Config["DaysUsers"] + 1
     );
     UpdateConfig($NewConfig, $CurGroupID);
-
 }
 
 
@@ -740,7 +752,6 @@ function UpdateConfig($NewConfig, $GroupID)
 	} else {
 		return false;
 	}
-
 }
 
 
