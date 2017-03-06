@@ -76,8 +76,8 @@ if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 }
 
 $CurUserID             = $CurUserInfo['uid'];  //当前用户ID
+$CurUserName            = $CurUserInfo['nickName'];  //当前用户昵称
 $CurGroupID            = $CurUserInfo['merCode'];  //当前组织ID
-//$CurGroupID            = '0';  //当前组织ID
 $CurUserRole           = 0;                     //当前角色ID
 
 //Load configuration

@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' || $IsApp) {
 			break;
 		}
 
-/*
+
 		$DBUser = $DB->row("SELECT ID,UserName,Salt,Password,UserRoleID,UserMail,UserIntro FROM " . PREFIX . "users WHERE UserName = :UserName", array(
 			"UserName" => $UserName
 		));
@@ -152,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' || $IsApp) {
 			$ErrorCode     = 101004;
 			break;
 		}
-*/
+
 
 /*调用API登录接口*/
         $DBUser = apiLogin(array(
