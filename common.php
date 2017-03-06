@@ -56,6 +56,45 @@ if (EnableMemcache) {
 	}
 }
 
+$UserAgent = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT']) : '';
+if ($UserAgent) {
+    $IsSpider = preg_match('/(bot|crawl|spider|slurp|sohu-search|lycos|robozilla|google)/i', $UserAgent);
+    $IsMobile = preg_match('/(iPod|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP)/i', $UserAgent);
+} else {
+    //exit('error: 400 no agent');
+    $IsSpider = false;
+    $IsMobile = false;
+}
+$IsApp = $_SERVER['HTTP_HOST'] == $Config['AppDomainName'] ? true : false;
+/* Set current template
+ * default: PC Version
+ * mobile: Mobile Version
+ * api: API
+ */
+if ($IsApp) {
+    $TemplatePath = __DIR__ . '/view/api/template/';
+    $Style        = 'API';
+    header('Access-Control-Allow-Origin: *');
+    header('Content-Type: application/json');
+    //API鉴权
+    $SignatureKey   = Request("Request", "SKey");
+    $SignatureValue = Request("Request", "SValue");
+    $SignatureTime  = intval(Request("Request", "STime"));
+    if (!$SignatureTime || !$SignatureKey || !$SignatureValue || empty($APISignature[$SignatureKey]) || abs($SignatureTime - $TimeStamp) > 600 || !HashEquals($SignatureValue, md5($SignatureKey . $APISignature[$SignatureKey] . $SignatureTime))) {
+        AlertMsg('403', 'Forbidden', 403);
+    }
+} elseif ($_SERVER['HTTP_HOST'] == $Config['MobileDomainName'] || (!$Config['MobileDomainName'] && $IsMobile)) {
+    $TemplatePath = __DIR__ . '/view/mobile/template/';
+    $Style        = 'Mobile';
+    header('X-Frame-Options: SAMEORIGIN');
+} else {
+    $TemplatePath = __DIR__ . '/view/default/template/';
+    $Style        = 'Default';
+    header('X-Frame-Options: SAMEORIGIN');
+    //header('X-XSS-Protection: 1; mode=block');
+    //X-XSS-Protection may cause some issues in dashboard
+}
+
 require(LibraryPath . "RedisClient.class.php");
 $redis = RedisClient::getInstance();
 $accessToken = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
@@ -64,7 +103,8 @@ $CurUserInfo = json_decode($redis->get($redisKey), TRUE);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 {
-    AlertMsg('请登录', '您还未登陆，无法访问');
+//    AlertMsg('请登录', '您还未登陆，无法访问');
+    die('您还未登陆，无法访问');
 }
 
 $CurUserID             = $CurUserInfo['uid'];  //当前用户ID
@@ -1026,44 +1066,7 @@ function dhtmlspecialchars($string, $flags = null)
 	return $string;
 }
 
-$UserAgent = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT']) : '';
-if ($UserAgent) {
-	$IsSpider = preg_match('/(bot|crawl|spider|slurp|sohu-search|lycos|robozilla|google)/i', $UserAgent);
-	$IsMobile = preg_match('/(iPod|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP)/i', $UserAgent);
-} else {
-	//exit('error: 400 no agent');
-	$IsSpider = false;
-	$IsMobile = false;
-}
-$IsApp = $_SERVER['HTTP_HOST'] == $Config['AppDomainName'] ? true : false;
-/* Set current template
- * default: PC Version
- * mobile: Mobile Version
- * api: API
- */
-if ($IsApp) {
-	$TemplatePath = __DIR__ . '/view/api/template/';
-	$Style        = 'API';
-	header('Access-Control-Allow-Origin: *');
-	header('Content-Type: application/json');
-	//API鉴权
-	$SignatureKey   = Request("Request", "SKey");
-	$SignatureValue = Request("Request", "SValue");
-	$SignatureTime  = intval(Request("Request", "STime"));
-	if (!$SignatureTime || !$SignatureKey || !$SignatureValue || empty($APISignature[$SignatureKey]) || abs($SignatureTime - $TimeStamp) > 600 || !HashEquals($SignatureValue, md5($SignatureKey . $APISignature[$SignatureKey] . $SignatureTime))) {
-		AlertMsg('403', 'Forbidden', 403);
-	}
-} elseif ($_SERVER['HTTP_HOST'] == $Config['MobileDomainName'] || (!$Config['MobileDomainName'] && $IsMobile)) {
-	$TemplatePath = __DIR__ . '/view/mobile/template/';
-	$Style        = 'Mobile';
-	header('X-Frame-Options: SAMEORIGIN');
-} else {
-	$TemplatePath = __DIR__ . '/view/default/template/';
-	$Style        = 'Default';
-	header('X-Frame-Options: SAMEORIGIN');
-	//header('X-XSS-Protection: 1; mode=block');
-	//X-XSS-Protection may cause some issues in dashboard
-}
+
 
 $CurView = GetCookie('View', $IsMobile ? 'mobile' : 'desktop');
 $CurIP    = CurIP();
