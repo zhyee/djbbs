@@ -67,11 +67,8 @@ if ($UserAgent) {
 }
 $IsApp = $_SERVER['HTTP_HOST'] == $Config['AppDomainName'] ? true : false;
 
-require(LibraryPath . "RedisClient.class.php");
-$redis = RedisClient::getInstance();
-$accessToken = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
-$redisKey = 'userinfo' . $accessToken;
-$CurUserInfo = json_decode($redis->get($redisKey), TRUE);
+$accessToken = trim($_REQUEST['token']);  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
+$CurUserInfo = getUserInfo($accessToken);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 {
@@ -291,6 +288,21 @@ if (version_compare(PHP_VERSION, '5.4.0') < 0 && get_magic_quotes_gpc()) {
 	$_POST    = StripslashesDeep($_POST);
 	$_COOKIE  = StripslashesDeep($_COOKIE);
 	$_REQUEST = StripslashesDeep($_REQUEST);
+}
+
+
+/* 根据token从缓存中取用户信息 */
+function getUserInfo($accessToken)
+{
+    if (!class_exists('RedisClient'))
+    {
+        require(LibraryPath . "RedisClient.class.php");
+    }
+    $redis = RedisClient::getInstance();
+    $redisKey = RedisUserinfoPrefix . $accessToken;
+    $CurUserInfo = json_decode($redis->get($redisKey), TRUE);
+    $redis = NULL;
+    return $CurUserInfo;
 }
 
 

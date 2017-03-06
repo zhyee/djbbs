@@ -23,6 +23,7 @@ define('MemCachePrefix', 'djbbs_');
 define('RedisHost', '192.168.23.139');
 define('RedisPort', 6379);
 define('RedisPrefix', 'djbbs_');
+define('RedisUserinfoPrefix', 'userinfo');  //userinfo缓存前缀
 
 //Database
 define('DBHost', '192.168.24.66');
