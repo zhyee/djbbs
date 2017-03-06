@@ -56,13 +56,29 @@ if (EnableMemcache) {
 	}
 }
 
+require(LibraryPath . "RedisClient.class.php");
+$redis = RedisClient::getInstance();
+$accessToken = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
+$redisKey = 'userinfo' . $accessToken;
+$CurUserInfo = json_decode($redis->get($redisKey), TRUE);
+
+if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
+{
+    AlertMsg('请登录', '您还未登陆，无法访问');
+}
+
+$CurUserID             = $CurUserInfo['uid'];  //当前用户ID
+$CurGroupID            = $CurUserInfo['gid'];  //当前组织ID
+$CurUserRole           = 0;                     //当前角色ID
+
+
 //Load configuration
 $Config = array();
 if ($MCache) {
 	$Config = $MCache->get(MemCachePrefix . 'Config');
 }
 if (!$Config) {
-	foreach ($DB->query('SELECT ConfigName,ConfigValue FROM ' . PREFIX . 'config') as $ConfigArray) {
+	foreach ($DB->query('SELECT ConfigName,ConfigValue FROM ' . PREFIX . 'config WHERE GroupID = :GroupID', array('GroupID' =>$CurGroupID)) as $ConfigArray) {
 		$Config[$ConfigArray['ConfigName']] = $ConfigArray['ConfigValue'];
 	}
 	// Update
@@ -74,6 +90,82 @@ if (!$Config) {
 		$MCache->set(MemCachePrefix . 'Config', $Config, 86400);
 	}
 }
+
+$TempUserInfo = $DB->row("SELECT UserID FROM " . PREFIX . "users WHERE ID = :UserID LIMIT 1", array(
+    "UserID" => $CurUserID
+));
+
+if (!$TempUserInfo || !$TempUserInfo['UserID'])
+{
+
+    /*用户首次登录计入本地数据库*/
+    $NewUserData     = array(
+        'ID' => $CurUserID,
+        'UserName' => $CurUserInfo['nickName'],
+        'Salt' => mt_rand(100000, 999999),
+        'Password' => '',
+        'UserMail' => '',
+        'UserHomepage' => '',
+        'PasswordQuestion' => '',
+        'PasswordAnswer' => '',
+        'UserSex' => 0,
+        'NumFavUsers' => 0,
+        'NumFavTags' => 0,
+        'NumFavTopics' => 0,
+        'NewMessage' => 0,
+        'NewNotification' => 0,
+        'Topics' => 0,
+        'Replies' => 0,
+        'Followers' => 0,
+        'DelTopic' => 0,
+        'GoodTopic' => 0,
+        'UserPhoto' => '',
+        'UserMobile' => '',
+        'UserLastIP' => CurIP(),
+        'UserRegTime' => $TimeStamp,
+        'LastLoginTime' => $TimeStamp,
+        'LastPostTime' => $TimeStamp,
+        'BlackLists' => '',
+        'UserFriend' => '',
+        'UserInfo' => '',
+        'UserIntro' => '',
+        'UserIM' => '',
+        'UserRoleID' => 1,
+        'UserAccountStatus' => 1,
+        'Birthday' => date("Y-m-d", $TimeStamp)
+    );
+
+    $Result = $DB->query('INSERT INTO `' . PREFIX . 'users`
+			(
+				`ID`, `UserName`, `Salt`, `Password`, `UserMail`, 
+				`UserHomepage`, `PasswordQuestion`, `PasswordAnswer`, 
+				`UserSex`, `NumFavUsers`, `NumFavTags`, `NumFavTopics`, 
+				`NewMessage`, `NewNotification`, `Topics`, `Replies`, `Followers`, 
+				`DelTopic`, `GoodTopic`, `UserPhoto`, `UserMobile`, 
+				`UserLastIP`, `UserRegTime`, `LastLoginTime`, `LastPostTime`, 
+				`BlackLists`, `UserFriend`, `UserInfo`, `UserIntro`, `UserIM`, 
+				`UserRoleID`, `UserAccountStatus`, `Birthday`
+			) VALUES (
+				:ID, :UserName, :Salt, :Password, :UserMail, 
+				:UserHomepage, :PasswordQuestion, :PasswordAnswer, 
+				:UserSex, :NumFavUsers, :NumFavTags, 
+				:NumFavTopics, :NewMessage, :NewNotification, :Topics, :Replies, :Followers, 
+				:DelTopic, :GoodTopic, :UserPhoto, :UserMobile, 
+				:UserLastIP, :UserRegTime, :LastLoginTime, :LastPostTime, 
+				:BlackLists, :UserFriend, :UserInfo, :UserIntro, :UserIM, 
+				:UserRoleID, :UserAccountStatus, :Birthday
+			)', $NewUserData);
+
+    //更新全站统计数据
+    $NewConfig      = array(
+        "NumUsers" => $Config["NumUsers"] + 1,
+        "DaysUsers" => $Config["DaysUsers"] + 1
+    );
+    UpdateConfig($NewConfig, $CurGroupID);
+
+}
+
+
 // 热门标签列表
 $HotTagsArray = json_decode($Config['CacheHotTags'], true);
 $HotTagsArray = $HotTagsArray ? $HotTagsArray : array();
@@ -629,14 +721,15 @@ function TagsDiff($Arr1, $Arr2)
 
 
 //修改系统设置
-function UpdateConfig($NewConfig)
+function UpdateConfig($NewConfig, $GroupID)
 {
 	global $DB, $Config, $MCache;
 	if ($NewConfig) {
 		foreach ($NewConfig as $Key => $Value) {
-			$DB->query("UPDATE `" . PREFIX . "config` SET ConfigValue=? WHERE ConfigName=?", array(
+			$DB->query("UPDATE `" . PREFIX . "config` SET ConfigValue=? WHERE ConfigName=? AND GroupID =?", array(
 				$Value,
-				$Key
+				$Key,
+                $GroupID
 			));
 			$Config[$Key] = $Value;
 		}
@@ -1008,20 +1101,8 @@ if ($Config['DaysDate'] != $CurrentDate) {
 }
 // Get the infomation of current user
 
-require(LibraryPath . "RedisClient.class.php");
-$redis = RedisClient::getInstance();
-$accessToken = $_REQUEST['token'];  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
-$redisKey = 'userinfo' . $accessToken;
-$CurUserInfo = json_decode($redis->get($redisKey), TRUE);
 
-if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
-{
-    AlertMsg('请登录', '您还未登陆，无法访问');
-}
 
-$CurUserID             = $CurUserInfo['uid'];  //当前用户ID
-$CurGroupID            = $CurUserInfo['gid'];  //当前组织ID
-$CurUserRole           = 0;                     //当前角色ID
 //$CurUserExpirationTime = intval(GetCookie('UserExpirationTime'));
 //$CurUserCode           = GetCookie('UserCode');
 
