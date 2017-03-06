@@ -430,7 +430,7 @@ function Search() {
 		doneCallback: function() {
 			if($("#SearchInput").val()) {
 				$.afui.loadContent(
-					WebsitePath + '/search/'+$("#SearchInput").val(), 
+					WebsitePath + '/search/'+$("#SearchInput").val() + '?token=' + accessToken,
 					false, 
 					false, 
 					'slide',
