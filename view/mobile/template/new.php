@@ -22,8 +22,6 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" />
 			<i class="fa fa-paperclip fa-1_65x add-attachment"></i>
 		</label>
-
-		<input type="file" style="width: 50px; height: 50px; display: block;line-height: 50px">
 	</p>
 	<p>
 		<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
