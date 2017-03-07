@@ -475,15 +475,13 @@ function createBoard()
 			UploadData.append('BoardName', BoardName);
 			UploadData.append('token', accessToken);
 
-			$.ajax({
-				url : WebsitePath + "/boards",
-				type : 'POST',
-				data : UploadData,
-				dataType : 'JSON',
-				success : function (data, status) {
-
-				}
-			});
+			// $.ajax({
+			// 	url : WebsitePath + "/boards",
+			// 	type : 'POST',
+			// 	data : UploadData,
+			// 	dataType : 'JSON'
+			// });
+			console.log($.ajax);
 		},
 		cancelOnly: false
 	});
