@@ -478,7 +478,7 @@ function createBoard()
 			$.ajax({
 				url : WebsitePath + "/boards",
 				type : 'POST',
-				data : UploadData,
+				data : {},
 				dataType : 'JSON'
 			});
 			console.log(UploadData);
