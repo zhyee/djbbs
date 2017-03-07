@@ -108,7 +108,7 @@ if($CurUserID){
 		</div>
 	</div>
 	<script type="text/javascript">
-	GetNotification();
+		//GetNotification();
 	</script>
 <?php
 }

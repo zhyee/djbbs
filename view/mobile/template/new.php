@@ -16,6 +16,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 <form name="NewForm">
 	<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
 	<input type="hidden" name="ContentHash" value="" />
+	<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
 	<p><input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" /></p>
 	<p>
 		<label class="button block add-attachment">
@@ -36,5 +37,5 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		<div id="TagsList">
 		</div>
 	</p>
-	<p><input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block green" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /></p>
+	<p><input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /></p>
 </form>

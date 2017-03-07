@@ -1919,9 +1919,9 @@ input[type="checkbox"]:checked + label:before {
 }
 .button.red {
 	color: #fff;
-	text-shadow: 0 -1px 0 #666666;
-	background: #B20000;
-	border-color: #666;
+	text-shadow: 0 -1px 0 #f77668;
+	background: #e43620;
+	border-color: #e73418;
 }
 .button.green {
 	color: #fff;

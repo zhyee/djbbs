@@ -422,10 +422,10 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	});
 }
 
-//回复某人
+//搜索
 function Search() {
 	$.afui.popup({
-		title: "Search",
+		title: "搜索",
 		message: '<input type="text" id="SearchInput" />',
 		cancelText: Lang['Cancel'],
 		cancelCallback: function() {
@@ -447,6 +447,23 @@ function Search() {
 		},
 		cancelOnly: false
 	});
+}
+
+//新建板块
+function createBoard()
+{
+	$.afui.popup({
+		title: '新建板块',
+		messase : '<p><label for="BoardName">板块名</label><input type="text" id="BoardName" /></p><p><label for="BoardIcon">板块图标</label><input type="file" accept="images/*" id="BoardIcon"></p>',
+		cancelText: Lang['Cancel'],
+		doneText: Lang['Confirm'],
+		cancelCallback: function () {},
+		doneCallback: function () {
+
+		},
+		cancelOnly: false
+	});
+
 }
 
 
