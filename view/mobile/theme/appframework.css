@@ -2859,3 +2859,39 @@ header .menuButton:after {
 	position: absolute;
 	width: 15px;
 }
+
+label.add-attachment
+{
+	cursor:pointer;
+	width:40px;
+	height: 40px;
+	border:1px solid #dadada;
+	background-color: #fff;
+	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
+	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
+}
+
+i.add-attachment
+{
+	position: absolute;
+	top: 50%;
+	left : 50%;
+	transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+}
+
+input.add-attachment
+{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%, -50%);
+	-ms-transform:translate(-50%, -50%);
+	-moz-transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
+}

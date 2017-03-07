@@ -13,6 +13,6 @@ $Lang = array_merge($Lang, array(
 	'Too_Long' => '标题长度不能超过{{MaxTitleChars}}个字节，内容长度不能超过{{MaxPostChars}}个字节',
 	'Title_Empty' => '标题不能为空',
 
-	'Tags' => '选择已有标签',
+	'Tags' => '推荐标签',
 	'Content' => '内容'
 	));
