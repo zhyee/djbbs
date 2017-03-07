@@ -5,7 +5,7 @@ if (empty($Lang) || !is_array($Lang))
 
 $Lang = array_merge($Lang, array(
 	'Title' => '标题',
-	'Add_Tags' => '添加话题(按Enter添加)',
+	'Add_Tags' => '添加标签(按Enter添加)',
 	'Submit' => ' 发 布 ',
 	'Posting_Too_Often' => '您发帖过于频繁，请稍后再尝试',
 	'Tags_Empty' => '标签不能为空',
