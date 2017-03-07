@@ -454,7 +454,7 @@ function createBoard()
 {
 	$.afui.popup({
 		title: '新建板块',
-		message : '<p><label class="board" for="BoardName">板块名</label><input type="text" class="board" id="BoardName" /></p><p><label class="board" for="BoardIcon">板块图标</label><span class="button add-attachment"><input type="file" class="add-attachment" id="BoardIcon" onchange="javascript:UploadPicture(\'Content\');" accept="image/*" /><i class="fa fa-paperclip fa-1_65x add-attachment"></i></span></p>',
+		message : '<p><label class="board" for="BoardName">板块名</label><input type="text" class="board" id="BoardName" /></p><p><label class="board">板块图标</label><label for="BoardIcon" class="button add-attachment"><input type="file" class="add-attachment" id="BoardIcon" onchange="javascript:UploadPicture(\'Content\');" accept="image/*" /><i class="fa fa-paperclip fa-1_65x add-attachment"></i></label></p>',
 
 		cancelText: Lang['Cancel'],
 		doneText: Lang['Confirm'],
