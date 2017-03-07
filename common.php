@@ -575,12 +575,12 @@ function FormatTime($UnixTimeStamp)
 function GetAvatar($UserID, $UserName, $Size = 'middle')
 {
 	global $Config;
-    $FaceUrl = 'upload/avatar/' . $Size . '/' . $UserID . '.png';
+    $FaceUrl = '/upload/avatar/' . $Size . '/' . $UserID . '.png';
     if (!file_exists(RootPath . $FaceUrl))
     {
-        $FaceUrl = 'upload/avatar/' . $Size . '/default.gif';
+        $FaceUrl = '/upload/avatar/' . $Size . '/default.gif';
     }
-	return '<img src="' . $Config['WebsitePath'] . '/' . $FaceUrl . '" alt="' . $UserName . '"/>';
+	return '<img src="' . $Config['WebsitePath'] . $FaceUrl . '" alt="' . $UserName . '"/>';
 }
 
 
@@ -589,6 +589,19 @@ function GetTagIcon($TagID, $Icon, $TagName, $Size = 'middle')
 {
 	global $Config;
 	return '<img src="' . $Config['WebsitePath'] . '/upload/tag/' . $Size . '/' . ($Icon ? $TagID : '0') . '.png" alt="' . $TagName . '"/>';
+}
+
+function GetBoardIcon($BoardID, $Icon, $BoardName, $Size = 'middle')
+{
+    global $Config;
+    if (file_exists(RootPath . $Icon))
+    {
+        return $Config['WebsitePath'] . $Icon;
+    }
+    else
+    {
+        return $Config['WebsitePath'] . '/upload/board/default.png';
+    }
 }
 
 //获取Cookie

@@ -35,7 +35,7 @@ define('DBPassword', 'fXL2bO$RQgaRS^lH');
 define('SearchServer', '');
 define('SearchPort', '');
 
-define('RootPath', __DIR__ . '/');
+define('RootPath', __DIR__);
 define('LanguagePath', __DIR__ . '/language/' . ForumLanguage . '/');
 define('LibraryPath', __DIR__ . '/library/');
 //define('APIHost', 'http://192.168.23.139:8081/cpms/Internet');
