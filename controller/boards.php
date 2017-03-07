@@ -3,10 +3,28 @@ require(LanguagePath . 'board.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-    Auth(4, 0, true);
     /**
      * 新建版块
      */
+    Auth(4, 0, true);
+
+    $BoardName = trim(Request('Post', 'BoardName'));
+    if (!$BoardName)
+    {
+        echo json_decode(array('code' => -2, 'msg' => '版块名称不能为空'));
+        exit();
+    }
+
+
+    $row = $DB->row("SELECT ID FROM `" . PREFIX . "boards` WHERE Name = ? LIMIT 1", array($BoardName));
+
+    if (is_array($row) && $row['ID'])
+    {
+        echo json_encode(array('code' => 2, 'msg' => '该版块已存在'));
+        exit();
+    }
+
+
     if ($_FILES['BoardIcon'])
     {
         include(LibraryPath . 'Uploader.class.php');
@@ -19,10 +37,59 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         );
         /* 生成上传实例对象并完成上传 */
         $up = new Uploader($fieldName, $config, 'upload', $CurUserName, $DB);
-        echo json_encode($up->getFileInfo());
+        $icon = $up->getFileInfo();
+        if ($icon['state'] != 'SUCCESS')
+        {
+            echo json_encode(array('code' => -1, 'msg' => $icon['state']));
+            exit();
+        }
     }
-    $BoardName = trim(Request('Post', 'BoardName'));
 
+    $boardData = array(
+        'ID'    => NULL,
+        'Name'  => $BoardName,
+        'Followers' => 0,
+        'Icon'      => isset($icon) ? $icon['url'] : '',
+        'Description'   => '',
+        'IsEnabled'     => 1,
+        'TotalPosts'   => 0,
+        'MostRecentPostTime'    => 0,
+        'DateCreated'   => $TimeStamp
+    );
+
+    $res = $DB->query("INSERT INTO `" . PREFIX . "boards` 
+        (
+            `ID`,
+            `Name`,
+            `Followers`,
+            `Icon`,
+            `Description`,
+            `IsEnabled`,
+            `TotalPosts`,
+            `MostRecentPostTime`,
+            `DateCreated`
+        )
+        VALUES
+        (
+            :ID,
+            :Name,
+            :Followers,
+            :Icon,
+            :Description,
+            :IsEnabled,
+            :TotalPosts,
+            :MostRecentPostTime,
+            :DateCreated
+        )", $boardData);
+
+    if ($res)
+    {
+        echo json_encode(array('code' => 0, 'msg' => 'OK'));
+    }
+    else
+    {
+        echo json_encode(array('code' => 1, 'msg' => '新建失败，请稍后再试'));
+    }
     exit();
 }
 

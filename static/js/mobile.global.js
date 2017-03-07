@@ -486,8 +486,6 @@ function createBoard()
 					console.log(data);
 				}
 			});
-			console.log(UploadData);
-			console.log($.ajax);
 		},
 		cancelOnly: false
 	});

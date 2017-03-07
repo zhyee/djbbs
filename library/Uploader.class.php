@@ -10,6 +10,7 @@
 class Uploader
 {
 	private $DB; //数据库PDO对象
+    private $insertID = 0;  //插入数据库中的ID
 	private $CurUserName; //当前用户名
 	private $fileField; //文件域名
 	private $file; //文件上传对象
@@ -331,7 +332,7 @@ class Uploader
 	private function insertData()
 	{
 		if ($this->DB) {
-			$this->DB->query('INSERT INTO ' . PREFIX . 'upload(`ID`, `UserName`, `FileName`, `FileSize`, `FileType`, `SHA1`, `MD5`, `FilePath`, `Description`, `Category`, `Class`, `PostID`, `Created`) VALUES(:ID, :UserName, :FileName, :FileSize, :FileType, :SHA1, :MD5, :FilePath, :Description, :Category, :Class, :PostID, :Created)', array(
+			$rs = $this->DB->query('INSERT INTO ' . PREFIX . 'upload(`ID`, `UserName`, `FileName`, `FileSize`, `FileType`, `SHA1`, `MD5`, `FilePath`, `Description`, `Category`, `Class`, `PostID`, `Created`) VALUES(:ID, :UserName, :FileName, :FileSize, :FileType, :SHA1, :MD5, :FilePath, :Description, :Category, :Class, :PostID, :Created)', array(
 				'ID' => Null,
 				'UserName' => $this->CurUserName,
 				'FileName' => htmlspecialchars($this->oriName),
@@ -346,6 +347,10 @@ class Uploader
 				'PostID' => 0,
 				'Created' => time()
 			));
+            if ($rs)
+            {
+                $this->insertID = $this->DB->lastInsertId();
+            }
 		}
 	}
 	
@@ -461,7 +466,8 @@ class Uploader
 			"title" => $this->fileName,
 			"original" => $this->oriName,
 			"type" => $this->fileType,
-			"size" => $this->fileSize
+			"size" => $this->fileSize,
+            "insertID"     => $this->insertID
 		);
 	}
 	
