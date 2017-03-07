@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/font-awesome.min.css?version=<?php echo $Config['Version']; ?>">
+
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
