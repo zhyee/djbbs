@@ -2870,7 +2870,7 @@ header .menuButton:after {
 	width: 15px;
 }
 
-label.add-attachment
+label.add-attachment, span.add-attachment
 {
 	cursor:pointer;
 	width:45px;
