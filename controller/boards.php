@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         );
         /* 生成上传实例对象并完成上传 */
         $up = new Uploader($fieldName, $config, 'upload', $CurUserName, $DB);
-        print_r($up->getFileInfo());
+        echo json_encode($up->getFileInfo());
     }
     $BoardName = trim(Request('Post', 'BoardName'));
 
