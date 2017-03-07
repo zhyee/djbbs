@@ -43,14 +43,15 @@
       <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="456" column="181" selection-start-line="456" selection-start-column="181" selection-end-line="456" selection-end-column="181" />
+            <state relative-caret-position="572">
+              <caret line="456" column="431" selection-start-line="456" selection-start-column="431" selection-end-line="456" selection-end-column="431" />
               <folding>
-                <marker date="1488877284829" expanded="true" signature="30985:31027" ph="&quot;" />
-                <marker date="1488877284829" expanded="true" signature="40126:40183" ph="..." />
-                <marker date="1488877284829" expanded="true" signature="54181:54197" ph="..." />
-                <marker date="1488877284829" expanded="true" signature="54373:54386" ph="..." />
-                <marker date="1488877284829" expanded="true" signature="54468:54479" ph="..." />
+                <marker date="1488877544694" expanded="true" signature="30985:31027" ph="&quot;" />
+                <marker date="1488877544694" expanded="true" signature="40126:40183" ph="..." />
+                <marker date="1488877544694" expanded="true" signature="54181:54197" ph="..." />
+                <marker date="1488877544694" expanded="true" signature="54373:54386" ph="..." />
+                <marker date="1488877544694" expanded="true" signature="54468:54479" ph="..." />
+                <marker date="1488877544694" expanded="true" signature="57124:57135" ph="..." />
               </folding>
             </state>
           </provider>
@@ -495,12 +496,12 @@
       <workItem from="1488761389416" duration="209000" />
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
-      <workItem from="1488848520342" duration="21387000" />
+      <workItem from="1488848520342" duration="21632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216118000" />
+    <option name="totallyTimeSpent" value="216363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -1034,14 +1035,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="456" column="181" selection-start-line="456" selection-start-column="181" selection-end-line="456" selection-end-column="181" />
+        <state relative-caret-position="572">
+          <caret line="456" column="431" selection-start-line="456" selection-start-column="431" selection-end-line="456" selection-end-column="431" />
           <folding>
-            <marker date="1488877284829" expanded="true" signature="30985:31027" ph="&quot;" />
-            <marker date="1488877284829" expanded="true" signature="40126:40183" ph="..." />
-            <marker date="1488877284829" expanded="true" signature="54181:54197" ph="..." />
-            <marker date="1488877284829" expanded="true" signature="54373:54386" ph="..." />
-            <marker date="1488877284829" expanded="true" signature="54468:54479" ph="..." />
+            <marker date="1488877544694" expanded="true" signature="30985:31027" ph="&quot;" />
+            <marker date="1488877544694" expanded="true" signature="40126:40183" ph="..." />
+            <marker date="1488877544694" expanded="true" signature="54181:54197" ph="..." />
+            <marker date="1488877544694" expanded="true" signature="54373:54386" ph="..." />
+            <marker date="1488877544694" expanded="true" signature="54468:54479" ph="..." />
+            <marker date="1488877544694" expanded="true" signature="57124:57135" ph="..." />
           </folding>
         </state>
       </provider>
