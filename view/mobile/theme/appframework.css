@@ -2449,7 +2449,7 @@ li .icon:before {
 	background: #f8f8f8;
 }
 
-.list {
+.tag-list,.list {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
@@ -2457,7 +2457,7 @@ li .icon:before {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-.list li {
+.tag-list li,.list li {
 	display: block;
 	list-style: none;
 	position: relative;
@@ -2468,7 +2468,7 @@ li .icon:before {
 .list li:first-child {
 	/*   border-top: 1px solid #ccc;*/
 }
-.list > li > a {
+.tag-list > li > a,.list > li > a {
 	position: relative;
 	display: block;
 	color: inherit;

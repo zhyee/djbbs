@@ -26,7 +26,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	</p>
 	<p>
 		<input type="text" name="AlternativeTag" id="AlternativeTag" value="" onclick="JavaScript:GetTags();" placeholder="<?php echo $Lang['Add_Tags']; ?>" />
-		<ul id="SelectTags" class="list">
+		<ul id="SelectTags" class="tag-list">
 			<li class="divider"><?php echo $Lang['Tags']; ?></li>
 		</ul>
 	</p>

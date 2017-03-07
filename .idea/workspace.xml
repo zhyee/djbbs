@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/zh-cn/new.php" afterPath="$PROJECT_DIR$/language/zh-cn/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/appframework.css" afterPath="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,34 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/language/zh-cn/new.php">
+      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="goto.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/goto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="108" selection-start-line="16" selection-start-column="108" selection-end-line="16" selection-end-column="108" />
-              <folding>
-                <marker date="1488804322085" expanded="true" signature="161:304" ph="SELECT count... ${PREFIX}" />
-                <marker date="1488804322085" expanded="true" signature="245:303" ph="SELECT PostT... ${PREFIX}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/404.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+            <state relative-caret-position="468">
+              <caret line="2470" column="35" selection-start-line="2470" selection-start-column="35" selection-end-line="2470" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -166,12 +145,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="517">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#p#5;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.function.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/new.function.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="241" column="50" selection-start-line="241" selection-start-column="50" selection-end-line="241" selection-end-column="50" />
+              <folding>
+                <marker date="1484292762253" expanded="true" signature="7265:7271" ph=" " />
+                <marker date="1484292762253" expanded="true" signature="7526:7532" ph=" " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobile.new.function.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/mobile.new.function.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="137" column="37" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+              <folding>
+                <marker date="1484292762253" expanded="true" signature="3895:3907" ph="..." />
+                <marker date="1484292762253" expanded="true" signature="3910:3916" ph=" " />
+                <marker date="1484292762253" expanded="true" signature="3916:3922" ph=" " />
+                <marker date="1484292762253" expanded="true" signature="3933:3939" ph=" " />
+                <marker date="1484292762253" expanded="true" signature="4195:4207" ph="..." />
+                <marker date="1484292762253" expanded="true" signature="4210:4216" ph=" " />
+                <marker date="1484292762253" expanded="true" signature="4216:4222" ph=" " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -210,7 +222,6 @@
         <option value="$PROJECT_DIR$/view/default/template/settings.php" />
         <option value="$PROJECT_DIR$/view/default/template/sider.php" />
         <option value="$PROJECT_DIR$/view/default/template/login.php" />
-        <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
         <option value="$PROJECT_DIR$/controller/new.php" />
         <option value="$PROJECT_DIR$/view/mobile/template/login.php" />
         <option value="$PROJECT_DIR$/static/js/reply.function.js" />
@@ -241,6 +252,8 @@
         <option value="$PROJECT_DIR$/common.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/common.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/new.php" />
+        <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
+        <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
       </list>
     </option>
   </component>
@@ -317,6 +330,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,12 +636,12 @@
       <workItem from="1488761389416" duration="209000" />
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
-      <workItem from="1488848520342" duration="3405000" />
+      <workItem from="1488848520342" duration="4505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198136000" />
+    <option name="totallyTimeSpent" value="199236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -667,49 +684,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Uploader.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="286" column="5" selection-start-line="286" selection-start-column="5" selection-end-line="286" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/upload_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/update/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="158" column="16" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
-          <folding>
-            <marker date="1484292762255" expanded="true" signature="1109:1193" ph="SELECT Confi... ${DATABASE_PREFIX}config" />
-            <marker date="1484292762255" expanded="true" signature="3277:3330" ph="SELECT UserN... ${DATABASE_PREFIX}" />
-            <marker date="1484292762255" expanded="true" signature="3954:4042" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="4060:4144" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="4162:4232" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="4250:4321" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="4339:4426" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="4444:4521" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="4542:4596" ph="DROP TABLE I... " />
-            <marker date="1484292762255" expanded="true" signature="4614:5059" ph="CREATE TABLE... ${DATABASE_PREFIX}app_users" />
-            <marker date="1484292762255" expanded="true" signature="5160:5269" ph="ALTER TABLE `${DATABASE_PREFIX}tags`... " />
-            <marker date="1484292762255" expanded="true" signature="5287:5379" ph="ALTER TABLE `${DATABASE_PREFIX}tags`... " />
-            <marker date="1484292762255" expanded="true" signature="5397:5545" ph="ALTER TABLE `${DATABASE_PREFIX}tags`... " />
-            <marker date="1484292762255" expanded="true" signature="5564:5635" ph="INSERT INTO `${DATABASE_PREFIX}config`... " />
-            <marker date="1484292762255" expanded="true" signature="5735:5789" ph="DROP TABLE I... " />
-            <marker date="1484292762255" expanded="true" signature="5808:6302" ph="CREATE TABLE... ${DATABASE_PREFIX}messages" />
-            <marker date="1484292762255" expanded="true" signature="6321:6462" ph="ALTER TABLE `${DATABASE_PREFIX}messages`... " />
-            <marker date="1484292762255" expanded="true" signature="6481:6586" ph="ALTER TABLE `${DATABASE_PREFIX}messages`... " />
-            <marker date="1484292762255" expanded="true" signature="6605:6730" ph="ALTER TABLE ${DATABASE_PREFIX}users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1049,14 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
@@ -1133,9 +1099,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/language/zh-cn/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="2470" column="35" selection-start-line="2470" selection-start-column="35" selection-end-line="2470" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/new.function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="241" column="50" selection-start-line="241" selection-start-column="50" selection-end-line="241" selection-end-column="50" />
+          <folding>
+            <marker date="1484292762253" expanded="true" signature="7265:7271" ph=" " />
+            <marker date="1484292762253" expanded="true" signature="7526:7532" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mobile.new.function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="137" column="37" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+          <folding>
+            <marker date="1484292762253" expanded="true" signature="3895:3907" ph="..." />
+            <marker date="1484292762253" expanded="true" signature="3910:3916" ph=" " />
+            <marker date="1484292762253" expanded="true" signature="3916:3922" ph=" " />
+            <marker date="1484292762253" expanded="true" signature="3933:3939" ph=" " />
+            <marker date="1484292762253" expanded="true" signature="4195:4207" ph="..." />
+            <marker date="1484292762253" expanded="true" signature="4210:4216" ph=" " />
+            <marker date="1484292762253" expanded="true" signature="4216:4222" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#p#5;n#form#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
