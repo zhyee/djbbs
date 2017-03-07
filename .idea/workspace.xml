@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/appframework.css" afterPath="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
@@ -71,8 +69,8 @@
       <file leaf-file-name="appframework.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="2895" column="26" selection-start-line="2895" selection-start-column="26" selection-end-line="2895" selection-end-column="26" />
+            <state relative-caret-position="497">
+              <caret line="2887" column="17" selection-start-line="2887" selection-start-column="17" selection-end-line="2887" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -497,12 +495,12 @@
       <workItem from="1488761389416" duration="209000" />
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
-      <workItem from="1488848520342" duration="20635000" />
+      <workItem from="1488848520342" duration="20727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215366000" />
+    <option name="totallyTimeSpent" value="215458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -1042,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="2895" column="26" selection-start-line="2895" selection-start-column="26" selection-end-line="2895" selection-end-column="26" />
+        <state relative-caret-position="497">
+          <caret line="2887" column="17" selection-start-line="2887" selection-start-column="17" selection-end-line="2887" selection-end-column="17" />
           <folding />
         </state>
       </provider>
