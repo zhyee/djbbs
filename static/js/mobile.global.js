@@ -464,7 +464,7 @@ function createBoard()
 			if (BoardName == '')
 			{
 				alert("版块名称不能为空");
-				return false;
+				return true;
 			}
 			var UploadData = new FormData();
 			var BoardIcon = $("#BoardIcon").get(0).files[0];
