@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         print_r($up->getFileInfo());
     }
     $BoardName = trim(Request('Post', 'BoardName'));
-    
+
 
 }
 
