@@ -18,7 +18,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
 	<p><input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" /></p>
 	<p>
-		<label class="button block add-attachment">
+		<label for="upfile" class="button block add-attachment">
 			<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" />
 			<i class="fa fa-paperclip fa-1_65x add-attachment"></i>
 		</label>

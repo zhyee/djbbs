@@ -1,5 +1,33 @@
 <?php
 require(LanguagePath . 'board.php');
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    Auth(4, 0, true);
+    /**
+     * 新建版块
+     */
+    if ($_FILES['BoardIcon'])
+    {
+        include(LibraryPath . 'Uploader.class.php');
+        $UploadConfig = json_decode(preg_replace("/\/\*[\s\S]+?\*\//", "", file_get_contents(LibraryPath . 'Uploader.config.json')), true);
+        $fieldName = 'BoardName';
+        $config    = array(
+            "pathFormat" => $Config['WebsitePath'] . $UploadConfig['imagePathFormat'],
+            "maxSize" => $UploadConfig['imageMaxSize'],
+            "allowFiles" => $UploadConfig['imageAllowFiles']
+        );
+        /* 生成上传实例对象并完成上传 */
+        $up = new Uploader($fieldName, $config, 'upload', $CurUserName, $DB);
+        print_r($up->getFileInfo());
+    }
+    $BoardName = trim(Request('Post', 'BoardName'));
+    
+
+}
+
+
+
 $Page      = intval(Request('Get', 'page'));
 $TotalPage = ceil($Config['NumBoards'] / $Config['TopicsPerPage']);
 if ($Page < 0 || $Page == 1)
