@@ -2064,6 +2064,15 @@ label {
 	text-align: right;
 	padding: 15px 18px;
 }
+
+label.board {
+	padding: 15px 18px 15px 0;
+}
+
+input.board	{
+	margin-top: 10px ;
+}
+
 label + select,
 label + input[type="radio"],
 label + input[type="checkbox"] label + textarea,
