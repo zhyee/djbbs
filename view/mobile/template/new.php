@@ -18,8 +18,8 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	<input type="hidden" name="ContentHash" value="" />
 	<p><input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" /></p>
 	<p>
-		<label class="button block" style="cursor: pointer;">
-			<i class="icon picture"></i>
+		<label class="button block" style="cursor:pointer;width:40px;height: 40px;border:1px solid #dadada;background-color: #fff;background-image: -webkit-linear-gradient(top, #fefefe, #dedede);background-image: -moz-linear-gradient(top, #fefefe, #dedede);">
+			<i class="fa fa-paperclip fa-2x"></i>
 			<input type="file" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" style="display:none;" />
 		</label>
 	</p>
