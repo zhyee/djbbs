@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css" afterPath="$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,11 +124,22 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" column="107" selection-start-line="20" selection-start-column="107" selection-end-line="20" selection-end-column="107" />
+            <state relative-caret-position="380">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding>
+                <element signature="n#style#0;n#label#0;n#p#1;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#p#5;n#form#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="font-awesome.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="3" column="824" selection-start-line="3" selection-start-column="824" selection-end-line="3" selection-end-column="832" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,8 +228,8 @@
         <option value="$PROJECT_DIR$/language/zh-cn/common.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/new.php" />
         <option value="$PROJECT_DIR$/static/js/mobile.new.function.js" />
-        <option value="$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
+        <option value="$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
       </list>
     </option>
@@ -278,6 +289,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,12 +525,12 @@
       <workItem from="1488761389416" duration="209000" />
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
-      <workItem from="1488848520342" duration="8155000" />
+      <workItem from="1488848520342" duration="8348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202886000" />
+    <option name="totallyTimeSpent" value="203079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -923,14 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="3" column="460" selection-start-line="3" selection-start-column="460" selection-end-line="3" selection-end-column="460" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
@@ -997,11 +1022,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/theme/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="3" column="824" selection-start-line="3" selection-start-column="824" selection-end-line="3" selection-end-column="832" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="107" selection-start-line="20" selection-start-column="107" selection-end-line="20" selection-end-column="107" />
+        <state relative-caret-position="380">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding>
+            <element signature="n#style#0;n#label#0;n#p#1;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#5;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
