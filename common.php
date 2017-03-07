@@ -189,7 +189,7 @@ if ($IsApp) {
     //X-XSS-Protection may cause some issues in dashboard
 }
 
-$TempUserInfo = $DB->row("SELECT ID,UserRoleID FROM " . PREFIX . "users WHERE ID = :ID LIMIT 1", array(
+$TempUserInfo = $DB->row("SELECT * FROM " . PREFIX . "users WHERE ID = :ID LIMIT 1", array(
     "ID" => $CurUserID
 ));
 
@@ -259,10 +259,12 @@ if (!$TempUserInfo || !$TempUserInfo['ID'])
         "DaysUsers" => $Config["DaysUsers"] + 1
     );
     UpdateConfig($NewConfig, $CurGroupID);
+    $CurUserInfo = array_merge($NewUserData, $CurUserInfo);
 }
 else
 {
     $CurUserRole           = $TempUserInfo['UserRoleID'];                //当前角色ID
+    $CurUserInfo = array_merge($TempUserInfo, $CurUserInfo);
 }
 
 
