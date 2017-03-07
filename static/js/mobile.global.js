@@ -464,7 +464,7 @@ function createBoard()
 			if (BoardName == '')
 			{
 				alert("版块名称不能为空");
-				return true;
+				return false;
 			}
 			var UploadData = new FormData();
 			var BoardIcon = $("#BoardIcon").get(0).files[0];
@@ -483,7 +483,18 @@ function createBoard()
 				processData: false,  // 告诉jQuery不要去处理发送的数据
 				contentType: false,  // 告诉jQuery不要去设置Content-Type请求头
 				success : function (data, status) {
-					console.log(data);
+					if(data.code == 0)
+					{
+						alert("创建成功");
+						setTimeout(function () {
+							location.reload();
+						}, 500)
+					}
+					else
+					{
+						alert('创建失败：' + data.msg);
+						return false;
+					}
 				}
 			});
 		},
