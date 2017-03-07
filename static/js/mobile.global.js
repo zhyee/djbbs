@@ -470,7 +470,7 @@ function createBoard()
 			var BoardIcon = $("#BoardIcon").get(0).files[0];
 			if(typeof BoardIcon != 'undefined' && BoardIcon)
 			{
-				UploadData.append('BoardIcon', BoardIcon);
+				//UploadData.append('BoardIcon', BoardIcon);
 			}
 			UploadData.append('BoardName', BoardName);
 			UploadData.append('token', accessToken);
