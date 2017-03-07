@@ -2891,6 +2891,9 @@ span.add-attachment
 	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
 	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
 	float: right;
+	margin-top: 0;
+	margin-bottom: 0;
+	display: inline-block;
 }
 
 i.add-attachment
