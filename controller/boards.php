@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         include(LibraryPath . 'Uploader.class.php');
         $UploadConfig = json_decode(preg_replace("/\/\*[\s\S]+?\*\//", "", file_get_contents(LibraryPath . 'Uploader.config.json')), true);
-        $fieldName = 'BoardName';
+        $fieldName = 'BoardIcon';
         $config    = array(
             "pathFormat" => $Config['WebsitePath'] . $UploadConfig['imagePathFormat'],
             "maxSize" => $UploadConfig['imageMaxSize'],
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
     $BoardName = trim(Request('Post', 'BoardName'));
 
-
+    exit();
 }
 
 
