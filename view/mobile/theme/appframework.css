@@ -2863,7 +2863,7 @@ header .menuButton:after {
 label.add-attachment
 {
 	cursor:pointer;
-	width:40px;
+	width:45px;
 	height: 40px;
 	border:1px solid #dadada;
 	background-color: #fff;
