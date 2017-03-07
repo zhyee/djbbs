@@ -2499,7 +2499,7 @@ li .icon:before {
 	top: 48%;
 	margin-top: -10px;
 }
-.list .divider {
+.tag-list .divider,.list .divider {
 	position: relative;
 	top: -1px;
 	padding-top: 6px;
