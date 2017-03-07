@@ -64,15 +64,15 @@ $Routes['GET']['/statistics']                                                   
 $Routes['GET']['/t/(?<id>[0-9]+)(-(?<page>[0-9]*))?']                                      = 'topic';
 $Routes['POST']['/t/(?<id>[0-9]+)(-(?<page>[0-9]*))?']                                     = 'topic'; //Delete later
 $Routes['GET']['/tag/(?<name>.*?)(/page/(?<page>[0-9]*))?']                                = 'tag';
+$Routes['GET']['/board/(?<id>[0-9]+?)(/page/(?<page>[0-9]*))?']                            = 'board';
 $Routes['GET']['/tags/following(/page/(?<page>[0-9]*))?']                                  = 'favorite_tags';
 $Routes['GET']['/tags(/page/(?<page>[0-9]*))?']                                            = 'tags';
-$Routes['GET']['/u/(?<userid>.*?)']                                                      = 'user';
+$Routes['GET']['/boards(/page/(?<page>[0-9]*))?']                                          = 'boards';
+$Routes['GET']['/u/(?<userid>[0-9]+?)']                                                    = 'user';
 $Routes['GET']['/users/following(/page/(?<page>[0-9]*))?']                                 = 'favorite_users';
 $Routes['GET']['/upload_controller']                                                       = 'upload_controller';
 $Routes['POST']['/upload_controller']                                                      = 'upload_controller';
 $Routes['GET']['/view-(?<view>desktop|mobile)']                                            = 'view';
-
-$Routes['GET']['/demo']                                                                    = 'demo';
 
 //这里是Routes End
 
