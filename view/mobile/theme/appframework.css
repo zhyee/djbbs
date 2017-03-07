@@ -2887,6 +2887,8 @@ input.add-attachment
 	z-index: 9999;
 	/*visibility: hidden;*/
 	width: 100%;
+	height: 100%;
+	line-height: 100%;
 	position: absolute;
 	left: 50%;
 	top: 50%;
