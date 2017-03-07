@@ -470,7 +470,7 @@ function createBoard()
 			var BoardIcon = $("#BoardIcon").get(0).files[0];
 			if(typeof BoardIcon != 'undefined' && BoardIcon)
 			{
-				//UploadData.append('BoardIcon', BoardIcon);
+				UploadData.append('BoardIcon', BoardIcon);
 			}
 			UploadData.append('BoardName', BoardName);
 			UploadData.append('token', accessToken);
@@ -478,8 +478,13 @@ function createBoard()
 			$.ajax({
 				url : WebsitePath + "/boards",
 				type : 'POST',
-				data : {},
-				dataType : 'JSON'
+				data : UploadData,
+				dataType : 'JSON',
+				processData: false,  // 告诉jQuery不要去处理发送的数据
+				contentType: false,  // 告诉jQuery不要去设置Content-Type请求头
+				success : function (data, status) {
+					console.log(data);
+				}
 			});
 			console.log(UploadData);
 			console.log($.ajax);
