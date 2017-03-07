@@ -134,7 +134,7 @@ function TagsListAppend(TagName, id) {
 
 function AddTag(TagName, id) {
 	if (CheckTag(TagName, 1)) {
-		$("#SelectTags").append('<li id="Tag' + id + '"><a onclick="javascript:TagRemove(\'' + TagName + '\',' + id + ');">' + TagName + '<span style="float:right;">&times;&nbsp;&nbsp;</span><input type="hidden" name="Tag[]" value="' + TagName + '" /></a></li>');
+		$("#SelectTags").append('<li id="Tag' + id + '"><a onclick="javascript:TagRemove(\'' + TagName + '\',' + id + ');">' + TagName + '<span style="float:right;" class="fa fa-close"></span><input type="hidden" name="Tag[]" value="' + TagName + '" /></a></li>');
 		$("#TagsList" + id).remove();
 	}
 	//document.NewForm.AlternativeTag.focus();
