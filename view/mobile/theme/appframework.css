@@ -2870,7 +2870,7 @@ header .menuButton:after {
 	width: 15px;
 }
 
-label.add-attachment, span.add-attachment
+label.add-attachment
 {
 	cursor:pointer;
 	width:45px;
@@ -2879,6 +2879,18 @@ label.add-attachment, span.add-attachment
 	background-color: #fff;
 	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
 	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
+}
+
+span.add-attachment
+{
+	cursor:pointer;
+	width:45px;
+	height: 40px;
+	border:1px solid #dadada;
+	background-color: #fff;
+	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
+	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
+	float: right;
 }
 
 i.add-attachment
