@@ -239,6 +239,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 	} while (false);
 }
+
+/*获取所有版块*/
+$TotalBoards = $DB->query("SELECT * FROM `" . PREFIX . "boards` WHERE `IsEnabled` = 1 ORDER BY TotalPosts DESC");
+if (!$TotalBoards)
+{
+    $TotalBoards = array();
+}
+
 $DB->CloseConnection();
 // 页面变量
 $PageTitle   = $Lang['Create_New_Topic'];

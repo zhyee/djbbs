@@ -16,7 +16,17 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
 	<input type="hidden" name="ContentHash" value="" />
 	<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
-	<p><input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" /></p>
+	<p>
+		<input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" />
+	</p>
+	<p>
+		<select name="BoardID" id="BoardID">
+			<option value="0">选择版块</option>
+			<?php foreach ($TotalBoards as $board): ?>
+				<option value="<?php echo $board['ID']; ?>"><?php echo htmlspecialchars($board['Name']); ?></option>
+			<?php endforeach; ?>
+		</select>
+	</p>
 	<p>
 		<label for="upfile" class="button block add-attachment">
 			<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" />
