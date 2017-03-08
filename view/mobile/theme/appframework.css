@@ -2905,7 +2905,10 @@ span.add-attachment
 
 i.add-attachment
 {
-
+	padding: 1em;
+	background-color: #fff;
+	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
+	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
 }
 
 input.add-attachment
