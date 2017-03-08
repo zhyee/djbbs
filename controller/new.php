@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"ID" => null,
             "GroupID" => $CurGroupID,
 			"Topic" => htmlspecialchars($Title),
-			"Tags" => "111", //过滤不合法的标签请求
+			"Tags" => "", //过滤不合法的标签请求
             "BoardID" => $BoardID,
 			"UserID" => $CurUserID,
 			"UserName" => $CurUserName,
@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"ListsTime" => $TimeStamp,
 			"Log" => ""
 		);
-        
+
 		$NewTopicResult = $DB->query("INSERT INTO `" . PREFIX . "topics` (
 				`ID`, 
 				`GroupID`,
