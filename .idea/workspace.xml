@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/new.php" afterPath="$PROJECT_DIR$/controller/new.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/appframework.css" afterPath="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
@@ -67,8 +66,8 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+            <state relative-caret-position="380">
+              <caret line="30" column="62" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -77,8 +76,8 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="243" column="119" selection-start-line="243" selection-start-column="119" selection-end-line="243" selection-end-column="119" />
+            <state relative-caret-position="-3804">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
               <folding>
                 <marker date="1488957095369" expanded="true" signature="2246:2307" ph="SELECT ID, N... ${PREFIX}tags" />
                 <marker date="1488957095369" expanded="true" signature="2571:2754" ph="INSERT INTO `${PREFIX}tags`... " />
@@ -100,8 +99,8 @@
       <file leaf-file-name="appframework.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="2725" column="18" selection-start-line="2725" selection-start-column="18" selection-end-line="2725" selection-end-column="18" />
+            <state relative-caret-position="546">
+              <caret line="2921" column="17" selection-start-line="2921" selection-start-column="17" selection-end-line="2921" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -114,22 +113,6 @@
               <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
                 <marker date="1488945210714" expanded="true" signature="651:663" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tag.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/tag.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
-              <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-              <folding>
-                <marker date="1488945498823" expanded="true" signature="169:218" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1488945498823" expanded="true" signature="693:862" ph="SELECT Topic... ${PREFIX}" />
-                <marker date="1488945498823" expanded="true" signature="972:1287" ph="SELECT Topic... ${PREFIX}" />
-                <marker date="1488945498823" expanded="true" signature="1422:1607" ph="SELECT `ID`,... ${PREFIX}" />
-                <marker date="1488945498823" expanded="true" signature="1671:1771" ph="SELECT ID FR... ${PREFIX}" />
               </folding>
             </state>
           </provider>
@@ -499,12 +482,12 @@
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
       <workItem from="1488848520342" duration="33849000" />
-      <workItem from="1488934905644" duration="13140000" />
+      <workItem from="1488934905644" duration="14352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241720000" />
+    <option name="totallyTimeSpent" value="242932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -944,43 +927,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/tag.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-          <folding>
-            <marker date="1488945498823" expanded="true" signature="169:218" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1488945498823" expanded="true" signature="693:862" ph="SELECT Topic... ${PREFIX}" />
-            <marker date="1488945498823" expanded="true" signature="972:1287" ph="SELECT Topic... ${PREFIX}" />
-            <marker date="1488945498823" expanded="true" signature="1422:1607" ph="SELECT `ID`,... ${PREFIX}" />
-            <marker date="1488945498823" expanded="true" signature="1671:1771" ph="SELECT ID FR... ${PREFIX}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/language/zh-cn/common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/tags.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <marker date="1488945210714" expanded="true" signature="651:663" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,18 +968,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+    <entry file="file://$PROJECT_DIR$/controller/tag.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+        <state relative-caret-position="922">
+          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding>
+            <marker date="1488945498823" expanded="true" signature="169:218" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1488945498823" expanded="true" signature="693:862" ph="SELECT Topic... ${PREFIX}" />
+            <marker date="1488945498823" expanded="true" signature="972:1287" ph="SELECT Topic... ${PREFIX}" />
+            <marker date="1488945498823" expanded="true" signature="1422:1607" ph="SELECT `ID`,... ${PREFIX}" />
+            <marker date="1488945498823" expanded="true" signature="1671:1771" ph="SELECT ID FR... ${PREFIX}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/tags.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <marker date="1488945210714" expanded="true" signature="651:663" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="243" column="119" selection-start-line="243" selection-start-column="119" selection-end-line="243" selection-end-column="119" />
+        <state relative-caret-position="-3804">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
           <folding>
             <marker date="1488957095369" expanded="true" signature="2246:2307" ph="SELECT ID, N... ${PREFIX}tags" />
             <marker date="1488957095369" expanded="true" signature="2571:2754" ph="INSERT INTO `${PREFIX}tags`... " />
@@ -1046,10 +1021,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="2725" column="18" selection-start-line="2725" selection-start-column="18" selection-end-line="2725" selection-end-column="18" />
+        <state relative-caret-position="546">
+          <caret line="2921" column="17" selection-start-line="2921" selection-start-column="17" selection-end-line="2921" selection-end-column="17" />
           <folding />
         </state>
       </provider>
