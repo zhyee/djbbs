@@ -2706,7 +2706,7 @@ p {
 	-moz-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-	background: #ffffff;
+	background: #f0f0f0;
 	color: #000000;
 	overflow: hidden;
 }
