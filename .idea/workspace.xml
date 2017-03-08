@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/controller/new.php" line="192" mnemonic="4" />
+    <bookmark url="file://$PROJECT_DIR$/controller/new.php" line="194" mnemonic="4" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
@@ -133,22 +133,22 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+            <state relative-caret-position="732">
+              <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
               <folding>
-                <marker date="1488978327538" expanded="true" signature="1441:1456" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="1441:1469" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="1441:1514" ph="SELECT * FRO... ${PREFIX}boards" />
-                <marker date="1488978327538" expanded="true" signature="1441:1515" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="3180:4039" ph="INSERT INTO `${PREFIX}topics`... " />
-                <marker date="1488978327538" expanded="true" signature="4427:4648" ph="INSERT INTO `${PREFIX}posts`... " />
-                <marker date="1488978327538" expanded="true" signature="6082:6095" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="6082:6096" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1488978327538" expanded="true" signature="6082:6097" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="6082:6110" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="6082:6173" ph="SELECT * FRO... ${PREFIX}boards" />
-                <marker date="1488978327538" expanded="true" signature="6082:6174" ph="SELECT * FRO... " />
-                <marker date="1488978327538" expanded="true" signature="6082:6251" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="1441:1456" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="1441:1469" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="1441:1514" ph="SELECT * FRO... ${PREFIX}boards" />
+                <marker date="1488978573789" expanded="true" signature="1441:1515" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="3210:4069" ph="INSERT INTO `${PREFIX}topics`... " />
+                <marker date="1488978573789" expanded="true" signature="4457:4678" ph="INSERT INTO `${PREFIX}posts`... " />
+                <marker date="1488978573789" expanded="true" signature="6112:6125" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="6112:6126" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1488978573789" expanded="true" signature="6112:6127" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="6112:6140" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="6112:6203" ph="SELECT * FRO... ${PREFIX}boards" />
+                <marker date="1488978573789" expanded="true" signature="6112:6204" ph="SELECT * FRO... " />
+                <marker date="1488978573789" expanded="true" signature="6112:6281" ph="SELECT * FRO... " />
               </folding>
             </state>
           </provider>
@@ -594,12 +594,12 @@
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
       <workItem from="1488848520342" duration="33849000" />
-      <workItem from="1488934905644" duration="29651000" />
+      <workItem from="1488934905644" duration="29899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258231000" />
+    <option name="totallyTimeSpent" value="258479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -1134,22 +1134,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+        <state relative-caret-position="732">
+          <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
           <folding>
-            <marker date="1488978327538" expanded="true" signature="1441:1456" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="1441:1469" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="1441:1514" ph="SELECT * FRO... ${PREFIX}boards" />
-            <marker date="1488978327538" expanded="true" signature="1441:1515" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="3180:4039" ph="INSERT INTO `${PREFIX}topics`... " />
-            <marker date="1488978327538" expanded="true" signature="4427:4648" ph="INSERT INTO `${PREFIX}posts`... " />
-            <marker date="1488978327538" expanded="true" signature="6082:6095" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="6082:6096" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1488978327538" expanded="true" signature="6082:6097" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="6082:6110" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="6082:6173" ph="SELECT * FRO... ${PREFIX}boards" />
-            <marker date="1488978327538" expanded="true" signature="6082:6174" ph="SELECT * FRO... " />
-            <marker date="1488978327538" expanded="true" signature="6082:6251" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="1441:1456" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="1441:1469" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="1441:1514" ph="SELECT * FRO... ${PREFIX}boards" />
+            <marker date="1488978573789" expanded="true" signature="1441:1515" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="3210:4069" ph="INSERT INTO `${PREFIX}topics`... " />
+            <marker date="1488978573789" expanded="true" signature="4457:4678" ph="INSERT INTO `${PREFIX}posts`... " />
+            <marker date="1488978573789" expanded="true" signature="6112:6125" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="6112:6126" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1488978573789" expanded="true" signature="6112:6127" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="6112:6140" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="6112:6203" ph="SELECT * FRO... ${PREFIX}boards" />
+            <marker date="1488978573789" expanded="true" signature="6112:6204" ph="SELECT * FRO... " />
+            <marker date="1488978573789" expanded="true" signature="6112:6281" ph="SELECT * FRO... " />
           </folding>
         </state>
       </provider>

@@ -105,6 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"ListsTime" => $TimeStamp,
 			"Log" => ""
 		);
+
+        print_r($TopicData);
 		$NewTopicResult = $DB->query("INSERT INTO `" . PREFIX . "topics` 
 			(
 				`ID`, 
