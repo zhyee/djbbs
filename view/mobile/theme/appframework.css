@@ -2877,18 +2877,6 @@ header .menuButton:after {
 	width: 15px;
 }
 
-label.add-attachment
-{
-	z-index: 9999;
-	cursor:pointer;
-	width:200px;
-	height: 130px;
-	border:1px solid #dadada;
-	background-color: #fff;
-	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
-	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
-}
-
 span.add-attachment
 {
 	cursor:pointer;
@@ -2908,8 +2896,8 @@ label.add-attachment
 	padding: 10px 17px;
 	border-radius: 5px;
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
-	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
+	background-image: -webkit-linear-gradient(top, #fefefe, #efefef);
+	background-image: -moz-linear-gradient(top, #fefefe, #efefef);
 }
 
 input.add-attachment
