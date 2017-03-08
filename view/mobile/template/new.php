@@ -28,7 +28,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		</select>
 	</p>
 	<p>
-		<i class="fa fa-paperclip fa-2x add-attachment"></i>
+		<i class="fa fa-paperclip fa-2x add-attachment" onclick="alert('ok');"></i>
 		<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" />
 	</p>
 	<p>
