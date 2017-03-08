@@ -27,14 +27,11 @@ function CreateNewTopic() {
 		CarbonAlert(Lang['Title_Too_Long'].replace("{{MaxTitleChars}}", MaxTitleChars).replace("{{Current_Title_Length}}", document.NewForm.Title.value.replace(/[^\x00-\xff]/g, "***").length));
 		document.NewForm.Title.focus();
 		return false;
-	} else if ($("#SelectTags li").length <= 1) {
-		if ($("#AlternativeTag").val().length != 0) {
-			AddTag($("#AlternativeTag").val(), Math.round(new Date().getTime() / 1000));
-		}else{
-			CarbonAlert(Lang['Tags_Empty']);
-			document.NewForm.AlternativeTag.focus();
-			return false;
-		}
+	}
+	else if ($("#BoardID").val() == '0')
+	{
+		CarbonAlert('请选择版块');
+		return false;
 	} else {
 		$.afui.toast(Lang['Submitting']);
 		$("#PublishButton").val(Lang['Submitting']);
@@ -44,11 +41,10 @@ function CreateNewTopic() {
 			url: WebsitePath + '/new',
 			data: {
 				FormHash: document.NewForm.FormHash.value,
+				token: accessToken,
 				Title: document.NewForm.Title.value,
-				Content: Content,
-				Tag: $("input[name='Tag[]']").map(function() {
-					return $(this).val();
-				}).get()
+				BoardID: document.NewForm.BoardID.value,
+				Content: Content
 			},
 			type: 'post',
 			dataType: 'json',
