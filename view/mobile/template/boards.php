@@ -27,7 +27,7 @@ foreach ($BoardsArray as $Board) {
 			<?php echo ($Board['Description']? mb_strlen($Board['Description']) > 60 ? mb_substr($Board['Description'], 0, 60, 'utf-8').'……' : $Board['Description'] : '' ); ?>
 		</p-->
 			<p>
-				<span class="number-topic">今日 ( 30 )</span>
+				<span class="number-topic">今日 ( <?php echo $Board['TodayPosts']; ?> )</span>
 				<span class="number-topic">总贴 ( <?php echo $Board['TotalPosts']; ?> )</span>
 			</p>
 		</div>

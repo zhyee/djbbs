@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/new.php" afterPath="$PROJECT_DIR$/controller/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/boards.php" afterPath="$PROJECT_DIR$/view/mobile/template/boards.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,6 +103,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="boards.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/mobile/template/boards.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
+              <folding>
+                <marker date="1488979776294" expanded="true" signature="730:743" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="2017-01-13-2c4770aaa1d5e90634e786e68902727c.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/logs/2017-01-13-2c4770aaa1d5e90634e786e68902727c.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="314">
               <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
               <folding>
                 <marker date="1488979407353" expanded="true" signature="1441:1456" ph="SELECT * FRO... " />
@@ -226,7 +238,6 @@
         <option value="$PROJECT_DIR$/library/Uploader.class.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/style.css" />
         <option value="$PROJECT_DIR$/language/zh-cn/board.php" />
-        <option value="$PROJECT_DIR$/view/mobile/template/boards.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/common.php" />
         <option value="$PROJECT_DIR$/view/mobile/template/tag.php" />
         <option value="$PROJECT_DIR$/view/mobile/template/tags.php" />
@@ -242,6 +253,7 @@
         <option value="$PROJECT_DIR$/static/js/mobile.new.function.js" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/controller/new.php" />
+        <option value="$PROJECT_DIR$/view/mobile/template/boards.php" />
       </list>
     </option>
   </component>
@@ -577,12 +589,12 @@
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
       <workItem from="1488848520342" duration="33849000" />
-      <workItem from="1488934905644" duration="30731000" />
+      <workItem from="1488934905644" duration="31099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259311000" />
+    <option name="totallyTimeSpent" value="259679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -819,17 +831,6 @@
           <folding>
             <marker date="1484719456392" expanded="true" signature="485:725" ph="SELECT `ID`,... ${PREFIX}" />
             <marker date="1484719456392" expanded="true" signature="895:1290" ph="SELECT `ID`,... ${PREFIX}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/boards.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="4" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
-            <marker date="1488943981076" expanded="true" signature="730:743" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1117,7 +1118,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="314">
           <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
           <folding>
             <marker date="1488979407353" expanded="true" signature="1441:1456" ph="SELECT * FRO... " />
@@ -1133,6 +1134,16 @@
             <marker date="1488979407353" expanded="true" signature="6069:6160" ph="SELECT * FRO... ${PREFIX}boards" />
             <marker date="1488979407353" expanded="true" signature="6069:6161" ph="SELECT * FRO... " />
             <marker date="1488979407353" expanded="true" signature="6069:6238" ph="SELECT * FRO... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/boards.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
+          <folding>
+            <marker date="1488979776294" expanded="true" signature="730:743" ph="..." />
           </folding>
         </state>
       </provider>
