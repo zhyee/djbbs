@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"ID" => null,
             "GroupID" => $CurGroupID,
 			"Topic" => htmlspecialchars($Title),
-			"Tags" => '', //过滤不合法的标签请求
+			"Tags" => "111", //过滤不合法的标签请求
             "BoardID" => $BoardID,
 			"UserID" => $CurUserID,
 			"UserName" => $CurUserName,
