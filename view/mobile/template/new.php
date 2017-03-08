@@ -29,7 +29,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	</p>
 	<p>
 		<label for="upfile" class="fa fa-paperclip fa-2x add-attachment" onclick></label>
-		<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" />
+		<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" />
 	</p>
 	<p>
 		<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
