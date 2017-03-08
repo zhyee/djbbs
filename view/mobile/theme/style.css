@@ -24,6 +24,7 @@ body {
 {
 	margin: 0 0 10px 0;
 	background: #fff;
+	border: none;
 }
 
 .topic-list .avatar {
@@ -37,7 +38,7 @@ body {
 {
 	min-width: 53px;
 	min-height: 53px;
-	margin: 0 1em;
+	margin: 5px 1em 0;
 }
 
 span.number-topic
