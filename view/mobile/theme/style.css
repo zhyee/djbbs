@@ -19,12 +19,25 @@ body {
 	margin: auto 10px;
 	padding: .5em 0 !important;
 }
+
+.board-list li
+{
+	margin: 0 0 10px 0;
+}
+
 .topic-list .avatar {
 	width: 20%;
 	max-height: 5em;
 	max-width: 5em;
 	float: left;
 }
+
+.board-list .avatar
+{
+	min-width: 53px;
+	min-height: 53px;
+}
+
 .topic-list .avatar img {
 	max-height: 5em;
 	max-width: 5em;
