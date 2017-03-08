@@ -2881,8 +2881,8 @@ label.add-attachment
 {
 	z-index: 9999;
 	cursor:pointer;
-	width:50px;
-	height: 44px;
+	width:200px;
+	height: 130px;
 	border:1px solid #dadada;
 	background-color: #fff;
 	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
