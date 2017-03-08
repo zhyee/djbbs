@@ -34,15 +34,8 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	<p>
 		<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
 	</p>
+
 	<p>
-		<input type="text" name="AlternativeTag" id="AlternativeTag" value="" onclick="JavaScript:GetTags();" placeholder="<?php echo $Lang['Add_Tags']; ?>" />
-		<ul id="SelectTags" class="tag-list">
-			<li class="divider"><?php echo $Lang['Tags']; ?></li>
-		</ul>
+		<input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" />
 	</p>
-	<p>
-		<div id="TagsList">
-		</div>
-	</p>
-	<p><input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /></p>
 </form>
