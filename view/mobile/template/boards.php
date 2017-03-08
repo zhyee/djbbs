@@ -20,7 +20,7 @@ foreach ($BoardsArray as $Board) {
 		<div class="content">
 			<h2>
 				<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $Board['ID']; ?>?token=<?php echo $accessToken; ?>">
-					<?php echo $Board['Name']; ?>    (<?php echo $Board['TotalPosts']; ?>)
+					<?php echo $Board['Name']; ?>
 				</a>
 			</h2>
 		<!--p>

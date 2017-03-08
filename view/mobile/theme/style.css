@@ -40,6 +40,12 @@ body {
 	margin: 0 1em;
 }
 
+span.number-topic
+{
+	color: #9b9b9b;
+	margin-right: 1.5em;
+}
+
 .topic-list .avatar img {
 	max-height: 5em;
 	max-width: 5em;
