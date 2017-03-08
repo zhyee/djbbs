@@ -2467,6 +2467,12 @@ li .icon:before {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+
+.board-list
+{
+	background: #f0f0f0;
+}
+
 .tag-list li,.list li {
 	display: block;
 	list-style: none;
@@ -2717,7 +2723,6 @@ p {
 	top: 0px;
 	left: 0px;
 	display: none;
-	padding: 10px;
 	padding-top: 0px;
 	overflow-x: hidden;
 	overflow-y: auto;

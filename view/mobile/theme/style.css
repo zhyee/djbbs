@@ -36,6 +36,7 @@ body {
 {
 	min-width: 53px;
 	min-height: 53px;
+	padding: 0 1em;
 }
 
 .topic-list .avatar img {
@@ -44,7 +45,6 @@ body {
 	border-radius: 50%;
 }
 .topic-list .content {
-	width: 80%;
 	float: left;
 }
 .topic-list h2 {
