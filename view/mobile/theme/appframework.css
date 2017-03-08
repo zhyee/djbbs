@@ -2569,7 +2569,8 @@ body {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-box-align: stretch;
-	background: #ffffff;
+	/*background: #ffffff;*/
+	background: #f0f0f0;
 }
 input,
 textarea {
