@@ -18,13 +18,18 @@ foreach ($BoardsArray as $Board) {
 			</a>
 		</div>
 		<div class="content">
-		<h2>
-			<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $Board['ID']; ?>?token=<?php echo $accessToken; ?>">
-				<?php echo $Board['Name']; ?>    (<?php echo $Board['TotalPosts']; ?>)
-			</a>
-		</h2>
-		<p><?php echo ($Board['Description']? mb_strlen($Board['Description']) > 60 ? mb_substr($Board['Description'], 0, 60, 'utf-8').'……' : $Board['Description'] : '' ); ?>
-		</p>
+			<h2>
+				<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $Board['ID']; ?>?token=<?php echo $accessToken; ?>">
+					<?php echo $Board['Name']; ?>    (<?php echo $Board['TotalPosts']; ?>)
+				</a>
+			</h2>
+		<!--p>
+			<?php echo ($Board['Description']? mb_strlen($Board['Description']) > 60 ? mb_substr($Board['Description'], 0, 60, 'utf-8').'……' : $Board['Description'] : '' ); ?>
+		</p-->
+			<p>
+				<span class="number-topic">今日 ( 30 )</span>
+				<span class="number-topic">总贴 ( <?php echo $Board['TotalPosts']; ?> )</span>
+			</p>
 		</div>
 		
 		<div class="c"></div>
