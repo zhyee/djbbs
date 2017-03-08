@@ -105,12 +105,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"ListsTime" => $TimeStamp,
 			"Log" => ""
 		);
-
-        print_r($TopicData);
-		$NewTopicResult = $DB->query("INSERT INTO `" . PREFIX . "topics` 
-			(
+        
+		$NewTopicResult = $DB->query("INSERT INTO `" . PREFIX . "topics` (
 				`ID`, 
-				`GroupID`
+				`GroupID`,
 				`Topic`, 
 				`Tags`, 
 				`BoardID`,
@@ -135,9 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				`Lists`, 
 				`ListsTime`, 
 				`Log`
-			) 
-			VALUES 
-			(
+			) VALUES (
 				:ID,
 				:GroupID,
 				:Topic,
