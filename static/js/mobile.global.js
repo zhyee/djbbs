@@ -559,7 +559,7 @@ function UploadPicture(TextareaID) {
 		UploadData.append('upfile', $('#upfile')[0].files[0]);
 		UploadData.append('token', accessToken);
 		$.ajax({  
-			url: WebsitePath + "/upload_controller?action=uploadimage",  
+			url: WebsitePath + "/upload_controller?action=uploadfile",
 			type: 'POST',  
 			data: UploadData,
 			dataType: 'json',
