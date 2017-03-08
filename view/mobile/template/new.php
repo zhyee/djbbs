@@ -28,8 +28,13 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		</select>
 	</p>
 	<p>
-		<i class="fa fa-paperclip fa-2x add-attachment" onclick="$('#upfile').click();"></i>
+		<i class="fa fa-paperclip fa-2x add-attachment" id="attachment" onclick></i>
 		<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" accept="image/*" />
+		<script>
+			$("#attachment").click(function () {
+				$("#upfile").click();
+			});
+		</script>
 	</p>
 	<p>
 		<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
