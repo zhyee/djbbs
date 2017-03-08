@@ -27,7 +27,7 @@ foreach ($TopicsArray as $Topic) {
 ?>
 	<li>
 		<div class="avatar">
-			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo urlencode($Topic['UserName']); ?>" data-transition="slide">
+			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>" data-transition="slide">
 					<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>
 			</a>
 		</div>

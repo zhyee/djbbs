@@ -1,14 +1,12 @@
 <?php
 require(LanguagePath . 'tag.php');
-$TagName = htmlspecialchars(trim(Request('Get', 'name')));
+$TagID = intval(Request('Get', 'id'));
 $Page    = Request('Get', 'page');
 $TagInfo = array();
-if ($TagName)
-	$TagInfo = $DB->row('SELECT * FROM ' . PREFIX . 'tags FORCE INDEX(TagName) 
-		WHERE Name=:Name', 
-		array(
-			'Name' => $TagName
-		)
+if ($TagID)
+	$TagInfo = $DB->row('SELECT * FROM ' . PREFIX . 'tags  
+		WHERE ID = ?',
+		array($TagID)
 	);
 if (empty($TagInfo) || $TagInfo['TotalPosts'] == 0 || ($TagInfo['IsEnabled'] == 0 && $CurUserRole < 3))
 	AlertMsg('404 Not Found', '404 Not Found', 404);

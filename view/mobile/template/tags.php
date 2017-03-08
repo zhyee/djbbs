@@ -12,13 +12,13 @@ foreach ($TagsArray as $Tag) {
 ?>
 	<li>
 		<div class="avatar">
-			<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag['Name']); ?>">
+			<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo $Tag['ID']; ?>?token=<?php echo $accessToken; ?>">
 				<?php echo GetTagIcon($Tag['ID'], $Tag['Icon'], $Tag['Name'], 'middle'); ?>
 			</a>
 		</div>
 		<div class="content">
 		<h2>
-			<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag['Name']); ?>">
+			<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo $Tag['ID']; ?>?token=<?php echo $accessToken; ?>">
 				<?php echo $Tag['Name']; ?>    (<?php echo $Tag['TotalPosts']; ?>)
 			</a>
 		</h2>
