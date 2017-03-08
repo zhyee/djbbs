@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         'Description'   => '',
         'IsEnabled'     => 1,
         'TotalPosts'   => 0,
+        'TodayPosts'    => 0,
         'MostRecentPostTime'    => 0,
         'DateCreated'   => $TimeStamp
     );
@@ -66,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             `Description`,
             `IsEnabled`,
             `TotalPosts`,
+            `TodayPosts`,
             `MostRecentPostTime`,
             `DateCreated`
         )
@@ -78,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             :Description,
             :IsEnabled,
             :TotalPosts,
+            :TodayPosts,
             :MostRecentPostTime,
             :DateCreated
         )", $boardData);
@@ -125,6 +128,6 @@ if ($CurUserID && $BoardsArray){
 $DB->CloseConnection();
 
 $PageTitle = $Page > 1 ? ' Page' . $Page . '-' : '';
-$PageTitle .= $Lang['Hot_Tags'];
+$PageTitle .= $Lang['Board'];
 $ContentFile  = $TemplatePath . 'boards.php';
 include($TemplatePath . 'layout.php');

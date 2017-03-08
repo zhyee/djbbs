@@ -4,18 +4,18 @@ if (empty($Lang) || !is_array($Lang))
 	$Lang = array();
 
 $Lang = array_merge($Lang, array(
-	'Tag' => '话题',
+	'Tag' => '版块',
 	'Last_Reply_From' => '最后回复来自',
 	'Followers' => '人收藏',
-	'Topics' => '个标签',
-	'Created_In' => '标签创建于',
+	'Topics' => '个版块',
+	'Created_In' => '版块创建于',
 	'Last_Updated_In' => '最后更新于',
-	'Follow' => '关注本标签',
-	'Unfollow' => '取消关注本标签',
+	'Follow' => '关注本版块',
+	'Unfollow' => '取消关注本版块',
 
 	'Upload_A_New_Icon' => '更新图标',
-	'Enable_Tag' => '启用标签',
-	'Disable_Tag' => '禁用标签',
+	'Enable_Tag' => '启用版块',
+	'Disable_Tag' => '禁用版块',
 	'Edit_Description' => '编辑描述',
 	'Submit' => '提交',
 	'Cancel' => '取消',

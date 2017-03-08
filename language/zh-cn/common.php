@@ -28,6 +28,7 @@ $Lang = array_merge($Lang, array(
 	'Log_Out' => '登出',
 	'Information_Bar' =>'信息栏',
 	'Hot_Tags'=>'标签广场',
+    'Board'     => '版块',
 	'Show_More'=>'查看更多',
 	'Home' => '首页',
 	'Search' => '搜索',
