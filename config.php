@@ -1,7 +1,7 @@
 <?php
 // set automatically the time zone
 date_default_timezone_set('Asia/Shanghai');
-define('DEBUG_MODE', false);
+define('DEBUG_MODE', TRUE);
 
 // Salt for Cookie and Form
 // Free to modify
