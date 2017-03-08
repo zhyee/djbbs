@@ -7,7 +7,6 @@ $Error     = '';
 $ErrorCode = $ErrorCodeList['Default'];
 $Title     = '';
 $Content   = '';
-$TagsArray = array();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	SetStyle('api', 'API');
@@ -15,7 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		AlertMsg($Lang['Error_Unknown_Referer'], $Lang['Error_Unknown_Referer'], 403);
 	}
 	$Title     = Request('Post', 'Title');
-	$Content   = Request('Post', 'Content');
+    $BoardID   = intval(Request('Post', 'BoardID'));
+    $Content   = Request('Post', 'Content');
+
+
 	$TagsArray = isset($_POST['Tag']) ? $_POST['Tag'] : array();
 	do {
 		if (DEBUG_MODE === false && ($TimeStamp - $CurUserInfo['LastPostTime']) <= 8) { //发帖至少要间隔8秒
@@ -29,6 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$ErrorCode = $ErrorCodeList['Title_Empty'];
 			break;
 		}
+
+		if (!$BoardID)
+        {
+            $Error      = '请选择版块';
+            $ErrorCode = $ErrorCodeList['BoardID_Empty'];
+            break;
+        }
 		
 		
 		if (strlen($Title) > $Config['MaxTitleChars'] || strlen($Content) > $Config['MaxPostChars']) {
@@ -36,15 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$ErrorCode = $ErrorCodeList['Too_Long'];
 			break;
 		}
-		
-		
-		$TagsArray = TagsDiff($TagsArray, array());
-		if (empty($TagsArray) || in_array('', $TagsArray) || count($TagsArray) > $Config["MaxTagsNum"]) {
-			$Error     = $Lang['Tags_Empty'];
-			$ErrorCode = $ErrorCodeList['Tags_Empty'];
-			break;
-		}
 
+		$BoardInfo = $DB->row("SELECT * FROM `" . PREFIX . "boards` WHERE ID = ? AND GroupID = ? LIMIT 1", array($BoardID, $CurGroupID));
+
+        if (!is_array($BoardInfo) || !$BoardInfo['ID'])
+        {
+            $Error      = '该版块不存在';
+            $ErrorCode  = $ErrorCodeList['Board_Not_Exists'];
+            break;
+        }
 
 		// 内容过滤系统
 		$TitleFilterResult = Filter($Title);
@@ -66,41 +75,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		$Title = $TitleFilterResult['Content'];
 		$Content = $ContentFilterResult['Content'];
-		//获取已存在的标签
-		$TagsExistArray = $DB->query("SELECT ID, Name FROM `" . PREFIX . "tags` WHERE `Name` IN (?)", $TagsArray);
-		$TagsExist      = ArrayColumn($TagsExistArray, 'Name');
-		$TagsID         = ArrayColumn($TagsExistArray, 'ID');
-		$NewTags        = TagsDiff($TagsArray, $TagsExist);
-		//新建不存在的标签
-		if ($NewTags) {
-			foreach ($NewTags as $Name) {
-				$DB->query("INSERT INTO `" . PREFIX . "tags` 
-					(`ID`, `Name`,`Followers`,`Icon`,`Description`, `IsEnabled`, `TotalPosts`, `MostRecentPostTime`, `DateCreated`) 
-					VALUES (?,?,?,?,?,?,?,?,?)", array(
-					null,
-					$Name,
-					0,
-					0,
-					null,
-					1,
-					1,
-					$TimeStamp,
-					$TimeStamp
-				));
-				$TagsID[] = $DB->lastInsertId();
-			}
-			//更新全站统计数据
-			$NewConfig = array(
-				"NumTags" => $Config["NumTags"] + count($NewTags)
-			);
-			//var_dump($NewTags);
-		}
-		$TagsArray      = array_merge($TagsExist, $NewTags);
+
 		//往Topics表插入数据
 		$TopicData      = array(
 			"ID" => null,
+            "GroupID" => $CurGroupID,
 			"Topic" => htmlspecialchars($Title),
-			"Tags" => implode("|", $TagsArray), //过滤不合法的标签请求
+			"Tags" => '', //过滤不合法的标签请求
+            "BoardID" => $BoardID,
 			"UserID" => $CurUserID,
 			"UserName" => $CurUserName,
 			"LastName" => "",
@@ -126,8 +108,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$NewTopicResult = $DB->query("INSERT INTO `" . PREFIX . "topics` 
 			(
 				`ID`, 
+				`GroupID`
 				`Topic`, 
 				`Tags`, 
+				`BoardID`,
 				`UserID`, 
 				`UserName`, 
 				`LastName`, 
@@ -153,8 +137,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			VALUES 
 			(
 				:ID,
+				:GroupID,
 				:Topic,
 				:Tags,
+				:BoardID,
 				:UserID,
 				:UserName,
 				:LastName,
@@ -179,6 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			)", $TopicData);
 		
 		$TopicID       = $DB->lastInsertId();
+
 		//往Posts表插入数据
 		$PostData      = array(
 			"ID" => null,
@@ -203,7 +190,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				"NumTopics" => $Config["NumTopics"] + 1,
 				"DaysTopics" => $Config["DaysTopics"] + 1
 			);
-			UpdateConfig($NewConfig);
+			UpdateConfig($NewConfig, $CurGroupID);
+
 			//更新用户自身统计数据
 			UpdateUserInfo(array(
 				"Topics" => $CurUserInfo['Topics'] + 1,
@@ -214,22 +202,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$PostID,
 				$CurUserName
 			));
-			//记录标签与TopicID的对应关系
-			foreach ($TagsID as $TagID) {
-				$DB->query("INSERT INTO `" . PREFIX . "posttags` 
-					(`TagID`, `TopicID`, `PostID`) 
-					VALUES (?,?,?)", array(
-					$TagID,
-					$TopicID,
-					$PostID
-				));
-			}
-			//更新标签统计数据
-			if ($TagsExist) {
-				$DB->query("UPDATE `" . PREFIX . "tags` SET TotalPosts=TotalPosts+1, MostRecentPostTime=" . $TimeStamp . " WHERE `Name` in (?)", $TagsExist);
-			}
+
+			/* 更新版块统计信息 */
+            if (date('Ymd', $TimeStamp) === date('Ymd', $BoardInfo['MostRecentPostTime']))
+            {
+                $TodayPosts = (int)$BoardInfo['TodayPosts'] + 1;
+            }
+            else
+            {
+                $TodayPosts = 1;
+            }
+            $TotalPosts = (int)$BoardInfo['TotalPosts'] + 1;
+
+            $DB->query("UPDATE `" . PREFIX . "boards` SET TotalPosts = ?, TodayPosts = ?, MostRecentPostTime = ? WHERE `ID` = ?", array(
+                $TotalPosts,
+                $TodayPosts,
+                $TimeStamp,
+                $BoardID
+            ));
+
+
 			//添加提醒消息
-			AddingNotifications($Content, $TopicID, $PostID);
+//			AddingNotifications($Content, $TopicID, $PostID);
 			//清理首页内存缓存
 			if ($MCache) {
 				$MCache->delete(MemCachePrefix . 'Homepage');

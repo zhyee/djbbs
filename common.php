@@ -866,95 +866,19 @@ function UpdateUserInfo($NewUserInfo, $UserID = 0)
 		$UserID = $CurUserID;
 	}
 	if ($NewUserInfo) {
-	    $UserInfo = $DB->row("SELECT ID,UserName,Salt,Password,UserRoleID,UserMail,UserIntro FROM " . PREFIX . "users WHERE ID = :UserID", array(
-	        "UserID" => $UserID
-        ));
 
-        if (!$UserInfo)
-        {
-            /*用户首次登录计入本地数据库*/
-            $NewUserData     = array(
-                'ID' => $UserID,
-                'UserName' => $NewUserInfo['UserName'],
-                'Salt' => mt_rand(100000, 999999),
-                'Password' => '',
-                'UserMail' => '',
-                'UserHomepage' => '',
-                'PasswordQuestion' => '',
-                'PasswordAnswer' => '',
-                'UserSex' => 0,
-                'NumFavUsers' => 0,
-                'NumFavTags' => 0,
-                'NumFavTopics' => 0,
-                'NewMessage' => 0,
-                'NewNotification' => 0,
-                'Topics' => 0,
-                'Replies' => 0,
-                'Followers' => 0,
-                'DelTopic' => 0,
-                'GoodTopic' => 0,
-                'UserPhoto' => '',
-                'UserMobile' => '',
-                'UserLastIP' => $NewUserInfo['UserLastIP'],
-                'UserRegTime' => $NewUserInfo['LastLoginTime'],
-                'LastLoginTime' => $NewUserInfo['LastLoginTime'],
-                'LastPostTime' => $NewUserInfo['LastLoginTime'],
-                'BlackLists' => '',
-                'UserFriend' => '',
-                'UserInfo' => '',
-                'UserIntro' => '',
-                'UserIM' => '',
-                'UserRoleID' => 1,
-                'UserAccountStatus' => 1,
-                'Birthday' => date("Y-m-d", $NewUserInfo['LastLoginTime'])
-            );
-
-            $Result = $DB->query('INSERT INTO `' . PREFIX . 'users`
-			(
-				`ID`, `UserName`, `Salt`, `Password`, `UserMail`, 
-				`UserHomepage`, `PasswordQuestion`, `PasswordAnswer`, 
-				`UserSex`, `NumFavUsers`, `NumFavTags`, `NumFavTopics`, 
-				`NewMessage`, `NewNotification`, `Topics`, `Replies`, `Followers`, 
-				`DelTopic`, `GoodTopic`, `UserPhoto`, `UserMobile`, 
-				`UserLastIP`, `UserRegTime`, `LastLoginTime`, `LastPostTime`, 
-				`BlackLists`, `UserFriend`, `UserInfo`, `UserIntro`, `UserIM`, 
-				`UserRoleID`, `UserAccountStatus`, `Birthday`
-			) 
-			VALUES 
-			(
-				:ID, :UserName, :Salt, :Password, :UserMail, 
-				:UserHomepage, :PasswordQuestion, :PasswordAnswer, 
-				:UserSex, :NumFavUsers, :NumFavTags, 
-				:NumFavTopics, :NewMessage, :NewNotification, :Topics, :Replies, :Followers, 
-				:DelTopic, :GoodTopic, :UserPhoto, :UserMobile, 
-				:UserLastIP, :UserRegTime, :LastLoginTime, :LastPostTime, 
-				:BlackLists, :UserFriend, :UserInfo, :UserIntro, :UserIM, 
-				:UserRoleID, :UserAccountStatus, :Birthday
-			)', $NewUserData);
-
-            //更新全站统计数据
-            $NewConfig      = array(
-                "NumUsers" => $Config["NumUsers"] + 1,
-                "DaysUsers" => $Config["DaysUsers"] + 1
-            );
-            UpdateConfig($NewConfig);
-
+        $StringBindParam = '';
+        foreach ($NewUserInfo as $Key => $Value) {
+            $StringBindParam .= $Key . ' = :' . $Key . ',';
         }
-        else
-        {
-            $StringBindParam = '';
-            foreach ($NewUserInfo as $Key => $Value) {
-                $StringBindParam .= $Key . ' = :' . $Key . ',';
-            }
-            $StringBindParam = substr($StringBindParam, 0, -1);
-            $Result          = $DB->query('UPDATE `' . PREFIX . 'users` SET ' . $StringBindParam . ' WHERE ID = :UserID', array_merge($NewUserInfo, array(
-                'UserID' => $UserID
-            )));
-            if ($MCache) {
-                $MCache->set(MemCachePrefix . 'UserInfo_' . $UserID, $DB->row("SELECT * FROM " . PREFIX . "users WHERE ID = :UserID", array(
-                    "UserID" => $UserID
-                )), 86400);
-            }
+        $StringBindParam = substr($StringBindParam, 0, -1);
+        $Result          = $DB->query('UPDATE `' . PREFIX . 'users` SET ' . $StringBindParam . ' WHERE ID = :UserID', array_merge($NewUserInfo, array(
+            'UserID' => $UserID
+        )));
+        if ($MCache) {
+            $MCache->set(MemCachePrefix . 'UserInfo_' . $UserID, $DB->row("SELECT * FROM " . PREFIX . "users WHERE ID = :UserID", array(
+                "UserID" => $UserID
+            )), 86400);
         }
 
 		return $Result;

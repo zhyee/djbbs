@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 
 
-    $row = $DB->row("SELECT ID FROM `" . PREFIX . "boards` WHERE Name = ? LIMIT 1", array($BoardName));
+    $row = $DB->row("SELECT ID FROM `" . PREFIX . "boards` WHERE Name = ? AND GroupID = ? LIMIT 1", array($BoardName, $CurGroupID));
 
     if (is_array($row) && $row['ID'])
     {
@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $boardData = array(
         'ID'    => NULL,
         'Name'  => $BoardName,
+        'GroupID' => $CurGroupID,
         'Followers' => 0,
         'Icon'      => isset($icon) ? $icon['url'] : '',
         'Description'   => '',
@@ -62,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         (
             `ID`,
             `Name`,
+            `GroupID`
             `Followers`,
             `Icon`,
             `Description`,
@@ -75,6 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         (
             :ID,
             :Name,
+            :GroupID
             :Followers,
             :Icon,
             :Description,
@@ -113,9 +116,9 @@ $IsFavoriteArray = array();
 
 $BoardsArray = $DB->query('SELECT * 
 	FROM ' . PREFIX . 'boards 
-	WHERE IsEnabled=1
+	WHERE IsEnabled=1 AND GroupID = ?
 	ORDER BY TotalPosts DESC 
-	LIMIT ' . ($Page - 1) * $Config['TopicsPerPage'] . ',' . $Config['TopicsPerPage']);
+	LIMIT ' . ($Page - 1) * $Config['TopicsPerPage'] . ',' . $Config['TopicsPerPage'], array($CurGroupID));
 
 if ($CurUserID && $BoardsArray){
 	$IsFavoriteArray = array_flip($DB->column("SELECT FavoriteID FROM " . PREFIX . "favorites 
