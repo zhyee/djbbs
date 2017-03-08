@@ -4,8 +4,7 @@
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/new.php" afterPath="$PROJECT_DIR$/controller/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/zh-cn/tag.php" afterPath="$PROJECT_DIR$/language/zh-cn/tag.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/appframework.css" afterPath="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="49" />
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -78,22 +77,32 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="246" column="16" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="16" />
+            <state relative-caret-position="561">
+              <caret line="243" column="119" selection-start-line="243" selection-start-column="119" selection-end-line="243" selection-end-column="119" />
               <folding>
-                <marker date="1488955654821" expanded="true" signature="2246:2307" ph="SELECT ID, N... ${PREFIX}tags" />
-                <marker date="1488955654821" expanded="true" signature="2571:2754" ph="INSERT INTO `${PREFIX}tags`... " />
-                <marker date="1488955654821" expanded="true" signature="3755:4557" ph="INSERT INTO `${PREFIX}topics`... " />
-                <marker date="1488955654821" expanded="true" signature="4944:5165" ph="INSERT INTO `${PREFIX}posts`... " />
-                <marker date="1488955654821" expanded="true" signature="5789:5883" ph="INSERT INTO `${PREFIX}posttags`... " />
-                <marker date="1488955654821" expanded="true" signature="6390:6403" ph="SELECT * FRO... " />
-                <marker date="1488955654821" expanded="true" signature="6390:6404" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1488955654821" expanded="true" signature="6390:6405" ph="SELECT * FRO... " />
-                <marker date="1488955654821" expanded="true" signature="6390:6418" ph="SELECT * FRO... " />
-                <marker date="1488955654821" expanded="true" signature="6390:6473" ph="SELECT * FRO... ${PREFIX}boards" />
-                <marker date="1488955654821" expanded="true" signature="6390:6474" ph="SELECT * FRO... " />
-                <marker date="1488955654821" expanded="true" signature="6390:6551" ph="SELECT * FRO... " />
+                <marker date="1488957095369" expanded="true" signature="2246:2307" ph="SELECT ID, N... ${PREFIX}tags" />
+                <marker date="1488957095369" expanded="true" signature="2571:2754" ph="INSERT INTO `${PREFIX}tags`... " />
+                <marker date="1488957095369" expanded="true" signature="3755:4557" ph="INSERT INTO `${PREFIX}topics`... " />
+                <marker date="1488957095369" expanded="true" signature="4944:5165" ph="INSERT INTO `${PREFIX}posts`... " />
+                <marker date="1488957095369" expanded="true" signature="5789:5883" ph="INSERT INTO `${PREFIX}posttags`... " />
+                <marker date="1488957095369" expanded="true" signature="6390:6403" ph="SELECT * FRO... " />
+                <marker date="1488957095369" expanded="true" signature="6390:6404" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1488957095369" expanded="true" signature="6390:6405" ph="SELECT * FRO... " />
+                <marker date="1488957095369" expanded="true" signature="6390:6418" ph="SELECT * FRO... " />
+                <marker date="1488957095369" expanded="true" signature="6390:6481" ph="SELECT * FRO... ${PREFIX}boards" />
+                <marker date="1488957095369" expanded="true" signature="6390:6482" ph="SELECT * FRO... " />
+                <marker date="1488957095369" expanded="true" signature="6390:6559" ph="SELECT * FRO... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="2725" column="18" selection-start-line="2725" selection-start-column="18" selection-end-line="2725" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -194,7 +203,6 @@
         <option value="$PROJECT_DIR$/common.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/style.css" />
         <option value="$PROJECT_DIR$/language/zh-cn/board.php" />
-        <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
         <option value="$PROJECT_DIR$/view/mobile/template/boards.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/common.php" />
         <option value="$PROJECT_DIR$/controller/boards.php" />
@@ -203,8 +211,9 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controller/tag.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/tag.php" />
-        <option value="$PROJECT_DIR$/controller/new.php" />
         <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
+        <option value="$PROJECT_DIR$/controller/new.php" />
+        <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
       </list>
     </option>
   </component>
@@ -490,12 +499,12 @@
       <workItem from="1488761936366" duration="26819000" />
       <workItem from="1488800667833" duration="5264000" />
       <workItem from="1488848520342" duration="33849000" />
-      <workItem from="1488934905644" duration="12862000" />
+      <workItem from="1488934905644" duration="13140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241442000" />
+    <option name="totallyTimeSpent" value="241720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -865,14 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2658">
-          <caret line="1767" column="21" selection-start-line="1767" selection-start-column="21" selection-end-line="1767" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1016,31 +1017,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="246" column="16" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="16" />
+        <state relative-caret-position="561">
+          <caret line="243" column="119" selection-start-line="243" selection-start-column="119" selection-end-line="243" selection-end-column="119" />
           <folding>
-            <marker date="1488955654821" expanded="true" signature="2246:2307" ph="SELECT ID, N... ${PREFIX}tags" />
-            <marker date="1488955654821" expanded="true" signature="2571:2754" ph="INSERT INTO `${PREFIX}tags`... " />
-            <marker date="1488955654821" expanded="true" signature="3755:4557" ph="INSERT INTO `${PREFIX}topics`... " />
-            <marker date="1488955654821" expanded="true" signature="4944:5165" ph="INSERT INTO `${PREFIX}posts`... " />
-            <marker date="1488955654821" expanded="true" signature="5789:5883" ph="INSERT INTO `${PREFIX}posttags`... " />
-            <marker date="1488955654821" expanded="true" signature="6390:6403" ph="SELECT * FRO... " />
-            <marker date="1488955654821" expanded="true" signature="6390:6404" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1488955654821" expanded="true" signature="6390:6405" ph="SELECT * FRO... " />
-            <marker date="1488955654821" expanded="true" signature="6390:6418" ph="SELECT * FRO... " />
-            <marker date="1488955654821" expanded="true" signature="6390:6473" ph="SELECT * FRO... ${PREFIX}boards" />
-            <marker date="1488955654821" expanded="true" signature="6390:6474" ph="SELECT * FRO... " />
-            <marker date="1488955654821" expanded="true" signature="6390:6551" ph="SELECT * FRO... " />
+            <marker date="1488957095369" expanded="true" signature="2246:2307" ph="SELECT ID, N... ${PREFIX}tags" />
+            <marker date="1488957095369" expanded="true" signature="2571:2754" ph="INSERT INTO `${PREFIX}tags`... " />
+            <marker date="1488957095369" expanded="true" signature="3755:4557" ph="INSERT INTO `${PREFIX}topics`... " />
+            <marker date="1488957095369" expanded="true" signature="4944:5165" ph="INSERT INTO `${PREFIX}posts`... " />
+            <marker date="1488957095369" expanded="true" signature="5789:5883" ph="INSERT INTO `${PREFIX}posttags`... " />
+            <marker date="1488957095369" expanded="true" signature="6390:6403" ph="SELECT * FRO... " />
+            <marker date="1488957095369" expanded="true" signature="6390:6404" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1488957095369" expanded="true" signature="6390:6405" ph="SELECT * FRO... " />
+            <marker date="1488957095369" expanded="true" signature="6390:6418" ph="SELECT * FRO... " />
+            <marker date="1488957095369" expanded="true" signature="6390:6481" ph="SELECT * FRO... ${PREFIX}boards" />
+            <marker date="1488957095369" expanded="true" signature="6390:6482" ph="SELECT * FRO... " />
+            <marker date="1488957095369" expanded="true" signature="6390:6559" ph="SELECT * FRO... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+    <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="656">
+          <caret line="2725" column="18" selection-start-line="2725" selection-start-column="18" selection-end-line="2725" selection-end-column="18" />
           <folding />
         </state>
       </provider>

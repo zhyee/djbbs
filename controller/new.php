@@ -241,7 +241,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 /*获取所有版块*/
-$TotalBoards = $DB->query("SELECT * FROM `" . PREFIX . "boards` WHERE `IsEnabled` = 1 ORDER BY TotalPosts DESC");
+$TotalBoards = $DB->query("SELECT * FROM `" . PREFIX . "boards` WHERE `IsEnabled` = 1 ORDER BY TotalPosts DESC, ID ASC");
 if (!$TotalBoards)
 {
     $TotalBoards = array();
