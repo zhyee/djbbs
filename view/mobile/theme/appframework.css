@@ -2881,8 +2881,8 @@ label.add-attachment
 {
 	z-index: 9999;
 	cursor:pointer;
-	width:45px;
-	height: 40px;
+	width:50px;
+	height: 44px;
 	border:1px solid #dadada;
 	background-color: #fff;
 	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
@@ -2907,8 +2907,6 @@ i.add-attachment
 {
 	z-index: 3;
 	position: absolute;
-	width: 100%;
-	height: 100%;
 	top: 50%;
 	left : 50%;
 	transform:translate(-50%, -50%);
