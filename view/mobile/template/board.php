@@ -16,9 +16,12 @@ if($Page>1){
 foreach ($TopicsArray as $Topic) {
 ?>
 	<li>
-		<div class="avatar">
+		<div class="avatar board-avatar">
 			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
 					<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>
+			</a>
+			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
+				<?php echo htmlspecialchars($Topic['UserName']); ?>
 			</a>
 		</div>
 		<div class="content">
@@ -26,7 +29,7 @@ foreach ($TopicsArray as $Topic) {
 				<h2><?php echo $Topic['Topic']; ?></h2>
 			</a>
 			<p>
-				<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo htmlspecialchars($Topic['UserName']); ?></a> 发表于 <?php echo FormatTime($Topic['PostTime']); ?>
+				发表于 <?php echo FormatTime($Topic['PostTime']); ?>
 			</p>
 
 			<p><span class="aside"><?php echo $Topic['Replies']; ?></span> &nbsp;&nbsp;回帖数</p>
