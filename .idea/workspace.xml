@@ -7,7 +7,6 @@
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/board.php" afterPath="$PROJECT_DIR$/view/mobile/template/board.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/appframework.css" afterPath="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,20 +127,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="board.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding>
-                <element signature="e#1261#1267#0#HTML" expanded="true" />
-                <element signature="e#1267#1273#0#HTML" expanded="true" />
+                <element signature="e#1270#1276#0#HTML" expanded="true" />
+                <element signature="e#1276#1282#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="440">
@@ -248,8 +247,8 @@
         <option value="$PROJECT_DIR$/controller/board.php" />
         <option value="$PROJECT_DIR$/language/zh-cn/board.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/style.css" />
-        <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
+        <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
       </list>
     </option>
   </component>
@@ -587,12 +586,12 @@
       <workItem from="1488934905644" duration="31361000" />
       <workItem from="1489023104586" duration="1791000" />
       <workItem from="1489049595138" duration="489000" />
-      <workItem from="1489057970647" duration="6112000" />
+      <workItem from="1489057970647" duration="6175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268333000" />
+    <option name="totallyTimeSpent" value="268396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1110,22 +1109,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="e#1261#1267#0#HTML" expanded="true" />
-            <element signature="e#1267#1273#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="2477" column="21" selection-start-line="2477" selection-start-column="21" selection-end-line="2477" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#1270#1276#0#HTML" expanded="true" />
+            <element signature="e#1276#1282#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

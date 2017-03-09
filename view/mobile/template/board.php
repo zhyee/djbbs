@@ -2,7 +2,7 @@
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 
-<ul class="list board-list">
+<ul class="list tag-list board-list">
 <?php
 if($Page>1){
 ?>
