@@ -41,6 +41,11 @@ body {
 	margin: 5px 1em 0;
 }
 
+.board-avatar
+{
+	text-align: center;
+}
+
 .board-avatar img
 {
 	display: block;
