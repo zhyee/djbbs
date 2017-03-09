@@ -26,11 +26,11 @@ foreach ($TopicsArray as $Topic) {
 				<h2><?php echo $Topic['Topic']; ?></h2>
 			</a>
 			<p>
-				<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo htmlspecialchars($Topic['UserName']); ?></a>发表于 <?php echo FormatTime($Topic['PostTime']); ?></p>
+				<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo htmlspecialchars($Topic['UserName']); ?></a> 发表于 <?php echo FormatTime($Topic['PostTime']); ?></p>
 
 			<span class="aside">
 				<?php echo $Topic['Replies']; ?>
-			</span>回帖数
+			</span> 回帖数
 
 		</div>
 		
