@@ -24,7 +24,7 @@ else if ($Page > $TotalPage)
     $Page = $TotalPage;
 }
 
-$TopicsArray = $DB->query("SELECT `ID`, `Topic`, `UserID`, `UserName`, `LastName`, `LastTime`, `Replies` FROM `" . PREFIX . "topics` WHERE 
+$TopicsArray = $DB->query("SELECT `ID`, `Topic`, `UserID`, `UserName`, `PostTime`, `LastName`, `LastTime`, `Replies` FROM `" . PREFIX . "topics` WHERE 
 BoardID = :BoardID AND IsDel = 0 ORDER BY ID DESC LIMIT :offset,:limit", array(
     'BoardID' => $BoardID,
     'offset'    => ($Page - 1) * $Config['TopicsPerPage'],

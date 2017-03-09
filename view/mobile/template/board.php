@@ -1,15 +1,15 @@
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
-<h2 class="expanded" onclick="showHide(this,'TagDescription<?php echo $TagInfo['ID']; ?>');"><?php echo $TagInfo['Name']; ?></h2>
-<p id="TagDescription<?php echo $TagInfo['ID']; ?>">
+<h2 class="expanded" onclick="showHide(this,'TagDescription<?php echo $BoardInfo['ID']; ?>');"><?php echo $BoardInfo['Name']; ?></h2>
+<p id="TagDescription<?php echo $BoardInfo['ID']; ?>">
 <?php
 if($CurUserID){
 ?>
-<a href="#" class="button block" onclick="javascript:Manage('<?php echo $TagInfo['ID']; ?>', 4, 2, false, this);"><?php echo $IsFavorite?$Lang['Unfollow']:$Lang['Follow']; ?></a>
+<a href="#" class="button block" onclick="javascript:Manage('<?php echo $BoardInfo['ID']; ?>', 4, 2, false, this);"><?php echo $IsFavorite?$Lang['Unfollow']:$Lang['Follow']; ?></a>
 <?php
 }
-echo $TagInfo['Description'];
+echo $BoardInfo['Description'];
 ?>
 </p>
 <ul class="list topic-list">
