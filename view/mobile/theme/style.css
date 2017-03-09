@@ -79,6 +79,12 @@ span.number-topic
 	display: block;
 	line-height: 1.3;
 }
+
+.topic-list p.replies-num
+{
+	margin-top: 4px;
+}
+
 .topic-list .aside {
 	/*position: absolute;*/
 	line-height: .875em;
