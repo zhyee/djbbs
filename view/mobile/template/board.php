@@ -1,17 +1,7 @@
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
-<h2 class="expanded" onclick="showHide(this,'TagDescription<?php echo $BoardInfo['ID']; ?>');"><?php echo $BoardInfo['Name']; ?></h2>
-<p id="TagDescription<?php echo $BoardInfo['ID']; ?>">
-<?php
-if($CurUserID){
-?>
-<a href="#" class="button block" onclick="javascript:Manage('<?php echo $BoardInfo['ID']; ?>', 4, 2, false, this);"><?php echo $IsFavorite?$Lang['Unfollow']:$Lang['Follow']; ?></a>
-<?php
-}
-echo $BoardInfo['Description'];
-?>
-</p>
+
 <ul class="list topic-list">
 <?php
 if($Page>1){
@@ -32,10 +22,11 @@ foreach ($TopicsArray as $Topic) {
 			</a>
 		</div>
 		<div class="content">
-			<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>" data-transition="slide">
+			<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
 				<h2><?php echo $Topic['Topic']; ?></h2>
 			</a>
-			<p><?php echo FormatTime($Topic['PostTime']); ?>&nbsp;&nbsp;<?php echo htmlspecialchars($Topic['UserName']); ?></p>
+			<p>
+				<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo htmlspecialchars($Topic['UserName']); ?></a>发表于<?php echo FormatTime($Topic['PostTime']); ?></p>
 
 			<span class="aside">
 				<?php echo $Topic['Replies']; ?>
@@ -54,10 +45,9 @@ if($Page<$TotalPage){
 
 </ul>
 <ul class="list">
-	<li class="divider"><?php echo $Lang['Tag']; ?>：<?php echo $TagName; ?></li>
+	<li class="divider"><?php echo $Lang['Board']; ?>：<?php echo htmlspecialchars($BoardInfo['Name']); ?></li>
 	<li>
-		共<?php echo $BoardInfo['TotalPosts']; ?><?php echo $Lang['Topics']; ?>
-		今天<?php echo $BoardInfo['TodayPosts']; ?><?php echo $Lang['Topics']; ?>
+		共<?php echo $BoardInfo['TodayPosts']; ?> / <?php echo $BoardInfo['TotalPosts']; ?> <?php echo $Lang['Topics']; ?>
 	</li>
 	<li><?php echo $Lang['Created_In']; ?><?php echo FormatTime($BoardInfo['DateCreated']); ?></li>
 	<li><?php echo $Lang['Last_Updated_In']; ?><?php echo FormatTime($BoardInfo['MostRecentPostTime']); ?></li>

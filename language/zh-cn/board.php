@@ -4,7 +4,7 @@ if (empty($Lang) || !is_array($Lang))
 	$Lang = array();
 
 $Lang = array_merge($Lang, array(
-	'Tag' => '版块',
+	'Board' => '版块',
 	'Last_Reply_From' => '最后回复来自',
 	'Followers' => '人收藏',
 	'Topics' => '个帖子',
