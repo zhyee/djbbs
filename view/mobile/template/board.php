@@ -20,7 +20,7 @@ foreach ($TopicsArray as $Topic) {
 			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
 					<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>
 			</a>
-			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
+			<a class="board-nickname" href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
 				<?php echo htmlspecialchars($Topic['UserName']); ?>
 			</a>
 		</div>
