@@ -30,7 +30,7 @@ foreach ($TopicsArray as $Topic) {
 
 			<span class="aside">
 				<?php echo $Topic['Replies']; ?>
-			</span> 回帖数
+			</span> &nbsp;&nbsp;回帖数
 
 		</div>
 		
