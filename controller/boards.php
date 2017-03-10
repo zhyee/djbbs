@@ -120,7 +120,7 @@ $BoardsArray = $DB->query('SELECT *
 	ORDER BY TotalPosts DESC 
 	LIMIT ' . ($Page - 1) * $Config['TopicsPerPage'] . ',' . $Config['TopicsPerPage'], array($CurGroupID));
 
-if ($CurUserID && $BoardsArray){
+if ($CurUserID && $BoardsArray) {
 	$IsFavoriteArray = array_flip($DB->column("SELECT FavoriteID FROM " . PREFIX . "favorites 
 		Where UserID=".$CurUserID." and Type=2 and FavoriteID in (?)",
 		ArrayColumn($TagsArray, 'ID')
