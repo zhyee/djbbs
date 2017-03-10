@@ -52,3 +52,6 @@ if($Page<$TotalPage){
 	<li><?php echo $Lang['Created_In']; ?><?php echo FormatTime($BoardInfo['DateCreated']); ?></li>
 	<li><?php echo $Lang['Last_Updated_In']; ?><?php echo FormatTime($BoardInfo['MostRecentPostTime']); ?></li>
 </ul>
+
+<p><button type="button" class="button block red" onclick="javascript:">修改版块</button></p>
+<p><button type="button" class="button block red">删除版块</button></p>

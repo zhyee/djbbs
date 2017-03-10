@@ -503,6 +503,65 @@ function createBoard()
 
 }
 
+/**
+ * 修改版块
+ */
+function modifyBoard(BoardID, BoardName)
+{
+
+	var message = '<p><label class="board" for="BoardName">版块名</label><input type="text" value="';
+	message +=  '" class="board" id="BoardName" /></p><p><label class="board">版块图标</label><label for="BoardIcon" class="button add-attachment"><input type="file" class="add-attachment" id="BoardIcon" accept="image/*" /><i class="fa fa-paperclip fa-1_65x add-attachment"></i></label></p><div style="clear: both"></div>';
+
+	$.afui.popup({
+		title: '新建版块',
+		message : message,
+
+		cancelText: Lang['Cancel'],
+		doneText: Lang['Confirm'],
+		cancelCallback: function () {},
+		doneCallback: function () {
+			var BoardName = $("#BoardName").val();
+			if (BoardName == '')
+			{
+				alert("版块名称不能为空");
+				return false;
+			}
+			var UploadData = new FormData();
+			var BoardIcon = $("#BoardIcon").get(0).files[0];
+			if(typeof BoardIcon != 'undefined' && BoardIcon)
+			{
+				UploadData.append('BoardIcon', BoardIcon);
+			}
+			UploadData.append('BoardName', BoardName);
+			UploadData.append('token', accessToken);
+
+			$.ajax({
+				url : WebsitePath + "/boards",
+				type : 'POST',
+				data : UploadData,
+				dataType : 'JSON',
+				processData: false,  // 告诉jQuery不要去处理发送的数据
+				contentType: false,  // 告诉jQuery不要去设置Content-Type请求头
+				success : function (data, status) {
+					if(data.code == 0)
+					{
+						alert("创建成功");
+						setTimeout(function () {
+							location.reload();
+						}, 500)
+					}
+					else
+					{
+						alert('创建失败：' + data.msg);
+						return false;
+					}
+				}
+			});
+		},
+		cancelOnly: false
+	});
+}
+
 
 //可以去除tab的trim
 function trim3(str) {
