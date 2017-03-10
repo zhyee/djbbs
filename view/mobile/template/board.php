@@ -46,7 +46,5 @@ if($Page<$TotalPage){
 <?php } ?>
 
 </ul>
-<ul class="list">
-	<li>共 <?php echo $BoardInfo['TodayPosts']; ?> / <?php echo $BoardInfo['TotalPosts']; ?> <?php echo $Lang['Topics']; ?></li>
-	<li><?php echo $Lang['Created_In']; ?><?php echo FormatTime($BoardInfo['DateCreated']); ?></li>
-</ul>
+
+<p class="topic-nums">共 <?php echo $BoardInfo['TodayPosts']; ?> / <?php echo $BoardInfo['TotalPosts']; ?> <?php echo $Lang['Topics']; ?></p>

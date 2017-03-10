@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/boards.php" afterPath="$PROJECT_DIR$/controller/boards.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/board.php" afterPath="$PROJECT_DIR$/view/mobile/template/board.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
@@ -157,8 +156,8 @@
       <file leaf-file-name="board.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+            <state relative-caret-position="552">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -591,12 +590,12 @@
       <workItem from="1489023104586" duration="1791000" />
       <workItem from="1489049595138" duration="489000" />
       <workItem from="1489057970647" duration="8749000" />
-      <workItem from="1489108986611" duration="6059000" />
+      <workItem from="1489108986611" duration="6296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277029000" />
+    <option name="totallyTimeSpent" value="277266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1132,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        <state relative-caret-position="552">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
           <folding />
         </state>
       </provider>
