@@ -43,5 +43,3 @@ if($Page<$TotalPage){
 }
 ?>
 </ul>
-
-<p><button type="button" style="width: 90%;" onclick="javascript:createBoard();" class="button block red">创建版块</button></p>
