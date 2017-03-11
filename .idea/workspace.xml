@@ -82,17 +82,15 @@
       <file leaf-file-name="board.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/board.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+            <state relative-caret-position="409">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
-                <marker date="1489215380303" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
-                <marker date="1489215380303" expanded="true" signature="547:635" ph="SELECT COUNT... ${PREFIX}posts" />
-                <marker date="1489215380303" expanded="true" signature="1090:1186" ph="SELECT `ID`,... " />
-                <marker date="1489215380303" expanded="true" signature="1090:1270" ph="SELECT `ID`,... ${PREFIX}topics" />
-                <marker date="1489215380303" expanded="true" signature="1090:1271" ph="SELECT `ID`,... ${PREFIX}topics" />
-                <marker date="1489215380303" expanded="true" signature="1090:1279" ph="SELECT `ID`,... ${PREFIX}topics" />
-                <marker date="1489215380303" expanded="true" signature="1090:1285" ph="SELECT `ID`,... ${PREFIX}topics" />
-                <marker date="1489215380303" expanded="true" signature="1090:1286" ph="SELECT `ID`,... " />
+                <marker date="1489217181280" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
+                <marker date="1489217181280" expanded="true" signature="547:651" ph="SELECT COUNT... ${PREFIX}posts" />
+                <marker date="1489217181280" expanded="true" signature="1099:1129" ph="SELECT DISTI... " />
+                <marker date="1489217181280" expanded="true" signature="1099:1236" ph="SELECT DISTI... ${PREFIX}posts" />
+                <marker date="1489217181280" expanded="true" signature="1099:1237" ph="SELECT DISTI... " />
+                <marker date="1489217181280" expanded="true" signature="1525:1720" ph="SELECT `ID`,... ${PREFIX}topics" />
               </folding>
             </state>
           </provider>
@@ -621,12 +619,12 @@
       <workItem from="1489049595138" duration="489000" />
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
-      <workItem from="1489194976843" duration="12193000" />
+      <workItem from="1489194976843" duration="13992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290638000" />
+    <option name="totallyTimeSpent" value="292437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1161,17 +1159,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/board.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        <state relative-caret-position="409">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
-            <marker date="1489215380303" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
-            <marker date="1489215380303" expanded="true" signature="547:635" ph="SELECT COUNT... ${PREFIX}posts" />
-            <marker date="1489215380303" expanded="true" signature="1090:1186" ph="SELECT `ID`,... " />
-            <marker date="1489215380303" expanded="true" signature="1090:1270" ph="SELECT `ID`,... ${PREFIX}topics" />
-            <marker date="1489215380303" expanded="true" signature="1090:1271" ph="SELECT `ID`,... ${PREFIX}topics" />
-            <marker date="1489215380303" expanded="true" signature="1090:1279" ph="SELECT `ID`,... ${PREFIX}topics" />
-            <marker date="1489215380303" expanded="true" signature="1090:1285" ph="SELECT `ID`,... ${PREFIX}topics" />
-            <marker date="1489215380303" expanded="true" signature="1090:1286" ph="SELECT `ID`,... " />
+            <marker date="1489217181280" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
+            <marker date="1489217181280" expanded="true" signature="547:651" ph="SELECT COUNT... ${PREFIX}posts" />
+            <marker date="1489217181280" expanded="true" signature="1099:1129" ph="SELECT DISTI... " />
+            <marker date="1489217181280" expanded="true" signature="1099:1236" ph="SELECT DISTI... ${PREFIX}posts" />
+            <marker date="1489217181280" expanded="true" signature="1099:1237" ph="SELECT DISTI... " />
+            <marker date="1489217181280" expanded="true" signature="1525:1720" ph="SELECT `ID`,... ${PREFIX}topics" />
           </folding>
         </state>
       </provider>

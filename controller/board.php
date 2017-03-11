@@ -19,11 +19,8 @@ if (empty($BoardInfo) || ($BoardInfo['IsEnabled'] == 0 && $CurUserRole < 3))
 
 if ($type == 1)
 {
-    $TotalPosts = $DB->single("SELECT COUNT(DISTINCT TopicID) FROM `" . PREFIX . "posts` WHERE UserID = ? AND IsDel = ?",
-        array($CurUserID, 0));
-
-    var_dump($TotalPosts);
-    die;
+    $TotalPosts = $DB->single("SELECT COUNT(DISTINCT TopicID) FROM `" . PREFIX . "posts` WHERE UserID = ? AND BoardID = ? AND IsDel = ?",
+        array($CurUserID, $BoardID, 0));
 
     $TotalPage = ceil($TotalPosts / $Config['TopicsPerPage']);
 }
@@ -43,16 +40,28 @@ else if ($Page > $TotalPage)
     $Page = $TotalPage;
 }
 
+if($type == 1)
+{
+    $TopicIDArray = $DB->column("SELECT DISTINCT TopicID FROM `" . PREFIX . "posts` WHERE UserID = :UserID AND BoardID = :BoardID AND IsDel = :IsDel LIMIT :offset, :limit", array(
+        'UserID' => $CurUserID,
+        'BoardID' => $BoardID,
+        'IsDel' => 0,
+        'offset'    => ($Page - 1) * $Config['TopicsPerPage'],
+        'limit' => $Config['TopicsPerPage']
+    ));
 
-
-
-$TopicsArray = $DB->query("SELECT `ID`, `Topic`, `UserID`, `UserName`, `PostTime`, `LastName`, `LastTime`, `Replies` FROM `" . PREFIX . "topics` WHERE 
+    var_dump($TopicIDArray);
+    die;
+}
+else
+{
+    $TopicsArray = $DB->query("SELECT `ID`, `Topic`, `UserID`, `UserName`, `PostTime`, `LastName`, `LastTime`, `Replies` FROM `" . PREFIX . "topics` WHERE 
 BoardID = :BoardID AND IsDel = 0 ORDER BY ID DESC LIMIT :offset,:limit", array(
-    'BoardID' => $BoardID,
-    'offset'    => ($Page - 1) * $Config['TopicsPerPage'],
-    'limit' => $Config['TopicsPerPage']
-));
-
+        'BoardID' => $BoardID,
+        'offset'    => ($Page - 1) * $Config['TopicsPerPage'],
+        'limit' => $Config['TopicsPerPage']
+    ));
+}
 
 $DB->CloseConnection();
 $PageTitle = $BoardInfo['Name'];
