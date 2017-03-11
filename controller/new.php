@@ -168,6 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$PostData      = array(
 			"ID" => null,
 			"TopicID" => $TopicID,
+            "BoardID"  => $BoardID,
 			"IsTopic" => 1,
 			"UserID" => $CurUserID,
 			"UserName" => $CurUserName,
