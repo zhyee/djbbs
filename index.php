@@ -26,8 +26,8 @@ $Routes = array();
 //Support HTTP Method: GET / POST / PUT / DELETE / OPTIONS
 //这里是Routes Start
 
-$Routes['GET']['/']                                                                        = 'home';
-$Routes['POST']['/']                                                                       = 'home'; //Delete later
+$Routes['GET']['/']                                                                        = 'boards';
+$Routes['POST']['/']                                                                       = 'boards'; //Delete later
 $Routes['GET']['/dashboard']                                                               = 'dashboard';
 $Routes['POST']['/dashboard']                                                              = 'dashboard';
 $Routes['GET']['/favorites(/page/(?<page>[0-9]+))?']                                       = 'favorites';
