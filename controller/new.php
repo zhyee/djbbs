@@ -178,8 +178,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"PostTime" => $TimeStamp
 		);
 		$NewPostResult = $DB->query("INSERT INTO `" . PREFIX . "posts` 
-			(`ID`, `TopicID`, `IsTopic`, `UserID`, `UserName`, `Subject`, `Content`, `PostIP`, `PostTime`) 
-			VALUES (:ID,:TopicID,:IsTopic,:UserID,:UserName,:Subject,:Content,:PostIP,:PostTime)", $PostData);
+			(`ID`, `TopicID`, `BoardID`, `IsTopic`, `UserID`, `UserName`, `Subject`, `Content`, `PostIP`, `PostTime`) 
+			VALUES (:ID,:TopicID,:BoardID,:IsTopic,:UserID,:UserName,:Subject,:Content,:PostIP,:PostTime)", $PostData);
 		
 		$PostID = $DB->lastInsertId();
 		
