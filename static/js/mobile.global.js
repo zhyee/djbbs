@@ -586,7 +586,7 @@ if (! ((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchst
 	var tag = $("head").append(script);
 }
 $.afui.overlayStatusbar = false; // for ios7 only to add header padding to overlay the statusbar
-$.afui.autoLaunch = true; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
+$.afui.autoLaunch = false; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
 $.afui.useOSThemes = false; //This must be set before $(document).ready() triggers;
 $.afui.isAjaxApp = true;
 $.afui.useAjaxCacheBuster = false;
@@ -594,7 +594,7 @@ $.afui.loadDefaultHash=false;
 //This function runs when the body is loaded.
 
 $(document).ready(function() {
-	$.afui.launch();
+	//$.afui.launch();
 	$.ajaxSetup({
 		cache: false
 	});
