@@ -68,6 +68,17 @@ if ($UserAgent) {
 $IsApp = $_SERVER['HTTP_HOST'] == $Config['AppDomainName'] ? true : false;
 
 $accessToken = trim($_REQUEST['token']);  //用户访问token  26307ecc02f0e3cb30346d1f28d4c225
+
+/* token存储入cookie */
+if ($accessToken)
+{
+    setcookie('accessToken', $accessToken, 0, $Config['WebsitePath'] . '/');
+}
+else
+{
+    $accessToken = trim($_COOKIE['accessToken']);
+}
+
 $CurUserInfo = getUserInfo($accessToken);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
