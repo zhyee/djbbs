@@ -12,6 +12,14 @@ body {
 	line-height: 1.3;
 	text-decoration: none;
 }
+
+.board-a a {
+    color: #333;
+    display: inline-block;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
 .topic-list a:after {
 	content: none !important;
 }

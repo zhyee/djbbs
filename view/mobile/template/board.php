@@ -2,7 +2,7 @@
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 
-<p> <a href="">全部</a> | <a href="">与我相关</a> </p>
+<p class="board-a"><a href="">全部</a> &nbsp;|&nbsp; <a href="">与我相关</a></p>
 
 <ul class="list topic-list board-list">
 <?php
