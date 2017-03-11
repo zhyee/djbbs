@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/layout.php" afterPath="$PROJECT_DIR$/view/mobile/template/layout.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
@@ -108,17 +107,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="94" column="2" selection-start-line="94" selection-start-column="2" selection-end-line="94" selection-end-column="2" />
+            <state relative-caret-position="561">
+              <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="507">
@@ -248,8 +247,8 @@
         <option value="$PROJECT_DIR$/common.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/style.css" />
         <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
-        <option value="$PROJECT_DIR$/view/mobile/template/layout.php" />
         <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
+        <option value="$PROJECT_DIR$/view/mobile/template/layout.php" />
       </list>
     </option>
   </component>
@@ -621,12 +620,12 @@
       <workItem from="1489049595138" duration="489000" />
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
-      <workItem from="1489194976843" duration="10189000" />
+      <workItem from="1489194976843" duration="10326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288634000" />
+    <option name="totallyTimeSpent" value="288771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1109,17 +1108,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-          <folding>
-            <marker date="1489212581836" expanded="true" signature="1467:1499" ph="..." />
-            <marker date="1489212581836" expanded="true" signature="1666:1704" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="912">
@@ -1152,14 +1140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="94" column="2" selection-start-line="94" selection-start-column="2" selection-end-line="94" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
@@ -1172,6 +1152,25 @@
             <marker date="1489213375305" expanded="true" signature="54468:54479" ph="..." />
             <marker date="1489213375305" expanded="true" signature="57074:57085" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding>
+            <marker date="1489212581836" expanded="true" signature="1467:1499" ph="..." />
+            <marker date="1489212581836" expanded="true" signature="1666:1704" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="79" column="14" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

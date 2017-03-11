@@ -74,7 +74,7 @@ if($Config['MobileDomainName']){
 			<!--a class="menuButton" onclick="javascript:slideout.toggle();"></a-->
 		</header>
 		<div class="pages">
-			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
+			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel active" selected="true">
 				<?php include($ContentFile); ?>
 			</div>
 		</div>
