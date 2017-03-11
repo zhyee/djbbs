@@ -8,7 +8,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/board.php" afterPath="$PROJECT_DIR$/view/mobile/template/board.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/style.css" afterPath="$PROJECT_DIR$/view/mobile/theme/style.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,18 +120,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="596" column="22" selection-start-line="596" selection-start-column="22" selection-end-line="596" selection-end-column="22" />
+            <state relative-caret-position="526">
+              <caret line="596" column="23" selection-start-line="596" selection-start-column="23" selection-end-line="596" selection-end-column="23" />
               <folding>
-                <marker date="1489204297858" expanded="true" signature="30985:31027" ph="&quot;" />
-                <marker date="1489204297858" expanded="true" signature="40126:40183" ph="..." />
-                <marker date="1489204297858" expanded="true" signature="54181:54197" ph="..." />
-                <marker date="1489204297858" expanded="true" signature="54373:54386" ph="..." />
-                <marker date="1489204297858" expanded="true" signature="54468:54479" ph="..." />
-                <marker date="1489204297858" expanded="true" signature="57074:57085" ph="..." />
+                <marker date="1489212488621" expanded="true" signature="30985:31027" ph="&quot;" />
+                <marker date="1489212488621" expanded="true" signature="40126:40183" ph="..." />
+                <marker date="1489212488621" expanded="true" signature="54181:54197" ph="..." />
+                <marker date="1489212488621" expanded="true" signature="54373:54386" ph="..." />
+                <marker date="1489212488621" expanded="true" signature="54468:54479" ph="..." />
+                <marker date="1489212488621" expanded="true" signature="57074:57085" ph="..." />
               </folding>
             </state>
           </provider>
@@ -141,8 +140,8 @@
       <file leaf-file-name="appframework.ui.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
+            <state relative-caret-position="297">
+              <caret line="38" column="445" selection-start-line="38" selection-start-column="445" selection-end-line="38" selection-end-column="445" />
               <folding />
             </state>
           </provider>
@@ -161,14 +160,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="board.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="7" column="232" selection-start-line="7" selection-start-column="232" selection-end-line="7" selection-end-column="232" />
+            <state relative-caret-position="152">
+              <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
               <folding>
-                <marker date="1489200747788" expanded="true" signature="1543:1575" ph="..." />
-                <marker date="1489200747788" expanded="true" signature="1742:1780" ph="..." />
+                <marker date="1489212581836" expanded="true" signature="1467:1499" ph="..." />
+                <marker date="1489212581836" expanded="true" signature="1666:1704" ph="..." />
               </folding>
             </state>
           </provider>
@@ -251,8 +250,8 @@
         <option value="$PROJECT_DIR$/controller/board.php" />
         <option value="$PROJECT_DIR$/common.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/style.css" />
-        <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
         <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
+        <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
       </list>
     </option>
   </component>
@@ -624,12 +623,12 @@
       <workItem from="1489049595138" duration="489000" />
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
-      <workItem from="1489194976843" duration="8073000" />
+      <workItem from="1489194976843" duration="9475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286518000" />
+    <option name="totallyTimeSpent" value="287920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1119,17 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="7" column="232" selection-start-line="7" selection-start-column="232" selection-end-line="7" selection-end-column="232" />
-          <folding>
-            <marker date="1489200747788" expanded="true" signature="1543:1575" ph="..." />
-            <marker date="1489200747788" expanded="true" signature="1742:1780" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.new.function.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1317">
@@ -1157,23 +1145,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="96" column="48" selection-start-line="96" selection-start-column="48" selection-end-line="96" selection-end-column="48" />
+        <state relative-caret-position="297">
+          <caret line="38" column="445" selection-start-line="38" selection-start-column="445" selection-end-line="38" selection-end-column="445" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="596" column="22" selection-start-line="596" selection-start-column="22" selection-end-line="596" selection-end-column="22" />
+        <state relative-caret-position="526">
+          <caret line="596" column="23" selection-start-line="596" selection-start-column="23" selection-end-line="596" selection-end-column="23" />
           <folding>
-            <marker date="1489204297858" expanded="true" signature="30985:31027" ph="&quot;" />
-            <marker date="1489204297858" expanded="true" signature="40126:40183" ph="..." />
-            <marker date="1489204297858" expanded="true" signature="54181:54197" ph="..." />
-            <marker date="1489204297858" expanded="true" signature="54373:54386" ph="..." />
-            <marker date="1489204297858" expanded="true" signature="54468:54479" ph="..." />
-            <marker date="1489204297858" expanded="true" signature="57074:57085" ph="..." />
+            <marker date="1489212488621" expanded="true" signature="30985:31027" ph="&quot;" />
+            <marker date="1489212488621" expanded="true" signature="40126:40183" ph="..." />
+            <marker date="1489212488621" expanded="true" signature="54181:54197" ph="..." />
+            <marker date="1489212488621" expanded="true" signature="54373:54386" ph="..." />
+            <marker date="1489212488621" expanded="true" signature="54468:54479" ph="..." />
+            <marker date="1489212488621" expanded="true" signature="57074:57085" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          <folding>
+            <marker date="1489212581836" expanded="true" signature="1467:1499" ph="..." />
+            <marker date="1489212581836" expanded="true" signature="1666:1704" ph="..." />
           </folding>
         </state>
       </provider>

@@ -594,7 +594,7 @@ $.afui.loadDefaultHash=false;
 //This function runs when the body is loaded.
 
 $(document).ready(function() {
-	//$.afui.launch();
+	// $.afui.launch();
 	$.ajaxSetup({
 		cache: false
 	});
@@ -603,13 +603,5 @@ $(document).ready(function() {
 		'menu': document.getElementById('menu'),
 		'padding': 200,
 		'tolerance': 70
-	});
-
-	/*每次点击左部导航时收起导航*/
-	$(document).on('click', '#menu .list a,a.backButton.back', function () {
-		if (slideout.isOpen())
-		{
-			slideout.close();
-		}
 	});
 });
