@@ -63,8 +63,8 @@ $Routes['GET']['/sitemap-(?<action>topics|pages|tags|users|index)(-(?<page>[0-9]
 $Routes['GET']['/statistics']                                                              = 'statistics';
 $Routes['GET']['/t/(?<id>[0-9]+)(-(?<page>[0-9]*))?']                                      = 'topic';
 $Routes['POST']['/t/(?<id>[0-9]+)(-(?<page>[0-9]*))?']                                     = 'topic'; //Delete later
-$Routes['GET']['/tag/(?<id>.*?)(/page/(?<page>[0-9]*))?']                                = 'tag';
-$Routes['GET']['/board/(?<id>[0-9]+?)(/page/(?<page>[0-9]+))?(/type/(?<type>\d+))?']                            = 'board';
+$Routes['GET']['/tag/(?<id>.*?)(/page/(?<page>[0-9]*))?']                                  = 'tag';
+$Routes['GET']['/board/(?<id>[0-9]+?)(/type/(?<type>\d+))?(/page/(?<page>[0-9]+))?']       = 'board';
 $Routes['GET']['/tags/following(/page/(?<page>[0-9]*))?']                                  = 'favorite_tags';
 $Routes['GET']['/tags(/page/(?<page>[0-9]*))?']                                            = 'tags';
 $Routes['GET']['/boards(/page/(?<page>[0-9]*))?']                                          = 'boards';
