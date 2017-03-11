@@ -1,7 +1,11 @@
 <?php
 require(LanguagePath . 'board.php');
-$BoardID = intval(Request('Get', 'id'));
-$Page    = Request('Get', 'page');
+$BoardID = (int)Request('Get', 'id');
+$Page    = (int)Request('Get', 'page');
+$type    = (int)Request('Get', 'type');
+
+var_dump($type);
+
 $BoardInfo = array();
 
 if ($BoardID)
