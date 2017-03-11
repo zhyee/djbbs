@@ -13,47 +13,20 @@ if($Page==1){
 	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
-			<p class="color-gray">By <a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>"><?php echo $Topic['UserName']; ?></a>
- at <?php echo FormatTime($Topic['PostTime']); ?><br /><?php echo $Topic['Favorites']; ?><?php echo $Lang['People_Collection']; ?> • <?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?>
+			<p class="color-gray">
+				<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
+					<?php echo $Topic['UserName']; ?>
+				</a>
+				创建于
+				<?php echo FormatTime($Topic['PostTime']); ?><br />
+				<?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?>
 			</p>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
-			<div class="button-grouped">
-<?php
-if($Topic['Tags']){
-	foreach (explode("|", $Topic['Tags']) as $Tag) {
-?>					<a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo urlencode($Tag); ?>?token=<?php echo $accessToken; ?>" class="button"><?php echo $Tag; ?></a>
-<?php
-	}
-}
-?>
-			</div>
+			<div class="button-grouped"></div>
 		</div>
 	</div>
 	<div class="card-footer">
-	<?php
-if($CurUserRole>=4){
-	if($Topic['IsDel']==0){
-	?>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 1, 'Delete', true, this);" class="link red"><?php echo $Lang['Delete']; ?></a>
-<?php
-	}else{
-?>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 1, 'Recover', false, this);" class="link green"><?php echo $Lang['Recover']; ?></a>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 1, 'PermanentlyDelete', true, this);" class="link red"><?php echo $Lang['Permanently_Delete']; ?></a>
-<?php
-	}
-?>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 1, 'Lock', true, this);" class="link"><?php echo $Topic['IsLocked']?$Lang['Unlock']:$Lang['Lock']; ?></a>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 1, 'Sink', true, this);" class="link"><?php echo $Lang['Sink']; ?></a>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 1, 'Rise', true, this);" class="link"><?php echo $Lang['Rise']; ?></a>
-<?php
-}
-if($CurUserID){
-?>
-		<a href="#" onclick="javascript:Manage('<?php echo $ID; ?>', 4, 1, false, this);" class="link"><?php echo $IsFavorite?$Lang['Unsubscribe']:$Lang['Collect']; ?></a>
-<?php
-}
-?>
+
 	</div>
 </div>
 <!-- post main content end -->
