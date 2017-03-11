@@ -574,13 +574,25 @@ function FormatTime($UnixTimeStamp)
 //获取头像
 function GetAvatar($UserID, $UserName, $Size = 'middle')
 {
-	global $Config;
     $FaceUrl = '/upload/avatar/' . $Size . '/' . $UserID . '.png';
     if (!file_exists(RootPath . $FaceUrl))
     {
         $FaceUrl = '/upload/avatar/' . $Size . '/default.gif';
     }
-	return '<img src="' . $Config['WebsitePath'] . $FaceUrl . '" alt="' . $UserName . '"/>';
+	return '<img src="' . MyGetAvatar($UserID, $UserName, $Size) . '" alt="' . $UserName . '"/>';
+}
+
+/* 我的获取头像 */
+function MyGetAvatar($UserID, $UserName, $Size = 'middle')
+{
+    global $Config;
+    $FaceUrl = '/upload/avatar/' . $Size . '/' . $UserID . '.png';
+    if (!file_exists(RootPath . $FaceUrl))
+    {
+        $FaceUrl = '/upload/avatar/' . $Size . '/default.gif';
+    }
+
+    return $Config['WebsitePath'] . $FaceUrl;
 }
 
 
