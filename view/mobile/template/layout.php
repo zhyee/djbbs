@@ -71,7 +71,9 @@ if($Config['MobileDomainName']){
 	<div id="mainview" class="view splitview active">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
-			<!--a class="menuButton" onclick="javascript:slideout.toggle();"></a-->
+			<?php if ($UrlPath == 'board'): ?>
+				<a href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
+			<?php endif; ?>
 		</header>
 		<div class="pages">
 			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel active" selected="true">

@@ -52,5 +52,3 @@ if($Page<$TotalPage){
 <?php } ?>
 
 </ul>
-
-<p class="topic-nums">共 <?php echo $BoardInfo['TodayPosts']; ?> / <?php echo $BoardInfo['TotalPosts']; ?> <?php echo $Lang['Topics']; ?></p>
