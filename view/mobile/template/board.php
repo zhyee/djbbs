@@ -2,13 +2,17 @@
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 
-<p class="board-a"><a href="">全部</a> &nbsp;|&nbsp; <a href="">与我相关</a></p>
+<p class="board-a">
+	<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>">全部</a>
+	&nbsp;|&nbsp;
+	<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>/type/1">与我相关</a>
+</p>
 
 <ul class="list topic-list board-list">
 <?php
 if($Page>1){
 ?>
-	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo $BoardInfo['ID'].'/page/'.($Page-1); ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Lang['Page_Previous']; ?></a></li>
+	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID'].'/page/'.($Page-1); ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Lang['Page_Previous']; ?></a></li>
 
 <?php
 }
@@ -44,7 +48,7 @@ foreach ($TopicsArray as $Topic) {
 } 
 if($Page<$TotalPage){
 ?>
-	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/tag/<?php echo $BoardInfo['ID'] .'/page/'.($Page+1); ?>" data-transition="slide" data-persist-ajax="false"><?php echo $Lang['Page_Next']; ?></a></li>
+	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID'] .'/page/'.($Page+1); ?>" data-transition="slide" data-persist-ajax="false"><?php echo $Lang['Page_Next']; ?></a></li>
 <?php } ?>
 
 </ul>
