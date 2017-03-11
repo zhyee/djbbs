@@ -2856,7 +2856,7 @@ h2 {
 	display: none !important;
 	}
 }
-header .menuButton {
+header .menuButton{
 	position: relative;
 	top: 5px;
 	right: -8px;
@@ -2874,6 +2874,16 @@ header .menuButton:after {
 	height: 15px;
 	position: absolute;
 	width: 15px;
+}
+
+header .board-new
+{
+    position: relative;
+    padding:0 10px;
+    height: 36px;
+    line-height: 44px;
+    width: 36px;
+    float: right;
 }
 
 span.add-attachment

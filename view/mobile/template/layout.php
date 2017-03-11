@@ -72,7 +72,7 @@ if($Config['MobileDomainName']){
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
 			<?php if ($UrlPath == 'board'): ?>
-				<a class="menuButton" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
+				<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
 			<?php endif; ?>
 		</header>
 		<div class="pages">
