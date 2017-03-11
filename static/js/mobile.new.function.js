@@ -52,13 +52,14 @@ function CreateNewTopic() {
 				//TODO: 隐藏Toast
 				if (data.Status == 1) {
 					$("#PublishButton").val(Lang['Submit_Success']);
-					$.afui.loadContent(
-						WebsitePath + "/t/" + data.TopicID, 
-						false, 
-						false, 
-						"slide",
-						document.getElementById('mainview')
-					);
+					location.href = WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken;
+					// $.afui.loadContent(
+					// 	WebsitePath + "/t/" + data.TopicID,
+					// 	false,
+					// 	false,
+					// 	"slide",
+					// 	document.getElementById('mainview')
+					// );
 				} else {
 					CarbonAlert(data.ErrorMessage);
 				}
