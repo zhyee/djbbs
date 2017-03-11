@@ -190,7 +190,7 @@
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="618">
-              <caret line="2884" column="22" selection-start-line="2884" selection-start-column="22" selection-end-line="2884" selection-end-column="22" />
+              <caret line="2884" column="18" selection-start-line="2884" selection-start-column="18" selection-end-line="2884" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -626,12 +626,12 @@
       <workItem from="1489049595138" duration="489000" />
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
-      <workItem from="1489194976843" duration="16439000" />
+      <workItem from="1489194976843" duration="16495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294884000" />
+    <option name="totallyTimeSpent" value="294940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1179,7 +1179,7 @@
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
-          <caret line="2884" column="22" selection-start-line="2884" selection-start-column="22" selection-end-line="2884" selection-end-column="22" />
+          <caret line="2884" column="18" selection-start-line="2884" selection-start-column="18" selection-end-line="2884" selection-end-column="18" />
           <folding />
         </state>
       </provider>
