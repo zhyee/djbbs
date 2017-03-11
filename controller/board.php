@@ -42,7 +42,7 @@ else if ($Page > $TotalPage)
 
 if($type == 1)
 {
-    $TopicIDArray = $DB->column("SELECT DISTINCT TopicID FROM `" . PREFIX . "posts` WHERE UserID = :UserID AND BoardID = :BoardID AND IsDel = :IsDel LIMIT :offset, :limit", array(
+    $TopicIDArray = $DB->column("SELECT DISTINCT TopicID FROM `" . PREFIX . "posts` WHERE UserID = :UserID AND BoardID = :BoardID AND IsDel = :IsDel ORDER BY PostTime DESC LIMIT :offset, :limit", array(
         'UserID' => $CurUserID,
         'BoardID' => $BoardID,
         'IsDel' => 0,
@@ -50,8 +50,8 @@ if($type == 1)
         'limit' => $Config['TopicsPerPage']
     ));
 
-    var_dump($TopicIDArray);
-    die;
+    $TopicsArray = $DB->query("SELECT `ID`, `Topic`, `UserID`, `UserName`, `PostTime`, `LastName`, `LastTime`, `Replies` FROM `" . PREFIX . "topics` WHERE ID IN (?) ORDER BY PostTime DESC", $TopicIDArray);
+    
 }
 else
 {
