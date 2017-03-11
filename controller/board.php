@@ -19,7 +19,7 @@ if (empty($BoardInfo) || ($BoardInfo['IsEnabled'] == 0 && $CurUserRole < 3))
 
 if ($type == 1)
 {
-    $TotalPosts = $DB->single("SELECT COUNT(DISTINCT TopicID) FORM `" . PREFIX . "posts` WHERE UserID = ? AND IsDel = ?",
+    $TotalPosts = $DB->single("SELECT COUNT(DISTINCT TopicID) FROM `" . PREFIX . "posts` WHERE UserID = ? AND IsDel = ?",
         array($CurUserID, 0));
 
     var_dump($TotalPosts);
