@@ -68,24 +68,49 @@ if($Config['MobileDomainName']){
 
 <body>
 	<!-- this is the main container div.  This way, you can have only part of your app use UI -->
-	<div id="mainview" class="view splitview">
+	<div id="mainview" class="view splitview active">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
 			<?php if ($UrlPath == 'board'): ?>
 				<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
 			<?php endif; ?>
 		</header>
-
 		<div class="pages">
-			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
+			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel active" selected="true">
 				<?php include($ContentFile); ?>
 			</div>
 		</div>
 		<!-- this is the default left side nav menu.  If you do not want any, do not include these -->
+		<nav id="menu">
+			 <div class="view active" id="navView">
+				<header class="header" id="menuHeader"></header>
+				<div class="pages">
+					 <div class="panel active" id="navPage" style="padding:0!important;" data-title="navPage">
+						<?php include($TemplatePath.'sider.php'); ?>
+					</div>
+				</div>
+			</div>
+		</nav>
 	</div>
+
 <?php
 if($CurUserID){
 ?>
+	<div class="view" id="ReplyView">
+		<div class="pages">
+			<div class="panel" id="Reply">
+				<p>
+					<br />
+				<h1 id="ReplyViewTitle"></h1>
+				<br />
+				</p>
+				<div id="ReplyViewHTML">
+				</div>
+				<p><a class="button green block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewSubmitButton"></a></p>
+				<p><a class="button block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a></p>
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript">
 		//GetNotification();
 	</script>
