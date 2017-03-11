@@ -25,9 +25,6 @@ if($Page==1){
 			<div class="button-grouped"></div>
 		</div>
 	</div>
-	<div class="card-footer">
-
-	</div>
 </div>
 <!-- post main content end -->
 <?php

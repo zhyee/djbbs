@@ -81,16 +81,7 @@ if($Config['MobileDomainName']){
 			</div>
 		</div>
 		<!-- this is the default left side nav menu.  If you do not want any, do not include these -->
-		<nav id="menu">
-			 <div class="view active" id="navView">
-				<header class="header" id="menuHeader"></header>
-				<div class="pages">
-					 <div class="panel active" id="navPage" style="padding:0!important;" data-title="navPage">
-						<?php include($TemplatePath.'sider.php'); ?>
-					</div>
-				</div>
-			</div>
-		</nav>
+
 	</div>
 <?php
 if($CurUserID){

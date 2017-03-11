@@ -598,10 +598,10 @@ $(document).ready(function() {
 	$.ajaxSetup({
 		cache: false
 	});
-	slideout = new Slideout({
-		'panel': document.getElementsByClassName('pages')[0],
-		'menu': document.getElementById('menu'),
-		'padding': 200,
-		'tolerance': 70
-	});
+	// slideout = new Slideout({
+	// 	'panel': document.getElementsByClassName('pages')[0],
+	// 	'menu': document.getElementById('menu'),
+	// 	'padding': 200,
+	// 	'tolerance': 70
+	// });
 });
