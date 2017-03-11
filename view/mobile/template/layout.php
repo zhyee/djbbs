@@ -68,7 +68,7 @@ if($Config['MobileDomainName']){
 
 <body>
 	<!-- this is the main container div.  This way, you can have only part of your app use UI -->
-	<div id="mainview" class="view splitview">
+	<div id="mainview" class="view splitview active">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
 			<!--a class="menuButton" onclick="javascript:slideout.toggle();"></a-->
@@ -93,21 +93,6 @@ if($Config['MobileDomainName']){
 <?php
 if($CurUserID){
 ?>
-	<div class="view" id="ReplyView">
-		<div class="pages">
-			<div class="panel" id="Reply">
-				<p>
-					<br />
-					<h1 id="ReplyViewTitle"></h1>
-					<br />
-				</p>
-				<div id="ReplyViewHTML">
-				</div>
-				<p><a class="button green block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewSubmitButton"></a></p>
-				<p><a class="button block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a></p>
-			</div>
-		</div>
-	</div>
 	<script type="text/javascript">
 		//GetNotification();
 	</script>
