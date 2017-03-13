@@ -44,6 +44,7 @@ if(!$Topic['IsLocked'] && !$CurUserInfo){
 	<p><a href="#" class="button block" onclick="JavaScript:Reply('<?php echo $Topic['UserName'];?>', 0, 0, '<?php echo $FormHash;?>', <?php echo $ID; ?>);"><?php echo $Lang['Reply']; ?></a></p>
 <?php
 }
+
 if($Topic['Replies']!=0)
 {
 ?>
@@ -72,14 +73,14 @@ foreach($PostsArray as $key => $Post)
 <?php if($CurUserID){
 	if($CurUserRole>=4){
 ?>
-	<a href="#" onclick="javascript:Manage(<?php echo $Post['ID']; ?>, 2, 'Delete', true, this);" class="link"><?php echo $Lang['Delete']; ?></a>
+	<!--a href="#" onclick="javascript:Manage(<?php echo $Post['ID']; ?>, 2, 'Delete', true, this);" class="link"><?php echo $Lang['Delete']; ?></a-->
 <?php
 	}
 ?>
 
-	<?php if(!$Topic['IsLocked']): ?>
+	<?php if(!$Topic['IsLocked']){ ?>
 	<a href="#" title="<?php echo $Lang['Reply']; ?>" onclick="JavaScript:Reply('<?php echo $Post['UserName'];?>', <?php echo $PostFloor; ?>, <?php echo $Post['ID'];?>, '<?php echo $FormHash;?>', <?php echo $ID;?>);" class="link"><?php echo $Lang['Reply']; ?></a>
-		<?php endif; ?>
+		<?php } ?>
 <?php } ?>
 	</div>
 </div>
