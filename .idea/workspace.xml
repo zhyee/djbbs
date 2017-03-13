@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/boards.php" afterPath="$PROJECT_DIR$/controller/boards.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
@@ -95,14 +94,14 @@
       <file leaf-file-name="boards.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/boards.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
+            <state relative-caret-position="561">
+              <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
               <folding>
-                <marker date="1489389593088" expanded="true" signature="364:440" ph="SELECT ID FR... ${PREFIX}boards" />
-                <marker date="1489389593088" expanded="true" signature="1932:2310" ph="INSERT INTO `${PREFIX}boards`... " />
-                <marker date="1489389593088" expanded="true" signature="1932:2602" ph="INSERT INTO `${PREFIX}boards`... " />
-                <marker date="1489389593088" expanded="true" signature="3283:3437" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1489389593088" expanded="true" signature="3732:3842" ph="SELECT Favor... ${PREFIX}" />
+                <marker date="1489389738919" expanded="true" signature="364:440" ph="SELECT ID FR... ${PREFIX}boards" />
+                <marker date="1489389738919" expanded="true" signature="1932:2310" ph="INSERT INTO `${PREFIX}boards`... " />
+                <marker date="1489389738919" expanded="true" signature="1932:2602" ph="INSERT INTO `${PREFIX}boards`... " />
+                <marker date="1489389738919" expanded="true" signature="3283:3437" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1489389738919" expanded="true" signature="3732:3842" ph="SELECT Favor... ${PREFIX}" />
               </folding>
             </state>
           </provider>
@@ -625,12 +624,12 @@
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
-      <workItem from="1489368537849" duration="1835000" />
+      <workItem from="1489368537849" duration="1980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303085000" />
+    <option name="totallyTimeSpent" value="303230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1165,14 +1164,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/boards.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
+        <state relative-caret-position="561">
+          <caret line="125" column="77" selection-start-line="125" selection-start-column="77" selection-end-line="125" selection-end-column="77" />
           <folding>
-            <marker date="1489389593088" expanded="true" signature="364:440" ph="SELECT ID FR... ${PREFIX}boards" />
-            <marker date="1489389593088" expanded="true" signature="1932:2310" ph="INSERT INTO `${PREFIX}boards`... " />
-            <marker date="1489389593088" expanded="true" signature="1932:2602" ph="INSERT INTO `${PREFIX}boards`... " />
-            <marker date="1489389593088" expanded="true" signature="3283:3437" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1489389593088" expanded="true" signature="3732:3842" ph="SELECT Favor... ${PREFIX}" />
+            <marker date="1489389738919" expanded="true" signature="364:440" ph="SELECT ID FR... ${PREFIX}boards" />
+            <marker date="1489389738919" expanded="true" signature="1932:2310" ph="INSERT INTO `${PREFIX}boards`... " />
+            <marker date="1489389738919" expanded="true" signature="1932:2602" ph="INSERT INTO `${PREFIX}boards`... " />
+            <marker date="1489389738919" expanded="true" signature="3283:3437" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1489389738919" expanded="true" signature="3732:3842" ph="SELECT Favor... ${PREFIX}" />
           </folding>
         </state>
       </provider>

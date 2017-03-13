@@ -123,7 +123,7 @@ $BoardsArray = $DB->query('SELECT *
 
 foreach ($BoardsArray as &$Board)
 {
-    if (date('Ymd', $TimeStamp) != date('Ymd', $Board('MostRecentPostTime')))
+    if (date('Ymd', $TimeStamp) != date('Ymd', $Board['MostRecentPostTime']))
     {
         $Board['TodayPosts'] = 0;
     }
