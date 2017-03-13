@@ -7,7 +7,6 @@
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/reply.php" afterPath="$PROJECT_DIR$/controller/reply.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,12 +46,12 @@
       <file leaf-file-name="reply.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/reply.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="133" column="15" selection-start-line="133" selection-start-column="15" selection-end-line="133" selection-end-column="15" />
+            <state relative-caret-position="618">
+              <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
               <folding>
-                <marker date="1489412637755" expanded="true" signature="312:357" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1489412637755" expanded="true" signature="2310:2546" ph="INSERT INTO `${PREFIX}posts`... " />
-                <marker date="1489412637755" expanded="true" signature="3466:3620" ph="INSERT INTO `${PREFIX}notifications`... " />
+                <marker date="1489412830466" expanded="true" signature="312:357" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1489412830466" expanded="true" signature="2310:2566" ph="INSERT INTO `${PREFIX}posts`... " />
+                <marker date="1489412830466" expanded="true" signature="3486:3640" ph="INSERT INTO `${PREFIX}notifications`... " />
               </folding>
             </state>
           </provider>
@@ -634,12 +633,12 @@
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
-      <workItem from="1489368537849" duration="11805000" />
+      <workItem from="1489368537849" duration="12023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313055000" />
+    <option name="totallyTimeSpent" value="313273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1188,12 +1187,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/reply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="133" column="15" selection-start-line="133" selection-start-column="15" selection-end-line="133" selection-end-column="15" />
+        <state relative-caret-position="618">
+          <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
           <folding>
-            <marker date="1489412637755" expanded="true" signature="312:357" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1489412637755" expanded="true" signature="2310:2546" ph="INSERT INTO `${PREFIX}posts`... " />
-            <marker date="1489412637755" expanded="true" signature="3466:3620" ph="INSERT INTO `${PREFIX}notifications`... " />
+            <marker date="1489412830466" expanded="true" signature="312:357" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1489412830466" expanded="true" signature="2310:2566" ph="INSERT INTO `${PREFIX}posts`... " />
+            <marker date="1489412830466" expanded="true" signature="3486:3640" ph="INSERT INTO `${PREFIX}notifications`... " />
           </folding>
         </state>
       </provider>

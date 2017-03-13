@@ -82,8 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			"IsDel" => 0
 		);
 		$NewPostResult = $DB->query("INSERT INTO `" . PREFIX . "posts`
-			(`ID`, `TopicID`, `IsTopic`, `UserID`, `UserName`, `Subject`, `Content`, `PostIP`, `PostTime`, `IsDel`) 
-			VALUES (:ID,:TopicID,:IsTopic,:UserID,:UserName,:Subject,:Content,:PostIP,:PostTime,:IsDel)", $PostData);
+			(`ID`, `TopicID`, `BoardID`, `IsTopic`, `UserID`, `UserName`, `Subject`, `Content`, `PostIP`, `PostTime`, `IsDel`) 
+			VALUES (:ID,:TopicID,:BoardID,:IsTopic,:UserID,:UserName,:Subject,:Content,:PostIP,:PostTime,:IsDel)", $PostData);
 
 		$PostID = $DB->lastInsertId();
 
