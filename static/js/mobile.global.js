@@ -366,7 +366,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		"#Reply", 
 		false, 
 		false, 
-		"up-reveal",
+		"",
 		document.getElementById('mainview')
 	);
 	$("#ReplyViewTitle").text(Lang['Reply_To'] + "#" + PostFloor + " @" + UserName + " :");
