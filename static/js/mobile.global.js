@@ -370,9 +370,8 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		document.getElementById('mainview')
 	);
 	$("#ReplyViewTitle").text(Lang['Reply_To'] + "#" + PostFloor + " @" + UserName + " :");
-	var TempHTML = "<label class=\"button block\" style=\"cursor: pointer;\"><i class=\"icon picture\"></i>";
+	var TempHTML = "<label for=\"upfile\" class=\"fa fa-paperclip fa-2x add-attachment\" onclick></label>";
 	TempHTML += "<input type=\"file\" id=\"upfile\" onchange=\"javascript:UploadPicture('Content" + TopicID +"');\" accept=\"image/*\" style=\"display:none;\" />";
-	TempHTML += "</label>";
 	TempHTML += "<div class=\"input-group\" style=\"width:100%;\"><textarea id=\"Content" + TopicID +"\" rows=\"10\"></textarea></div>";
 	$("#ReplyViewHTML").html(TempHTML);
 	$("#ReplyViewCancelButton").text(Lang['Cancel']);
