@@ -378,11 +378,11 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	$("#ReplyViewCancelButton").unbind('click');
 	$("#ReplyViewCancelButton").click(function () {
 		$.afui.loadContent(
-			"#Reply",
+			"#mainview",
 			false,
 			false,
 			"up-reveal",
-			document.getElementById('mainview')
+			document.getElementById('Reply')
 		);
 	});
 	$("#ReplyViewSubmitButton").text(Lang['Reply']);
