@@ -464,3 +464,8 @@ blockquote {
 .slideout-open .slideout-menu {
 	display: block;
 }
+
+h1#ReplyViewTitle
+{
+	font-size: 20px;
+}
