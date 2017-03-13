@@ -381,7 +381,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 			"#mainview",
 			false,
 			false,
-			"up-reveal",
+			"down-reveal",
 			document.getElementById('Reply')
 		);
 	});
