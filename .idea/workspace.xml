@@ -30,14 +30,14 @@
       <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="378" column="51" selection-start-line="378" selection-start-column="51" selection-end-line="378" selection-end-column="51" />
+            <state relative-caret-position="228">
+              <caret line="379" column="47" selection-start-line="379" selection-start-column="47" selection-end-line="379" selection-end-column="47" />
               <folding>
-                <marker date="1489409171001" expanded="true" signature="30985:31027" ph="&quot;" />
-                <marker date="1489409171001" expanded="true" signature="40126:40183" ph="..." />
-                <marker date="1489409171001" expanded="true" signature="54371:54384" ph="..." />
-                <marker date="1489409171001" expanded="true" signature="54441:54452" ph="..." />
-                <marker date="1489409171001" expanded="true" signature="57194:57205" ph="..." />
+                <marker date="1489409312534" expanded="true" signature="30985:31027" ph="&quot;" />
+                <marker date="1489409312534" expanded="true" signature="40126:40183" ph="..." />
+                <marker date="1489409312534" expanded="true" signature="54371:54384" ph="..." />
+                <marker date="1489409312534" expanded="true" signature="54441:54452" ph="..." />
+                <marker date="1489409312534" expanded="true" signature="57192:57203" ph="..." />
               </folding>
             </state>
           </provider>
@@ -638,12 +638,12 @@
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
-      <workItem from="1489368537849" duration="8824000" />
+      <workItem from="1489368537849" duration="8964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310074000" />
+    <option name="totallyTimeSpent" value="310214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1186,14 +1186,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="378" column="51" selection-start-line="378" selection-start-column="51" selection-end-line="378" selection-end-column="51" />
+        <state relative-caret-position="228">
+          <caret line="379" column="47" selection-start-line="379" selection-start-column="47" selection-end-line="379" selection-end-column="47" />
           <folding>
-            <marker date="1489409171001" expanded="true" signature="30985:31027" ph="&quot;" />
-            <marker date="1489409171001" expanded="true" signature="40126:40183" ph="..." />
-            <marker date="1489409171001" expanded="true" signature="54371:54384" ph="..." />
-            <marker date="1489409171001" expanded="true" signature="54441:54452" ph="..." />
-            <marker date="1489409171001" expanded="true" signature="57194:57205" ph="..." />
+            <marker date="1489409312534" expanded="true" signature="30985:31027" ph="&quot;" />
+            <marker date="1489409312534" expanded="true" signature="40126:40183" ph="..." />
+            <marker date="1489409312534" expanded="true" signature="54371:54384" ph="..." />
+            <marker date="1489409312534" expanded="true" signature="54441:54452" ph="..." />
+            <marker date="1489409312534" expanded="true" signature="57192:57203" ph="..." />
           </folding>
         </state>
       </provider>
