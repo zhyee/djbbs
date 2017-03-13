@@ -377,7 +377,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	$("#ReplyViewCancelButton").text(Lang['Cancel']);
 	$("#ReplyViewCancelButton").unbind('click');
 	$("#ReplyViewCancelButton").click(function () {
-		$.afui.dismissView("#reply", "up-reveal");
+		$.afui.dismissView("#reply", "none");
 	});
 	$("#ReplyViewSubmitButton").text(Lang['Reply']);
 	$("#ReplyViewSubmitButton").unbind('click');
