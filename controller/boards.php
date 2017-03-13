@@ -120,6 +120,16 @@ $BoardsArray = $DB->query('SELECT *
 	ORDER BY TotalPosts DESC 
 	LIMIT ' . ($Page - 1) * $Config['TopicsPerPage'] . ',' . $Config['TopicsPerPage'], array($CurGroupID));
 
+
+foreach ($BoardsArray as &$Board)
+{
+    if (date('Ymd', $TimeStamp) != date('Ymd', $Board('MostRecentPostTime')))
+    {
+        $Board['TodayPosts'] = 0;
+    }
+}
+
+
 if ($CurUserID && $BoardsArray) {
 	$IsFavoriteArray = array_flip($DB->column("SELECT FavoriteID FROM " . PREFIX . "favorites 
 		Where UserID=".$CurUserID." and Type=2 and FavoriteID in (?)",
