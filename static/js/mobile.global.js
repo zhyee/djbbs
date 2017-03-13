@@ -366,7 +366,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		"#Reply", 
 		false, 
 		false, 
-		"",
+		"up-reveal",
 		document.getElementById('mainview')
 	);
 	$("#ReplyViewTitle").text(Lang['Reply_To'] + "#" + PostFloor + " @" + UserName + " :");
@@ -377,13 +377,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	$("#ReplyViewCancelButton").text(Lang['Cancel']);
 	$("#ReplyViewCancelButton").unbind('click');
 	$("#ReplyViewCancelButton").click(function () {
-		$.afui.loadContent(
-			"#mainview",
-			false,
-			false,
-			"down-reveal",
-			document.getElementById('Reply')
-		);
+		$.afui.dismissView("#reply", "down-reveal");
 	});
 	$("#ReplyViewSubmitButton").text(Lang['Reply']);
 	$("#ReplyViewSubmitButton").unbind('click');
