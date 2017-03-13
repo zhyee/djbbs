@@ -375,6 +375,16 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	TempHTML += "<div class=\"input-group\" style=\"width:100%;\"><textarea id=\"Content" + TopicID +"\" rows=\"10\"></textarea></div>";
 	$("#ReplyViewHTML").html(TempHTML);
 	$("#ReplyViewCancelButton").text(Lang['Cancel']);
+	$("#ReplyViewCancelButton").unbind('click');
+	$("#ReplyViewCancelButton").click(function () {
+		$.afui.loadContent(
+			"#Reply",
+			false,
+			false,
+			"up-reveal",
+			document.getElementById('mainview')
+		);
+	});
 	$("#ReplyViewSubmitButton").text(Lang['Reply']);
 	$("#ReplyViewSubmitButton").unbind('click');
 	$("#ReplyViewSubmitButton").click(function() {

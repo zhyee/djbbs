@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/style.css" afterPath="$PROJECT_DIR$/view/mobile/theme/style.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
@@ -30,14 +31,14 @@
       <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="371" column="22" selection-start-line="371" selection-start-column="8" selection-end-line="371" selection-end-column="22" />
+            <state relative-caret-position="532">
+              <caret line="380" column="19" selection-start-line="380" selection-start-column="14" selection-end-line="380" selection-end-column="19" />
               <folding>
-                <marker date="1489390638030" expanded="true" signature="30985:31027" ph="&quot;" />
-                <marker date="1489390638030" expanded="true" signature="40126:40183" ph="..." />
-                <marker date="1489390638030" expanded="true" signature="54371:54384" ph="..." />
-                <marker date="1489390638030" expanded="true" signature="54441:54452" ph="..." />
-                <marker date="1489390638030" expanded="true" signature="57047:57058" ph="..." />
+                <marker date="1489392567258" expanded="true" signature="30985:31027" ph="&quot;" />
+                <marker date="1489392567258" expanded="true" signature="40126:40183" ph="..." />
+                <marker date="1489392567258" expanded="true" signature="54371:54384" ph="..." />
+                <marker date="1489392567258" expanded="true" signature="54441:54452" ph="..." />
+                <marker date="1489392567258" expanded="true" signature="57262:57273" ph="..." />
               </folding>
             </state>
           </provider>
@@ -46,8 +47,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="469" column="20" selection-start-line="469" selection-start-column="20" selection-end-line="469" selection-end-column="20" />
+            <state relative-caret-position="723">
+              <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -638,12 +639,12 @@
       <workItem from="1489057970647" duration="8749000" />
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
-      <workItem from="1489368537849" duration="3650000" />
+      <workItem from="1489368537849" duration="4839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304900000" />
+    <option name="totallyTimeSpent" value="306089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1178,22 +1179,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="371" column="22" selection-start-line="371" selection-start-column="8" selection-end-line="371" selection-end-column="22" />
+        <state relative-caret-position="532">
+          <caret line="380" column="19" selection-start-line="380" selection-start-column="14" selection-end-line="380" selection-end-column="19" />
           <folding>
-            <marker date="1489390638030" expanded="true" signature="30985:31027" ph="&quot;" />
-            <marker date="1489390638030" expanded="true" signature="40126:40183" ph="..." />
-            <marker date="1489390638030" expanded="true" signature="54371:54384" ph="..." />
-            <marker date="1489390638030" expanded="true" signature="54441:54452" ph="..." />
-            <marker date="1489390638030" expanded="true" signature="57047:57058" ph="..." />
+            <marker date="1489392567258" expanded="true" signature="30985:31027" ph="&quot;" />
+            <marker date="1489392567258" expanded="true" signature="40126:40183" ph="..." />
+            <marker date="1489392567258" expanded="true" signature="54371:54384" ph="..." />
+            <marker date="1489392567258" expanded="true" signature="54441:54452" ph="..." />
+            <marker date="1489392567258" expanded="true" signature="57262:57273" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="469" column="20" selection-start-line="469" selection-start-column="20" selection-end-line="469" selection-end-column="20" />
+        <state relative-caret-position="723">
+          <caret line="470" column="0" selection-start-line="470" selection-start-column="0" selection-end-line="470" selection-end-column="0" />
           <folding />
         </state>
       </provider>
