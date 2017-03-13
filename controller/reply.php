@@ -71,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$PostData      = array(
 			"ID" => null,
 			"TopicID" => $TopicID,
+            "BoardID"  => $Topic['BoardID'],
 			"IsTopic" => 0,
 			"UserID" => $CurUserID,
 			"UserName" => $CurUserName,
@@ -92,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				"NumPosts" => $Config["NumPosts"] + 1,
 				"DaysPosts" => $Config["DaysPosts"] + 1
 			);
-			UpdateConfig($NewConfig);
+			UpdateConfig($NewConfig, $CurGroupID);
 			//更新主题统计数据
 			$DB->query("UPDATE `" . PREFIX . "topics` SET Replies=Replies+1,LastTime=?,LastName=? WHERE `ID`=?", array(
 				($TimeStamp > $Topic['LastTime']) ? $TimeStamp : $Topic['LastTime'],
@@ -109,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$PostID,
 				$CurUserName
 			));
-			//添加提醒消息
+/*			//添加提醒消息
 			AddingNotifications($Content, $TopicID, $PostID, $Topic['UserName']);
 			if ($CurUserID != $Topic['UserID']) {
 				$DB->query('INSERT INTO `' . PREFIX . 'notifications`
@@ -130,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				if ($MCache) {
 					$MCache->delete(MemCachePrefix . 'UserInfo_' . $Topic['UserID']);
 				}
-			}
+			}*/
 			if ($MCache) {
 				//清理首页内存缓存
 				$MCache->delete(MemCachePrefix . 'Homepage');

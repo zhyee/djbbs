@@ -386,7 +386,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		if ($("Content" + TopicID).val()) {
 			CarbonAlert(Lang['Content_Empty']);
 		} else {
-			$.afui.toast(Lang['Replying']);
+			var toast = $.afui.toast(Lang['Replying']);
 			var MarkdownConverter = new showdown.Converter(),
 			PreContent =  (PostFloor==0) ? "" : Lang['Reply_To'] + "[#" + PostFloor + "](/t/"+TopicID+"#Post"+PostID+") @#USERNAME# :\n\n",
 			Content = MarkdownConverter.makeHtml(PreContent + $("#Content" + TopicID).val());
@@ -407,12 +407,13 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 						console.log(Result);
 						$.afui.goBack();
 						$.afui.loadContent(
-							WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: ""), 
+							WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: "") + "?token=" + accessToken,
 							false, 
 							false, 
 							"slide",
 							document.getElementById('mainview')
 						);
+						toast.hide();
 						//$("#ReplyViewSubmitButton").attr("href", WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: ""));
 					} else {
 						CarbonAlert(Result.ErrorMessage);
