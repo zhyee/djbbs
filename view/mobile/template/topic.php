@@ -22,6 +22,7 @@ if($Page==1){
 				<div class="avatar board-avatar">
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>
+						<img src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>" width="34" height="34" />
 					</a>
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<?php echo htmlspecialchars($Topic['UserName']); ?>
