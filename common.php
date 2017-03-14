@@ -89,7 +89,7 @@ if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 $CurUserID              = $CurUserInfo['uid'];  //当前用户ID
 $CurUserName            = $CurUserInfo['nickName'];  //当前用户昵称
 $CurGroupID             = $CurUserInfo['merCode'];  //当前组织ID
-$CurUserRole            = 5;                        //当前用户角色，默认为1
+$CurUserRole            = 1;                        //当前用户角色，默认为1
 
 //Load configuration
 $Config = array();

@@ -89,6 +89,7 @@ $PageMetaDesc    = htmlspecialchars(mb_substr(trim(strip_tags($PostsArray[0]['Co
 foreach ($PostsArray as $key => $post)
 {
     $PostsArray[$key]['Content'] = preg_replace('/href="http[^"]+"/i', 'href="javascript:;"', $post['Content']);
+    $PostsArray[$key]['Content'] = str_replace("\n", "<br />", $post['Content']);
 }
 
 $PageMetaKeyword = str_replace('|', ',', $Topic['Tags']);
