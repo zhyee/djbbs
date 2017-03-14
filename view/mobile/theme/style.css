@@ -60,15 +60,15 @@ body {
 	margin: 5px 15px 0 0;
 }
 
-.board-avatar
-{
-	text-align: center;
-}
-
 .avatar img {
 	max-height: 5em;
 	max-width: 5em;
 	border-radius: 50%;
+}
+
+.board-avatar
+{
+	text-align: center;
 }
 
 .board-avatar img
@@ -79,6 +79,18 @@ body {
 .board-avatar .dj-nickname
 {
 	font-size: 0.7em;
+}
+
+.card-content-inner-center
+{
+	float: left;
+	margin: 5px 0 0 5px;
+	font-size: 13px;
+}
+
+.card-content-inner-footer
+{
+	float: right;
 }
 
 span.number-topic

@@ -27,10 +27,11 @@ if($Page==1){
 						<?php echo htmlspecialchars($Topic['UserName']); ?>
 					</a>
 				</div>
-				<div style="float: left; margin: 5px 0 0 5px;">
+				<div class="card-content-inner-center">
 					<p>创建于 <?php echo FormatTime($Topic['PostTime']); ?></p>
 					<p><?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?></p>
 				</div>
+				<div class="card-content-inner-footer">楼主</div>
 				<div class="c"></div>
 			</div>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
