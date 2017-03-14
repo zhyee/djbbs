@@ -61,9 +61,10 @@ body {
 .list-empty .icon-list-empty
 {
 	display: inline-block;
-	width: 57px;
-	height: 57px;
-	background: #f0f0f0 url(images/icon.png) 0 -57px no-repeat;
+	width: 100px;
+	height: 100px;
+	background: #f0f0f0 url(images/icon.png) 0 -100px no-repeat;
+	background-size: 100% auto;
 }
 
 .list-empty .title-list-empty
