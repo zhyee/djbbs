@@ -353,13 +353,19 @@ html.ios-gt-6.pixel-ratio-3 .card-footer:before {
 	height: 34px;
 	border-radius: 50%;
 }
+
+.carbonforum-card .carbonforum-center
+{
+	float: left;
+	max-width: 70%;
+}
 .carbonforum-card .carbonforum-name {
 	margin-left: 44px;
 	font-size: 14px;
 	font-weight: 500;
 }
 .carbonforum-card .carbonforum-floor {
-	display: none;
+	float: right;
 }
 
 .carbonforum-card .carbonforum-date {

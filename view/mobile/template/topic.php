@@ -76,8 +76,10 @@ foreach($PostsArray as $key => $Post)
 				<?php echo GetAvatar($Post['UserID'], $Post['UserName'], 'small'); ?>
 			</a>
 		</div>
-		<div class="carbonforum-name"><?php echo $Post['UserName'];?></div>
-		<div class="carbonforum-date"><?php echo FormatTime($Post['PostTime']); ?></div>
+		<div class="carbonforum-center">
+			<div class="carbonforum-name"><?php echo $Post['UserName'];?></div>
+			<div class="carbonforum-date"><?php echo FormatTime($Post['PostTime']); ?></div>
+		</div>
 		<div class="carbonforum-floor">#<?php echo $PostFloor; ?></div>
 	</div>
 	<div class="card-content" id="p<?php echo $Post['ID']; ?>"><p><?php echo $Post['Content']; ?></p></div>
