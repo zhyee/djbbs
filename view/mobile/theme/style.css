@@ -26,7 +26,7 @@ body {
     padding: 3px 5px;
 }
 
-.board-a a.active {
+.board-a a.on {
     background: #c9c9c9;
 }
 

@@ -3,9 +3,9 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 
 <p class="board-a">
-	<a <?php if (!$type): ?>class="active"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>?token=<?php echo $accessToken; ?>">全部</a>
+	<a <?php if (!$type): ?>class="on"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>?token=<?php echo $accessToken; ?>">全部</a>
 	|
-	<a <?php if ($type == 1): ?>class="active"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>/type/1?token=<?php echo $accessToken; ?>">与我相关</a>
+	<a <?php if ($type == 1): ?>class="on"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>/type/1?token=<?php echo $accessToken; ?>">与我相关</a>
 </p>
 
 <?php if ($TopicsArray) { ?>
