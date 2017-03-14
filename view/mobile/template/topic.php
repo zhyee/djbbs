@@ -18,7 +18,7 @@ if($Page==1){
 	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
-			<div class="color-gray">
+			<div class="topic-author color-gray" style="border-bottom: 1px solid #e1e1e1;padding-bottom: 5px;">
 				<div class="avatar board-avatar">
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<img src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>" width="34" height="34" />
@@ -35,7 +35,6 @@ if($Page==1){
 				<div class="c"></div>
 			</div>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
-			<div class="button-grouped"></div>
 		</div>
 	</div>
 </div>
