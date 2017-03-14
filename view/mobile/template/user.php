@@ -8,23 +8,10 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			<p class="color-gray"><?php echo $Lang['Registered_In']; ?>：<?php echo FormatTime($UserInfo['UserRegTime']); ?></p>
 			<p><?php echo $Lang['UserName']; ?>：<strong><?php echo $UserInfo['UserName']; ?></strong></p>
 			<p><?php echo $Lang['Topics_Number']; ?>： <?php echo $UserInfo['Topics']; ?>  &nbsp;&nbsp;&nbsp; <?php echo $Lang['Posts_Number']; ?>： <?php echo $UserInfo['Replies']; ?></p>
-			<p><?php echo $Lang['Homepage']; ?>： <a href="<?php echo $UserInfo['UserHomepage']; ?>" target="_blank" rel="nofollow"><?php echo $UserInfo['UserHomepage']; ?></a></p>
 			<p><?php echo $Lang['Introduction']; ?>： <br/> <?php echo $UserInfo['UserIntro']; ?></p>
 		</div>
 	</div>
 	<div class="card-footer">
-<?php
-if($CurUserID){
-?>
-	<a href="###" onclick="javascript:Manage('<?php echo $UserInfo['ID']; ?>', 4, 3, false, this);" class="link"><?php echo $IsFavorite?$Lang['Unfollow']:$Lang['Follow']; ?></a>
-<?php
-	if($CurUserRole>=4){
-?>
-	<a href="###" onclick="javascript:Manage('<?php echo $UserInfo['ID']; ?>', 3, 'Block', true, this);" class="link"><?php echo $UserInfo['UserAccountStatus']?$Lang['Block_User']:$Lang['Unblock_User']; ?></a>
-<?php
-	}
-}
-?>
 	</div>
 </div>
 <!-- User Infomation end -->
