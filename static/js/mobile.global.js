@@ -177,7 +177,7 @@ function PageAjaxLoad (Title, URL) {
 		document.title = Title;
 		$.afui.setTitle(Title);
 		$($.afui.activeDiv).attr('data-title', Title);
-		slideout.close();
+		// slideout.close();
 		if (document.getElementById("ReturnUrl") != null) {
 			document.getElementById("ReturnUrl").value = URL;
 		};
@@ -598,6 +598,7 @@ $.afui.isAjaxApp = true;
 $.afui.useAjaxCacheBuster = false;
 $.afui.loadDefaultHash=false;
 //This function runs when the body is loaded.
+$.afui.backButtonText = '返回';
 
 $(document).ready(function() {
 	$.afui.launch();
