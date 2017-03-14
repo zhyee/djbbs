@@ -1911,8 +1911,8 @@ input[type="checkbox"]:checked + label:before {
 	border-bottom: 1px solid #666;
 }
 .button.gray {
-	background: #999;
-	border-color: #666;
+	background: #dcdcdc;
+	border-color: #cdcdcd;
 }
 .button.yellow {
 	background-color: #F1C222;
