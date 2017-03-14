@@ -12,7 +12,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		});
 	});
 </script>
-<form name="NewForm">
+<form name="NewForm" style="padding: 0 10px;">
 	<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
 	<input type="hidden" name="ContentHash" value="" />
 	<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
