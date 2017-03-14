@@ -65,6 +65,14 @@ BoardID = :BoardID AND IsDel = 0 ORDER BY ID DESC LIMIT :offset,:limit", array(
 
 $DB->CloseConnection();
 $PageTitle = $BoardInfo['Name'];
+if ($type == 1)
+{
+    $PageTitle .= '-与我相关';
+}
+elseif (isset($_GET['type']))
+{
+    $PageTitle .= '-全部';
+}
 $PageTitle .= $Page > 1 ? ' Page' . $Page : '';
 $PageMetaDesc = $BoardInfo['Name'] . ' - ' . htmlspecialchars(mb_substr(trim(strip_tags($BoardInfo['Description'])), 0, 150, 'utf-8'));
 $ContentFile  = $TemplatePath . 'board.php';
