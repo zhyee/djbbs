@@ -27,7 +27,7 @@ body {
 }
 
 .board-a a.active {
-    background: wheat;
+    background: #c9c9c9;
 }
 
 .topic-list a:after {
@@ -63,7 +63,7 @@ body {
 	display: inline-block;
 	width: 100px;
 	height: 100px;
-	background: #f0f0f0 url(images/icon.png) 0 -100px no-repeat;
+	background: #f0f0f0 url(images/icon.png) 0 -95px no-repeat;
 	background-size: 100% auto;
 }
 
