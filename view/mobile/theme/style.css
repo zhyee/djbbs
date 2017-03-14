@@ -358,9 +358,9 @@ html.ios-gt-6.pixel-ratio-3 .card-footer:before {
 {
 	float: left;
 	max-width: 70%;
+	margin-left: 14px;
 }
 .carbonforum-card .carbonforum-name {
-	margin-left: 44px;
 	font-size: 14px;
 	font-weight: 500;
 }
@@ -369,7 +369,6 @@ html.ios-gt-6.pixel-ratio-3 .card-footer:before {
 }
 
 .carbonforum-card .carbonforum-date {
-	margin-left: 10px;
 	font-size: 13px;
 	color: #8e8e93;
 }
