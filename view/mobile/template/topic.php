@@ -1,5 +1,10 @@
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
+?>
+
+<div class="container">
+
+<?php
 if($Page>1){
 ?>
 <ul class="list topic-list">
@@ -93,6 +98,7 @@ if($Page<$TotalPage){
 	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $ID.'-'.($Page+1); ?>?token=<?php echo $accessToken; ?>" data-transition="slide"<?php echo (($Page+1)==$TotalPage)?' data-refresh="true"':''; ?>><?php echo $Lang['Page_Next']; ?></a></li>
 <?php } ?>
 </ul>
+</div>
 <script type="text/javascript">
 TopicParse();
 </script>

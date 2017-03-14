@@ -469,3 +469,8 @@ h1#ReplyViewTitle
 {
 	font-size: 18px;
 }
+
+.container
+{
+	padding: 0 5px;
+}
