@@ -18,14 +18,20 @@ if($Page==1){
 	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
-			<p class="color-gray">
-				<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
-					<?php echo $Topic['UserName']; ?>
-				</a>
-				创建于
-				<?php echo FormatTime($Topic['PostTime']); ?><br />
-				<?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?>
-			</p>
+			<div class="color-gray">
+				<div class="avatar board-avatar">
+					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
+						<?php GetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>
+					</a>
+					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
+						<?php echo htmlspecialchars($Topic['UserName']); ?>
+					</a>
+				</div>
+				<div>
+					<p>创建于 <?php echo FormatTime($Topic['PostTime']); ?></p>
+					<p><?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?></p>
+				</div>
+			</div>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
 			<div class="button-grouped"></div>
 		</div>
