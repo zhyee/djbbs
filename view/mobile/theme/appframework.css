@@ -1766,7 +1766,7 @@ input[type="checkbox"]:checked + label:before {
 	display: inline-block;
 	padding: 8px 12px;
 	margin: 8px auto;
-	font-weight: bold;
+	font-weight: 500;
 	color: #000;
 	text-align: center;
 	vertical-align: top;
@@ -1913,6 +1913,7 @@ input[type="checkbox"]:checked + label:before {
 .button.gray {
 	background: #dcdcdc;
 	border-color: #cdcdcd;
+	color: #999;
 }
 .button.yellow {
 	background-color: #F1C222;
