@@ -46,14 +46,14 @@
       <file leaf-file-name="appframework.ui.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="933" column="73" selection-start-line="933" selection-start-column="73" selection-end-line="933" selection-end-column="73" />
+            <state relative-caret-position="610">
+              <caret line="1573" column="41" selection-start-line="1573" selection-start-column="41" selection-end-line="1573" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1489497680275" expanded="true" signature="61947:61957" ph="..." />
-                <marker date="1489497680275" expanded="true" signature="63314:63408" ph="..." />
-                <marker date="1489497680275" expanded="true" signature="78532:78542" ph="..." />
-                <marker date="1489497680275" expanded="true" signature="107382:107388" ph=" " />
+                <marker date="1489497913153" expanded="true" signature="61989:61999" ph="..." />
+                <marker date="1489497913153" expanded="true" signature="63356:63450" ph="..." />
+                <marker date="1489497913153" expanded="true" signature="78574:78584" ph="..." />
+                <marker date="1489497913153" expanded="true" signature="107424:107430" ph=" " />
               </folding>
             </state>
           </provider>
@@ -640,12 +640,12 @@
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
-      <workItem from="1489454991230" duration="26004000" />
+      <workItem from="1489454991230" duration="26235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340346000" />
+    <option name="totallyTimeSpent" value="340577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1187,14 +1187,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="933" column="73" selection-start-line="933" selection-start-column="73" selection-end-line="933" selection-end-column="73" />
+        <state relative-caret-position="610">
+          <caret line="1573" column="41" selection-start-line="1573" selection-start-column="41" selection-end-line="1573" selection-end-column="41" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1489497680275" expanded="true" signature="61947:61957" ph="..." />
-            <marker date="1489497680275" expanded="true" signature="63314:63408" ph="..." />
-            <marker date="1489497680275" expanded="true" signature="78532:78542" ph="..." />
-            <marker date="1489497680275" expanded="true" signature="107382:107388" ph=" " />
+            <marker date="1489497913153" expanded="true" signature="61989:61999" ph="..." />
+            <marker date="1489497913153" expanded="true" signature="63356:63450" ph="..." />
+            <marker date="1489497913153" expanded="true" signature="78574:78584" ph="..." />
+            <marker date="1489497913153" expanded="true" signature="107424:107430" ph=" " />
           </folding>
         </state>
       </provider>

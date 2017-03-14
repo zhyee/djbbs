@@ -1571,6 +1571,7 @@ window.af=window.jq=jQuery;
                 return $.afui.dismissView(theTarget,mytransition);
             }
             href = theTarget.hash.length > 0 ? theTarget.hash : href;
+            console.log("href: " + href);
             $.afui.loadContent(href, false, 0, mytransition, theTarget);
             return;
         }
