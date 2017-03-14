@@ -96,7 +96,7 @@ body {
 {
 	float: right;
 	color: #e43620;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 span.number-topic
@@ -384,6 +384,7 @@ html.ios-gt-6.pixel-ratio-3 .card-footer:before {
 }
 .carbonforum-card .carbonforum-floor {
 	float: right;
+	color: #e43620;
 }
 
 .carbonforum-card .carbonforum-date {
