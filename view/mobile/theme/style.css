@@ -85,12 +85,18 @@ body {
 {
 	float: left;
 	margin: 5px 0 0 5px;
+}
+
+.card-content-inner-center p
+{
 	font-size: 13px;
 }
 
 .card-content-inner-footer
 {
 	float: right;
+	color: #e43620;
+	font-size: 17px;
 }
 
 span.number-topic
