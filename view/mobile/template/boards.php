@@ -50,7 +50,7 @@ if($Page<$TotalPage){
 		{
 			return;
 		}
-		location.href = $(this).find("a:first").attr("href");
+		$(this).find("a:first").click();
 	});
 
 </script>
