@@ -106,8 +106,8 @@ if($CurUserID){
 				</p>
 				<div id="ReplyViewHTML">
 				</div>
-				<p><a class="button green block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewSubmitButton"></a></p>
-				<p><a class="button block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a></p>
+				<p><a class="button red block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewSubmitButton"></a></p>
+				<p><a class="button gray block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a></p>
 			</div>
 		</div>
 	</div>
