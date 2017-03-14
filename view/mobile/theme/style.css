@@ -52,6 +52,27 @@ body {
 	border: none;
 }
 
+.list-empty
+{
+	padding-top: 100px;
+	text-align: center;
+}
+
+.list-empty .icon-list-empty
+{
+	display: inline-block;
+	width: 57px;
+	height: 57px;
+	background: #f0f0f0 url(images/icon.png) 0 -57px no-repeat;
+}
+
+.list-empty .title-list-empty
+{
+	font-size: 1em;
+	color: #999;
+	padding: 15px 0;
+}
+
 .avatar {
 	max-height: 5em;
 	float: left;

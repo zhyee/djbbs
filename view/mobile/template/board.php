@@ -8,6 +8,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	<a <?php if ($type == 1): ?>class="active"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>/type/1?token=<?php echo $accessToken; ?>">与我相关</a>
 </p>
 
+<?php if ($TopicsArray) { ?>
 <ul class="list topic-list board-list">
 <?php
 if($Page>1){
@@ -41,14 +42,25 @@ foreach ($TopicsArray as $Topic) {
 			<p class="replies-num"><span class="aside"><?php echo $Topic['Replies']; ?></span> &nbsp;回帖数</p>
 
 		</div>
-		
+
 		<div class="c"></div>
 	</li>
 <?php
-} 
+}
 if($Page<$TotalPage){
 ?>
 	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID'] .'/page/'.($Page+1); ?>" data-transition="slide" data-persist-ajax="false"><?php echo $Lang['Page_Next']; ?></a></li>
 <?php } ?>
 
 </ul>
+
+<?php } else{ ?>
+
+
+	<div class="list-empty">
+		<i class="icon-list-empty"></i>
+		<p class="title-list-empty">没有结果</p>
+	</div>
+
+
+<?php } ?>
