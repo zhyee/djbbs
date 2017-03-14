@@ -2,8 +2,7 @@
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 <div class="card user-card-header-pic">
-	<div valign="bottom" class="card-header color-white no-border">
-		<div style="color:#FFFFFF;background-image:url(<?php echo $Config['WebsitePath'] . '/upload/avatar/large/' . $UserInfo['ID'] . '.png?' . time() ; ?>); position: absolute; width: 100%; height: 100%"></div>
+	<div style="color:#FFFFFF;background-image:url(<?php echo $Config['WebsitePath'] . '/upload/avatar/large/' . $UserInfo['ID'] . '.png?' . time() ; ?>)" valign="bottom" class="card-header color-white no-border">
 		<?php echo $UserInfo['UserName']; ?>
 	</div>
 	<div class="card-content">
