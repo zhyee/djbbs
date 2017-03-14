@@ -12,7 +12,8 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		});
 	});
 </script>
-<form name="NewForm" style="padding: 0 10px;">
+<div class="container">
+<form name="NewForm">
 	<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
 	<input type="hidden" name="ContentHash" value="" />
 	<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
@@ -40,3 +41,4 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		<a type="button" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" ><?php echo $Lang['Submit']; ?></a>
 	</p>
 </form>
+	</div>
