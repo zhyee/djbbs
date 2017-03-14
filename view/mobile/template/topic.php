@@ -81,6 +81,7 @@ foreach($PostsArray as $key => $Post)
 			<div class="carbonforum-date"><?php echo FormatTime($Post['PostTime']); ?></div>
 		</div>
 		<div class="carbonforum-floor">#<?php echo $PostFloor; ?></div>
+		<div class="c"></div>
 	</div>
 	<div class="card-content" id="p<?php echo $Post['ID']; ?>"><p><?php echo $Post['Content']; ?></p></div>
 	<div class="card-footer no-border">
