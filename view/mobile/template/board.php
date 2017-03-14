@@ -52,14 +52,3 @@ if($Page<$TotalPage){
 <?php } ?>
 
 </ul>
-
-<script type="text/javascript">
-	$(".board-list>li").click(function (e) {
-		if (e.target.tagName.toUpperCase() === 'A')
-		{
-			return;
-		}
-		location.href = $(this).find("a:first").attr("href");
-	});
-
-</script>
