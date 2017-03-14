@@ -2,13 +2,15 @@
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 <div class="card user-card-header-pic">
-	<div style="color:#FFFFFF;background-image:url(<?php echo $Config['WebsitePath'] . '/upload/avatar/large/' . $UserInfo['ID'] . '.png?' . time() ; ?>)" valign="bottom" class="card-header color-white no-border"><?php echo $UserInfo['UserName']; ?></div>
+	<div valign="bottom" class="card-header color-white no-border">
+		<div style="color:#FFFFFF;background-image:url(<?php echo $Config['WebsitePath'] . '/upload/avatar/large/' . $UserInfo['ID'] . '.png?' . time() ; ?>); position: absolute; width: 100%; height: 100%"></div>
+		<?php echo $UserInfo['UserName']; ?>
+	</div>
 	<div class="card-content">
 		<div class="card-content-inner">
 			<p class="color-gray"><?php echo $Lang['Registered_In']; ?>：<?php echo FormatTime($UserInfo['UserRegTime']); ?></p>
 			<p><?php echo $Lang['UserName']; ?>：<strong><?php echo $UserInfo['UserName']; ?></strong></p>
 			<p><?php echo $Lang['Topics_Number']; ?>： <?php echo $UserInfo['Topics']; ?>  &nbsp;&nbsp;&nbsp; <?php echo $Lang['Posts_Number']; ?>： <?php echo $UserInfo['Replies']; ?></p>
-			<p><?php echo $Lang['Introduction']; ?>： <br/> <?php echo $UserInfo['UserIntro']; ?></p>
 		</div>
 	</div>
 	<div class="card-footer">

@@ -138,9 +138,11 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="114">
+              <caret line="5" column="206" selection-start-line="5" selection-start-column="206" selection-end-line="5" selection-end-column="206" />
+              <folding>
+                <element signature="e#187#379#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -617,12 +619,12 @@
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
-      <workItem from="1489454991230" duration="14262000" />
+      <workItem from="1489454991230" duration="14741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328604000" />
+    <option name="totallyTimeSpent" value="329083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1180,9 +1182,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="114">
+          <caret line="5" column="206" selection-start-line="5" selection-start-column="206" selection-end-line="5" selection-end-column="206" />
+          <folding>
+            <element signature="e#187#379#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
