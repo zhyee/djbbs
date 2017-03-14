@@ -79,11 +79,18 @@ else
     $accessToken = trim($_COOKIE['accessToken']);
 }
 
+if (!$accessToken || !preg_match('/^[1-9a-w]+$/', $accessToken))
+{
+    header('Content-Type: text/html;charset=UTF-8');
+    die('您还未登陆，无法访问');
+}
+
 $CurUserInfo = getUserInfo($accessToken);
 
 if (!is_array($CurUserInfo) || empty($CurUserInfo) || !$CurUserInfo['uid'])
 {
-    die('请登录，您还未登陆，无法访问');
+    header('Content-Type: text/html;charset=UTF-8');
+    die('您还未登陆，无法访问');
 }
 
 $CurUserID              = $CurUserInfo['uid'];  //当前用户ID
@@ -209,6 +216,7 @@ if (!$TempUserInfo || !$TempUserInfo['ID'])
     /*用户首次登录计入本地数据库*/
     $NewUserData     = array(
         'ID' => $CurUserID,
+        'GroupID' => $CurGroupID,
         'UserName' => $CurUserInfo['nickName'],
         'Salt' => mt_rand(100000, 999999),
         'Password' => '',
@@ -245,7 +253,7 @@ if (!$TempUserInfo || !$TempUserInfo['ID'])
 
     $Result = $DB->query('INSERT INTO `' . PREFIX . 'users`
 			(
-				`ID`, `UserName`, `Salt`, `Password`, `UserMail`, 
+				`ID`, `GroupID`, `UserName`, `Salt`, `Password`, `UserMail`, 
 				`UserHomepage`, `PasswordQuestion`, `PasswordAnswer`, 
 				`UserSex`, `NumFavUsers`, `NumFavTags`, `NumFavTopics`, 
 				`NewMessage`, `NewNotification`, `Topics`, `Replies`, `Followers`, 
@@ -254,7 +262,7 @@ if (!$TempUserInfo || !$TempUserInfo['ID'])
 				`BlackLists`, `UserFriend`, `UserInfo`, `UserIntro`, `UserIM`, 
 				`UserRoleID`, `UserAccountStatus`, `Birthday`
 			) VALUES (
-				:ID, :UserName, :Salt, :Password, :UserMail, 
+				:ID, :GroupID, :UserName, :Salt, :Password, :UserMail, 
 				:UserHomepage, :PasswordQuestion, :PasswordAnswer, 
 				:UserSex, :NumFavUsers, :NumFavTags, 
 				:NumFavTopics, :NewMessage, :NewNotification, :Topics, :Replies, :Followers, 
@@ -274,6 +282,18 @@ if (!$TempUserInfo || !$TempUserInfo['ID'])
 }
 else
 {
+    $updata = array();
+    if($TempUserInfo['GroupID'] != $CurGroupID)
+    {
+        $updata['GroupID'] = $CurGroupID;
+    }
+    if ($TempUserInfo['UserName'] != $CurUserName)
+    {
+        $updata['UserName'] = $CurUserName;
+    }
+
+    updateUserInfo($updata, $CurUserID);  //更新用户组织ID和昵称
+
     $CurUserRole           = $TempUserInfo['UserRoleID'];                //当前角色ID
     $CurUserInfo = array_merge($TempUserInfo, $CurUserInfo);
 }

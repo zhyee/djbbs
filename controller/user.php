@@ -6,8 +6,9 @@ if(!preg_match('/^\d+$/', $UserID)) {
     AlertMsg('404 Not Found', '404 Not Found', 404);
 }
 
-$UserInfo = $DB->row('SELECT * FROM ' . PREFIX . 'users WHERE ID=:ID', array(
-    'ID' => $UserID
+$UserInfo = $DB->row('SELECT * FROM ' . PREFIX . 'users WHERE ID=:ID AND GroupID=:GroupID', array(
+    'ID' => $UserID,
+    'GroupID' => $CurGroupID
 ));
 
 if (!$UserInfo)
