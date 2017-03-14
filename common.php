@@ -79,11 +79,11 @@ else
     $accessToken = trim($_COOKIE['accessToken']);
 }
 
-if (!$accessToken || !preg_match('/^[1-9a-w]+$/', $accessToken))
-{
-    header('Content-Type: text/html;charset=UTF-8');
-    die('您还未登陆，无法访问');
-}
+//if (!$accessToken || !preg_match('/^[1-9a-w]+$/', $accessToken))
+//{
+//    header('Content-Type: text/html;charset=UTF-8');
+//    die('您还未登陆，无法访问');
+//}
 
 $CurUserInfo = getUserInfo($accessToken);
 
