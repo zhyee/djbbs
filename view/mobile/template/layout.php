@@ -96,7 +96,7 @@ if($Config['MobileDomainName']){
 <?php
 if($CurUserID){
 ?>
-	<div class="view" id="ReplyView">
+	<div class="view container" id="ReplyView">
 		<div class="pages">
 			<div class="panel" id="Reply">
 				<p>
