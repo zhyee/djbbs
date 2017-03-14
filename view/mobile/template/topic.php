@@ -27,10 +27,11 @@ if($Page==1){
 						<?php echo htmlspecialchars($Topic['UserName']); ?>
 					</a>
 				</div>
-				<div>
+				<div style="float: right">
 					<p>创建于 <?php echo FormatTime($Topic['PostTime']); ?></p>
 					<p><?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?></p>
 				</div>
+				<div class="c"></div>
 			</div>
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
 			<div class="button-grouped"></div>
