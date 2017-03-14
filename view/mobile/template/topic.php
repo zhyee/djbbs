@@ -21,7 +21,7 @@ if($Page==1){
 			<div class="color-gray">
 				<div class="avatar board-avatar">
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
-						<?php GetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>
+						<?php echo GetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>
 					</a>
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<?php echo htmlspecialchars($Topic['UserName']); ?>
