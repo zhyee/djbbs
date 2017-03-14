@@ -41,7 +41,7 @@ if(!$Topic['IsLocked'] && !$CurUserInfo){
 <?php
 }else{
 ?>
-	<p><a href="#" class="button block" onclick="JavaScript:Reply('<?php echo $Topic['UserName'];?>', 0, 0, '<?php echo $FormHash;?>', <?php echo $ID; ?>);"><?php echo $Lang['Reply']; ?></a></p>
+	<p><a href="#" class="button block red" onclick="JavaScript:Reply('<?php echo $Topic['UserName'];?>', 0, 0, '<?php echo $FormHash;?>', <?php echo $ID; ?>);"><?php echo $Lang['Reply']; ?></a></p>
 <?php
 }
 
@@ -71,11 +71,6 @@ foreach($PostsArray as $key => $Post)
 	<div class="card-content" id="p<?php echo $Post['ID']; ?>"><p><?php echo $Post['Content']; ?></p></div>
 	<div class="card-footer no-border">
 <?php if($CurUserID){
-	if($CurUserRole>=4){
-?>
-	<!--a href="#" onclick="javascript:Manage(<?php echo $Post['ID']; ?>, 2, 'Delete', true, this);" class="link"><?php echo $Lang['Delete']; ?></a-->
-<?php
-	}
 ?>
 
 	<?php if(!$Topic['IsLocked']){ ?>

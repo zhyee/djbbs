@@ -560,7 +560,6 @@ function UploadPicture(TextareaID) {
 	//$("#upfile").click();
 	//if($('#upfile')[0].files[0]){
 		var toast = $.afui.toast("上传中……");
-	console.log(typeof toast);
 		var UploadData = new FormData();
 		UploadData.append('upfile', $('#upfile')[0].files[0]);
 		UploadData.append('token', accessToken);
