@@ -76,48 +76,48 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+            <state relative-caret-position="440">
+              <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
               <folding>
-                <element signature="e#15220#15502#0#PHP" expanded="false" />
-                <element signature="e#16142#16231#0#PHP" expanded="false" />
-                <element signature="e#16247#16387#0#PHP" expanded="false" />
-                <element signature="e#16400#17257#0#PHP" expanded="false" />
-                <element signature="e#18360#18696#0#PHP" expanded="false" />
-                <element signature="e#18708#19414#0#PHP" expanded="false" />
-                <element signature="e#20622#21024#0#PHP" expanded="false" />
-                <element signature="e#21045#21248#0#PHP" expanded="false" />
-                <element signature="e#21274#21368#0#PHP" expanded="false" />
-                <element signature="e#21383#21496#0#PHP" expanded="false" />
-                <element signature="e#21512#21650#0#PHP" expanded="false" />
-                <element signature="e#21939#22091#0#PHP" expanded="false" />
-                <element signature="e#22108#22660#0#PHP" expanded="false" />
-                <element signature="e#22668#24451#0#PHP" expanded="false" />
-                <element signature="e#24459#24602#0#PHP" expanded="false" />
-                <element signature="e#24611#24918#0#PHP" expanded="false" />
-                <element signature="e#24927#25606#0#PHP" expanded="false" />
-                <element signature="e#25661#25987#0#PHP" expanded="false" />
-                <element signature="e#26419#26998#0#PHP" expanded="false" />
-                <element signature="e#31025#31846#0#PHP" expanded="false" />
-                <marker date="1489482753515" expanded="true" signature="3167:3247" ph="SELECT Confi... ${PREFIX}" />
-                <marker date="1489482753515" expanded="true" signature="6270:6364" ph="INSERT INTO ${PREFIX}config... " />
-                <marker date="1489482753515" expanded="true" signature="8184:8240" ph="SELECT ID,Us... ${PREFIX}" />
-                <marker date="1489482753515" expanded="true" signature="9446:10469" ph="INSERT INTO `${PREFIX}users`... " />
-                <marker date="1489482753515" expanded="true" signature="13375:13435" ph="SELECT ID FR... ${PREFIX}users" />
-                <marker date="1489482753515" expanded="true" signature="13574:13717" ph="INSERT INTO `${PREFIX}notifications`... " />
-                <marker date="1489482753515" expanded="true" signature="22382:22390" ph="‹" />
-                <marker date="1489482753515" expanded="true" signature="22390:22398" ph="‹" />
-                <marker date="1489482753515" expanded="true" signature="22630:22638" ph="›" />
-                <marker date="1489482753515" expanded="true" signature="22638:22646" ph="›" />
-                <marker date="1489482753515" expanded="true" signature="23096:23104" ph="‹" />
-                <marker date="1489482753515" expanded="true" signature="23104:23112" ph="‹" />
-                <marker date="1489482753515" expanded="true" signature="24142:24150" ph="›" />
-                <marker date="1489482753515" expanded="true" signature="24150:24158" ph="›" />
-                <marker date="1489482753515" expanded="true" signature="28150:28202" ph="SELECT * FRO... ${PREFIX}" />
-                <marker date="1489482753515" expanded="true" signature="32218:32603" ph="INSERT INTO `${PREFIX}statistics`... " />
-                <marker date="1489482753515" expanded="true" signature="32374:32603" ph="SELECT :Days... dual" />
-                <marker date="1489482753515" expanded="true" signature="32525:32599" ph="SELECT * FRO... ${PREFIX}statistics" />
-                <marker date="1489482753515" expanded="true" signature="33120:33262" ph="SELECT ID,Na... ${PREFIX}" />
+                <element signature="e#15210#15492#0#PHP" expanded="false" />
+                <element signature="e#16132#16221#0#PHP" expanded="false" />
+                <element signature="e#16237#16377#0#PHP" expanded="false" />
+                <element signature="e#16390#17247#0#PHP" expanded="false" />
+                <element signature="e#18350#18686#0#PHP" expanded="false" />
+                <element signature="e#18698#19404#0#PHP" expanded="false" />
+                <element signature="e#20612#21014#0#PHP" expanded="false" />
+                <element signature="e#21035#21238#0#PHP" expanded="false" />
+                <element signature="e#21264#21358#0#PHP" expanded="false" />
+                <element signature="e#21373#21486#0#PHP" expanded="false" />
+                <element signature="e#21502#21640#0#PHP" expanded="false" />
+                <element signature="e#21929#22081#0#PHP" expanded="false" />
+                <element signature="e#22098#22650#0#PHP" expanded="false" />
+                <element signature="e#22658#24441#0#PHP" expanded="false" />
+                <element signature="e#24449#24592#0#PHP" expanded="false" />
+                <element signature="e#24601#24908#0#PHP" expanded="false" />
+                <element signature="e#24917#25596#0#PHP" expanded="false" />
+                <element signature="e#25651#25977#0#PHP" expanded="false" />
+                <element signature="e#26409#26988#0#PHP" expanded="false" />
+                <element signature="e#31015#31836#0#PHP" expanded="false" />
+                <marker date="1489482785773" expanded="true" signature="3157:3237" ph="SELECT Confi... ${PREFIX}" />
+                <marker date="1489482785773" expanded="true" signature="6260:6354" ph="INSERT INTO ${PREFIX}config... " />
+                <marker date="1489482785773" expanded="true" signature="8174:8230" ph="SELECT ID,Us... ${PREFIX}" />
+                <marker date="1489482785773" expanded="true" signature="9436:10459" ph="INSERT INTO `${PREFIX}users`... " />
+                <marker date="1489482785773" expanded="true" signature="13365:13425" ph="SELECT ID FR... ${PREFIX}users" />
+                <marker date="1489482785773" expanded="true" signature="13564:13707" ph="INSERT INTO `${PREFIX}notifications`... " />
+                <marker date="1489482785773" expanded="true" signature="22372:22380" ph="‹" />
+                <marker date="1489482785773" expanded="true" signature="22380:22388" ph="‹" />
+                <marker date="1489482785773" expanded="true" signature="22620:22628" ph="›" />
+                <marker date="1489482785773" expanded="true" signature="22628:22636" ph="›" />
+                <marker date="1489482785773" expanded="true" signature="23086:23094" ph="‹" />
+                <marker date="1489482785773" expanded="true" signature="23094:23102" ph="‹" />
+                <marker date="1489482785773" expanded="true" signature="24132:24140" ph="›" />
+                <marker date="1489482785773" expanded="true" signature="24140:24148" ph="›" />
+                <marker date="1489482785773" expanded="true" signature="28140:28192" ph="SELECT * FRO... ${PREFIX}" />
+                <marker date="1489482785773" expanded="true" signature="32208:32593" ph="INSERT INTO `${PREFIX}statistics`... " />
+                <marker date="1489482785773" expanded="true" signature="32364:32593" ph="SELECT :Days... dual" />
+                <marker date="1489482785773" expanded="true" signature="32515:32589" ph="SELECT * FRO... ${PREFIX}statistics" />
+                <marker date="1489482785773" expanded="true" signature="33110:33252" ph="SELECT ID,Na... ${PREFIX}" />
               </folding>
             </state>
           </provider>
@@ -619,12 +619,12 @@
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
-      <workItem from="1489454991230" duration="16546000" />
+      <workItem from="1489454991230" duration="16577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330888000" />
+    <option name="totallyTimeSpent" value="330919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1119,48 +1119,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        <state relative-caret-position="440">
+          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
           <folding>
-            <element signature="e#15220#15502#0#PHP" expanded="false" />
-            <element signature="e#16142#16231#0#PHP" expanded="false" />
-            <element signature="e#16247#16387#0#PHP" expanded="false" />
-            <element signature="e#16400#17257#0#PHP" expanded="false" />
-            <element signature="e#18360#18696#0#PHP" expanded="false" />
-            <element signature="e#18708#19414#0#PHP" expanded="false" />
-            <element signature="e#20622#21024#0#PHP" expanded="false" />
-            <element signature="e#21045#21248#0#PHP" expanded="false" />
-            <element signature="e#21274#21368#0#PHP" expanded="false" />
-            <element signature="e#21383#21496#0#PHP" expanded="false" />
-            <element signature="e#21512#21650#0#PHP" expanded="false" />
-            <element signature="e#21939#22091#0#PHP" expanded="false" />
-            <element signature="e#22108#22660#0#PHP" expanded="false" />
-            <element signature="e#22668#24451#0#PHP" expanded="false" />
-            <element signature="e#24459#24602#0#PHP" expanded="false" />
-            <element signature="e#24611#24918#0#PHP" expanded="false" />
-            <element signature="e#24927#25606#0#PHP" expanded="false" />
-            <element signature="e#25661#25987#0#PHP" expanded="false" />
-            <element signature="e#26419#26998#0#PHP" expanded="false" />
-            <element signature="e#31025#31846#0#PHP" expanded="false" />
-            <marker date="1489482753515" expanded="true" signature="3167:3247" ph="SELECT Confi... ${PREFIX}" />
-            <marker date="1489482753515" expanded="true" signature="6270:6364" ph="INSERT INTO ${PREFIX}config... " />
-            <marker date="1489482753515" expanded="true" signature="8184:8240" ph="SELECT ID,Us... ${PREFIX}" />
-            <marker date="1489482753515" expanded="true" signature="9446:10469" ph="INSERT INTO `${PREFIX}users`... " />
-            <marker date="1489482753515" expanded="true" signature="13375:13435" ph="SELECT ID FR... ${PREFIX}users" />
-            <marker date="1489482753515" expanded="true" signature="13574:13717" ph="INSERT INTO `${PREFIX}notifications`... " />
-            <marker date="1489482753515" expanded="true" signature="22382:22390" ph="‹" />
-            <marker date="1489482753515" expanded="true" signature="22390:22398" ph="‹" />
-            <marker date="1489482753515" expanded="true" signature="22630:22638" ph="›" />
-            <marker date="1489482753515" expanded="true" signature="22638:22646" ph="›" />
-            <marker date="1489482753515" expanded="true" signature="23096:23104" ph="‹" />
-            <marker date="1489482753515" expanded="true" signature="23104:23112" ph="‹" />
-            <marker date="1489482753515" expanded="true" signature="24142:24150" ph="›" />
-            <marker date="1489482753515" expanded="true" signature="24150:24158" ph="›" />
-            <marker date="1489482753515" expanded="true" signature="28150:28202" ph="SELECT * FRO... ${PREFIX}" />
-            <marker date="1489482753515" expanded="true" signature="32218:32603" ph="INSERT INTO `${PREFIX}statistics`... " />
-            <marker date="1489482753515" expanded="true" signature="32374:32603" ph="SELECT :Days... dual" />
-            <marker date="1489482753515" expanded="true" signature="32525:32599" ph="SELECT * FRO... ${PREFIX}statistics" />
-            <marker date="1489482753515" expanded="true" signature="33120:33262" ph="SELECT ID,Na... ${PREFIX}" />
+            <element signature="e#15210#15492#0#PHP" expanded="false" />
+            <element signature="e#16132#16221#0#PHP" expanded="false" />
+            <element signature="e#16237#16377#0#PHP" expanded="false" />
+            <element signature="e#16390#17247#0#PHP" expanded="false" />
+            <element signature="e#18350#18686#0#PHP" expanded="false" />
+            <element signature="e#18698#19404#0#PHP" expanded="false" />
+            <element signature="e#20612#21014#0#PHP" expanded="false" />
+            <element signature="e#21035#21238#0#PHP" expanded="false" />
+            <element signature="e#21264#21358#0#PHP" expanded="false" />
+            <element signature="e#21373#21486#0#PHP" expanded="false" />
+            <element signature="e#21502#21640#0#PHP" expanded="false" />
+            <element signature="e#21929#22081#0#PHP" expanded="false" />
+            <element signature="e#22098#22650#0#PHP" expanded="false" />
+            <element signature="e#22658#24441#0#PHP" expanded="false" />
+            <element signature="e#24449#24592#0#PHP" expanded="false" />
+            <element signature="e#24601#24908#0#PHP" expanded="false" />
+            <element signature="e#24917#25596#0#PHP" expanded="false" />
+            <element signature="e#25651#25977#0#PHP" expanded="false" />
+            <element signature="e#26409#26988#0#PHP" expanded="false" />
+            <element signature="e#31015#31836#0#PHP" expanded="false" />
+            <marker date="1489482785773" expanded="true" signature="3157:3237" ph="SELECT Confi... ${PREFIX}" />
+            <marker date="1489482785773" expanded="true" signature="6260:6354" ph="INSERT INTO ${PREFIX}config... " />
+            <marker date="1489482785773" expanded="true" signature="8174:8230" ph="SELECT ID,Us... ${PREFIX}" />
+            <marker date="1489482785773" expanded="true" signature="9436:10459" ph="INSERT INTO `${PREFIX}users`... " />
+            <marker date="1489482785773" expanded="true" signature="13365:13425" ph="SELECT ID FR... ${PREFIX}users" />
+            <marker date="1489482785773" expanded="true" signature="13564:13707" ph="INSERT INTO `${PREFIX}notifications`... " />
+            <marker date="1489482785773" expanded="true" signature="22372:22380" ph="‹" />
+            <marker date="1489482785773" expanded="true" signature="22380:22388" ph="‹" />
+            <marker date="1489482785773" expanded="true" signature="22620:22628" ph="›" />
+            <marker date="1489482785773" expanded="true" signature="22628:22636" ph="›" />
+            <marker date="1489482785773" expanded="true" signature="23086:23094" ph="‹" />
+            <marker date="1489482785773" expanded="true" signature="23094:23102" ph="‹" />
+            <marker date="1489482785773" expanded="true" signature="24132:24140" ph="›" />
+            <marker date="1489482785773" expanded="true" signature="24140:24148" ph="›" />
+            <marker date="1489482785773" expanded="true" signature="28140:28192" ph="SELECT * FRO... ${PREFIX}" />
+            <marker date="1489482785773" expanded="true" signature="32208:32593" ph="INSERT INTO `${PREFIX}statistics`... " />
+            <marker date="1489482785773" expanded="true" signature="32364:32593" ph="SELECT :Days... dual" />
+            <marker date="1489482785773" expanded="true" signature="32515:32589" ph="SELECT * FRO... ${PREFIX}statistics" />
+            <marker date="1489482785773" expanded="true" signature="33110:33252" ph="SELECT ID,Na... ${PREFIX}" />
           </folding>
         </state>
       </provider>
