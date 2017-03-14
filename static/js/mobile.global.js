@@ -147,7 +147,7 @@
 
 
 	$.afui.toast=function(opts){
-		$(document.body).toast(opts);
+		return $(document.body).toast(opts);
 	};
 
 	$.afui.registerDataDirective("[data-toast]",function(item){
@@ -559,7 +559,8 @@ function UploadPicture(TextareaID) {
 	// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
 	//$("#upfile").click();
 	//if($('#upfile')[0].files[0]){
-		var toast = $.afui.toast("Uploading……");
+		var toast = $.afui.toast("上传中……");
+	console.log(typeof toast);
 		var UploadData = new FormData();
 		UploadData.append('upfile', $('#upfile')[0].files[0]);
 		UploadData.append('token', accessToken);
