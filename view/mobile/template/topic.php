@@ -23,11 +23,11 @@ if($Page==1){
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<img src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>" width="34" height="34" />
 					</a>
-					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
+					<a class="dj-nickname" href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<?php echo htmlspecialchars($Topic['UserName']); ?>
 					</a>
 				</div>
-				<div style="float: right">
+				<div style="float: left; margin: 5px 0 0 20px;">
 					<p>创建于 <?php echo FormatTime($Topic['PostTime']); ?></p>
 					<p><?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?></p>
 				</div>

@@ -26,7 +26,7 @@ foreach ($TopicsArray as $Topic) {
 			<a href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
 				<img width="53" height="53" src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>" alt="<?php echo $Topic['UserName']; ?>"/>
 			</a>
-			<a class="board-nickname" href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
+			<a class="dj-nickname" href="<?php echo $Config['WebsitePath']; ?>/u/<?php echo $Topic['UserID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
 				<?php echo htmlspecialchars($Topic['UserName']); ?>
 			</a>
 		</div>
