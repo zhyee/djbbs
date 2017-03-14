@@ -59,7 +59,7 @@ if($Page<$TotalPage){
 
 	<div class="list-empty">
 		<i class="icon-list-empty"></i>
-		<p class="title-list-empty">没有结果</p>
+		<p class="title-list-empty">没有内容</p>
 	</div>
 
 
