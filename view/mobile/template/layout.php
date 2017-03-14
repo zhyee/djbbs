@@ -68,27 +68,16 @@ if($Config['MobileDomainName']){
 
 <body>
 	<!-- this is the main container div.  This way, you can have only part of your app use UI -->
-	<div id="mainview" class="view splitview active">
+	<div id="mainview" class="view splitview">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
 			<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
 		</header>
 		<div class="pages">
-			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel active" selected="true">
+			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
 				<?php include($ContentFile); ?>
 			</div>
 		</div>
-		<!-- this is the default left side nav menu.  If you do not want any, do not include these -->
-		<nav id="menu">
-			 <div class="view active" id="navView">
-				<header class="header" id="menuHeader"></header>
-				<div class="pages">
-					 <div class="panel active" id="navPage" style="padding:0!important;" data-title="navPage">
-						<?php include($TemplatePath.'sider.php'); ?>
-					</div>
-				</div>
-			</div>
-		</nav>
 	</div>
 
 <?php

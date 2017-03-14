@@ -375,11 +375,11 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	TempHTML += "<div class=\"input-group\" style=\"width:100%;\"><textarea id=\"Content" + TopicID +"\" rows=\"10\"></textarea></div>";
 	$("#ReplyViewHTML").html(TempHTML);
 	$("#ReplyViewCancelButton").text(Lang['Cancel']);
-	$("#ReplyViewCancelButton").unbind('click');
-	$("#ReplyViewCancelButton").click(function (e) {
-		e.preventDefault();
-		$.afui.dismissView(document.getElementById("ReplyViewCancelButton"), "up-reveal:dismiss");
-	});
+	// $("#ReplyViewCancelButton").unbind('click');
+	// $("#ReplyViewCancelButton").click(function (e) {
+	// 	e.preventDefault();
+	// 	$.afui.dismissView(document.getElementById("ReplyViewCancelButton"), "up-reveal:dismiss");
+	// });
 	$("#ReplyViewSubmitButton").text(Lang['Reply']);
 	$("#ReplyViewSubmitButton").unbind('click');
 	$("#ReplyViewSubmitButton").click(function() {
@@ -403,6 +403,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 				dataType: "json",
 				success: function(Result) {
 					//TODO：删除Toast
+					toast.hide();
 					if (Result.Status == 1) {
 						console.log(Result);
 						$.afui.goBack();
@@ -413,7 +414,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 							"slide",
 							document.getElementById('mainview')
 						);
-						toast.hide();
+
 						//$("#ReplyViewSubmitButton").attr("href", WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: ""));
 					} else {
 						CarbonAlert(Result.ErrorMessage);
