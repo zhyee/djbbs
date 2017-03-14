@@ -2594,6 +2594,7 @@ p {
 	color: inherit;
 }
 .view {
+	background: #f0f0f0;
 	display: none;
 	overflow: hidden;
 	position: absolute;
