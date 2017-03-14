@@ -559,7 +559,7 @@ function UploadPicture(TextareaID) {
 	// https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
 	//$("#upfile").click();
 	//if($('#upfile')[0].files[0]){
-		$.afui.toast("Uploading……");
+		var toast = $.afui.toast("Uploading……");
 		var UploadData = new FormData();
 		UploadData.append('upfile', $('#upfile')[0].files[0]);
 		UploadData.append('token', accessToken);
@@ -577,6 +577,7 @@ function UploadPicture(TextareaID) {
 				} else {
 					CarbonAlert(JSON.state);
 				}
+				toast.hide();
 		});
 		return true;
 	//}else{
