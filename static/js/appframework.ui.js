@@ -931,7 +931,7 @@ window.af=window.jq=jQuery;
          */
         showMask: function(text, value) {
             if (!text) text = this.loadingText || "";
-            if (!value || typeof value !== "number") timeout = 15000;
+            if (!value || typeof value !== "number") var timeout = 15000;
             $.query("#afui_mask>h1").html(text);
             $.query("#afui_mask").show();
             this.showingMask = true;
