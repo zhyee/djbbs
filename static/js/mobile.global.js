@@ -600,7 +600,7 @@ $.afui.loadDefaultHash=false;
 //This function runs when the body is loaded.
 
 $(document).ready(function() {
-	// $.afui.launch();
+	$.afui.launch();
 	$.ajaxSetup({
 		cache: false
 	});
