@@ -615,6 +615,7 @@ function MyUploadPicture()
 	{
 		/* android */
 
+		if (typeof mAndroid)
 		var action = 'forum_upload_photo';
 		var params = "{'action' : '" + action + "', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
 		mAndroid.invokeJsApi(action, params);
