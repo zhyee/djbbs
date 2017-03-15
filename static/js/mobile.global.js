@@ -588,6 +588,7 @@ function UploadPicture(TextareaID) {
 	//}
 }
 
+var TextAreaID = '';
 function UploadPictureSuccess (obj) {
 	alert("OK");
 	// var str = '';
@@ -619,9 +620,10 @@ function UploadPictureSuccess (obj) {
 				},
 				dataType: 'JSON',
 				success : function (JSON) {
-					console.log(TextareaID);
+					TextAreaID = TextAreaID || 'Content';
+					console.log(TextAreaID);
 					if (JSON.state == "SUCCESS") {
-						var textAreaObj = $("#"+TextareaID);
+						var textAreaObj = $("#"+TextAreaID);
 						$("<li></li>").attr({title: JSON.original, rel: JSON.url}).appendTo(textAreaObj.next("ul"));
 						textAreaObj.val(textAreaObj.val() + "\n[" + JSON.original + "]\n");
 					} else {
@@ -641,16 +643,11 @@ function UploadPictureSuccess (obj) {
 }
 
 function UploadPictureError(obj) {
-	var str = '';
-	for(var i in obj)
-	{
-		str += 'obj[' + i + ']=' + obj[i] + "\n";
-	}
-	alert(str);
+	alert(obj);
 }
 
 
-function MyUploadPicture()
+function MyUploadPicture(areaID)
 {
 	if ($.os.ios)
 	{
@@ -660,6 +657,7 @@ function MyUploadPicture()
 		/* android */
 		if (typeof mAndroid === 'object' && typeof mAndroid.invokeJsApi !== 'undefined')
 		{
+			TextAreaID = areaID;
 			var action = 'forum_upload_photo';
 			var params = "{'action' : 'forum_upload_photo', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
 			mAndroid.invokeJsApi(action, params);
