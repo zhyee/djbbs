@@ -613,16 +613,10 @@ function MyUploadPicture()
 	}
 	else
 	{
-		alert('click');
-		//e.preventDefault();
 		/* android */
 
 		var action = 'forum_upload_photo';
-		var params = {
-			'action' : action,
-			'successCb' : UploadPictureSuccess,
-			'errorCb' : UploadPictureError
-		};
+		var params = "{'action' : '" + action + "', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
 		mAndroid.invokeJsApi(action, params);
 	}
 }
