@@ -586,6 +586,18 @@ function UploadPicture(TextareaID) {
 	//}
 }
 
+(function MyUploadPicture()
+{
+	if ($.os.ios)
+	{
+		alert('ios');
+	}
+	else
+	{
+		alert('android');
+	}
+})();
+
 /* Init Appframework*/
 if (! ((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
 	var script = document.createElement("script");
