@@ -29,7 +29,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			</select>
 		</p>
 		<p>
-			<label id="label-upfile" class="fa fa-paperclip fa-2x add-attachment" onclick="javascript:MyUploadPicture();"></label>
+			<label id="label-upfile" class="fa fa-paperclip fa-2x add-attachment" onclick=""></label>
 			<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" />
 		</p>
 		<p>
@@ -42,3 +42,9 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		</p>
 	</form>
 </div>
+
+<script>
+	$("#label-upfile").click(function () {
+		location.href = "/test.html";
+	});
+</script>
