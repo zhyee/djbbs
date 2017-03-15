@@ -31,6 +31,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			</select>
 		</p>
 		<p>
+			<input class="fa fa-paperclip fa-2x add-attachment" type="file" />
 			<button class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture()"></button>
 			<input type="file" style="display: none;" id="upfile" onchange="javascript:UploadPicture('Content');" />
 		</p>
