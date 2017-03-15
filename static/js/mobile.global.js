@@ -612,6 +612,7 @@ function MyUploadPicture(e)
 	}
 	else
 	{
+		alert('click');
 		e.preventDefault();
 		/* android */
 		if (typeof JsInterfaceObject !== 'undefined' && JsInterfaceObject.invokeJsApi !== 'undefined')

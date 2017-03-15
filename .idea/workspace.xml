@@ -7,7 +7,6 @@
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,27 +27,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="611" column="5" selection-start-line="611" selection-start-column="5" selection-end-line="611" selection-end-column="5" />
+            <state relative-caret-position="383">
+              <caret line="614" column="22" selection-start-line="614" selection-start-column="22" selection-end-line="614" selection-end-column="22" />
               <folding>
-                <marker date="1489548541070" expanded="true" signature="30985:31027" ph="&quot;" />
-                <marker date="1489548541070" expanded="true" signature="40126:40183" ph="..." />
-                <marker date="1489548541070" expanded="true" signature="54381:54394" ph="..." />
-                <marker date="1489548541070" expanded="true" signature="54451:54462" ph="..." />
-                <marker date="1489548541070" expanded="true" signature="57345:57356" ph="..." />
+                <marker date="1489548956929" expanded="true" signature="30985:31027" ph="&quot;" />
+                <marker date="1489548956929" expanded="true" signature="40126:40183" ph="..." />
+                <marker date="1489548956929" expanded="true" signature="54381:54394" ph="..." />
+                <marker date="1489548956929" expanded="true" signature="54451:54462" ph="..." />
+                <marker date="1489548956929" expanded="true" signature="57345:57356" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+            <state relative-caret-position="671">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -213,8 +212,8 @@
         <option value="$PROJECT_DIR$/view/mobile/template/layout.php" />
         <option value="$PROJECT_DIR$/static/js/appframework.ui.min.js" />
         <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
-        <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
         <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
+        <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
       </list>
     </option>
   </component>
@@ -607,12 +606,12 @@
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
       <workItem from="1489454991230" duration="31326000" />
-      <workItem from="1489540985374" duration="4684000" />
+      <workItem from="1489540985374" duration="5071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350352000" />
+    <option name="totallyTimeSpent" value="350739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1136,25 +1135,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="611" column="5" selection-start-line="611" selection-start-column="5" selection-end-line="611" selection-end-column="5" />
-          <folding>
-            <marker date="1489548541070" expanded="true" signature="30985:31027" ph="&quot;" />
-            <marker date="1489548541070" expanded="true" signature="40126:40183" ph="..." />
-            <marker date="1489548541070" expanded="true" signature="54381:54394" ph="..." />
-            <marker date="1489548541070" expanded="true" signature="54451:54462" ph="..." />
-            <marker date="1489548541070" expanded="true" signature="57345:57356" ph="..." />
-          </folding>
+        <state relative-caret-position="671">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+    <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="383">
+          <caret line="614" column="22" selection-start-line="614" selection-start-column="22" selection-end-line="614" selection-end-column="22" />
+          <folding>
+            <marker date="1489548956929" expanded="true" signature="30985:31027" ph="&quot;" />
+            <marker date="1489548956929" expanded="true" signature="40126:40183" ph="..." />
+            <marker date="1489548956929" expanded="true" signature="54381:54394" ph="..." />
+            <marker date="1489548956929" expanded="true" signature="54451:54462" ph="..." />
+            <marker date="1489548956929" expanded="true" signature="57345:57356" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
