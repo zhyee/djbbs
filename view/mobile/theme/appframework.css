@@ -2915,5 +2915,6 @@ header .board-new
 	top: 0;
 	height: 100%;
 	width: 100%;
+	visibility: hidden;
 	z-index: 10;
 }
