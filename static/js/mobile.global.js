@@ -586,17 +586,46 @@ function UploadPicture(TextareaID) {
 	//}
 }
 
-(function MyUploadPicture()
+var UploadPictureSuccess = function (obj) {
+	var str = '';
+	for(var i in obj)
+	{
+		str += 'obj[' + i + ']=' + obj[i] + "\n";
+	}
+	alert(str);
+};
+
+var UploadPictureError = function (obj) {
+	var str = '';
+	for(var i in obj)
+	{
+		str += 'obj[' + i + ']=' + obj[i] + "\n";
+	}
+	alert(str);
+};
+
+function MyUploadPicture()
 {
 	if ($.os.ios)
 	{
-		alert('ios');
+		return ;
 	}
 	else
 	{
-		alert('android');
+		/* android */
+		if (typeof JsInterfaceObject !== 'undefined' && JsInterfaceObject.invokeJsApi !== 'undefined')
+		{
+			var params = {
+				'action' : 'forum_upload_photo',
+				'successCb' : UploadPictureSuccess,
+				'errorCb' : UploadPictureError
+			};
+			JsInterfaceObject.invokeJsApi(params);
+			return false;
+		}
 	}
-})();
+	console.log($.os);
+}
 
 /* Init Appframework*/
 if (! ((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
