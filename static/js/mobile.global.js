@@ -615,15 +615,14 @@ function MyUploadPicture(e)
 		alert('click');
 		e.preventDefault();
 		/* android */
-		if (typeof JsInterfaceObject !== 'undefined' && JsInterfaceObject.invokeJsApi !== 'undefined')
-		{
-			var params = {
-				'action' : 'forum_upload_photo',
-				'successCb' : UploadPictureSuccess,
-				'errorCb' : UploadPictureError
-			};
-			JsInterfaceObject.invokeJsApi(params);
-		}
+
+		var params = {
+			'action' : 'forum_upload_photo',
+			'successCb' : UploadPictureSuccess,
+			'errorCb' : UploadPictureError
+		};
+		JsInterfaceObject.invokeJsApi(params);
+
 		return false;
 	}
 }
