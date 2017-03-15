@@ -13,32 +13,39 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 	});
 </script>
 <div class="container">
-<form name="NewForm">
-	<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
-	<input type="hidden" name="ContentHash" value="" />
-	<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
-	<p>
-		<input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" />
-	</p>
-	<p>
-		<select name="BoardID" id="BoardID">
-			<option value="0">选择版块</option>
-			<?php foreach ($TotalBoards as $board): ?>
-				<option value="<?php echo $board['ID']; ?>"><?php echo htmlspecialchars($board['Name']); ?></option>
-			<?php endforeach; ?>
-		</select>
-	</p>
-	<p>
-		<label for="upfile" class="fa fa-paperclip fa-2x add-attachment" onclick="javascript:MyUploadPicture();"></label>
-		<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" />
-	</p>
-	<p>
-		<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
-	</p>
+	<form name="NewForm">
+		<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
+		<input type="hidden" name="ContentHash" value="" />
+		<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
+		<p>
+			<input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" />
+		</p>
+		<p>
+			<select name="BoardID" id="BoardID">
+				<option value="0">选择版块</option>
+				<?php foreach ($TotalBoards as $board): ?>
+					<option value="<?php echo $board['ID']; ?>"><?php echo htmlspecialchars($board['Name']); ?></option>
+				<?php endforeach; ?>
+			</select>
+		</p>
+		<p>
+			<label for="upfile" id="label-upfile" class="fa fa-paperclip fa-2x add-attachment" onclick></label>
+			<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" />
+		</p>
+		<p>
+			<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
+		</p>
 
-	<p>
-		<!--input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /-->
-		<a type="button" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" ><?php echo $Lang['Submit']; ?></a>
-	</p>
-</form>
-	</div>
+		<p>
+			<!--input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /-->
+			<a type="button" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" ><?php echo $Lang['Submit']; ?></a>
+		</p>
+	</form>
+</div>
+
+<script>
+	$("#label-upfile").click(function (e) {
+		e.preventDefault();
+		MyUploadPicture();
+	});
+</script>

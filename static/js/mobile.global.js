@@ -608,7 +608,7 @@ function MyUploadPicture()
 {
 	if ($.os.ios)
 	{
-		return ;
+		return false;
 	}
 	else
 	{
