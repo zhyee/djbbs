@@ -586,23 +586,24 @@ function UploadPicture(TextareaID) {
 	//}
 }
 
-var UploadPictureSuccess = function (obj) {
-	var str = '';
-	for(var i in obj)
-	{
-		str += 'obj[' + i + ']=' + obj[i] + "\n";
-	}
-	alert(str);
-};
+function UploadPictureSuccess (obj) {
+	alert("OK");
+	// var str = '';
+	// for(var i in obj)
+	// {
+	// 	str += 'obj[' + i + ']=' + obj[i] + "\n";
+	// }
+	// alert(str);
+}
 
-var UploadPictureError = function (obj) {
+function UploadPictureError(obj) {
 	var str = '';
 	for(var i in obj)
 	{
 		str += 'obj[' + i + ']=' + obj[i] + "\n";
 	}
 	alert(str);
-};
+}
 
 
 function MyUploadPicture()
@@ -614,10 +615,8 @@ function MyUploadPicture()
 	else
 	{
 		/* android */
-
-		if (typeof mAndroid)
 		var action = 'forum_upload_photo';
-		var params = "{'action' : '" + action + "', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
+		var params = "{'action' : 'forum_upload_photo', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
 		mAndroid.invokeJsApi(action, params);
 	}
 }
