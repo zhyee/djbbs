@@ -45,10 +45,10 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		<?php endif; ?>
 			<input type="file" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 		</p>
-		<p>
+		<div>
 			<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
 			<ul class="picture-list" style="display: none;"></ul>
-		</p>
+		</div>
 
 		<p>
 			<!--input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /-->
