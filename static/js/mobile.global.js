@@ -610,7 +610,7 @@ function MyUploadPicture()
 {
 	if ($.os.ios)
 	{
-		/*什么都不做*/
+		$("#upfile").click();
 	}
 	else
 	{
