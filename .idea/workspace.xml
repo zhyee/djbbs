@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +32,8 @@
       <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="625" column="45" selection-start-line="625" selection-start-column="45" selection-end-line="625" selection-end-column="45" />
+            <state relative-caret-position="504">
+              <caret line="619" column="40" selection-start-line="619" selection-start-column="22" selection-end-line="619" selection-end-column="40" />
               <folding>
                 <marker date="1489549802285" expanded="true" signature="30985:31027" ph="&quot;" />
                 <marker date="1489549802285" expanded="true" signature="40126:40183" ph="..." />
@@ -42,25 +45,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4009">
-              <caret line="297" column="9" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+            <state relative-caret-position="497">
+              <caret line="501" column="57" selection-start-line="501" selection-start-column="57" selection-end-line="501" selection-end-column="57" />
               <folding>
-                <element signature="e#11490#11496#0#HTML" expanded="true" />
-                <element signature="e#11496#11502#0#HTML" expanded="true" />
-                <element signature="e#11517#11523#0#HTML" expanded="true" />
+                <element signature="e#11696#11702#0#HTML" expanded="true" />
+                <element signature="e#11702#11708#0#HTML" expanded="true" />
+                <element signature="e#11723#11729#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#7;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#table#0;n#div#7;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#7;n#div#0;n#!!top" expanded="true" />
@@ -401,12 +394,12 @@
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
       <workItem from="1489454991230" duration="31326000" />
-      <workItem from="1489540985374" duration="7563000" />
+      <workItem from="1489540985374" duration="8530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353231000" />
+    <option name="totallyTimeSpent" value="354198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -923,10 +916,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="625" column="45" selection-start-line="625" selection-start-column="45" selection-end-line="625" selection-end-column="45" />
+        <state relative-caret-position="504">
+          <caret line="619" column="40" selection-start-line="619" selection-start-column="22" selection-end-line="619" selection-end-column="40" />
           <folding>
             <marker date="1489549802285" expanded="true" signature="30985:31027" ph="&quot;" />
             <marker date="1489549802285" expanded="true" signature="40126:40183" ph="..." />
@@ -937,22 +938,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4009">
-          <caret line="297" column="9" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+        <state relative-caret-position="497">
+          <caret line="501" column="57" selection-start-line="501" selection-start-column="57" selection-end-line="501" selection-end-column="57" />
           <folding>
-            <element signature="e#11490#11496#0#HTML" expanded="true" />
-            <element signature="e#11496#11502#0#HTML" expanded="true" />
-            <element signature="e#11517#11523#0#HTML" expanded="true" />
+            <element signature="e#11696#11702#0#HTML" expanded="true" />
+            <element signature="e#11702#11708#0#HTML" expanded="true" />
+            <element signature="e#11723#11729#0#HTML" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#7;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#table#0;n#div#7;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#7;n#div#0;n#!!top" expanded="true" />

@@ -79,6 +79,13 @@
 		JsInterfaceObject.invokeJsApi(action,data);
 		document.getElementById("onVideoComplete").innerHTML = data;
 	}
+
+	function onUploadPic() {
+		var action = "forum_upload_photo";
+		var data = "{'contentId':'C36759926','clickParam':'0','webUrl':'http://www.baidu.com'}";
+		JsInterfaceObject.invokeJsApi(action, data);
+	}
+
 	function toVipCouponsActivity(){
 		var className = "VipCouponsActivity";
 		var data = "";
@@ -492,7 +499,8 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			</select>
 		</p>
 		<p>
-			<label id="label-upfile" class="fa fa-paperclip fa-2x add-attachment" onclick=""></label>
+			<button onclick="onUploadPic()">测试测试</button>
+			<label id="label-upfile" class="fa fa-paperclip fa-2x add-attachment" onclick="onUploadPic()"></label>
 			<input type="file" class="add-attachment" id="upfile" onchange="javascript:UploadPicture('Content');" />
 		</p>
 		<p>
