@@ -49,7 +49,9 @@ foreach ($TopicsArray as $Topic) {
 }
 if($Page<$TotalPage){
 ?>
-	<li class="pagination"><a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID'] .'/page/'.($Page+1); ?>" data-transition="slide" data-persist-ajax="false"><?php echo $Lang['Page_Next']; ?></a></li>
+	<li class="pagination">
+		<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID'] .'/page/'.($Page+1); ?>" data-transition="slide" data-persist-ajax="false"><?php echo $Lang['Page_Next']; ?></a>
+	</li>
 <?php } ?>
 
 </ul>
@@ -64,3 +66,18 @@ if($Page<$TotalPage){
 
 
 <?php } ?>
+
+
+<script>
+
+	/* 委托点击li事件到a */
+	$(".board-list>li").click(function (e) {
+		if (e.target.tagName.toUpperCase() === 'A')
+		{
+			return ;
+		}
+		$(this).find(".content>a").click();
+	});
+
+</script>
+

@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/appframework.ui.min.js.back" afterPath="$PROJECT_DIR$/static/js/appframework.ui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/board.php" afterPath="$PROJECT_DIR$/view/mobile/template/board.php" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +31,7 @@
       <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="6707">
               <caret line="364" column="23" selection-start-line="364" selection-start-column="23" selection-end-line="364" selection-end-column="23" />
               <folding>
                 <marker date="1489501369728" expanded="true" signature="30985:31027" ph="&quot;" />
@@ -43,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appframework.ui.min.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appframework.ui.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="19">
               <caret line="44" column="328" selection-start-line="44" selection-start-column="328" selection-end-line="44" selection-end-column="328" />
               <folding>
                 <marker date="1489502698075" expanded="true" signature="20731:20741" ph="..." />
@@ -73,7 +74,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="532">
               <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
               <folding />
             </state>
@@ -83,7 +84,7 @@
       <file leaf-file-name="appframework.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="29127">
               <caret line="1533" column="18" selection-start-line="1533" selection-start-column="18" selection-end-line="1533" selection-end-column="18" />
               <folding />
             </state>
@@ -93,7 +94,7 @@
       <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="1330">
               <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
               <folding />
             </state>
@@ -103,7 +104,7 @@
       <file leaf-file-name="boards.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/boards.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="19">
               <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding>
                 <marker date="1489485393578" expanded="true" signature="730:743" ph="..." />
@@ -112,14 +113,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="board.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="7" column="190" selection-start-line="7" selection-start-column="190" selection-end-line="7" selection-end-column="190" />
+            <state relative-caret-position="552">
+              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
               <folding>
-                <marker date="1489499838749" expanded="true" signature="1485:1517" ph="..." />
-                <marker date="1489499838749" expanded="true" signature="1684:1722" ph="..." />
+                <marker date="1489545698368" expanded="true" signature="1485:1517" ph="..." />
+                <marker date="1489545698368" expanded="true" signature="1684:1722" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,7 +129,7 @@
       <file leaf-file-name="board.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/board.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
+            <state relative-caret-position="642">
               <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
               <folding>
                 <marker date="1489500143018" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
@@ -138,18 +139,6 @@
                 <marker date="1489500143018" expanded="true" signature="1099:1260" ph="SELECT DISTI... " />
                 <marker date="1489500143018" expanded="true" signature="1501:1657" ph="SELECT `ID`,... ${PREFIX}topics" />
                 <marker date="1489500143018" expanded="true" signature="1721:1916" ph="SELECT `ID`,... ${PREFIX}topics" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topic.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/mobile/template/topic.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -209,11 +198,11 @@
         <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
         <option value="$PROJECT_DIR$/static/js/appframework.ui.js" />
         <option value="$PROJECT_DIR$/view/mobile/theme/style.css" />
-        <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
         <option value="$PROJECT_DIR$/controller/board.php" />
         <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
         <option value="$PROJECT_DIR$/view/mobile/template/layout.php" />
         <option value="$PROJECT_DIR$/static/js/appframework.ui.min.js" />
+        <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
       </list>
     </option>
   </component>
@@ -255,7 +244,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -494,6 +482,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -605,18 +594,19 @@
       <workItem from="1489108986611" duration="7475000" />
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
-      <workItem from="1489454991230" duration="31014000" />
+      <workItem from="1489454991230" duration="31326000" />
+      <workItem from="1489540985374" duration="1880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345356000" />
+    <option name="totallyTimeSpent" value="347548000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20512821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20726496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -777,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,10 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
           <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
-          <folding>
-            <marker date="1484292762253" expanded="true" signature="7265:7271" ph=" " />
-            <marker date="1484292762253" expanded="true" signature="7526:7532" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,13 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
-          <folding>
-            <marker date="1489220712811" expanded="true" signature="3772:3784" ph="..." />
-            <marker date="1489220712811" expanded="true" signature="3787:3793" ph=" " />
-            <marker date="1489220712811" expanded="true" signature="3793:3799" ph=" " />
-            <marker date="1489220712811" expanded="true" signature="3810:3816" ph=" " />
-            <marker date="1489220712811" expanded="true" signature="4072:4084" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="29" column="101" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="3" column="995" selection-start-line="3" selection-start-column="995" selection-end-line="3" selection-end-column="995" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,9 +937,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#p#4;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,48 +1029,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/boards.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <marker date="1489485393578" expanded="true" signature="730:743" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="532">
           <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="7" column="190" selection-start-line="7" selection-start-column="190" selection-end-line="7" selection-end-column="190" />
-          <folding>
-            <marker date="1489499838749" expanded="true" signature="1485:1517" ph="..." />
-            <marker date="1489499838749" expanded="true" signature="1684:1722" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/board.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-          <folding>
-            <marker date="1489500143018" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
-            <marker date="1489500143018" expanded="true" signature="547:651" ph="SELECT COUNT... ${PREFIX}posts" />
-            <marker date="1489500143018" expanded="true" signature="1099:1129" ph="SELECT DISTI... " />
-            <marker date="1489500143018" expanded="true" signature="1099:1259" ph="SELECT DISTI... ${PREFIX}posts" />
-            <marker date="1489500143018" expanded="true" signature="1099:1260" ph="SELECT DISTI... " />
-            <marker date="1489500143018" expanded="true" signature="1501:1657" ph="SELECT `ID`,... ${PREFIX}topics" />
-            <marker date="1489500143018" expanded="true" signature="1721:1916" ph="SELECT `ID`,... ${PREFIX}topics" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,36 +1041,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
           <caret line="1572" column="79" selection-start-line="1572" selection-start-column="79" selection-end-line="1572" selection-end-column="79" />
-          <folding>
-            <marker date="1489499247342" expanded="true" signature="61957:61967" ph="..." />
-            <marker date="1489499247342" expanded="true" signature="63324:63418" ph="..." />
-            <marker date="1489499247342" expanded="true" signature="78542:78552" ph="..." />
-            <marker date="1489499247342" expanded="true" signature="107392:107398" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="29127">
           <caret line="1533" column="18" selection-start-line="1533" selection-start-column="18" selection-end-line="1533" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/topic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="1330">
           <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
           <folding />
         </state>
@@ -1141,7 +1062,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="6707">
           <caret line="364" column="23" selection-start-line="364" selection-start-column="23" selection-end-line="364" selection-end-column="23" />
           <folding>
             <marker date="1489501369728" expanded="true" signature="30985:31027" ph="&quot;" />
@@ -1155,11 +1076,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="19">
           <caret line="44" column="328" selection-start-line="44" selection-start-column="328" selection-end-line="44" selection-end-column="328" />
           <folding>
             <marker date="1489502698075" expanded="true" signature="20731:20741" ph="..." />
             <marker date="1489502698075" expanded="true" signature="28474:28484" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/topic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="20" column="111" selection-start-line="20" selection-start-column="111" selection-end-line="20" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <marker date="1489500143018" expanded="true" signature="248:314" ph="SELECT * FRO... ${PREFIX}boards" />
+            <marker date="1489500143018" expanded="true" signature="547:651" ph="SELECT COUNT... ${PREFIX}posts" />
+            <marker date="1489500143018" expanded="true" signature="1099:1129" ph="SELECT DISTI... " />
+            <marker date="1489500143018" expanded="true" signature="1099:1259" ph="SELECT DISTI... ${PREFIX}posts" />
+            <marker date="1489500143018" expanded="true" signature="1099:1260" ph="SELECT DISTI... " />
+            <marker date="1489500143018" expanded="true" signature="1501:1657" ph="SELECT `ID`,... ${PREFIX}topics" />
+            <marker date="1489500143018" expanded="true" signature="1721:1916" ph="SELECT `ID`,... ${PREFIX}topics" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/boards.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <marker date="1489485393578" expanded="true" signature="730:743" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+          <folding>
+            <marker date="1489545698368" expanded="true" signature="1485:1517" ph="..." />
+            <marker date="1489545698368" expanded="true" signature="1684:1722" ph="..." />
           </folding>
         </state>
       </provider>
