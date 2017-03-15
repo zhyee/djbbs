@@ -605,7 +605,7 @@ var UploadPictureError = function (obj) {
 };
 
 
-function MyUploadPicture(e)
+function MyUploadPicture()
 {
 	if ($.os.ios)
 	{
@@ -614,17 +614,16 @@ function MyUploadPicture(e)
 	else
 	{
 		alert('click');
-		e.preventDefault();
+		//e.preventDefault();
 		/* android */
 
+		var action = 'forum_upload_photo';
 		var params = {
-			'action' : 'forum_upload_photo',
+			'action' : action,
 			'successCb' : UploadPictureSuccess,
 			'errorCb' : UploadPictureError
 		};
-		mAndroid.invokeJsApi(params);
-
-		return false;
+		mAndroid.invokeJsApi(action, params);
 	}
 }
 
