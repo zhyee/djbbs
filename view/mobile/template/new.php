@@ -1,4 +1,11 @@
+<?php
 
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
+
+$ipad = preg_match('/(iPad).*OS\s([\d_]+)/', $userAgent);
+$iphone = !$ipad && preg_match('/(iPhone\sOS)\s([\d_]+)/', $userAgent);
+$ios = $ipad || $iphone;
+?>
 
 
 <?php
@@ -31,7 +38,11 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			</select>
 		</p>
 		<p class="p-add-attachment">
+		<?php if ($ios): ?>
+			<label for="upfile" class="fa fa-paperclip fa-2x add-attachment" onclick></label>
+		<?php else: ?>
 			<button class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture()"></button>
+		<?php endif; ?>
 			<input type="file" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 		</p>
 		<p>

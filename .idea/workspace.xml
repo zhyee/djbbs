@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/theme/appframework.css" afterPath="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+            <state relative-caret-position="608">
+              <caret line="45" column="116" selection-start-line="45" selection-start-column="116" selection-end-line="45" selection-end-column="116" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#p#2;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -60,8 +58,8 @@
       <file leaf-file-name="appframework.ui.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+            <state relative-caret-position="354">
+              <caret line="94" column="70" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="75" />
               <folding>
                 <marker date="1489499247342" expanded="true" signature="61957:61967" ph="..." />
                 <marker date="1489499247342" expanded="true" signature="63324:63418" ph="..." />
@@ -85,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="541">
@@ -206,8 +204,8 @@
         <option value="$PROJECT_DIR$/static/js/appframework.ui.min.js" />
         <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
-        <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
         <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
+        <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
       </list>
     </option>
   </component>
@@ -382,12 +380,12 @@
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
       <workItem from="1489454991230" duration="31326000" />
-      <workItem from="1489540985374" duration="13618000" />
+      <workItem from="1489540985374" duration="15097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359286000" />
+    <option name="totallyTimeSpent" value="360765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -430,7 +428,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/demo.php" />
     <entry file="file://$PROJECT_DIR$/language/zh-cn/global.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -880,13 +877,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
+    <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+        <state relative-caret-position="19">
+          <caret line="44" column="328" selection-start-line="44" selection-start-column="328" selection-end-line="44" selection-end-column="328" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#p#2;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1489502698075" expanded="true" signature="20731:20741" ph="..." />
+            <marker date="1489502698075" expanded="true" signature="28474:28484" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="2894" column="7" selection-start-line="2894" selection-start-column="7" selection-end-line="2894" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/pcre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -906,8 +920,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+        <state relative-caret-position="354">
+          <caret line="94" column="70" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="75" />
           <folding>
             <marker date="1489499247342" expanded="true" signature="61957:61967" ph="..." />
             <marker date="1489499247342" expanded="true" signature="63324:63418" ph="..." />
@@ -917,22 +931,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="44" column="328" selection-start-line="44" selection-start-column="328" selection-end-line="44" selection-end-column="328" />
+        <state relative-caret-position="608">
+          <caret line="45" column="116" selection-start-line="45" selection-start-column="116" selection-end-line="45" selection-end-column="116" />
           <folding>
-            <marker date="1489502698075" expanded="true" signature="20731:20741" ph="..." />
-            <marker date="1489502698075" expanded="true" signature="28474:28484" ph="..." />
+            <element signature="n#style#0;n#input#0;n#p#2;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="2894" column="7" selection-start-line="2894" selection-start-column="7" selection-end-line="2894" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
