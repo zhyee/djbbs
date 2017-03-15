@@ -2890,11 +2890,6 @@ header .board-new
     float: right;
 }
 
-.p-add-attachment
-{
-	position: relative;
-}
-
 .add-attachment
 {
 	width: auto;
@@ -2905,16 +2900,4 @@ header .board-new
 	background-image: -webkit-linear-gradient(top, #fefefe, #efefef);
 	background-image: -moz-linear-gradient(top, #fefefe, #efefef);
 	border: 1px solid #efefef;
-	z-index: 1;
-}
-
-.p-add-attachment input[type="file"]
-{
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	visibility: hidden;
-	z-index: 10;
 }

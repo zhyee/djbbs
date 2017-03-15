@@ -610,7 +610,6 @@ function MyUploadPicture()
 {
 	if ($.os.ios)
 	{
-		$("#upfile").click();
 	}
 	else
 	{
