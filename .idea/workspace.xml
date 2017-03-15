@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="39577ff4-e88b-49df-87b4-2577b3622c6d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/static/editor/dialogs/emotion/ʹ��˵��.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/mobile/template/new.php" afterPath="$PROJECT_DIR$/view/mobile/template/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/upload_controller.php" afterPath="$PROJECT_DIR$/controller/upload_controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/upload_file.php" afterPath="$PROJECT_DIR$/controller/upload_file.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.global.js" afterPath="$PROJECT_DIR$/static/js/mobile.global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/mobile.new.function.js" afterPath="$PROJECT_DIR$/static/js/mobile.new.function.js" />
     </list>
     <ignored path="Carbon-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,17 +31,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobile.global.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="577" column="50" selection-start-line="577" selection-start-column="46" selection-end-line="577" selection-end-column="50" />
+            <state relative-caret-position="664">
+              <caret line="670" column="5" selection-start-line="670" selection-start-column="5" selection-end-line="670" selection-end-column="5" />
               <folding>
-                <marker date="1489567338632" expanded="true" signature="30985:31027" ph="&quot;" />
-                <marker date="1489567338632" expanded="true" signature="40126:40183" ph="..." />
-                <marker date="1489567338632" expanded="true" signature="54381:54394" ph="..." />
-                <marker date="1489567338632" expanded="true" signature="54451:54462" ph="..." />
-                <marker date="1489567338632" expanded="true" signature="57345:57356" ph="..." />
+                <marker date="1489581355686" expanded="true" signature="30985:31027" ph="&quot;" />
+                <marker date="1489581355686" expanded="true" signature="40126:40183" ph="..." />
+                <marker date="1489581355686" expanded="true" signature="54381:54394" ph="..." />
+                <marker date="1489581355686" expanded="true" signature="54451:54462" ph="..." />
+                <marker date="1489581355686" expanded="true" signature="57345:57356" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/upload_controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload_file.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/upload_file.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="33" column="67" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Uploader.config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Uploader.config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Uploader.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Uploader.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-16">
+              <caret line="384" column="15" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="15" />
+              <folding>
+                <marker date="1488890009676" expanded="true" signature="8410:8536" ph="SELECT UserN... ${PREFIX}" />
+                <marker date="1488890009676" expanded="true" signature="9228:9530" ph="INSERT INTO ${PREFIX}upload... " />
               </folding>
             </state>
           </provider>
@@ -46,8 +93,8 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+            <state relative-caret-position="2968">
+              <caret line="201" column="1" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
               <folding>
                 <element signature="e#15212#15494#0#PHP" expanded="false" />
                 <element signature="e#16134#16223#0#PHP" expanded="false" />
@@ -103,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+            <state relative-caret-position="437">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#p#2;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -119,63 +166,15 @@
       <file leaf-file-name="mobile.new.function.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/mobile.new.function.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+            <state relative-caret-position="399">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
               <folding>
-                <marker date="1489569726605" expanded="true" signature="4047:4059" ph="..." />
-                <marker date="1489569726605" expanded="true" signature="4062:4068" ph=" " />
-                <marker date="1489569726605" expanded="true" signature="4068:4074" ph=" " />
-                <marker date="1489569726605" expanded="true" signature="4085:4091" ph=" " />
-                <marker date="1489569726605" expanded="true" signature="4347:4359" ph="..." />
+                <marker date="1489577236133" expanded="true" signature="4048:4060" ph="..." />
+                <marker date="1489577236133" expanded="true" signature="4063:4069" ph=" " />
+                <marker date="1489577236133" expanded="true" signature="4069:4075" ph=" " />
+                <marker date="1489577236133" expanded="true" signature="4086:4092" ph=" " />
+                <marker date="1489577236133" expanded="true" signature="4348:4360" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myadmin/doc/html/_static/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="407" column="47" selection-start-line="407" selection-start-column="47" selection-end-line="407" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appframework.ui.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
-              <folding>
-                <marker date="1489499247342" expanded="true" signature="61957:61967" ph="..." />
-                <marker date="1489499247342" expanded="true" signature="63324:63418" ph="..." />
-                <marker date="1489499247342" expanded="true" signature="78542:78552" ph="..." />
-                <marker date="1489499247342" expanded="true" signature="107392:107398" ph=" " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appframework.ui.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/appframework.ui.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="44" column="328" selection-start-line="44" selection-start-column="328" selection-end-line="44" selection-end-column="328" />
-              <folding>
-                <marker date="1489502698075" expanded="true" signature="20731:20741" ph="..." />
-                <marker date="1489502698075" expanded="true" signature="28474:28484" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appframework.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/mobile/theme/appframework.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="2894" column="7" selection-start-line="2894" selection-start-column="7" selection-end-line="2894" selection-end-column="7" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -183,7 +182,7 @@
       <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
+            <state relative-caret-position="893">
               <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
               <folding />
             </state>
@@ -198,8 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/default/template/settings.php" />
-        <option value="$PROJECT_DIR$/view/default/template/sider.php" />
         <option value="$PROJECT_DIR$/view/default/template/login.php" />
         <option value="$PROJECT_DIR$/view/mobile/template/login.php" />
         <option value="$PROJECT_DIR$/static/js/reply.function.js" />
@@ -244,11 +241,13 @@
         <option value="$PROJECT_DIR$/static/js/appframework.ui.min.js" />
         <option value="$PROJECT_DIR$/view/mobile/template/board.php" />
         <option value="$PROJECT_DIR$/view/mobile/theme/appframework.css" />
-        <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/common.php" />
-        <option value="$PROJECT_DIR$/static/js/mobile.new.function.js" />
         <option value="$PROJECT_DIR$/view/mobile/template/new.php" />
+        <option value="$PROJECT_DIR$/static/js/mobile.new.function.js" />
+        <option value="$PROJECT_DIR$/controller/upload_controller.php" />
+        <option value="$PROJECT_DIR$/controller/upload_file.php" />
+        <option value="$PROJECT_DIR$/static/js/mobile.global.js" />
       </list>
     </option>
   </component>
@@ -305,6 +304,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="djbbs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,12 +464,12 @@
       <workItem from="1489194976843" duration="22805000" />
       <workItem from="1489368537849" duration="13092000" />
       <workItem from="1489454991230" duration="31326000" />
-      <workItem from="1489540985374" duration="20027000" />
+      <workItem from="1489540985374" duration="25899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365695000" />
+    <option name="totallyTimeSpent" value="371567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -471,20 +512,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="2146" column="0" selection-start-line="2146" selection-start-column="0" selection-end-line="2146" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Uploader.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6669">
-          <caret line="351" column="60" selection-start-line="351" selection-start-column="60" selection-end-line="351" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -538,33 +565,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/upload_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="41" column="57" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/Filtering.words.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Uploader.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/upload_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,14 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -889,18 +885,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
+    <entry file="file://$PROJECT_DIR$/myadmin/doc/html/_static/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="354">
+          <caret line="407" column="47" selection-start-line="407" selection-start-column="47" selection-end-line="407" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/mobile/template/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mobile.new.function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <marker date="1489577236133" expanded="true" signature="4048:4060" ph="..." />
+            <marker date="1489577236133" expanded="true" signature="4063:4069" ph=" " />
+            <marker date="1489577236133" expanded="true" signature="4069:4075" ph=" " />
+            <marker date="1489577236133" expanded="true" signature="4086:4092" ph=" " />
+            <marker date="1489577236133" expanded="true" signature="4348:4360" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        <state relative-caret-position="2968">
+          <caret line="201" column="1" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
           <folding>
             <element signature="e#15212#15494#0#PHP" expanded="false" />
             <element signature="e#16134#16223#0#PHP" expanded="false" />
@@ -945,49 +963,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
+    <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="577" column="50" selection-start-line="577" selection-start-column="46" selection-end-line="577" selection-end-column="50" />
-          <folding>
-            <marker date="1489567338632" expanded="true" signature="30985:31027" ph="&quot;" />
-            <marker date="1489567338632" expanded="true" signature="40126:40183" ph="..." />
-            <marker date="1489567338632" expanded="true" signature="54381:54394" ph="..." />
-            <marker date="1489567338632" expanded="true" signature="54451:54462" ph="..." />
-            <marker date="1489567338632" expanded="true" signature="57345:57356" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myadmin/doc/html/_static/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="407" column="47" selection-start-line="407" selection-start-column="47" selection-end-line="407" selection-end-column="47" />
+        <state relative-caret-position="250">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/mobile.new.function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <marker date="1489569726605" expanded="true" signature="4047:4059" ph="..." />
-            <marker date="1489569726605" expanded="true" signature="4062:4068" ph=" " />
-            <marker date="1489569726605" expanded="true" signature="4068:4074" ph=" " />
-            <marker date="1489569726605" expanded="true" signature="4085:4091" ph=" " />
-            <marker date="1489569726605" expanded="true" signature="4347:4359" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/mobile/template/new.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+        <state relative-caret-position="437">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#input#0;n#p#2;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Uploader.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Uploader.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="384" column="15" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="15" />
+          <folding>
+            <marker date="1488890009676" expanded="true" signature="8410:8536" ph="SELECT UserN... ${PREFIX}" />
+            <marker date="1488890009676" expanded="true" signature="9228:9530" ph="INSERT INTO ${PREFIX}upload... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/upload_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/upload_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/mobile.global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="670" column="5" selection-start-line="670" selection-start-column="5" selection-end-line="670" selection-end-column="5" />
+          <folding>
+            <marker date="1489581355686" expanded="true" signature="30985:31027" ph="&quot;" />
+            <marker date="1489581355686" expanded="true" signature="40126:40183" ph="..." />
+            <marker date="1489581355686" expanded="true" signature="54381:54394" ph="..." />
+            <marker date="1489581355686" expanded="true" signature="54451:54462" ph="..." />
+            <marker date="1489581355686" expanded="true" signature="57345:57356" ph="..." />
           </folding>
         </state>
       </provider>

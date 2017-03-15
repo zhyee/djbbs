@@ -575,7 +575,7 @@ function UploadPicture(TextareaID) {
 				console.log(TextareaID);
 				if (JSON.state == "SUCCESS") {
 					var textAreaObj = $("#"+TextareaID);
-					$("<li></li>").attr("data-file", JSON.original).html(JSON.url).appendTo(textAreaObj.next("ul"));
+					$("<li></li>").attr({title: JSON.original, rel: JSON.url}).appendTo(textAreaObj.next("ul"));
 					textAreaObj.val(textAreaObj.val() + "\n[" + JSON.original + "]\n");
 				} else {
 					CarbonAlert(JSON.state);
@@ -596,6 +596,48 @@ function UploadPictureSuccess (obj) {
 	// 	str += 'obj[' + i + ']=' + obj[i] + "\n";
 	// }
 	// alert(str);
+	obj = obj && JSON.parse(obj);
+	if (typeof obj === "object")
+	{
+		if (obj.code > 0)
+		{
+			CarbonAlert(obj.msg);
+		}
+		else
+		{
+			var toast = $.afui.toast("上传中……");
+			var fileName = obj.name;
+			var size = obj.size;
+			var data = obj.data;
+			$.ajax({
+				url: WebsitePath + "/upload_controller?action=uploadfile",
+				type: 'POST',
+				data: {
+					filename : fileName,
+					size	: size,
+					upfile	: data
+				},
+				dataType: 'JSON',
+				success : function (JSON) {
+					console.log(TextareaID);
+					if (JSON.state == "SUCCESS") {
+						var textAreaObj = $("#"+TextareaID);
+						$("<li></li>").attr({title: JSON.original, rel: JSON.url}).appendTo(textAreaObj.next("ul"));
+						textAreaObj.val(textAreaObj.val() + "\n[" + JSON.original + "]\n");
+					} else {
+						CarbonAlert(JSON.state);
+					}
+				},
+				complete : function () {
+					toast.hide();
+				}
+			});
+		}
+	}
+	else
+	{
+		CarbonAlert("上传失败");
+	}
 }
 
 function UploadPictureError(obj) {
@@ -616,9 +658,16 @@ function MyUploadPicture()
 	else
 	{
 		/* android */
-		var action = 'forum_upload_photo';
-		var params = "{'action' : 'forum_upload_photo', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
-		mAndroid.invokeJsApi(action, params);
+		if (typeof mAndroid === 'object' && typeof mAndroid.invokeJsApi !== 'undefined')
+		{
+			var action = 'forum_upload_photo';
+			var params = "{'action' : 'forum_upload_photo', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
+			mAndroid.invokeJsApi(action, params);
+		}
+		else
+		{
+			$("#upfile").click();
+		}
 	}
 }
 

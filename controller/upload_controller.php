@@ -18,6 +18,8 @@ switch ($action) {
 	case 'uploadvideo':
 	/* 上传文件 */
 	case 'uploadfile':
+    /* APP上传base64流 */
+    case 'uploadbase64':
 		$result = include("upload_file.php");
 		break;
 	

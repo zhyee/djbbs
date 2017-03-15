@@ -39,8 +39,8 @@ function CreateNewTopic() {
 		Content = $("#Content").val();
 		var origin, href;
 		$(".picture-list li").each(function () {
-			origin = $.trim($(this).attr("data-file"));
-			href = $.trim($(this).html());
+			origin = $.trim($(this).attr("title"));
+			href = $.trim($(this).attr("rel"));
 			href = '<p><img src="' + href + '"></p>';
 			Content = Content.replace('[' + origin + ']', href);
 		});

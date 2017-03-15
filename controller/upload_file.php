@@ -26,6 +26,16 @@ switch (htmlspecialchars($_GET['action'])) {
 		$fieldName = $UploadConfig['scrawlFieldName'];
 		$base64    = "base64";
 		break;
+    case 'uploadbase64':
+        $config = array(
+            "pathFormat" => $Config['WebsitePath'] . $UploadConfig['imagePathFormat'],
+            "maxSize" => $UploadConfig['scrawlMaxSize'],
+            "allowFiles" => $UploadConfig['scrawlAllowFiles'],
+            "oriName" => $_POST['filename'] ? trim($_POST['filename']) : "base64.png"
+        );
+        $fieldName = $UploadConfig['imageFieldName'];
+        $base64 = 'base64';
+        break;
 	case 'uploadvideo':
 		$config    = array(
 			"pathFormat" => $Config['WebsitePath'] . $UploadConfig['videoPathFormat'],
