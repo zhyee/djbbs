@@ -621,8 +621,8 @@ function MyUploadPicture()
 				'errorCb' : UploadPictureError
 			};
 			JsInterfaceObject.invokeJsApi(params);
-			return false;
 		}
+		return false;
 	}
 	console.log($.os);
 }
