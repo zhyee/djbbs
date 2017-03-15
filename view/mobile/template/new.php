@@ -47,6 +47,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		</p>
 		<p>
 			<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
+			<ul class="picture-list" style="display: none;"></ul>
 		</p>
 
 		<p>

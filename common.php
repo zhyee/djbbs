@@ -294,7 +294,7 @@ else
 
     updateUserInfo($updata, $CurUserID);  //更新用户组织ID和昵称
 
-    $CurUserRole           = $TempUserInfo['UserRoleID'];                //当前角色ID
+    //$CurUserRole           = $TempUserInfo['UserRoleID'];                //当前角色ID
     $CurUserInfo = array_merge($TempUserInfo, $CurUserInfo);
 }
 

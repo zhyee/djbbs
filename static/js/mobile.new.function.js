@@ -33,10 +33,18 @@ function CreateNewTopic() {
 		CarbonAlert('请选择版块');
 		return false;
 	} else {
-		$.afui.toast(Lang['Submitting']);
+		var toast = $.afui.toast(Lang['Submitting']);
 		$("#PublishButton").val(Lang['Submitting']);
 		var MarkdownConverter = new showdown.Converter(),
-		Content = MarkdownConverter.makeHtml($("#Content").val());
+		Content = $("#Content").val();
+		var origin, href;
+		$(".picture-list li").each(function () {
+			origin = $.trim($(this).attr("data-file"));
+			href = $.trim($(this).html());
+			href = '<p><img src="' + href + '"></p>';
+			Content = Content.replace('[' + origin + ']', href);
+		});
+		$(".picture-list li").remove();
 		$.ajax({
 			url: WebsitePath + '/new',
 			data: {
@@ -49,17 +57,17 @@ function CreateNewTopic() {
 			type: 'post',
 			dataType: 'json',
 			success: function(data) {
-				//TODO: 隐藏Toast
+				toast.hide();
 				if (data.Status == 1) {
 					$("#PublishButton").val(Lang['Submit_Success']);
-					location.href = WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken;
-					// $.afui.loadContent(
-					// 	WebsitePath + "/t/" + data.TopicID,
-					// 	false,
-					// 	false,
-					// 	"slide",
-					// 	document.getElementById('mainview')
-					// );
+					// location.href = WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken;
+					$.afui.loadContent(
+						WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken,
+						false,
+						false,
+						"slide",
+						document.getElementById('mainview')
+					);
 				} else {
 					CarbonAlert(data.ErrorMessage);
 				}

@@ -574,7 +574,9 @@ function UploadPicture(TextareaID) {
 			}).done(function(JSON) {
 				console.log(TextareaID);
 				if (JSON.state == "SUCCESS") {
-					$("#"+TextareaID).val($("#"+TextareaID).val() + "\n![" + JSON.original + "](" + JSON.url + ")\n");
+					var textAreaObj = $("#"+TextareaID);
+					$("<li></li>").attr("data-file", JSON.original).html(JSON.url).appendTo(textAreaObj.next("ul"));
+					textAreaObj.val(textAreaObj.val() + "\n[" + JSON.original + "]\n");
 				} else {
 					CarbonAlert(JSON.state);
 				}
