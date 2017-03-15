@@ -45,7 +45,6 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 
 <script>
 	$("#label-upfile").click(function (e) {
-		e.preventDefault();
-		MyUploadPicture();
+		MyUploadPicture(e);
 	});
 </script>

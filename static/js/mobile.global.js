@@ -604,14 +604,15 @@ var UploadPictureError = function (obj) {
 	alert(str);
 };
 
-function MyUploadPicture()
+function MyUploadPicture(e)
 {
 	if ($.os.ios)
 	{
-		return false;
+		/*什么都不做*/
 	}
 	else
 	{
+		e.preventDefault();
 		/* android */
 		if (typeof JsInterfaceObject !== 'undefined' && JsInterfaceObject.invokeJsApi !== 'undefined')
 		{
@@ -624,7 +625,6 @@ function MyUploadPicture()
 		}
 		return false;
 	}
-	console.log($.os);
 }
 
 /* Init Appframework*/
