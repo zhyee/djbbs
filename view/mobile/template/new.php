@@ -41,7 +41,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		<?php if ($ios): ?>
 			<label for="upfile" class="fa fa-paperclip fa-2x add-attachment" onclick></label>
 		<?php else: ?>
-			<button class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture()"></button>
+			<button type="button" class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture()"></button>
 		<?php endif; ?>
 			<input type="file" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 		</p>
