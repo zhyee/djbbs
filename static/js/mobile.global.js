@@ -604,6 +604,7 @@ var UploadPictureError = function (obj) {
 	alert(str);
 };
 
+
 function MyUploadPicture(e)
 {
 	if ($.os.ios)
@@ -621,7 +622,7 @@ function MyUploadPicture(e)
 			'successCb' : UploadPictureSuccess,
 			'errorCb' : UploadPictureError
 		};
-		JsInterfaceObject.invokeJsApi(params);
+		mAndroid.invokeJsApi(params);
 
 		return false;
 	}
