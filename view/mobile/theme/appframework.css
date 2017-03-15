@@ -2890,20 +2890,6 @@ header .board-new
     float: right;
 }
 
-span.add-attachment
-{
-	cursor:pointer;
-	width:48px;
-	height: 43px;
-	border:1px solid #dadada;
-	background-color: #fff;
-	background-image: -webkit-linear-gradient(top, #fefefe, #dedede);
-	background-image: -moz-linear-gradient(top, #fefefe, #dedede);
-	margin-top: 0;
-	margin-bottom: 0;
-	display: inline-block;
-}
-
 .add-attachment
 {
 	width: auto;
