@@ -624,8 +624,19 @@ function UploadPictureSuccess (obj) {
 					console.log(TextAreaID);
 					if (JSON.state == "SUCCESS") {
 						var textAreaObj = $("#"+TextAreaID);
-						$("<li></li>").attr({title: JSON.original, rel: JSON.url}).appendTo(textAreaObj.next("ul"));
-						textAreaObj.val(textAreaObj.val() + "\n[" + JSON.original + "]\n");
+						var ulObj = textAreaObj.next("ul");
+						var len = ulObj.find("li:last").length;
+						if (len > 0)
+						{
+							index = parseInt(ulObj.find("li:last").replace("图片", "")) + 1;
+						}
+						else
+						{
+							index = 1;
+						}
+						var title = "图片" + index;
+						$("<li></li>").attr({title: title, rel: JSON.url}).appendTo(ulObj);
+						textAreaObj.val(textAreaObj.val() + "\n[" + title + "]\n");
 					} else {
 						CarbonAlert(JSON.state);
 					}

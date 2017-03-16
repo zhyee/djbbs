@@ -41,10 +41,10 @@ function CreateNewTopic() {
 		$(".picture-list li").each(function () {
 			origin = $.trim($(this).attr("title"));
 			href = $.trim($(this).attr("rel"));
-			href = '<p><img src="' + href + '"></p>';
-			Content = Content.replace('[' + origin + ']', href);
+			href = '<img src="' + href + '">';
+			var reg = new RegExp("\\[" + origin + "\\]", "g");
+			Content = Content.replace(reg, href);
 		});
-		$(".picture-list li").remove();
 		$.ajax({
 			url: WebsitePath + '/new',
 			data: {
@@ -57,6 +57,7 @@ function CreateNewTopic() {
 			type: 'post',
 			dataType: 'json',
 			success: function(data) {
+				$(".picture-list li").remove();
 				toast.hide();
 				if (data.Status == 1) {
 					$("#PublishButton").val(Lang['Submit_Success']);
