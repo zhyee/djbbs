@@ -149,7 +149,7 @@ if (!$Config) {
             'SMTPAuth'                      => 'true',
             'SMTPUsername'                  => 'user@example.com',
             'SMTPPassword'                  => 'secret',
-            'WebsitePath'                   => '',
+            'WebsitePath'                   => dirname($_SERVER['PHP_SELF']) == '/' ? '' : dirname($_SERVER['PHP_SELF']),
             'LoadJqueryUrl'                 => '/static/js/jquery.js'
         );
 
@@ -1144,8 +1144,6 @@ if ($Config['DaysDate'] != $CurrentDate) {
 	));
 }
 // Get the infomation of current user
-
-
 
 //$CurUserExpirationTime = intval(GetCookie('UserExpirationTime'));
 //$CurUserCode           = GetCookie('UserCode');
