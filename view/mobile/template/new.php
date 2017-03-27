@@ -38,12 +38,14 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			</select>
 		</p>
 		<p class="p-add-attachment">
+
 		<?php if ($ios): ?>
 			<label for="upfile" class="fa fa-paperclip fa-2x add-attachment" onclick></label>
 		<?php else: ?>
-			<button type="button" class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture()"></button>
+			<button type="button" class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture(this);"></button>
 		<?php endif; ?>
-			<input type="file" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
+
+			<input type="file" accept="image/*" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 		</p>
 		<div>
 			<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>

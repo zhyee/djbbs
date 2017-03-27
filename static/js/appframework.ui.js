@@ -714,6 +714,9 @@ window.af=window.jq=jQuery;
                 hist.push(item);
             }
             if(item.length===0) return;
+
+            isSameView && (!$(item.target).hasClass("active")) && (item.target = this.activeDiv);
+
             if(hist.length>0){
                 var toTarget = hist[hist.length-1].target;
                 if(!toTarget) return;
@@ -931,7 +934,7 @@ window.af=window.jq=jQuery;
          */
         showMask: function(text, value) {
             if (!text) text = this.loadingText || "";
-            if (!value || typeof value !== "number") var timeout = 15000;
+            if (!value || typeof value !== "number") value = 4000;
             $.query("#afui_mask>h1").html(text);
             $.query("#afui_mask").show();
             this.showingMask = true;
@@ -1067,18 +1070,25 @@ window.af=window.jq=jQuery;
             if(isSplitViewParent&&currentView&&currentView.get(0)!==view.get(0))
                 $(currentView).trigger("nestedviewunload");
 
-
+            var updateView = anchor.getAttribute("data-update");
+            updateView = updateView || "true";
             if(!isSplitViewParent&&(newView||currentView&&currentView.get(0)!==view.get(0))){
                 //Need to transition the view
                 newView=currentView||newView;
                 this.runViewTransition(transition,view,newView,newDiv,back);
 
-                this.updateViewHistory(view,newDiv,transition,target);
+                if (updateView !== "false")
+                {
+                    this.updateViewHistory(view,newDiv,transition,target);
+                }
                 isNewView=true;
             }
             else{
                 this.runTransition(transition,previous, newDiv, back);
-                this.updateViewHistory(view,newDiv,transition,target);
+                if (updateView !== "false")
+                {
+                    this.updateViewHistory(view,newDiv,transition,target);
+                }
             }
 
             //Let's check if it has a function to run to update the data
@@ -1228,6 +1238,7 @@ window.af=window.jq=jQuery;
                 }
                 $(that.activeDiv).closest(".pages").append($res);
                 $res.attr("data-crc",crc);
+                $res.attr("data-href", target);
                 that.showLoading&&that.hideMask();
                 that.loadContent("#"+$res.prop("id"),newTab,back,transition,anchor);
             }).fail(function(res){

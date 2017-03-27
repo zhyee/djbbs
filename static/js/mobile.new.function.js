@@ -38,7 +38,7 @@ function CreateNewTopic() {
 		var MarkdownConverter = new showdown.Converter(),
 		Content = $("#Content").val();
 		var origin, href;
-		$(".picture-list li").each(function () {
+		$($.afui.activeDiv).find(".picture-list li").each(function () {
 			origin = $.trim($(this).attr("title"));
 			href = $.trim($(this).attr("rel"));
 			href = '<img src="' + href + '">';
@@ -62,6 +62,10 @@ function CreateNewTopic() {
 				if (data.Status == 1) {
 					$("#PublishButton").val(Lang['Submit_Success']);
 					// location.href = WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken;
+					document.NewForm.Title.value = '';
+					document.NewForm.BoardID.value = '0';
+					document.NewForm.Content.value = '';
+					$(document.NewForm.Content).next().find("li").remove();
 					$.afui.loadContent(
 						WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken,
 						false,

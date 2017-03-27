@@ -72,6 +72,7 @@ if($Config['MobileDomainName']){
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
 			<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
+            <a class="board-new" href="javascript:PageFresh();"><i class="fa fa-refresh" aria-hidden="true"></i></a>
 		</header>
 		<div class="pages">
 			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
@@ -93,7 +94,7 @@ if($CurUserID){
 				</p>
 				<div id="ReplyViewHTML">
 				</div>
-				<p><a class="button red block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewSubmitButton"></a></p>
+				<p><a class="button red block" href="javascript:;" id="ReplyViewSubmitButton"></a></p>
 				<p><a class="button gray block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a></p>
 			</div>
 		</div>

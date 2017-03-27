@@ -63,7 +63,7 @@ require(LanguagePath . 'board.php');
 //        (
 //            `ID`,
 //            `Name`,
-//            `GroupID`
+//            `GroupID`,
 //            `Followers`,
 //            `Icon`,
 //            `Description`,
@@ -77,7 +77,7 @@ require(LanguagePath . 'board.php');
 //        (
 //            :ID,
 //            :Name,
-//            :GroupID
+//            :GroupID,
 //            :Followers,
 //            :Icon,
 //            :Description,
@@ -121,15 +121,67 @@ $BoardsArray = $DB->query('SELECT *
 	LIMIT ' . ($Page - 1) * $Config['TopicsPerPage'] . ',' . $Config['TopicsPerPage'], array($CurGroupID));
 
 
-foreach ($BoardsArray as &$Board)
+
+if (empty($BoardsArray))
+{
+    /* 创建默认版块 */
+    $defaultBoard = array(
+        'ID'    => NULL,
+        'Name' => '默认版块',
+        'GroupID' => $CurGroupID,
+        'Followers' => 0,
+        'Icon' => '/upload/image/20170307/1488892283138895.png',
+        'Description' => '',
+        'IsEnabled' => 1,
+        'TotalPosts' => 0,
+        'TodayPosts' => 0,
+        'MostRecentPostTime' => 0,
+        'DateCreated' => $TimeStamp
+    );
+
+    $res = $DB->query("INSERT INTO `" . PREFIX . "boards`
+        (
+            `ID`,
+            `Name`,
+            `GroupID`,
+            `Followers`,
+            `Icon`,
+            `Description`,
+            `IsEnabled`,
+            `TotalPosts`,
+            `TodayPosts`,
+            `MostRecentPostTime`,
+            `DateCreated`
+        )
+        VALUES
+        (
+            :ID,
+            :Name,
+            :GroupID,
+            :Followers,
+            :Icon,
+            :Description,
+            :IsEnabled,
+            :TotalPosts,
+            :TodayPosts,
+            :MostRecentPostTime,
+            :DateCreated
+        )", $defaultBoard);
+
+    $defaultBoard['ID'] = $DB->lastInsertId();
+
+    $BoardsArray = array($defaultBoard);
+}
+
+foreach ($BoardsArray as $k => $Board)
 {
     if (date('Ymd', $TimeStamp) != date('Ymd', $Board['MostRecentPostTime']))
     {
-        $Board['TodayPosts'] = 0;
+        $BoardsArray[$k]['TodayPosts'] = 0;
     }
 }
 
-
+/*
 if ($CurUserID && $BoardsArray) {
 	$IsFavoriteArray = array_flip($DB->column("SELECT FavoriteID FROM " . PREFIX . "favorites 
 		Where UserID=".$CurUserID." and Type=2 and FavoriteID in (?)",
@@ -137,6 +189,7 @@ if ($CurUserID && $BoardsArray) {
 	));
 	//var_dump($IsFavoriteArray);
 }
+*/
 
 $DB->CloseConnection();
 

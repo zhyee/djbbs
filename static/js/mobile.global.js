@@ -173,7 +173,7 @@
 // 异步加载的回调函数
 function PageAjaxLoad (Title, URL) {
 	setTimeout(function () {
-		history.replaceState(null, Title, URL);
+		//history.replaceState(null, Title, URL);
 		document.title = Title;
 		$.afui.setTitle(Title);
 		$($.afui.activeDiv).attr('data-title', Title);
@@ -281,6 +281,12 @@ function loadScript(url, callback) {
 	var script = document.createElement("script");
 	script.id = md5(url);
 	script.type = "text/javascript";
+
+	script.src = url;
+	if (document.getElementById(script.id) == undefined) {
+		document.getElementsByTagName("head")[0].appendChild(script);
+	}
+
 	if (script.readyState) { //IE
 		script.onreadystatechange = function() {
 			if (script.readyState == "loaded" || script.readyState == "complete") {
@@ -293,13 +299,7 @@ function loadScript(url, callback) {
 			callback();
 		};
 	}
-	script.src = url;
-	if (document.getElementById(script.id) == undefined) {
-		document.getElementsByTagName("head")[0].appendChild(script);
-	} else {
-		callback();
-		//console.log(url);
-	}
+
 }
 
 //管理函数的完成回调
@@ -360,6 +360,31 @@ function Manage(ID, Type, Action, NeedToConfirm, TargetTag) {
 	}
 }
 
+
+//刷新页面
+function PageFresh()
+{
+	var target = $($.afui.activeDiv).attr("data-href") || '';
+	if (target === '')
+	{
+		$.afui.showMask("Loading...", 1000);
+		setTimeout(function () {
+			location.reload(true);
+		}, 300);
+	}
+	else
+	{
+		var currentViewID = $($.afui.activeDiv).closest(".view").prop("id");
+		var currentViews = $.afui.views[currentViewID];
+		currentViews.pop();
+		$($.afui.activeDiv).remove();
+		$.afui.activeDiv = currentViews[currentViews.length - 1].target;
+		$.afui.loadContent(target, false, false, "slide", document.getElementById('mainview'));
+	}
+
+
+}
+
 //回复某人
 function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	$.afui.loadContent(
@@ -370,9 +395,19 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		document.getElementById('mainview')
 	);
 	$("#ReplyViewTitle").text(Lang['Reply_To'] + "#" + PostFloor + " @" + UserName + " :");
-	var TempHTML = "<label for=\"upfile\" class=\"fa fa-paperclip fa-2x add-attachment\" onclick></label>";
-	TempHTML += "<input type=\"file\" id=\"upfile\" onchange=\"javascript:UploadPicture('Content" + TopicID +"');\" accept=\"image/*\" style=\"display:none;\" />";
-	TempHTML += "<div class=\"input-group\" style=\"width:100%;\"><textarea id=\"Content" + TopicID +"\" rows=\"10\"></textarea></div>";
+
+	var TempHTML = '';
+
+	if ($.os.ios)
+	{
+		TempHTML += "<label for=\"replyupfile\" class=\"fa fa-paperclip fa-2x add-attachment\" onclick></label>";
+	}
+	else
+	{
+		TempHTML += '<button type="button" class="fa fa-paperclip fa-2x add-attachment" onclick="MyUploadPicture(this);"></button>';
+	}
+	TempHTML += "<input type=\"file\" id=\"replyupfile\" onchange=\"javascript:UploadPicture('Content" + TopicID +"');\" accept=\"image/*\" style=\"display:none;\" />";
+	TempHTML += '<div class="input-group" style="width:100%;"><textarea id="Content' + TopicID +'" rows="10"></textarea><ul class="picture-list" style="display: none;"></ul></div>';
 	$("#ReplyViewHTML").html(TempHTML);
 	$("#ReplyViewCancelButton").text(Lang['Cancel']);
 	// $("#ReplyViewCancelButton").unbind('click');
@@ -383,14 +418,25 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	$("#ReplyViewSubmitButton").text(Lang['Reply']);
 	$("#ReplyViewSubmitButton").unbind('click');
 	$("#ReplyViewSubmitButton").click(function() {
-		if ($("Content" + TopicID).val()) {
+		if ($.trim($("#Content" + TopicID).val()) === '') {
 			CarbonAlert(Lang['Content_Empty']);
 		} else {
 			var toast = $.afui.toast(Lang['Replying']);
 			var MarkdownConverter = new showdown.Converter(),
-			PreContent =  (PostFloor==0) ? "" : Lang['Reply_To'] + "[#" + PostFloor + "](/t/"+TopicID+"#Post"+PostID+") @#USERNAME# :\n\n",
-			Content = MarkdownConverter.makeHtml(PreContent + $("#Content" + TopicID).val());
-			Content = Content.replace(/#USERNAME#/, UserName);
+			PreContent =  (PostFloor==0) ? "" : Lang['Reply_To'] + "[#" + PostFloor + "楼] @" + UserName + " :\n\n",
+			Content = $("#Content" + TopicID).val();
+
+			var origin, href;
+			$($.afui.activeDiv).find(".picture-list li").each(function () {
+				origin = $.trim($(this).attr("title"));
+				href = $.trim($(this).attr("rel"));
+				href = '<img src="' + href + '">';
+				var reg = new RegExp("\\[" + origin + "\\]", "g");
+				Content = Content.replace(reg, href);
+			});
+
+			Content = PreContent + Content;
+
 			$.ajax({
 				url: WebsitePath + "/reply",
 				data: {
@@ -407,13 +453,17 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 					if (Result.Status == 1) {
 						console.log(Result);
 						$.afui.goBack();
+						PageFresh();
+/*						var mainViews = $.afui.views['mainview'];
+						var target = mainViews.pop().target;
+						$(target).remove();
 						$.afui.loadContent(
 							WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: "") + "?token=" + accessToken,
-							false, 
-							false, 
+							false,
+							false,
 							"slide",
 							document.getElementById('mainview')
-						);
+						);*/
 
 						//$("#ReplyViewSubmitButton").attr("href", WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: ""));
 					} else {
@@ -562,7 +612,7 @@ function UploadPicture(TextareaID) {
 	//if($('#upfile')[0].files[0]){
 		var toast = $.afui.toast("上传中……");
 		var UploadData = new FormData();
-		UploadData.append('upfile', $('#upfile')[0].files[0]);
+		UploadData.append('upfile', $($.afui.activeDiv).find('input[type="file"]').get(0).files[0]);
 		UploadData.append('token', accessToken);
 		$.ajax({  
 			url: WebsitePath + "/upload_controller?action=uploadfile",
@@ -572,15 +622,27 @@ function UploadPicture(TextareaID) {
 			processData: false,  // 告诉jQuery不要去处理发送的数据  
 			contentType: false  // 告诉jQuery不要去设置Content-Type请求头  
 			}).done(function(JSON) {
-				console.log(TextareaID);
 				if (JSON.state == "SUCCESS") {
-					var textAreaObj = $("#"+TextareaID);
-					$("<li></li>").attr({title: JSON.original, rel: JSON.url}).appendTo(textAreaObj.next("ul"));
-					textAreaObj.val(textAreaObj.val() + "\n[" + JSON.original + "]\n");
+					//var textAreaObj = $("#"+TextareaID);
+					var textAreaObj = $($.afui.activeDiv).find("textarea:first");
+					var ulObj = textAreaObj.next("ul");
+					var len = ulObj.find("li:last").length;
+					if (len > 0)
+					{
+						index = parseInt(ulObj.find("li:last").attr("title").replace("图片", "")) + 1;
+					}
+					else
+					{
+						index = 1;
+					}
+					var title = "图片" + index;
+					$("<li></li>").attr({title: title, rel: JSON.url}).appendTo(ulObj);
+					textAreaObj.val(textAreaObj.val() + "\n[" + title + "]\n");
 				} else {
 					CarbonAlert(JSON.state);
 				}
 				toast.hide();
+				$($.afui.activeDiv).find('input[type="file"]').val('');  //上传后清除input框
 		});
 		return true;
 	//}else{
@@ -588,15 +650,8 @@ function UploadPicture(TextareaID) {
 	//}
 }
 
-var TextAreaID = '';
+
 function UploadPictureSuccess (obj) {
-	alert("OK");
-	// var str = '';
-	// for(var i in obj)
-	// {
-	// 	str += 'obj[' + i + ']=' + obj[i] + "\n";
-	// }
-	// alert(str);
 	obj = obj && JSON.parse(obj);
 	if (typeof obj === "object")
 	{
@@ -609,26 +664,25 @@ function UploadPictureSuccess (obj) {
 			var toast = $.afui.toast("上传中……");
 			var fileName = obj.name;
 			var size = obj.size;
-			var data = obj.data;
+			var data = obj.photoBase;
 			$.ajax({
-				url: WebsitePath + "/upload_controller?action=uploadfile",
+				url: WebsitePath + "/upload_controller?action=uploadbase64",
 				type: 'POST',
 				data: {
 					filename : fileName,
 					size	: size,
-					upfile	: data
+					upfile	: data,
+					token	: accessToken
 				},
 				dataType: 'JSON',
 				success : function (JSON) {
-					TextAreaID = TextAreaID || 'Content';
-					console.log(TextAreaID);
 					if (JSON.state == "SUCCESS") {
-						var textAreaObj = $("#"+TextAreaID);
+						var textAreaObj = $($.afui.activeDiv).find("textarea:first");
 						var ulObj = textAreaObj.next("ul");
 						var len = ulObj.find("li:last").length;
 						if (len > 0)
 						{
-							index = parseInt(ulObj.find("li:last").replace("图片", "")) + 1;
+							index = parseInt(ulObj.find("li:last").attr("title").replace("图片", "")) + 1;;
 						}
 						else
 						{
@@ -658,8 +712,9 @@ function UploadPictureError(obj) {
 }
 
 
-function MyUploadPicture(areaID)
+function MyUploadPicture(that)
 {
+	// alert("点击了附件按钮");
 	if ($.os.ios)
 	{
 	}
@@ -668,14 +723,15 @@ function MyUploadPicture(areaID)
 		/* android */
 		if (typeof mAndroid === 'object' && typeof mAndroid.invokeJsApi !== 'undefined')
 		{
-			TextAreaID = areaID;
+			// alert("弹出相册");
+			//TextAreaID = areaID;
 			var action = 'forum_upload_photo';
 			var params = "{'action' : 'forum_upload_photo', 'successCb' : 'UploadPictureSuccess', 'errorCb' : 'UploadPictureError'}";
 			mAndroid.invokeJsApi(action, params);
 		}
 		else
 		{
-			$("#upfile").click();
+			$(that).next("input").click();
 		}
 	}
 }
