@@ -31,6 +31,7 @@ if(!$IsAjax){
 	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="<?php echo $Config['WebsitePath']; ?>/static/img/retinahd_icon.png" />
 	<link rel="shortcut icon" type="image/ico" href="<?php echo $Config['WebsitePath']; ?>/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/font-awesome.min.css?version=<?php echo $Config['Version']; ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/iconfont.css?version=<?php echo $Config['Version']; ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/appframework.css?version=<?php echo $Config['Version']; ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/style.css?version=<?php echo $Config['Version']; ?>" />
 	<link rel="search" type="application/opensearchdescription+xml" title="<?php echo mb_substr($Config['SiteName'], 0, 15, 'utf-8'); ?>" href="<?php echo $Config['WebsitePath']; ?>/search.xml" />
@@ -73,7 +74,7 @@ if($Config['MobileDomainName']){
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
 			<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
-            <a class="board-new" href="javascript:PageFresh();"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+            <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh bold x1-3" aria-hidden="true"></i></a>
 		</header>
 		<div class="pages">
 			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">

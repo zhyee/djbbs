@@ -1551,6 +1551,15 @@ body #af_actionsheet a {
 .view footer > a.icon.pressed:not(.button):before {
 	color: inherit;
 }
+
+.backButton {
+	font-family:"iconfont" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .backButton::before {
 	z-index: -1;
 	font-size: 22px;
@@ -1564,17 +1573,17 @@ body #af_actionsheet a {
 	box-shadow: none;
 	-webkit-transform: none;
 	transform: none;
-	font-family: 'chevron';
+	/*font-family: 'chevron';*/
 	speak: none;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 500;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	content: "\f054";
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
+	content: "\e739";
+	/*-webkit-transform: rotate(180deg);*/
+	/*transform: rotate(180deg);*/
 	background-color: transparent;
 	padding: 12px;
 }
@@ -2893,11 +2902,13 @@ header .board-new
 .add-attachment
 {
 	width: auto;
-	padding: 10px 17px;
-	margin-bottom:10px;
+	padding: 5px;
+	margin-right: 3px;
 	border-radius: 5px;
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(top, #fefefe, #efefef);
-	background-image: -moz-linear-gradient(top, #fefefe, #efefef);
+	background-image: -webkit-linear-gradient(left, #f5f5f5, #fff);
+	background-image: -moz-linear-gradient(left, #f5f5f5, #fff);
 	border: 1px solid #efefef;
+	color: #996;
+	outline: none;
 }

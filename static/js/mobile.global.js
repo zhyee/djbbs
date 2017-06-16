@@ -749,7 +749,7 @@ $.afui.isAjaxApp = true;
 $.afui.useAjaxCacheBuster = false;
 $.afui.loadDefaultHash=false;
 //This function runs when the body is loaded.
-$.afui.backButtonText = '返回';
+$.afui.backButtonText = '';
 
 $(document).ready(function() {
 	$.afui.launch();

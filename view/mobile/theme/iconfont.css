@@ -1,0 +1,69 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1497582288974'); /* IE9*/
+  src: url('iconfont.eot?t=1497582288974#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1497582288974') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1497582288974') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1497582288974#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont.bold
+{
+  font-weight: bold;
+}
+
+.iconfont.x1-1
+{
+  font-size: 1.1em;
+}
+
+.iconfont.x1-2
+{
+  font-size: 1.2em;
+}
+
+.iconfont.x1-3
+{
+  font-size: 1.3em;
+}
+
+.iconfont.x1-4
+{
+  font-size: 1.4em;
+}
+
+.iconfont.x1-5
+{
+  font-size: 1.5em;
+}
+
+.iconfont.x2 {
+  font-size: 2em;
+}
+
+.icon-accessory:before { content: "\e6dd"; }
+
+.icon-camera_fill:before { content: "\e6e7"; }
+
+.icon-camera:before { content: "\e6e8"; }
+
+.icon-emoji_fill:before { content: "\e6f6"; }
+
+.icon-emoji:before { content: "\e6f7"; }
+
+.icon-picture_fill:before { content: "\e716"; }
+
+.icon-picture:before { content: "\e717"; }
+
+.icon-refresh:before { content: "\e71e"; }
+
+.icon-undo:before { content: "\e739"; }
+
