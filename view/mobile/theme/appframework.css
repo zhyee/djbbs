@@ -2106,10 +2106,60 @@ label + textarea {
 textarea {
 	height: auto;
 }
+
+.textarea
+{
+	padding: 15px 10px 5px 10px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.textarea textarea
+{
+	padding: 0 5px 0;
+	border:none !important;
+	margin-bottom: 0;
+	outline: none;
+	border-radius: 0;
+	resize: none;
+}
+
+.emotion
+{
+	width: 96%;
+	z-index: 9999;
+	position: fixed;
+	bottom: 6px;
+	left: 2%;
+	right: 2%;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.emotion .cancel
+{
+	border-top: 1px solid #dcdcdc;
+	text-align: center;
+	padding: 14px 0 4px;
+}
+
+.emotion .swiper-wrapper
+{
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+.emotion .swiper-wrapper img
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
 .input-group {
 	width: auto;
 	height: auto;
-	padding: 12px;
 	overflow: hidden;
 }
 .input-group input:not([type='button']):not([type='submit']),

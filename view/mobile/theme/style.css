@@ -424,7 +424,7 @@ html.ios-gt-6.pixel-ratio-3 .card-footer:before {
 .carbonforum-card .card-content p {
 	margin: 6px 10px !important;
 }
-.card-content img {
+.card-content .block {
 	max-width: 100%;
 	display: block;
 }

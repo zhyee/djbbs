@@ -11,6 +11,9 @@ $ios = $ipad || $iphone;
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/swiper-3.4.2.min.css?version=<?php echo $Config['Version']; ?>">
+
 <script type="text/javascript">
 	var MaxTagNum = <?php echo $Config["MaxTagsNum"]; ?>;//最多的话题数量
 	var MaxTitleChars = <?php echo $Config['MaxTitleChars']; ?>;//主题标题最多字节数
@@ -21,6 +24,8 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		});
 	});
 </script>
+
+
 <div class="container">
 	<form name="NewForm">
 		<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
@@ -37,15 +42,19 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 				<?php endforeach; ?>
 			</select>
 		</p>
-		<p class="p-add-attachment">
-			<button type="button" class="iconfont icon-camera x2 add-attachment" onclick="MyUploadPicture(this);"></button>
-			<input type="file" accept="image/*" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 
-			<button type="button" class="iconfont icon-emoji x2 add-attachment"></button>
-		</p>
-		<div>
-			<textarea name="Content" id="Content" rows="10" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
+
+		<div class="textarea">
+			<textarea name="Content" id="Content" rows="8" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
 			<ul class="picture-list" style="display: none;"></ul>
+
+			<div class="button-block">
+				<button type="button" class="iconfont icon-camera x4 add-attachment" onclick="MyUploadPicture(this);"></button>
+				<input type="file" accept="image/*" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
+
+				<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button>
+				<ul id="emotion-list" style="display: none;"></ul>
+			</div>
 		</div>
 
 		<p>
@@ -53,4 +62,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			<a type="button" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" ><?php echo $Lang['Submit']; ?></a>
 		</p>
 	</form>
+
 </div>
+
+

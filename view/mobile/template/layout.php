@@ -30,7 +30,6 @@ if(!$IsAjax){
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $Config['WebsitePath']; ?>/static/img/apple-touch-icon-144x144-precomposed.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="<?php echo $Config['WebsitePath']; ?>/static/img/retinahd_icon.png" />
 	<link rel="shortcut icon" type="image/ico" href="<?php echo $Config['WebsitePath']; ?>/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/font-awesome.min.css?version=<?php echo $Config['Version']; ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/iconfont.css?version=<?php echo $Config['Version']; ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/appframework.css?version=<?php echo $Config['Version']; ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/style.css?version=<?php echo $Config['Version']; ?>" />
@@ -39,12 +38,16 @@ if(!$IsAjax){
 		var Prefix="<?php echo PREFIX; ?>";
 		var WebsitePath="<?php echo $Config['WebsitePath'];?>";
 		var accessToken = "<?php echo $accessToken; ?>";
+		var EmotionRoot = '<?php echo $Config['WebsitePath']; ?>/static/img/emotions/';
 	</script>
 	
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['LoadJqueryUrl']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/appframework.ui.min.js?version=<?php echo $Config['Version']; ?>"></script>
-	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/mobile.global.js?version=1.005"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/mobile.global.js?version=1.006"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/language/<?php echo ForumLanguage; ?>/global.js?version=<?php echo $Config['Version']; ?>"></script>
+
+	<script type="text/javascript" src="<?php echo $Config['WebsitePath']; ?>/static/js/emotions.js?version=<?php echo $Config['Version']; ?>"></script>
+
 <?php
 if ($Config['PageHeadContent']) {
 	echo $Config['PageHeadContent'].'
@@ -107,6 +110,84 @@ if($CurUserID){
 <?php
 }
 ?>
+
+	<div class="emotion"  id="emotion-container">
+		<div class="swiper-container">
+			<div class="swiper-wrapper" id="wrapper"></div>
+			<div class="swiper-pagination" style="bottom:1px"></div>
+		</div>
+		<p class="cancel" id="emotion-cancel">取消</p>
+	</div>
+
+	<script>
+
+		$(function () {
+
+			$(document).on('click', ".emotion-btn,#emotion-cancel", function (e) {
+				$('#emotion-container').slideToggle(800);
+			});
+
+			var index = 0;
+			var step = 24;
+			var slideCont = $('<div class="swiper-slide"></div>');
+			for(var key in emotions)
+			{
+				$('<img />').attr({alt:key, src: EmotionRoot + emotions[key]}).appendTo(slideCont);
+				index ++;
+
+				if (index % step == 0)
+				{
+					slideCont.appendTo('#wrapper');
+
+					slideCont = $('<div class="swiper-slide"></div>');
+				}
+			}
+			/* 最后一个不满的容器 */
+			if (index % step > 0)
+			{
+				slideCont.appendTo('#wrapper');
+			}
+
+			loadScript('<?php echo $Config['WebsitePath']; ?>/static/js/swiper-3.4.2.jquery.min.js?version=<?php echo $Config['Version']; ?>', function(){
+				var mySwiper = new Swiper ('.swiper-container', {
+					direction: 'horizontal',
+					loop: false,
+
+					// 如果需要分页器
+					pagination: '.swiper-pagination',
+
+					// 如果需要前进后退按钮
+//			nextButton: '.swiper-button-next',
+//			prevButton: '.swiper-button-prev',
+
+					// 如果需要滚动条
+//			scrollbar: '.swiper-scrollbar',
+				});
+
+				var wrapperWidth = $("#wrapper").width();
+				$("#emotion-container").hide();
+				var itemWidth = wrapperWidth / 8;
+				var itemMargin = (itemWidth - 24) / 2;
+
+				$("#wrapper img").css({'margin-left': itemMargin + 'px', 'margin-right' : itemMargin + 'px'});
+
+
+				$('#wrapper img').click(function (e) {
+					var name = $(this).attr('alt');
+					var href = $(this).attr('src');
+					var textar = $($.afui.activeDiv).find('textarea:first');
+					textar.val(textar.val() + '[' + name  + ']');
+					$('<li/>').attr({'rel' : name, 'title' : href}).appendTo('#emotion-list');
+				});
+
+				$(document).on('click', '#Title, #BoardID, textarea', function () {
+					$('#emotion-container').hide();
+				});
+			});
+
+		});
+
+	</script>
 
 </body>
 </html>

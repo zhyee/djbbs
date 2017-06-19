@@ -41,10 +41,20 @@ function CreateNewTopic() {
 		$($.afui.activeDiv).find(".picture-list li").each(function () {
 			origin = $.trim($(this).attr("title"));
 			href = $.trim($(this).attr("rel"));
+			href = '<img src="' + href + '" class="block">';
+			var reg = new RegExp("\\[" + origin + "\\]", "g");
+			Content = Content.replace(reg, href);
+		});
+
+
+		$("#emotion-list li").each(function () {
+			origin = $(this).attr('rel');
+			href = $(this).attr('title');
 			href = '<img src="' + href + '">';
 			var reg = new RegExp("\\[" + origin + "\\]", "g");
 			Content = Content.replace(reg, href);
 		});
+
 		$.ajax({
 			url: WebsitePath + '/new',
 			data: {

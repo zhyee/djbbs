@@ -49,6 +49,15 @@
   font-size: 2em;
 }
 
+.iconfont.x3 {
+  font-size: 3em;
+}
+
+.iconfont.x4
+{
+  font-size: 4em;
+}
+
 .icon-accessory:before { content: "\e6dd"; }
 
 .icon-camera_fill:before { content: "\e6e7"; }
