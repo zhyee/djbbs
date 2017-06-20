@@ -47,7 +47,7 @@ function CreateNewTopic() {
 		});
 
 
-		$("#emotion-list li").each(function () {
+		$($.afui.activeDiv).find(".emotion-list li").each(function () {
 			origin = $(this).attr('rel');
 			href = $(this).attr('title');
 			href = '<img src="' + href + '">';

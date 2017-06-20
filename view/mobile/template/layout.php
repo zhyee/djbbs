@@ -33,6 +33,7 @@ if(!$IsAjax){
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/iconfont.css?version=<?php echo $Config['Version']; ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/appframework.css?version=<?php echo $Config['Version']; ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/style.css?version=<?php echo $Config['Version']; ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/swiper-3.4.2.min.css?version=<?php echo $Config['Version']; ?>">
 	<link rel="search" type="application/opensearchdescription+xml" title="<?php echo mb_substr($Config['SiteName'], 0, 15, 'utf-8'); ?>" href="<?php echo $Config['WebsitePath']; ?>/search.xml" />
 	<script type="text/javascript">
 		var Prefix="<?php echo PREFIX; ?>";
@@ -43,7 +44,7 @@ if(!$IsAjax){
 	
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['LoadJqueryUrl']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/appframework.ui.min.js?version=<?php echo $Config['Version']; ?>"></script>
-	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/mobile.global.js?version=1.006"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/mobile.global.js?version=<?php echo $Config['Version']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/language/<?php echo ForumLanguage; ?>/global.js?version=<?php echo $Config['Version']; ?>"></script>
 
 	<script type="text/javascript" src="<?php echo $Config['WebsitePath']; ?>/static/js/emotions.js?version=<?php echo $Config['Version']; ?>"></script>
@@ -124,6 +125,7 @@ if($CurUserID){
 		$(function () {
 
 			$(document).on('click', ".emotion-btn,#emotion-cancel", function (e) {
+				e.stopPropagation();
 				$('#emotion-container').slideToggle(800);
 			});
 
@@ -154,34 +156,30 @@ if($CurUserID){
 					loop: false,
 
 					// 如果需要分页器
-					pagination: '.swiper-pagination',
-
-					// 如果需要前进后退按钮
-//			nextButton: '.swiper-button-next',
-//			prevButton: '.swiper-button-prev',
-
-					// 如果需要滚动条
-//			scrollbar: '.swiper-scrollbar',
+					pagination: '.swiper-pagination'
 				});
 
-				var wrapperWidth = $("#wrapper").width();
+				var wrapperO = $("#wrapper");
+				var wrapperWidth = wrapperO.width();
 				$("#emotion-container").hide();
 				var itemWidth = wrapperWidth / 8;
 				var itemMargin = (itemWidth - 24) / 2;
 
-				$("#wrapper img").css({'margin-left': itemMargin + 'px', 'margin-right' : itemMargin + 'px'});
+				var emotiomItem = wrapperO.find('img');
 
+				emotiomItem.css({'margin-left': itemMargin + 'px', 'margin-right' : itemMargin + 'px'});
 
-				$('#wrapper img').click(function (e) {
+				emotiomItem.click(function (e) {
 					var name = $(this).attr('alt');
 					var href = $(this).attr('src');
 					var textar = $($.afui.activeDiv).find('textarea:first');
 					textar.val(textar.val() + '[' + name  + ']');
-					$('<li/>').attr({'rel' : name, 'title' : href}).appendTo('#emotion-list');
+					var emotionList = $($.afui.activeDiv).find('.emotion-list:first');
+					$('<li/>').attr({'rel' : name, 'title' : href}).appendTo(emotionList);
 				});
 
-				$(document).on('click', '#Title, #BoardID, textarea', function () {
-					$('#emotion-container').hide();
+				$('.view').click (function () {
+					$('#emotion-container').hide('fast');
 				});
 			});
 

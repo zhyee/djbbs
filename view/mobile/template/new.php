@@ -12,8 +12,6 @@ $ios = $ipad || $iphone;
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/swiper-3.4.2.min.css?version=<?php echo $Config['Version']; ?>">
-
 <script type="text/javascript">
 	var MaxTagNum = <?php echo $Config["MaxTagsNum"]; ?>;//最多的话题数量
 	var MaxTitleChars = <?php echo $Config['MaxTitleChars']; ?>;//主题标题最多字节数
@@ -53,7 +51,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 				<input type="file" accept="image/*" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 
 				<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button>
-				<ul id="emotion-list" style="display: none;"></ul>
+				<ul class="emotion-list" style="display: none;"></ul>
 			</div>
 		</div>
 

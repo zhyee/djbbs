@@ -403,7 +403,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 	TempHTML += '<div class="button-block"><button type="button" class="iconfont icon-camera x4 add-attachment" onclick="MyUploadPicture(this);"></button>';
 	TempHTML += '<input type="file" id="replyupfile" onchange="javascript:UploadPicture(\'Content' + TopicID + '\');" accept="image/*" style="display:none;">';
 
-	TempHTML += '<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button><ul id="emotion-list" style="display: none;"></ul>';
+	TempHTML += '<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button><ul class="emotion-list" style="display: none;"></ul>';
 
 	TempHTML += '</div></div>';
 	$("#ReplyViewHTML").html(TempHTML);
@@ -428,6 +428,14 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 			$($.afui.activeDiv).find(".picture-list li").each(function () {
 				origin = $.trim($(this).attr("title"));
 				href = $.trim($(this).attr("rel"));
+				href = '<img src="' + href + '" class="block">';
+				var reg = new RegExp("\\[" + origin + "\\]", "g");
+				Content = Content.replace(reg, href);
+			});
+
+			$($.afui.activeDiv).find(".emotion-list li").each(function () {
+				origin = $(this).attr('rel');
+				href = $(this).attr('title');
 				href = '<img src="' + href + '">';
 				var reg = new RegExp("\\[" + origin + "\\]", "g");
 				Content = Content.replace(reg, href);
