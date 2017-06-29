@@ -749,6 +749,43 @@ function MyUploadPicture(that)
 	}
 }
 
+/**
+ * IOS 下载附件
+ * @param obj
+ */
+function myDownloadAttach(obj) {
+	alert(obj);
+}
+
+/**
+ * 下载附件
+ */
+function downloadAttach(that) {
+	var fileName = $(that).attr('title');
+	var filePath = $(that).attr('rel');
+	var fileType = fileName.substr(fileName.lastIndexOf('.') + 1).toLowerCase();
+
+	//ios
+	var fileObj = '{"fileName" : "' + fileName + '", "filePath": "' + filePath + '", "fileType": "' + fileType + '"}';
+	myDownloadAttach(fileObj);
+
+	if ($.os.ios)
+	{
+
+	}
+	else
+	{
+		if (typeof mAndroid === 'object' && typeof mAndroid.invokeJsApi !== 'undefined')
+		{
+			// alert("弹出相册");
+			//TextAreaID = areaID;
+			var action = 'forum_file_down';
+			var params = '{"fileName" : "' + fileName + '", "filePath" : "' + filePath + '", "fileType" : "' + fileType + '"}';
+			mAndroid.invokeJsApi(action, params);
+		}
+	}
+}
+
 /* Init Appframework*/
 if (! ((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
 	var script = document.createElement("script");

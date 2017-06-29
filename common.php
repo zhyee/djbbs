@@ -177,8 +177,6 @@ if (!$Config) {
 	}
 }
 
-$Config['Version'] = '5.9.0';
-
 
 /* Set current template
  * default: PC Version

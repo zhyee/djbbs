@@ -1,5 +1,8 @@
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
+
+$Config['Version'] = '5.9.5';
+
 ob_start();
 if(!$IsAjax){
 ?><!DOCTYPE html>
