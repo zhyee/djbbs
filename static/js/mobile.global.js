@@ -457,7 +457,6 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 					//TODO：删除Toast
 					toast.hide();
 					if (Result.Status == 1) {
-						console.log(Result);
 						$.afui.goBack();
 						PageFresh();
 /*						var mainViews = $.afui.views['mainview'];
@@ -754,7 +753,6 @@ function MyUploadPicture(that)
  * @param obj
  */
 function myDownloadAttach(obj) {
-	alert(obj);
 }
 
 /**

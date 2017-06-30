@@ -1,7 +1,7 @@
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
-<ul class="list topic-list board-list">
+<ul class="list topic-list board-list" id="boards-ul">
 <?php
 if($Page>1){
 ?>
@@ -45,12 +45,14 @@ if($Page<$TotalPage){
 </ul>
 
 <script type="text/javascript">
-	$(".board-list>li").click(function (e) {
+	$("#boards-ul>li").unbind('click').click(function (e) {
 		if (e.target.tagName.toUpperCase() === 'A')
 		{
-			return;
 		}
-		$(this).find("a:first").click();
+		else
+		{
+			$(this).find("a:first").click();
+		}
 	});
 
 </script>

@@ -38,7 +38,17 @@ if($Page==1){
 
 			<div class="download-attachment">
 				<h4>附件下载:</h4>
+
+				<?php if ($Topic['Attachment']): ?>
+					<?php $attachs = json_decode($Topic['Attachment'], TRUE); foreach ($attachs as $attach): ?>
+						<p><a href="javascript:;" onclick="downloadAttach(this);return false;" rel="<?php echo $attach['fileUrl']; ?>" title="<?php echo $attach['fileName']; ?>"><?php echo $attach['fileName']; ?></a></p>
+					<?php endforeach; ?>
+				<?php endif; ?>
+
+
 				<p><a href="javascript:;" onclick="downloadAttach(this);return false;" rel="http://180.168.69.13:18087/upload/attachment/20170620/%E7%9B%B4%E6%92%AD%E8%AF%84%E8%AE%BA%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.docx" title="直播评论平台服务接口文档.docx">直播评论平台服务接口文档.docx</a></p>
+
+
 			</div>
 		</div>
 	</div>

@@ -9,7 +9,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 </p>
 
 <?php if ($TopicsArray) { ?>
-<ul class="list topic-list board-list">
+<ul class="list topic-list board-list" id="topics-ul">
 <?php
 if($Page>1){
 ?>
@@ -32,9 +32,9 @@ foreach ($TopicsArray as $Topic) {
 			</a>
 		</div>
 		<div class="content">
-			<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide">
-				<h2><?php echo $Topic['Topic']; ?></h2>
-			</a>
+			<h2>
+				<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Topic['Topic']; ?></a>
+			</h2>
 			<p>
 				发表于 <?php echo FormatTime($Topic['PostTime']); ?>
 			</p>
@@ -71,12 +71,16 @@ if($Page<$TotalPage){
 <script>
 
 	/* 委托点击li事件到a */
-	$(".board-list>li").click(function (e) {
+
+	$("#topics-ul>li").unbind('click').click(function (e) {
 		if (e.target.tagName.toUpperCase() === 'A')
 		{
-			return ;
 		}
-		$(this).find(".content>a").click();
+		else
+		{
+			$(this).find(".content>h2>a").click();
+		}
+
 	});
 
 </script>

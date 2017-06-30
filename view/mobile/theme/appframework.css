@@ -2137,6 +2137,11 @@ textarea {
 	background: #fff;
 }
 
+.emotion.visibility-hidden
+{
+	visibility: hidden;
+}
+
 .emotion .cancel
 {
 	border-top: 1px solid #dcdcdc;

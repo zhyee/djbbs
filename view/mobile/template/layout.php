@@ -1,7 +1,7 @@
 <?php
 if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 
-$Config['Version'] = '5.9.5';
+$Config['Version'] = '5.9.6';
 
 ob_start();
 if(!$IsAjax){
@@ -115,7 +115,7 @@ if($CurUserID){
 }
 ?>
 
-	<div class="emotion"  id="emotion-container">
+	<div class="emotion visibility-hidden"  id="emotion-container">
 		<div class="swiper-container">
 			<div class="swiper-wrapper" id="wrapper"></div>
 			<div class="swiper-pagination" style="bottom:1px"></div>
@@ -164,7 +164,7 @@ if($CurUserID){
 
 				var wrapperO = $("#wrapper");
 				var wrapperWidth = wrapperO.width();
-				$("#emotion-container").hide();
+				$("#emotion-container").hide().removeClass('visibility-hidden');
 				var itemWidth = wrapperWidth / 8;
 				var itemMargin = (itemWidth - 24) / 2;
 
@@ -181,8 +181,9 @@ if($CurUserID){
 					$('<li/>').attr({'rel' : name, 'title' : href}).appendTo(emotionList);
 				});
 
-				$('.view').click (function () {
-					$('#emotion-container').hide('fast');
+				$('.view').click (function (e) {
+				    if ($(e.target).hasClass('emotion-btn')) return;
+					$('#emotion-container').hide();
 				});
 			});
 
