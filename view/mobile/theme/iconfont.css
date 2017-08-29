@@ -2,7 +2,7 @@
 @font-face {font-family: "iconfont";
   src: url('iconfont.eot?t=1497582288974'); /* IE9*/
   src: url('iconfont.eot?t=1497582288974#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1497582288974') format('woff'), /* chrome, firefox */
+  url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
   url('iconfont.ttf?t=1497582288974') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
   url('iconfont.svg?t=1497582288974#iconfont') format('svg'); /* iOS 4.1- */
 }
@@ -58,6 +58,9 @@
   font-size: 4em;
 }
 
+
+.icon-iconfontback01:before { content: "\e68c"; }
+
 .icon-accessory:before { content: "\e6dd"; }
 
 .icon-camera_fill:before { content: "\e6e7"; }
@@ -68,11 +71,11 @@
 
 .icon-emoji:before { content: "\e6f7"; }
 
-.icon-picture_fill:before { content: "\e716"; }
-
-.icon-picture:before { content: "\e717"; }
-
 .icon-refresh:before { content: "\e71e"; }
 
 .icon-undo:before { content: "\e739"; }
+
+.icon-edit:before { content: "\e60e"; }
+
+
 

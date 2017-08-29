@@ -80,7 +80,9 @@ if($Config['MobileDomainName']){
 	<div id="mainview" class="view splitview">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
-			<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">发帖</a>
+			<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
+				<i class="iconfont icon-edit bold" aria-hidden="true"></i> 发帖
+			</a>
             <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh bold x1-3" aria-hidden="true"></i></a>
 		</header>
 		<div class="pages">

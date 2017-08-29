@@ -37,12 +37,14 @@ if($Page==1){
 			<p><?php echo $PostsArray[0]['Content']; ?></p>
 
 			<div class="download-attachment">
+				<h4>附件下载:</h4>
+
 				<?php if ($Topic['Attachment']): ?>
-					<h4>附件下载:</h4>
 					<?php $attachs = json_decode($Topic['Attachment'], TRUE); foreach ($attachs as $attach): ?>
 						<p><a href="javascript:;" onclick="downloadAttach(this);return false;" rel="<?php echo $attach['fileUrl']; ?>" title="<?php echo $attach['fileName']; ?>"><?php echo $attach['fileName']; ?></a></p>
 					<?php endforeach; ?>
 				<?php endif; ?>
+
 			</div>
 		</div>
 	</div>

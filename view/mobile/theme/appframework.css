@@ -1500,10 +1500,10 @@ body #af_actionsheet a {
 	text-shadow: none;
 }
 .view header {
-	background: #e43620 url(/static/img/top.png) no-repeat center center;
+	background: #4788ff url(/static/img/top.png) no-repeat center center;
 	background-size: cover;
 	border: none;
-	border-bottom: 1px solid #e43620;
+	border-bottom: 1px solid #4788ff;
 	color: #ffffff;
 }
 .view header h1 {
@@ -1581,7 +1581,7 @@ body #af_actionsheet a {
 	text-transform: none;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
-	content: "\e739";
+	content: "\e68c";
 	/*-webkit-transform: rotate(180deg);*/
 	/*transform: rotate(180deg);*/
 	background-color: transparent;
