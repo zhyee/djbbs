@@ -80,10 +80,10 @@ if($Config['MobileDomainName']){
 	<div id="mainview" class="view splitview">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
-			<a class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
+			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
 				<i class="iconfont icon-edit bold" aria-hidden="true"></i> 发帖
 			</a>
-            <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh bold x1-3" aria-hidden="true"></i></a>
+            <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh bold x1-1" aria-hidden="true"></i></a>
 		</header>
 		<div class="pages">
 			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
@@ -207,7 +207,7 @@ if($CurUserID){
 	//Pjax
 ?>
 <script>
-PageAjaxLoad("<?php echo $PageTitle; ?>", "//<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>");
+	//PageAjaxLoad("<?php echo $PageTitle; ?>", "//<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>");
 </script>
 <?php
 }

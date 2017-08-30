@@ -12,14 +12,11 @@ foreach ($BoardsArray as $Board) {
 ?>
 	<li>
 		<div class="avatar">
-			<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $Board['ID']; ?>?token=<?php echo $accessToken; ?>">
-
 				<img src="<?php echo GetBoardIcon($Board['ID'], $Board['Icon'], $Board['Name'], 'middle'); ?>" alt="<?php echo $Board['Name']; ?>" />
-			</a>
 		</div>
 		<div class="content">
 			<h2>
-				<a href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $Board['ID']; ?>?token=<?php echo $accessToken; ?>">
+				<a data-title="<?php echo $Board['Name']; ?>" href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $Board['ID']; ?>?token=<?php echo $accessToken; ?>">
 					<?php echo $Board['Name']; ?>
 				</a>
 			</h2>

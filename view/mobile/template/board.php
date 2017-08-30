@@ -3,9 +3,9 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 ?>
 
 <p class="board-a">
-	<a data-update="false" <?php if (!$type): ?>class="on"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>?token=<?php echo $accessToken; ?>">全部</a>
+	<a data-title="<?php echo $BoardInfo['Name']; ?>-全部" data-update="false" <?php if (!$type): ?>class="on"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>?token=<?php echo $accessToken; ?>">全部</a>
 
-	<a data-update="false" <?php if ($type == 1): ?>class="on"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>/type/1?token=<?php echo $accessToken; ?>">与我相关</a>
+	<a data-title="<?php echo $BoardInfo['Name']; ?>-与我相关" data-update="false" <?php if ($type == 1): ?>class="on"<?php endif; ?> href="<?php echo $Config['WebsitePath']; ?>/board/<?php echo $BoardInfo['ID']; ?>/type/1?token=<?php echo $accessToken; ?>">与我相关</a>
 </p>
 
 <?php if ($TopicsArray) { ?>
@@ -44,7 +44,7 @@ foreach ($TopicsArray as $Topic) {
 			</div>
 
 			<h2 class="article-title">
-				<a href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Topic['Topic']; ?></a>
+				<a data-title="<?php echo $Topic['Topic']; ?>" href="<?php echo $Config['WebsitePath']; ?>/t/<?php echo $Topic['ID']; ?>?token=<?php echo $accessToken; ?>" data-transition="slide"><?php echo $Topic['Topic']; ?></a>
 			</h2>
 		</div>
 

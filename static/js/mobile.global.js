@@ -180,7 +180,7 @@ function PageAjaxLoad (Title, URL) {
 		// slideout.close();
 		if (document.getElementById("ReturnUrl") != null) {
 			document.getElementById("ReturnUrl").value = URL;
-		};
+		}
 	}, 1);
 }
 

@@ -29,9 +29,10 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 		<input type="hidden" name="FormHash" value="<?php echo $FormHash; ?>" />
 		<input type="hidden" name="ContentHash" value="" />
 		<input type="hidden" name="token" value="<?php echo $accessToken; ?>" />
-		<p>
-			<input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="<?php echo $Lang['Title']; ?>" />
-		</p>
+		<div>
+			<input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="请输入你的标题内容" />
+		</div>
+
 		<p>
 			<select name="BoardID" id="BoardID">
 				<option value="0">选择版块</option>
@@ -43,11 +44,11 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 
 
 		<div class="textarea">
-			<textarea name="Content" id="Content" rows="8" placeholder="<?php echo $Lang['Content']; ?>"></textarea>
+			<textarea name="Content" id="Content" rows="8" placeholder="请输入你的文字内容"></textarea>
 			<ul class="picture-list" style="display: none;"></ul>
 
 			<div class="button-block">
-				<button type="button" class="iconfont icon-camera x4 add-attachment" onclick="MyUploadPicture(this);"></button>
+				<button type="button" class="iconfont icon-add add-attachment" onclick="MyUploadPicture(this);"></button>
 				<input type="file" accept="image/*" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
 
 				<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button>
