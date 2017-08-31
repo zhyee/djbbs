@@ -33,35 +33,40 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 			<input type="text" name="Title" id="Title" value="<?php echo htmlspecialchars($Title); ?>" placeholder="请输入你的标题内容" />
 		</div>
 
-		<p>
-			<select name="BoardID" id="BoardID">
-				<option value="0">选择版块</option>
-				<?php foreach ($TotalBoards as $board): ?>
-					<option value="<?php echo $board['ID']; ?>"><?php echo htmlspecialchars($board['Name']); ?></option>
-				<?php endforeach; ?>
-			</select>
-		</p>
-
-
 		<div class="textarea">
 			<textarea name="Content" id="Content" rows="8" placeholder="请输入你的文字内容"></textarea>
-			<ul class="picture-list" style="display: none;"></ul>
-
-			<div class="button-block">
-				<button type="button" class="iconfont icon-add add-attachment" onclick="MyUploadPicture(this);"></button>
-				<input type="file" accept="image/*" id="upfile" style="display: none;" onchange="javascript:UploadPicture('Content');" />
-
-				<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button>
-				<ul class="emotion-list" style="display: none;"></ul>
-			</div>
+			<ul class="picture-list hide"></ul>
+            <ul class="emotion-list hide"></ul>
+            <div class="thumb-list">
+                <div class="button-block">
+                    <button type="button" class="iconfont icon-add add-attachment" onclick="MyUploadPicture(this);"></button>
+                    <input type="file" accept="image/*" id="upfile" class="hide" onchange="javascript:UploadPicture('Content');" />
+                </div>
+            </div>
 		</div>
+
+        <p class="select-board">
+            <i class="iconfont icon-classify-red x1-5 select-board-icon-fenlei"></i>
+            <select name="BoardID" id="BoardID">
+                <option value="0">选择版块</option>
+                <?php foreach ($TotalBoards as $board): ?>
+                    <option value="<?php echo $board['ID']; ?>"><?php echo htmlspecialchars($board['Name']); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <i class="iconfont icon-iconfontfront-copy x1-5 select-board-icon-front"></i>
+        </p>
 
 		<p>
 			<!--input type="button" value="<?php echo $Lang['Submit']; ?>" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" /-->
-			<a type="button" name="submit" class="button block red" onclick="JavaScript:CreateNewTopic();" id="PublishButton" style="width:100%;" ><?php echo $Lang['Submit']; ?></a>
+
 		</p>
 	</form>
 
+</div>
+
+<div class="hide custom-header">
+    <a name="submit" class="board-new board-new-submit" onclick="JavaScript:CreateNewTopic();" id="PublishButton">发送</a>
+    <a href="javascript:;" class="board-new"><i class="iconfont icon-emoji emotion-btn x1-2"></i></a>
 </div>
 
 

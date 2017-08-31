@@ -21,11 +21,9 @@ document.getElementById("Content").onkeyup = function(e) {
 function CreateNewTopic() {
 	if (!document.NewForm.Title.value.length) {
 		CarbonAlert(Lang['Title_Can_Not_Be_Empty']);
-		document.NewForm.Title.focus();
 		return false;
 	} else if (document.NewForm.Title.value.replace(/[^\x00-\xff]/g, "***").length > MaxTitleChars) {
 		CarbonAlert(Lang['Title_Too_Long'].replace("{{MaxTitleChars}}", MaxTitleChars).replace("{{Current_Title_Length}}", document.NewForm.Title.value.replace(/[^\x00-\xff]/g, "***").length));
-		document.NewForm.Title.focus();
 		return false;
 	}
 	else if ($("#BoardID").val() == '0')

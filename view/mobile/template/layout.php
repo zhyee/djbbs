@@ -46,7 +46,7 @@ if(!$IsAjax){
 	</script>
 	
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['LoadJqueryUrl']; ?>"></script>
-	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/appframework.ui.min.js?version=<?php echo $Config['Version']; ?>"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/appframework.ui.js?version=<?php echo $Config['Version']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/mobile.global.js?version=<?php echo $Config['Version']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/language/<?php echo ForumLanguage; ?>/global.js?version=<?php echo $Config['Version']; ?>"></script>
 
@@ -83,8 +83,15 @@ if($Config['MobileDomainName']){
 			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
 				<i class="iconfont icon-edit bold" aria-hidden="true"></i> 发帖
 			</a>
-            <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh bold x1-1" aria-hidden="true"></i></a>
+            <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
 		</header>
+		<div class="hide" id="origin-header">
+			<h1><?php echo $PageTitle; ?></h1>
+			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
+				<i class="iconfont icon-edit bold" aria-hidden="true"></i> 发帖
+			</a>
+			<a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
+		</div>
 		<div class="pages">
 			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
 				<?php include($ContentFile); ?>

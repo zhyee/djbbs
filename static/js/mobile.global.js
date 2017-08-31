@@ -598,8 +598,8 @@ function TopicParse() {
 					a.setAttribute("target","_blank");
 					a.setAttribute("data-ignore","true");
 				}
-			};
-		};
+			}
+		}
 		//样式渲染需最后进行
 		uParse('.card-content',{
 			'rootPath': WebsitePath + '/static/editor/',
@@ -641,8 +641,10 @@ function UploadPicture(TextareaID) {
 						index = 1;
 					}
 					var title = "图片" + index;
-					$("<li></li>").attr({title: title, rel: JSON.url}).appendTo(ulObj);
+					$("<li/>").attr({title: title, rel: JSON.url}).appendTo(ulObj);
 					textAreaObj.val(textAreaObj.val() + "\n[" + title + "]\n");
+					var buttonObj = textAreaObj.siblings(".thumb-list").find('.button-block:first');
+					buttonObj.before($("<div/>").addClass("thumb-item").append($("<img>").attr({src: JSON.url})));
 				} else {
 					CarbonAlert(JSON.state);
 				}
@@ -703,6 +705,8 @@ function UploadPictureSuccess (obj) {
 						var title = "图片" + index;
 						$("<li></li>").attr({title: title, rel: JSON.url}).appendTo(ulObj);
 						textAreaObj.val(textAreaObj.val() + "\n[" + title + "]\n");
+						var buttonObj = textAreaObj.siblings(".thumb-list").find('.button-block:first');
+						buttonObj.before($("<div/>").addClass("thumb-item").append($("<img>").attr({src: JSON.url})));
 					} else {
 						CarbonAlert(JSON.state);
 					}

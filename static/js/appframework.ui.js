@@ -843,8 +843,10 @@ window.af=window.jq=jQuery;
                 title=$(item).attr("title");
 
             if(title)
+            {
                 $(item).closest(".view").children("header").find("h1").html(title);
-
+                document.title = title;
+            }
         },
         /**
          * Get the title of the active header
@@ -1128,9 +1130,22 @@ window.af=window.jq=jQuery;
          */
         loadContentData: function(what,view,back,isNewView) {
             this.activeDiv = what;
+
+            if ($(this.activeDiv).find(".custom-header:first").length > 0)
+            {
+                var header = $(this.activeDiv).find(".custom-header:first");
+                $("#mainview").find("header:first").html(header.html());
+            }
+            else
+            {
+                $("#mainview").find("header:first").html($("#origin-header").html());
+            }
+
             this.setTitle(what,view,back,isNewView);
             this.showBackButton(view,isNewView);
             this.setActiveTab(what,view);
+
+
         },
 
         /**
