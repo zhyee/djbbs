@@ -80,15 +80,15 @@ if($Config['MobileDomainName']){
 	<div id="mainview" class="view splitview">
 		<header>
 			<h1><?php echo $PageTitle; ?></h1>
-			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
-				<i class="iconfont icon-edit bold" aria-hidden="true"></i> 发帖
+			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>&moduleid=<?php echo $ModuleID; ?>">
+				<i class="iconfont icon-edit icon-edit-fatie" aria-hidden="true"></i>发帖
 			</a>
             <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
 		</header>
 		<div class="hide" id="origin-header">
 			<h1><?php echo $PageTitle; ?></h1>
-			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>">
-				<i class="iconfont icon-edit bold" aria-hidden="true"></i> 发帖
+			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>&moduleid=<?php echo $ModuleID; ?>">
+				<i class="iconfont icon-edit icon-edit-fatie" aria-hidden="true"></i>发帖
 			</a>
 			<a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
 		</div>

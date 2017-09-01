@@ -39,7 +39,7 @@ foreach ($TopicsArray as $Topic) {
 			</p>
 			<div>
 				<p class="float-left">发表于 <?php echo FormatTime($Topic['PostTime']); ?></p>
-				<p class="float-right"><span class="replies-num"><?php echo $Topic['Replies']; ?></span> 回帖数</p>
+				<p class="float-right"><span class="orange"><?php echo $Topic['Replies']; ?></span> 回帖数</p>
 				<p class="c"></p>
 			</div>
 

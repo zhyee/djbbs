@@ -66,7 +66,7 @@ if (!defined('InternalAccess')) exit('error: 403 Access Denied');
 
 <div class="hide custom-header">
     <a name="submit" class="board-new board-new-submit" onclick="JavaScript:CreateNewTopic();" id="PublishButton">发送</a>
-    <a href="javascript:;" class="board-new"><i class="iconfont icon-emoji emotion-btn x1-2"></i></a>
+    <a href="javascript:;" class="emotion-btn board-new"><i class="iconfont icon-emoji x1-2"></i></a>
 </div>
 
 

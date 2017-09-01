@@ -18,27 +18,36 @@ if($Page==1){
 	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
-			<div class="topic-author color-gray" style="border-bottom: 1px solid #e1e1e1;padding-bottom: 5px;">
+			<div class="topic-author color-gray">
 				<div class="avatar board-avatar">
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
 						<img src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>" width="34" height="34" />
 					</a>
-					<a class="dj-nickname" href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
-						<?php echo htmlspecialchars($Topic['UserName']); ?>
-					</a>
 				</div>
 				<div class="card-content-inner-center">
-					<p>创建于 <?php echo FormatTime($Topic['PostTime']); ?></p>
-					<p><?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?></p>
+					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>"><?php echo htmlspecialchars($Topic['UserName']); ?></a>
+					<span class="card-role">楼主</span>
 				</div>
-				<div class="card-content-inner-footer">楼主</div>
+				<div class="card-content-inner-footer">
+					<span>发表于 <?php echo FormatTime($Topic['PostTime']); ?></span>
+					<span class="float-right"><?php echo ($Topic['Views']+1); ?><?php echo $Lang['People_Have_Seen']; ?></span>
+				</div>
 				<div class="c"></div>
 			</div>
-			<p><?php echo $PostsArray[0]['Content']; ?></p>
+
+			<div class="topic-content">
+				<?php echo $PostsArray[0]['Content']; ?>
+				<div class="area-zan">
+					<div class="area-zan-icon">
+						<i class="iconfont icon-zan4 x4"></i>
+						<span class="area-zan-add-count hide">+1</span>
+					</div>
+					<div class="area-zan-count"><span class="orange">35</span>个赞</div>
+				</div>
+			</div>
 
 			<div class="download-attachment">
 				<h4>附件下载:</h4>
-
 				<?php if ($Topic['Attachment']): ?>
 					<?php $attachs = json_decode($Topic['Attachment'], TRUE); foreach ($attachs as $attach): ?>
 						<p><a href="javascript:;" onclick="downloadAttach(this);return false;" rel="<?php echo $attach['fileUrl']; ?>" title="<?php echo $attach['fileName']; ?>"><?php echo $attach['fileName']; ?></a></p>
@@ -120,6 +129,17 @@ if($Page<$TotalPage){
 <?php } ?>
 </ul>
 </div>
+
 <script type="text/javascript">
-TopicParse();
+//TopicParse();
+$(function () {
+	$(".icon-zan4").click(function () {
+		$(this).removeClass('icon-zan4').addClass('icon-zan3');
+		$(".area-zan-add-count").removeClass("hide").animate({fontSize: "14px", opacity : 0, bottom : "150%"}, 2000);
+		var count = parseInt($(".area-zan-count span").text()) + 1;
+		$(".area-zan-count span").text(count);
+	});
+});
+
+
 </script>

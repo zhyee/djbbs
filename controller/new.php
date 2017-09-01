@@ -233,8 +233,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} while (false);
 }
 
-/*获取所有版块*/
-$TotalBoards = $DB->query("SELECT * FROM `" . PREFIX . "boards` WHERE `IsEnabled` = 1 AND `GroupID` = ? ORDER BY TotalPosts DESC, ID ASC", array($CurGroupID));
+/*获取模块下的所有版块*/
+
+$ModuleID = intval(Request('Get', 'moduleid'));
+
+if ($ModuleID > 0)
+{
+    $TotalBoards = $DB->query("SELECT * FROM `" . PREFIX . "boards` WHERE `IsEnabled` = 1 AND `ModuleID` = ? AND `GroupID` = ? ORDER BY TotalPosts DESC, ID ASC", array($ModuleID, $CurGroupID));
+}
+else
+{
+    $TotalBoards = $DB->query("SELECT * FROM `" . PREFIX . "boards` WHERE `IsEnabled` = 1 AND `GroupID` = ? ORDER BY TotalPosts DESC, ID ASC", array($CurGroupID));
+}
 if (!$TotalBoards)
 {
     $TotalBoards = array();

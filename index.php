@@ -26,8 +26,6 @@ $Routes = array();
 //Support HTTP Method: GET / POST / PUT / DELETE / OPTIONS
 //这里是Routes Start
 
-$Routes['GET']['/']                                                                        = 'boards';
-$Routes['POST']['/']                                                                       = 'boards'; //Delete later
 $Routes['GET']['/dashboard']                                                               = 'dashboard';
 $Routes['POST']['/dashboard']                                                              = 'dashboard';
 $Routes['GET']['/favorites(/page/(?<page>[0-9]+))?']                                       = 'favorites';
@@ -52,6 +50,7 @@ $Routes['GET']['/register']                                                     
 $Routes['POST']['/register']                                                               = 'register';
 $Routes['GET']['/reply']                                                                   = 'reply';
 $Routes['POST']['/reply']                                                                  = 'reply';
+$Routes['GET']['/praise']                                                                  = 'praise';  // 赞
 $Routes['GET']['/reset_password/(?<access_token>.*?)']                                     = 'reset_password';
 $Routes['POST']['/reset_password/(?<access_token>.*?)']                                    = 'reset_password';
 $Routes['GET']['/robots.txt']                                                              = 'robots';
@@ -67,6 +66,7 @@ $Routes['GET']['/tag/(?<id>.*?)(/page/(?<page>[0-9]*))?']                       
 $Routes['GET']['/board/(?<id>[0-9]+?)(/type/(?<type>\d+))?(/page/(?<page>[0-9]+))?']       = 'board';
 $Routes['GET']['/tags/following(/page/(?<page>[0-9]*))?']                                  = 'favorite_tags';
 $Routes['GET']['/tags(/page/(?<page>[0-9]*))?']                                            = 'tags';
+$Routes['GET']['/module/(?<id>[0-9]+?)(/page/(?<page>[0-9]*))?']                           = 'module';
 $Routes['GET']['/boards(/page/(?<page>[0-9]*))?']                                          = 'boards';
 $Routes['POST']['/boards(/page/(?<page>[0-9]*))?']                                         = 'boards';
 $Routes['GET']['/u/(?<userid>[0-9]+?)']                                                    = 'user';
