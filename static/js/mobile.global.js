@@ -387,6 +387,7 @@ function PageFresh()
 
 //回复某人
 function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
+    document.getElementById("ReplyViewCancelButton").href = "#" + $.afui.activeDiv.id;
 	$.afui.loadContent(
 		"#Reply", 
 		false, 
@@ -421,7 +422,7 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		} else {
 			var toast = $.afui.toast(Lang['Replying']);
 			var MarkdownConverter = new showdown.Converter(),
-			PreContent =  (PostFloor==0) ? "" : Lang['Reply_To'] + "[#" + PostFloor + "楼] @" + UserName + " :\n\n",
+			PreContent =  (PostFloor==0) ? "" : Lang['Reply_To'] + "[" + PostFloor + "楼] @" + UserName + " :\n\n",
 			Content = $("#Content" + TopicID).val();
 
 			var origin, href;

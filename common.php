@@ -596,7 +596,7 @@ function FormatTime($UnixTimeStamp)
 		}
 	} else {
 		// 大于一月
-		return date("Y-m-d", $UnixTimeStamp);
+		return date("Y-m-d H:i", $UnixTimeStamp);
 		//gmdate()可以返回格林威治标准时，date()则为当地时
 	}
 }

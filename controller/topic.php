@@ -39,6 +39,7 @@ $PostsArray = $DB->query("SELECT `ID`, `TopicID`,`UserID`, `UserName`, `Content`
 	"id" => $ID
 ));
 if ($CurUserID) {
+    // 本人是否已点过赞
 	$IsFavorite = intval($DB->single("SELECT ID 
 		FROM " . PREFIX . "favorites 
 		WHERE UserID=:UserID and Type=1 AND FavoriteID=:FavoriteID", array(
@@ -46,6 +47,10 @@ if ($CurUserID) {
 		'FavoriteID' => $ID
 	)));
 }
+
+// 点赞数
+$FavoriteCount = intval($DB->single("SELECT COUNT(ID) AS total FROM " . PREFIX . "favorites WHERE Type = '1' AND FavoriteID=:FavoriteID" , array('FavoriteID' => $ID)));
+
 //更新浏览量
 if ($MCache) {
 	$TopicViews = $MCache->get(MemCachePrefix . 'Topic_Views_' . $ID);

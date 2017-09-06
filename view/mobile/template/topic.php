@@ -15,13 +15,13 @@ if($Page>1){
 if($Page==1){
 ?>
 <div class="card">
-	<div class="card-header"><?php echo $Topic['Topic']; ?></div>
+	<div class="card-title"><?php echo $Topic['Topic']; ?></div>
 	<div class="card-content" id="p<?php echo $PostsArray[0]['ID']; ?>">
 		<div class="card-content-inner">
 			<div class="topic-author color-gray">
 				<div class="avatar board-avatar">
 					<a href="<?php echo $Config['WebsitePath'].'/u/'.$Topic['UserID']; ?>?token=<?php echo $accessToken; ?>">
-						<img src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'small'); ?>" width="34" height="34" />
+						<img src="<?php echo MyGetAvatar($Topic['UserID'], $Topic['UserName'], 'middle'); ?>" width="34" height="34" />
 					</a>
 				</div>
 				<div class="card-content-inner-center">
@@ -39,10 +39,14 @@ if($Page==1){
 				<?php echo $PostsArray[0]['Content']; ?>
 				<div class="area-zan">
 					<div class="area-zan-icon">
-						<i class="iconfont icon-zan4 x4"></i>
+                    <?php if ($IsFavorite): ?>
+						<i class="iconfont icon-zan3 x4"></i>
+                    <?php else: ?>
+						<i class="iconfont icon-zan4 x4" rel="<?php echo $Topic['ID']; ?>" data-title="<?php echo $Topic['Topic']; ?>"></i>
+                    <?php endif; ?>
 						<span class="area-zan-add-count hide">+1</span>
 					</div>
-					<div class="area-zan-count"><span class="orange">35</span>个赞</div>
+					<div class="area-zan-count"><span class="orange"><?php echo $FavoriteCount; ?></span>个赞</div>
 				</div>
 			</div>
 
@@ -81,38 +85,43 @@ if($Topic['Replies']!=0)
 {
 ?>
 <!-- comment list start -->
-<div class="content-block-title">
+<!--div class="content-block-title">
 	<?php echo $Topic['Replies']; ?> <?php echo $Lang['Replies']; ?>  |  <?php echo $Lang['Last_Updated_In']; ?> <?php echo FormatTime($Topic['LastTime']); ?>
-</div>
+</div-->
 <?php
 foreach($PostsArray as $key => $Post)
 {
 	$PostFloor = ($Page-1)*$Config['PostsPerPage']+$key;
 ?>
 <div class="card carbonforum-card">
-	<div class="card-header no-border">
-		<div class="carbonforum-avatar">
-			<a href="<?php echo $Config['WebsitePath'].'/u/'.$Post['UserID']; ?>?token=<?php echo $accessToken; ?>">
-				<?php echo GetAvatar($Post['UserID'], $Post['UserName'], 'small'); ?>
-			</a>
-		</div>
-		<div class="carbonforum-center">
-			<div class="carbonforum-name"><?php echo $Post['UserName'];?></div>
-			<div class="carbonforum-date"><?php echo FormatTime($Post['PostTime']); ?></div>
-		</div>
-		<div class="carbonforum-floor">#<?php echo $PostFloor; ?></div>
-		<div class="c"></div>
-	</div>
-	<div class="card-content" id="p<?php echo $Post['ID']; ?>"><p><?php echo $Post['Content']; ?></p></div>
-	<div class="card-footer no-border">
-<?php if($CurUserID){
-?>
 
-	<?php if(!$Topic['IsLocked']){ ?>
-	<a href="#" title="<?php echo $Lang['Reply']; ?>" onclick="JavaScript:Reply('<?php echo $Post['UserName'];?>', <?php echo $PostFloor; ?>, <?php echo $Post['ID'];?>, '<?php echo $FormHash;?>', <?php echo $ID;?>);" class="link"><?php echo $Lang['Reply']; ?></a>
-		<?php } ?>
-<?php } ?>
-	</div>
+    <div class="carbonforum-avatar">
+        <a href="<?php echo $Config['WebsitePath'].'/u/'.$Post['UserID']; ?>?token=<?php echo $accessToken; ?>">
+            <?php echo GetAvatar($Post['UserID'], $Post['UserName'], 'middle'); ?>
+        </a>
+    </div>
+
+    <div class="carbonforum-right">
+        <div class="card-header no-border">
+            <div class="carbonforum-center">
+                <div class="carbonforum-name"><?php echo $Post['UserName'];?></div>
+                <div class="carbonforum-date">发表于 <?php echo FormatTime($Post['PostTime']); ?></div>
+            </div>
+            <div class="carbonforum-floor"><span class="orange"><?php echo $PostFloor; ?></span> 楼</div>
+            <div class="c"></div>
+        </div>
+        <div class="card-content" id="p<?php echo $Post['ID']; ?>"><p><?php echo $Post['Content']; ?></p></div>
+
+        <div class="card-footer no-border">
+    <?php if($CurUserID){
+    ?>
+
+        <?php if(!$Topic['IsLocked']){ ?>
+        <a href="#" onclick="JavaScript:Reply('<?php echo $Post['UserName'];?>', <?php echo $PostFloor; ?>, <?php echo $Post['ID'];?>, '<?php echo $FormHash;?>', <?php echo $ID;?>);" class="link"><i class="iconfont icon-message"></i> <?php echo $Lang['Reply']; ?></a>
+            <?php } ?>
+    <?php } ?>
+        </div>
+    </div>
 </div>
 <?php
 }
@@ -132,14 +141,4 @@ if($Page<$TotalPage){
 
 <script type="text/javascript">
 //TopicParse();
-$(function () {
-	$(".icon-zan4").click(function () {
-		$(this).removeClass('icon-zan4').addClass('icon-zan3');
-		$(".area-zan-add-count").removeClass("hide").animate({fontSize: "14px", opacity : 0, bottom : "150%"}, 2000);
-		var count = parseInt($(".area-zan-count span").text()) + 1;
-		$(".area-zan-count span").text(count);
-	});
-});
-
-
 </script>

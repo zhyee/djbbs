@@ -136,6 +136,28 @@ if($CurUserID){
 
 		$(function () {
 
+			/* 返回首页 */
+			$(document).on('click', ".backHomeButton", function () {
+				console.log("back home");
+				if ($.os.ios)
+				{
+
+				}
+				else
+				{
+					/* android */
+					if (typeof mAndroid === 'object' && typeof mAndroid.invokeJsApi !== 'undefined')
+					{
+						// alert("弹出相册");
+						//TextAreaID = areaID;
+						var action = 'go_back_home_view';
+						mAndroid.invokeJsApi(action, {});
+					}
+				}
+			});
+
+
+
 			$(document).on('click', ".emotion-btn,#emotion-cancel", function (e) {
 				e.stopPropagation();
 				$('#emotion-container').slideToggle(800);
@@ -195,6 +217,35 @@ if($CurUserID){
 					$('#emotion-container').hide();
 				});
 			});
+
+
+			/* 点赞 */
+			$(document).on("click", ".icon-zan4", function () {
+				var that = $(this);
+
+				$.ajax({
+					url: "<?php echo $Config['WebsitePath']; ?>/praise?token=<?php echo $accessToken; ?>",
+					type : "POST",
+					data : {TopicID : that.attr("rel"), Title : that.attr("data-title")},
+					dataType : "JSON",
+					success : function (rt) {
+						if (rt.code > 0)
+						{
+							CarbonAlert(rt.message);
+						}
+						else
+						{
+							that.next().removeClass("hide").animate({opacity : 0, bottom : "150%"}, 2000, 'swing', function () {
+								that.next().addClass("hide").css({opacity : 1, bottom : 0})
+							});
+							that.removeClass('icon-zan4').addClass('icon-zan3');
+							var count = parseInt(that.parent().next().find("span:first").text()) + 1;
+							that.parent().next().find("span:first").text(count);
+						}
+					}
+				});
+			});
+
 
 		});
 

@@ -1198,9 +1198,11 @@ window.af=window.jq=jQuery;
                 //Add the back button if it's not there
                 if(hdr.find(".backButton").length===1) return;
                 hdr.prepend("<a class='backButton back'>" + this.backButtonText + "</a>");
+                hdr.find(".backHomeButton").remove();
             }
             else {
                 hdr.find(".backButton").remove();
+                hdr.prepend("<a class='backHomeButton'>" + this.backButtonText + "</a>");
             }
         },
         /**
@@ -2080,7 +2082,7 @@ window.af=window.jq=jQuery;
             this.id = opts.id = opts.id || $.uuid(); //opts is passed by reference
             this.addCssClass = opts.addCssClass ? opts.addCssClass : "";
             this.suppressTitle = opts.suppressTitle || this.suppressTitle;
-            this.title = opts.suppressTitle ? "" : (opts.title || "Alert");
+            this.title = opts.suppressTitle ? "" : (opts.title || "提示");
             this.message = opts.message || "";
             this.cancelText = opts.cancelText || "Cancel";
             this.cancelCallback = opts.cancelCallback || function () {};

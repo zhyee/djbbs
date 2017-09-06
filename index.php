@@ -50,7 +50,7 @@ $Routes['GET']['/register']                                                     
 $Routes['POST']['/register']                                                               = 'register';
 $Routes['GET']['/reply']                                                                   = 'reply';
 $Routes['POST']['/reply']                                                                  = 'reply';
-$Routes['GET']['/praise']                                                                  = 'praise';  // 赞
+$Routes['POST']['/praise']                                                                 = 'praise';  // 赞
 $Routes['GET']['/reset_password/(?<access_token>.*?)']                                     = 'reset_password';
 $Routes['POST']['/reset_password/(?<access_token>.*?)']                                    = 'reset_password';
 $Routes['GET']['/robots.txt']                                                              = 'robots';

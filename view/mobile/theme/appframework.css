@@ -240,6 +240,7 @@
 .afPopup > DIV {
 	font-size: 14px;
 	margin: 8px;
+	text-align: center;
 }
 .afPopup > FOOTER {
 	width: 100%;
@@ -1510,7 +1511,7 @@ body #af_actionsheet a {
 	text-shadow: none;
 	width: 45%;
 }
-.view header .backButton {
+.view header .backButton,.view header .backHomeButton {
 	background: #f9f9f9;
 	color: #fff;
 	display: block;
@@ -1552,7 +1553,7 @@ body #af_actionsheet a {
 	color: inherit;
 }
 
-.backButton {
+.backButton, .backHomeButton {
 	font-family:"iconfont" !important;
 	font-size:16px;
 	font-style:normal;
@@ -1560,7 +1561,7 @@ body #af_actionsheet a {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.backButton::before {
+.backButton::before, .backHomeButton::before {
 	z-index: -1;
 	font-size: 22px;
 	position: absolute;
@@ -1958,7 +1959,7 @@ input[type="checkbox"]:checked + label:before {
 	background: #171F28;
 	border-color: #666;
 }
-.backButton {
+.backButton, .backHomeButton {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
