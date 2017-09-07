@@ -374,14 +374,16 @@ function PageFresh()
 	}
 	else
 	{
-		var currentViewID = $($.afui.activeDiv).closest(".view").prop("id");
-		var currentViews = $.afui.views[currentViewID];
-		currentViews.pop();
-		$($.afui.activeDiv).remove();
-		$.afui.activeDiv = currentViews[currentViews.length - 1].target;
-		$.afui.loadContent(target, false, false, "slide", document.getElementById('mainview'));
+		$.afui.activeDiv.setAttribute("data-refresh", "true");
+		// var title = $.afui.getTitle();
+		// var currentViewID = $($.afui.activeDiv).closest(".view").prop("id");
+		// var currentViews = $.afui.views[currentViewID];
+		// currentViews.pop();
+		// $($.afui.activeDiv).remove();
+		// $.afui.activeDiv = currentViews[currentViews.length - 1].target;
+		$.afui.loadContent(target, false, false, "slide", $.afui.activeDiv);
+		$.afui.activeDiv.removeAttribute("data-refresh");
 	}
-
 
 }
 
@@ -395,26 +397,28 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 		"up-reveal",
 		document.getElementById('mainview')
 	);
-	$("#ReplyViewTitle").text(Lang['Reply_To'] + "#" + PostFloor + " @" + UserName + " :");
+	$("#ReplyViewTitle").text(Lang['Reply_To'] + (PostFloor + 1) + "楼 @" + UserName + " :");
 
 	var TempHTML = '';
 
-	TempHTML += '<div class="input-group textarea" style="width:100%;"><textarea id="Content' + TopicID +'" rows="8"></textarea><ul class="picture-list" style="display: none;"></ul>';
+	TempHTML += '<div class="input-group textarea" style="width:100%;"><textarea placeholder="请输入回复内容" id="Content' + TopicID +'" rows="8"></textarea>';
 
-	TempHTML += '<div class="button-block"><button type="button" class="iconfont icon-camera x4 add-attachment" onclick="MyUploadPicture(this);"></button>';
-	TempHTML += '<input type="file" id="replyupfile" onchange="javascript:UploadPicture(\'Content' + TopicID + '\');" accept="image/*" style="display:none;">';
+	TempHTML += '<ul class="picture-list hide"></ul><ul class="emotion-list hide"></ul>';
 
-	TempHTML += '<button type="button" class="iconfont icon-emoji x4 add-attachment emotion-btn"></button><ul class="emotion-list" style="display: none;"></ul>';
+	TempHTML += '<div class="thumb-list"><div class="button-block"><button type="button" class="iconfont icon-add add-attachment" onclick="MyUploadPicture(this);"></button>';
+	TempHTML += '<input class="hide" type="file" id="replyupfile" onchange="javascript:UploadPicture(\'Content' + TopicID + '\');" accept="image/*">';
 
-	TempHTML += '</div></div>';
+	TempHTML += '</div></div></div>';
+
 	$("#ReplyViewHTML").html(TempHTML);
-	$("#ReplyViewCancelButton").text(Lang['Cancel']);
+
+	// $("#ReplyViewCancelButton").text(Lang['Cancel']);
 	// $("#ReplyViewCancelButton").unbind('click');
 	// $("#ReplyViewCancelButton").click(function (e) {
 	// 	e.preventDefault();
 	// 	$.afui.dismissView(document.getElementById("ReplyViewCancelButton"), "up-reveal:dismiss");
 	// });
-	$("#ReplyViewSubmitButton").text(Lang['Reply']);
+	// $("#ReplyViewSubmitButton").text(Lang['Reply']);
 	$("#ReplyViewSubmitButton").unbind('click');
 	$("#ReplyViewSubmitButton").click(function() {
 		if ($.trim($("#Content" + TopicID).val()) === '') {

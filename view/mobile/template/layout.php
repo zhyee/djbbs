@@ -83,14 +83,14 @@ if($Config['MobileDomainName']){
 			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>&moduleid=<?php echo $ModuleID; ?>">
 				<i class="iconfont icon-edit icon-edit-fatie" aria-hidden="true"></i>发帖
 			</a>
-            <a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
+            <a class="board-new" href="javascript:;" onclick="PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
 		</header>
 		<div class="hide" id="origin-header">
 			<h1><?php echo $PageTitle; ?></h1>
 			<a data-title="发帖" class="board-new" href="<?php echo $Config['WebsitePath']; ?>/new?token=<?php echo $accessToken; ?>&moduleid=<?php echo $ModuleID; ?>">
 				<i class="iconfont icon-edit icon-edit-fatie" aria-hidden="true"></i>发帖
 			</a>
-			<a class="board-new" href="javascript:PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
+			<a class="board-new" href="javascript:;" onclick="PageFresh();"><i class="iconfont icon-refresh" aria-hidden="true"></i></a>
 		</div>
 		<div class="pages">
 			<div data-title="<?php echo $PageTitle; ?>" id="ID<?php echo md5($PageTitle); ?>" class="panel" selected="true">
@@ -103,17 +103,19 @@ if($Config['MobileDomainName']){
 if($CurUserID){
 ?>
 	<div class="view container" id="ReplyView">
+		<div class="reply-header">
+			<a class="back" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a>
+			<a name="submit" class="board-new board-new-submit" href="javascript:;" id="ReplyViewSubmitButton">回复</a>
+			<a href="javascript:;" class="emotion-btn board-new"><i class="iconfont icon-emoji x1-2"></i></a>
+		</div>
 		<div class="pages">
 			<div class="panel" id="Reply">
 				<p>
 					<br />
-				<h1 id="ReplyViewTitle"></h1>
-				<br />
+					<h1 id="ReplyViewTitle"></h1>
+					<br />
 				</p>
-				<div id="ReplyViewHTML">
-				</div>
-				<p><a class="button red block" href="javascript:;" id="ReplyViewSubmitButton"></a></p>
-				<p><a class="button gray block" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a></p>
+				<div id="ReplyViewHTML"></div>
 			</div>
 		</div>
 	</div>

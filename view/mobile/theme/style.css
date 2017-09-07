@@ -606,6 +606,7 @@ blockquote {
 
 h1#ReplyViewTitle
 {
+	padding: 0 15px;
 	font-size: 18px;
 }
 

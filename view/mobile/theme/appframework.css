@@ -1500,7 +1500,7 @@ body #af_actionsheet a {
 	border: none;
 	text-shadow: none;
 }
-.view header {
+.view header, .reply-header {
 	background: #4788ff url(/static/img/top.png) no-repeat center center;
 	background-size: cover;
 	border: none;
@@ -1511,7 +1511,7 @@ body #af_actionsheet a {
 	text-shadow: none;
 	width: 45%;
 }
-.view header .backButton,.view header .backHomeButton {
+.view header .back, .reply-header .back {
 	background: #f9f9f9;
 	color: #fff;
 	display: block;
@@ -1553,7 +1553,7 @@ body #af_actionsheet a {
 	color: inherit;
 }
 
-.backButton, .backHomeButton {
+.back {
 	font-family:"iconfont" !important;
 	font-size:16px;
 	font-style:normal;
@@ -1561,7 +1561,7 @@ body #af_actionsheet a {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.backButton::before, .backHomeButton::before {
+.back::before {
 	z-index: -1;
 	font-size: 22px;
 	position: absolute;
@@ -2675,7 +2675,7 @@ p {
 	height: 100%;
 	width: 100%;
 }
-.view header {
+.view header, .reply-header {
 	position: relative;
 	overflow: hidden;
 	display: block;
@@ -2687,7 +2687,7 @@ p {
 	right: 0;
 }
 
-header#custom-header
+#custom-header
 {
 	display: none;
 }
@@ -2960,7 +2960,7 @@ header .menuButton:after {
 	width: 15px;
 }
 
-header .board-new
+header .board-new, .reply-header .board-new
 {
     position: relative;
     padding:0 12px;
@@ -2971,7 +2971,7 @@ header .board-new
     float: right;
 }
 
-header .board-new-submit
+header .board-new-submit, .reply-header .board-new-submit
 {
 	color: #97eda5;
 }
