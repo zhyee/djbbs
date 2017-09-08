@@ -1132,7 +1132,7 @@ window.af=window.jq=jQuery;
                 var header = $(this.activeDiv).find(".custom-header:first");
                 $("#mainview").find("header:first").html(header.html());
             }
-            else
+            else if (view.prop("id") == "mainview")
             {
                 $("#mainview").find("header:first").html($("#origin-header").html());
             }
@@ -1189,7 +1189,6 @@ window.af=window.jq=jQuery;
             var items=(this.views[view.prop("id")].length);
             var hdr=view.children("header");
             if(hdr.length===0) return;
-
             if(items>=2&&isNewView!==true){
                 //Add the back button if it's not there
                 if(hdr.find(".backButton").length===1) return;
@@ -1198,7 +1197,7 @@ window.af=window.jq=jQuery;
             }
             else {
                 hdr.find(".backButton").remove();
-                hdr.prepend("<a class='backHomeButton'>" + this.backButtonText + "</a>");
+                hdr.prepend("<a class='backHomeButton back'>" + this.backButtonText + "</a>");
             }
         },
         /**

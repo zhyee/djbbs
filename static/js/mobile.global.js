@@ -375,16 +375,9 @@ function PageFresh()
 	else
 	{
 		$.afui.activeDiv.setAttribute("data-refresh", "true");
-		// var title = $.afui.getTitle();
-		// var currentViewID = $($.afui.activeDiv).closest(".view").prop("id");
-		// var currentViews = $.afui.views[currentViewID];
-		// currentViews.pop();
-		// $($.afui.activeDiv).remove();
-		// $.afui.activeDiv = currentViews[currentViews.length - 1].target;
 		$.afui.loadContent(target, false, false, "slide", $.afui.activeDiv);
 		$.afui.activeDiv.removeAttribute("data-refresh");
 	}
-
 }
 
 //回复某人

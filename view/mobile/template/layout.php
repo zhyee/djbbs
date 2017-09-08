@@ -44,7 +44,8 @@ if(!$IsAjax){
 		var accessToken = "<?php echo $accessToken; ?>";
 		var EmotionRoot = '<?php echo $Config['WebsitePath']; ?>/static/img/emotions/';
 	</script>
-	
+
+    <script type="text/javascript" src="<?php echo $Config['WebsitePath']; ?>/view/mobile/theme/iconfont.js?version=<?php echo $Config['Version']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['LoadJqueryUrl']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/appframework.ui.js?version=<?php echo $Config['Version']; ?>"></script>
 	<script type="text/javascript" charset="utf-8" src="<?php echo $Config['WebsitePath']; ?>/static/js/mobile.global.js?version=<?php echo $Config['Version']; ?>"></script>
@@ -105,8 +106,8 @@ if($CurUserID){
 	<div class="view container" id="ReplyView">
 		<div class="reply-header">
 			<a class="back" href="#main" data-transition="up-reveal:dismiss" id="ReplyViewCancelButton"></a>
-			<a name="submit" class="board-new board-new-submit" href="javascript:;" id="ReplyViewSubmitButton">回复</a>
-			<a href="javascript:;" class="emotion-btn board-new"><i class="iconfont icon-emoji x1-2"></i></a>
+			<a class="board-new board-new-submit" href="javascript:;" id="ReplyViewSubmitButton">回复</a>
+			<a class="emotion-btn board-new" href="javascript:;" ><i class="iconfont icon-emoji x1-2"></i></a>
 		</div>
 		<div class="pages">
 			<div class="panel" id="Reply">
@@ -140,7 +141,6 @@ if($CurUserID){
 
 			/* 返回首页 */
 			$(document).on('click', ".backHomeButton", function () {
-				console.log("back home");
 				if ($.os.ios)
 				{
 
@@ -215,8 +215,8 @@ if($CurUserID){
 				});
 
 				$('.view').click (function (e) {
-				    if ($(e.target).hasClass('emotion-btn')) return;
-					$('#emotion-container').hide();
+				    if ($(e.target).hasClass('emotion-btn') || $(e.target).hasClass('icon-emoji')) return;
+					$('#emotion-container').hide(100);
 				});
 			});
 

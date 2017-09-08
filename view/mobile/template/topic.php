@@ -40,25 +40,60 @@ if($Page==1){
 				<div class="area-zan">
 					<div class="area-zan-icon">
                     <?php if ($IsFavorite): ?>
-						<i class="iconfont icon-zan3 x4"></i>
+						<i class="iconfont icon-zan3 x3"></i>
                     <?php else: ?>
-						<i class="iconfont icon-zan4 x4" rel="<?php echo $Topic['ID']; ?>" data-title="<?php echo $Topic['Topic']; ?>"></i>
+						<i class="iconfont icon-zan4 x3" rel="<?php echo $Topic['ID']; ?>" data-title="<?php echo $Topic['Topic']; ?>"></i>
                     <?php endif; ?>
 						<span class="area-zan-add-count hide">+1</span>
 					</div>
 					<div class="area-zan-count"><span class="orange"><?php echo $FavoriteCount; ?></span>个赞</div>
 				</div>
+
+				<?php
+				if(!$Topic['IsLocked'] && !$CurUserInfo){
+					?>
+					<ul class="list topic-list"><li class="pagination"><?php echo $Lang['Requirements_For_Login']; ?></li></ul>
+					<?php
+				}else if($Topic['IsLocked']){
+					?>
+					<ul class="list topic-list"><li class="pagination"><?php echo $Lang['Topic_Has_Been_Locked']; ?></li></ul>
+					<?php
+				}else{
+					?>
+					<div class="text-right reply"><a href="javascript:;" class="link reply-button" onclick="Reply('<?php echo $Topic['UserName'];?>', 0, 0, '<?php echo $FormHash;?>', <?php echo $ID; ?>);"><i class="iconfont icon-message"></i> <?php echo $Lang['Reply']; ?></a></div>
+					<?php
+				}
+				?>
+
 			</div>
 
-			<div class="download-attachment">
-				<h4>附件下载:</h4>
-				<?php if ($Topic['Attachment']): ?>
-					<?php $attachs = json_decode($Topic['Attachment'], TRUE); foreach ($attachs as $attach): ?>
-						<p><a href="javascript:;" onclick="downloadAttach(this);return false;" rel="<?php echo $attach['fileUrl']; ?>" title="<?php echo $attach['fileName']; ?>"><?php echo $attach['fileName']; ?></a></p>
-					<?php endforeach; ?>
-				<?php endif; ?>
 
-			</div>
+			<?php if ($Topic['Attachment']): ?>
+				<div class="download-attachment">
+					<div class="download-attachment-header">附件下载:</div>
+				<?php $attachs = json_decode($Topic['Attachment'], TRUE); foreach ($attachs as $attach): ?>
+					<div class="download-item">
+						<div class="download-filetype-icon float-left">
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#icon-PPT"></use>
+							</svg>
+						</div>
+						<div class="download-fileinfo float-left">
+							<div class="download-fileinfo-title"><?php echo $attach['fileName']; ?></div>
+							<div class="download-fileinfo-attr">
+								<span class="download-fileinfo-size">6.32MB</span>
+								<span class="download-fileinfo-date">2017.05.23 16:23</span>
+							</div>
+						</div>
+						<div class="download-icon float-right">
+							<i class="iconfont icon-xiazai x2" onclick="downloadAttach(this);return false;" rel="<?php echo $attach['fileUrl']; ?>" title="<?php echo $attach['fileName']; ?>"></i>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
+
 		</div>
 	</div>
 </div>
@@ -66,21 +101,6 @@ if($Page==1){
 <?php
 	unset($PostsArray[0]);
 }
-
-if(!$Topic['IsLocked'] && !$CurUserInfo){
-?>
-	<ul class="list topic-list"><li class="pagination"><?php echo $Lang['Requirements_For_Login']; ?></li></ul>
-<?php
-}else if($Topic['IsLocked']){
-?>
-	<ul class="list topic-list"><li class="pagination"><?php echo $Lang['Topic_Has_Been_Locked']; ?></li></ul>
-<?php
-}else{
-?>
-	<p><a href="#" class="button block red" onclick="JavaScript:Reply('<?php echo $Topic['UserName'];?>', 0, 0, '<?php echo $FormHash;?>', <?php echo $ID; ?>);"><?php echo $Lang['Reply']; ?></a></p>
-<?php
-}
-
 if($Topic['Replies']!=0)
 {
 ?>
@@ -112,16 +132,18 @@ foreach($PostsArray as $key => $Post)
         </div>
         <div class="card-content" id="p<?php echo $Post['ID']; ?>"><p><?php echo $Post['Content']; ?></p></div>
 
-        <div class="card-footer no-border">
-    <?php if($CurUserID){
-    ?>
-
-        <?php if(!$Topic['IsLocked']){ ?>
-        <a href="#" onclick="JavaScript:Reply('<?php echo $Post['UserName'];?>', <?php echo $PostFloor; ?>, <?php echo $Post['ID'];?>, '<?php echo $FormHash;?>', <?php echo $ID;?>);" class="link"><i class="iconfont icon-message"></i> <?php echo $Lang['Reply']; ?></a>
-            <?php } ?>
-    <?php } ?>
-        </div>
     </div>
+
+
+		<?php if($CurUserID){
+			?>
+			<?php if(!$Topic['IsLocked']){ ?>
+			<div class="text-right reply">
+				<a href="javascript:;" onclick="Reply('<?php echo $Post['UserName'];?>', <?php echo $PostFloor; ?>, <?php echo $Post['ID'];?>, '<?php echo $FormHash;?>', <?php echo $ID;?>);" class="link reply-button"><i class="iconfont icon-message"></i> <?php echo $Lang['Reply']; ?></a>
+			</div>
+			<?php } ?>
+		<?php } ?>
+
 </div>
 <?php
 }

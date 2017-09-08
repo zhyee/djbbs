@@ -2980,7 +2980,7 @@ header .board-new-submit, .reply-header .board-new-submit
 {
 	width: 100%;
 	height: 100%;
-	font-size: 4.5em;
+	font-size: 60px;
 	background-color: #fff;
 	border: none;
 	color: #999;
@@ -2992,11 +2992,13 @@ header .board-new-submit, .reply-header .board-new-submit
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	height: 66px;
 }
 
 .thumb-list>div {
 	width: 22%;
 	margin-right: 3%;
+	overflow: hidden;
 }
 
 .thumb-list .thumb-item

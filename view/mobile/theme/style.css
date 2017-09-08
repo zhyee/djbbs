@@ -142,8 +142,8 @@ body {
 
 .area-zan-icon
 {
-	height: 4em;
-	line-height: 4em;
+	height: 3em;
+	line-height: 3em;
 	position: relative;
 }
 
@@ -231,6 +231,14 @@ span.number-topic
 
 .float-right {
 	float: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
 }
 
 .clearfix {
@@ -509,12 +517,17 @@ html.ios-gt-6.pixel-ratio-3 .card-footer:before {
 .carbonforum-card .card-footer {
 
 }
-.carbonforum-card .card-footer a {
-	color: #00a0e9;
-	font-weight: 500;
+
+.reply {
+	line-height: 250%;
 }
 
-.carbonforum-card .card-footer a .icon-message
+.reply-button {
+	color: #00a0e9 !important;
+	font-size: 12px;
+}
+
+.reply-button .icon-message
 {
 	font-size: 14px;
 }
@@ -604,7 +617,7 @@ blockquote {
 	display: block;
 }
 
-h1#ReplyViewTitle
+#ReplyViewTitle
 {
 	padding: 0 15px;
 	font-size: 18px;
@@ -612,5 +625,59 @@ h1#ReplyViewTitle
 
 .container
 {
-	/*padding: 0 10px;*/
 }
+
+/* 附件下载 */
+.download-attachment
+{
+	padding: 15px;
+	font-size: 14px;
+	font-family: "宋体", "微软雅黑", sans-serif;
+}
+
+.download-attachment-header
+{
+	margin: 10px 0;
+}
+
+.download-item
+{
+	margin: 10px 0;
+}
+
+.download-fileinfo
+{
+	max-width: 70%;
+	margin-left: 10px;
+}
+
+.download-fileinfo .download-fileinfo-title
+{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.download-fileinfo .download-fileinfo-attr
+{
+	font-size: 12px;
+	color: #9b9b9b;
+}
+
+.download-filetype-icon .icon
+{
+	width: 3em;
+	height: 3em;
+}
+
+.download-fileinfo
+{
+	line-height: 150%;
+}
+
+.download-icon
+{
+	line-height: 300%;
+	color: #00a0e9;
+}
+
