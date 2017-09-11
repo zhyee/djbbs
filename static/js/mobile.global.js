@@ -455,18 +455,22 @@ function Reply(UserName, PostFloor, PostID, FormHash, TopicID) {
 					//TODO：删除Toast
 					toast.hide();
 					if (Result.Status == 1) {
-						$.afui.goBack();
-						PageFresh();
-/*						var mainViews = $.afui.views['mainview'];
+
+						$($.afui.activeDiv).removeClass("active").closest(".view").removeClass("active");
+						var mainViews = $.afui.views['mainview'];
 						var target = mainViews.pop().target;
+						var href = $(target).attr("data-href");
+						var title = $(target).attr("data-title");
+						document.getElementById('mainview').setAttribute("data-title", title);
+						$.afui.activeDiv = $(target).prev().get(0);
 						$(target).remove();
 						$.afui.loadContent(
-							WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: "") + "?token=" + accessToken,
+							href,
 							false,
 							false,
 							"slide",
 							document.getElementById('mainview')
-						);*/
+						);
 
 						//$("#ReplyViewSubmitButton").attr("href", WebsitePath + "/t/" + Result.TopicID + (Result.Page > 1 ? "-" + Result.Page: ""));
 					} else {

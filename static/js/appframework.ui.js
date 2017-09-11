@@ -1220,7 +1220,7 @@ window.af=window.jq=jQuery;
             var forceRefresh=anchor.getAttribute("data-refresh");
             if(found.length>0){
                 if(forceRefresh){
-                    that.showLoading&&that.showMask("Loading Content");
+                    that.showLoading&&that.showMask("Loading...");
                     $.ajax(target).then(function(res){
                         found.html(res);
                         that.showLoading&&that.hideMask();
@@ -1232,7 +1232,7 @@ window.af=window.jq=jQuery;
             }
             else
             {
-                that.showLoading&&that.showMask("Loading Content");
+                that.showLoading&&that.showMask("Loading...");
                 // $.ajax(target).then(function(res){
                 $.ajax(target).then(function(res){
                     var $res=$.create("div",{html:res});

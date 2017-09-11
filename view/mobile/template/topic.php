@@ -75,7 +75,7 @@ if($Page==1){
 					<div class="download-item">
 						<div class="download-filetype-icon float-left">
 							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-PPT"></use>
+								<use xlink:href="#<?php $extName = getExtName($attach['fileName']); if (array_key_exists($extName, $fileIcons)) echo $fileIcons[$extName]; else echo $fileIcons['default']; ?>"></use>
 							</svg>
 						</div>
 						<div class="download-fileinfo float-left">

@@ -1,5 +1,40 @@
 <?php
 require(LanguagePath . 'topic.php');
+
+
+$fileIcons = array(
+    'mp4' => 'icon-MOV',
+    'avi' => 'icon-MOV',
+    'wmv' => 'icon-MOV',
+    'swf' => 'icon-MOV',
+    'mp3' => 'icon-MP',
+    'wav' => 'icon-MP',
+    'zip' => 'icon-ZIP',
+    'rar' => 'icon-RAR',
+    'txt' => 'icon-TXT',
+    'ppt' => 'icon-PPT',
+    'doc' => 'icon-DOC',
+    'docx' => 'icon-DOC',
+    'xls' => 'icon-XLS',
+    'xlsx' => 'icon-XLS',
+    'pdf' => 'icon-PDF',
+    'png' => 'icon-PNG',
+    'jpg' => 'icon-JPEG',
+    'jpeg' => 'icon-JPEG',
+    'gif' => 'icon-GIF',
+    'default' => 'icon-geshi_weizhi'
+);
+
+/**
+ * 获取扩展名
+ */
+function getExtName($filename)
+{
+    $extName = strrchr($filename, '.');
+    return strtolower(trim($extName, '.'));
+}
+
+
 $ID   = intval(Request('Request', 'id'));
 $Page = intval(Request('Request', 'page'));
 if ($MCache) {

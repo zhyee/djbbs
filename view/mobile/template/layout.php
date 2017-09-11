@@ -216,7 +216,7 @@ if($CurUserID){
 
 				$('.view').click (function (e) {
 				    if ($(e.target).hasClass('emotion-btn') || $(e.target).hasClass('icon-emoji')) return;
-					$('#emotion-container').hide(100);
+					$('#emotion-container').hide();
 				});
 			});
 
@@ -271,8 +271,5 @@ if($CurUserID){
 </script>
 <?php
 }
-$MicroTime = explode(' ', microtime());
-$TotalTime = number_format(($MicroTime[1] + $MicroTime[0] - $StartTime), 6) * 1000;
-header("X-Response-Time: " . $TotalTime . "ms");
 ob_end_flush();
 ?>

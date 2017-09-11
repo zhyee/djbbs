@@ -68,8 +68,8 @@ function CreateNewTopic() {
 				$(".picture-list li").remove();
 				toast.hide();
 				if (data.Status == 1) {
-					$("#PublishButton").val(Lang['Submit_Success']);
 					// location.href = WebsitePath + "/t/" + data.TopicID + "?token=" + accessToken;
+					$('#mainview').attr('data-title', document.NewForm.Title.value);
 					document.NewForm.Title.value = '';
 					document.NewForm.BoardID.value = '0';
 					document.NewForm.Content.value = '';
